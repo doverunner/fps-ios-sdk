@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>FPSCidKey</key>
+		<string></string>
+		<key>ContentURL</key>
+		<string></string>
+		<key>ContentNameKey</key>
+		<string></string>
+		<key>OnlyStreaming</key>
+		<true/>
+		<key>FPSToken</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>FPSCidKey</key>
+		<string></string>
+		<key>ContentURL</key>
+		<string></string>
+		<key>FPSToken</key>
+		<string></string>
+		<key>ContentNameKey</key>
+		<string></string>
+		<key>OnlyStreaming</key>
+		<false/>
+		<key>Mainm3u8Scheme</key>
+		<false/>
+	</dict>
+</array>
+</plist>

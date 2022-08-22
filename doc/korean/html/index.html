@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PallyConFPSSDK  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+
+    <a title="PallyConFPSSDK  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          PallyConFPSSDK 1.17.1 Docs
+        </a>
+        
+      </p>
+    
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">PallyConFPSSDK Reference</a>
+      <img class="carat" src="img/carat.png" alt=""/>
+      PallyConFPSSDK  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/DownloadTask.html">DownloadTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PallyConCustomDataInfo.html">PallyConCustomDataInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PallyConFPSSDK.html">PallyConFPSSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DrmType.html">DrmType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/PallyConSDKException.html">PallyConSDKException</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RenewalInterval.html">RenewalInterval</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/PallyConFPSDownloadDelegate.html">PallyConFPSDownloadDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicenseDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <h1 id='version-1-17-1' class='heading'>Version 1.17.1</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.17.1</strong></p>
+</blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> 콘텐츠 다운로드 시 라이선스를 먼저 획득하는 <code>createDownloadTask()</code> 함수가 추가됩니다.</p>
+
+<ul>
+<li>콘텐츠 용량이 작아 라이선스 획득보다 다운로드가 먼저 끝나는 경우, 라이선스 획득 오류가 발생할 수 있습니다.</li>
+<li>이 경우 라이선스를 먼저 획득 후 콘텐츠 다운로드를 시작하는 <code>createDownloadTask()</code> 함수를 사용해야 합니다.</li>
+<li>이 함수는 <code>iOS 11.2</code> 부터 지원됩니다.</li>
+</ul>
+<pre class="highlight swift"><code><span class="c1">// contentKeyIDList -&gt; Key ID value in EXT-X-KEY tag in m3u8 file.</span>
+<span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">11.2</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDownloadTask</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+                    <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span>
+                    <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                    <span class="nv">contentKeyIDList</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>   <span class="c1">// &lt;= ex) "skd://key67"</span>
+                    <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                    <span class="nv">licenseUrl</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span>
+                    <span class="nv">appleCertUrl</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span>
+                    <span class="nv">downloadOptions</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span>
+                    <span class="nv">isCelluraAccess</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+                    <span class="nv">isAVAssetDownloadTask</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="nv">downloadDelegate</span><span class="p">:</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">DownloadTask</span>
+</code></pre>
+<h1 id='version-1-17-0' class='heading'>Version 1.17.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.17.0</strong></p>
+</blockquote>
+
+<p><font color="green"><strong><code>Update</code></strong></font> <code>CSL(Concurrent Stream Limiting)</code>을 지원하도록 업데이트 됩니다.</p>
+
+<ul>
+<li><code>pallycon-customdata-v2 Token</code>일 경우 <code>PallyCon Console</code>에서 지정한 시간이 적용됩니다.</li>
+<li><code>pallycon-customdata-v1 Token</code>일 경우 <code>PallyCon Console</code>에서 지정한 시간을 아래 API 파라메터에 입력해야  <code>CSL</code> 기능을 사용할 수 있습니다.</li>
+</ul>
+<pre class="highlight swift"><code><span class="cm">/**
+ - parameters:
+    - licenseRenewalInterval: It must be the same as the time(interval) specified in the PallyCon console. 
+        Default is 0 seconds.
+        The value received from the PallyCon license server takes precedence over the API parameter value.
+*/</span>
+<span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="nv">urlAsset</span><span class="p">:</span> <span class="kt">AVURLAsset</span><span class="p">,</span>
+                          <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <span class="nv">licenseUrl</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span>
+                          <span class="nv">appleCertUrl</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span>
+                          <span class="nv">licenseRenewalInterval</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="kt">RenewalInterval</span><span class="o">.</span><span class="kt">Default</span><span class="o">.</span><span class="n">rawValue</span> <span class="p">)</span>
+
+<span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="nv">urlAsset</span><span class="p">:</span> <span class="kt">AVURLAsset</span><span class="p">,</span>
+                          <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <span class="nv">licenseUrl</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span>
+                          <span class="nv">appleCertUrl</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span>
+                          <span class="nv">liveKeyRotation</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                          <span class="nv">licenseRenewalInterval</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="kt">RenewalInterval</span><span class="o">.</span><span class="kt">Default</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span>
+</code></pre>
+<h1 id='version-1-16-2' class='heading'>Version 1.16.2</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.16.2</strong></p>
+</blockquote>
+
+<p><font color="red"><strong><code>Changed</code></strong></font> <code>createDownloadTask</code> 함수 파라메터 <code>isAVAsseDownloadTask</code> 이름이 변경됩니다.</p>
+
+<ul>
+<li><code>isAVAsseDownloadTask</code>에서 <code>isAVAssetDownloadTask</code>로 변경됩니다.</li>
+</ul>
+<h1 id='version-1-16-1' class='heading'>Version 1.16.1</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.16.1</strong></p>
+</blockquote>
+
+<p><font color="green"><strong><code>Update</code></strong></font>  <code><a href="Classes/DownloadTask.html">DownloadTask</a></code>에 API가 추가됩니다.</p>
+
+<ul>
+<li><code><a href="Classes/DownloadTask.html">DownloadTask</a></code>에 <code>AVAssetDownloadTask</code>가 적용된 API가 제공됩니다.</li>
+<li><code>isAVAssetDownloadTask</code> 파라메터에 <code>true</code>를 설정하여 사용할 수 있습니다.</li>
+</ul>
+<pre class="highlight swift"><code>    <span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+    <span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDownloadTask</span><span class="p">(</span>
+                <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+                <span class="o">...</span>
+                <span class="nv">isAVAssetDownloadTask</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+                <span class="nv">downloadDelegate</span><span class="p">:</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">DownloadTask</span>
+
+    <span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+    <span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDownloadTask</span><span class="p">(</span>
+                <span class="nv">urlAsset</span><span class="p">:</span> <span class="kt">AVURLAsset</span><span class="p">,</span>
+                <span class="o">...</span>
+                <span class="nv">isAVAssetDownloadTask</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+                <span class="nv">downloadDelegate</span><span class="p">:</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">DownloadTask</span>
+
+</code></pre>
+<h1 id='version-1-16-0' class='heading'>Version 1.16.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.16.0</strong></p>
+</blockquote>
+
+<p><font color="red"><strong><code>Changed</code></strong></font>  HLS 다운로드가 <code>iOS 11</code>부터 지원됩니다.</p>
+
+<ul>
+<li><code>iOS 10</code>부터 지원하던 HLS 다운로드가 내부 API 변경으로 <code>iOS 11</code>부터 지원됩니다.</li>
+<li>이로써 자막이 2개 이상 다운로드 하는 경우 영상 콘텐츠도 2번 다운로드되는 현상이 제거됩니다.</li>
+</ul>
+<h1 id='version-1-15-0' class='heading'>Version 1.15.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.15.0</strong></p>
+</blockquote>
+
+<p><font color="red"><strong><code>Changed</code></strong></font>  <code>tvOS</code> 라이브러리는 <code>bitcode</code> 지원으로 변경됩니다.</p>
+
+<ul>
+<li><code>bitcode</code>를 사용하는 경우  <code>Build Settings</code> &ndash;&gt; <code>User Defined</code>에 <code>BITCODE_GENERATION_MODE</code> 을 추가하고 <code>bitcode</code> 로 설정해야 합니다.</li>
+</ul>
+
+<p><font color="green"><strong><code>Update</code></strong></font>  최신 Device Model 정보로 업데이트 됩니다.</p>
+
+<ul>
+<li><p>Model 정보가 없는 경우 Device 번호가 반환되도록 업데이트 됩니다.</p></li>
+<li><p>Device Model 정보는 라이선스 서버에 저장되고 확인 할수 있습니다. </p></li>
+</ul>
+<h1 id='version-1-14-0' class='heading'>Version 1.14.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.14.0</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet"><strong>Added</strong></font></code>  <code>AVAssetResourceLoaderDelegate.resourceLoader()</code> 의 내용을 외부에서 변경할 수 있는 <code>resourceLoaderRequest()</code> 함수가 추가됩니다.</p>
+
+<ul>
+<li>재생하려는 <code>playlist.m3u8</code> 의 내용을 수정할 수 있습니다(자막 추가 같은).</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PallyConFPSLicenseDelegate</span><span class="p">:</span> <span class="kt">NSObjectProtocol</span> <span class="p">{</span>
+    <span class="cm">/**
+       You can modify the `requestResource` of `AVAssetResourceLoaderDelegate.resourceLoader()` used within PallyCon SDK as needed.
+       (e.g. add subtitles to the m3u8 content you want to play)
+       The `resourceLoaderRequest()` function is called when `PallyConFPSSDK.mainm3u8Scheme` is applied to the m3u8 URL.
+
+       Example:
+        // Changed [https] URL Scheme to [PallyConFPSSDK.mainm3u8Scheme]
+        https://somedomain.com/playlist.m3u8 -&gt; mainm3u8://somedomain.com/playlist.m3u8
+
+       @param requestResource
+              An instance of AVAssetResourceLoadingRequest that provides information about the requested resource.
+       @result TRUE  if the delegate can load the resource indicated by the AVAssetResourceLoadingRequest; otherwise FALSE.
+       */</span>
+    <span class="kd">optional</span> <span class="kd">func</span> <span class="nf">resourceLoaderRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">requestResource</span><span class="p">:</span> <span class="kt">AVAssetResourceLoadingRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+  <span class="p">}</span>
+
+</code></pre>
+
+<ul>
+<li><p><code>m3u8</code>주소 <code>URL Scheme(https)</code> 을 <code>PallyConFPSSDK.mainm3u8Scheme(mainm3u8)</code>으로 변경해야 <code>resourceLoaderRequest()</code> 함수가 호출됩니다.</p></li>
+<li><p><code>resourceLoaderRequest()</code> 함수 구현 예제는 샘플 프로젝트(<code>advanced sample</code>)에서 확인할 수 있습니다.</p></li>
+</ul>
+<h1 id='version-1-13-0' class='heading'>Version 1.13.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.13.0</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet"><strong>Added</strong></font></code>  콘텐츠 키를 요청할 수 있는 <code>contentKeyRequest()</code> 함수가 추가됩니다.</p>
+
+<ul>
+<li><code><a href="Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicenseDelegate</a></code> 프로토콜에 <code>contentKeyRequest()</code> 함수가  추가되어 있습니다.</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PallyConFPSLicenseDelegate</span><span class="p">:</span> <span class="kt">NSObjectProtocol</span> <span class="p">{</span>
+    <span class="kd">optional</span> <span class="kd">func</span> <span class="nf">contentKeyRequest</span><span class="p">(</span><span class="nv">keyData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">requestData</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">String</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span>
+  <span class="p">}</span>
+</code></pre>
+
+<ul>
+<li><p><code>contentKeyRequest()</code>을 구현하지 않으면 <code>PallyCon FPS SDK</code>에서 콘텐츠 키를 요청합니다.</p></li>
+<li><p><code>contentKeyRequest()</code> 함수 구현 예제는 샘플 프로젝트(<code>advanced sample</code>)에서 확인할 수 있습니다.</p></li>
+</ul>
+
+<p><code><font color="darkviolet"><strong>Added</strong></font></code> <code>prepare()</code>함수에 데이터를 보낼 URL 을 지정할 수 있도록 파라메터가 추가되었습니다.</p>
+
+<ul>
+<li><code>URL</code>을 지정하지 않으면 기본적으로 <code>PallyCon Server</code>로 요청됩니다.</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="c1">// licenseUrl: You can specify the URL to which you want to send data. If not specified, it is requested to the PallyCon Server.</span>
+  <span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="nv">urlAsset</span><span class="p">:</span> <span class="kt">AVURLAsset</span><span class="p">,</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">optionalId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">liveKeyRotation</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">licenseUrl</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">())</span>
+</code></pre>
+<h1 id='version-1-12-0' class='heading'>Version 1.12.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.12.0</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> <code>HLS</code> 파일 크기를 알수 있는 <code><a href="Classes/PallyConHLSInfo.html">PallyConHLSInfo</a></code> 클래스가 추가됩니다.</p>
+
+<ul>
+<li>Track 별로 콘텐츠 크기를 제공합니다.</li>
+</ul>
+<pre class="highlight swift"><code><span class="kt">PallyConHLSInfo</span><span class="o">.</span><span class="nf">getAllTrackInfo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span> 
+<span class="kt">PallyConHLSInfo</span><span class="o">.</span><span class="nf">getVideoResolutionSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span> 
+<span class="kt">PallyConHLSInfo</span><span class="o">.</span><span class="nf">getVideoBitrateSiz</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span> 
+<span class="kt">PallyConHLSInfo</span><span class="o">.</span><span class="nf">getAudioLanguageSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span> 
+<span class="kt">PallyConHLSInfo</span><span class="o">.</span><span class="nf">getSubtitleLanguageSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span> 
+<span class="kt">PallyConHLSInfo</span><span class="o">.</span><span class="nf">getHLSPallyConMeta</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span> 
+</code></pre>
+
+<ul>
+<li>샘플에 HLS 사이즈를 볼수 있는 예제가 포함되어 있습니다.</li>
+</ul>
+<h1 id='version-1-11-0' class='heading'>Version 1.11.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.11.0</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> SDK 샘플이 <code>Token</code>으로 라이선스를 획득하도록 코드가 변경됩니다.</p>
+
+<ul>
+<li>제공되는 SDK 샘플 프로젝트에서 <code>Token</code>을 이용하여 라이선스를 획득할 수 있도록 변경됩니다.</li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code> <code>Token</code> 으로 라이선스를 획득할 수 있는 API가 추가됩니다.</p>
+
+<ul>
+<li>주어진 <code>Token</code> 에서 필요한 정보(Content ID) 얻어 라이선스 획득을 준비하는 API가 추가됩니다.</li>
+</ul>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="nv">urlAsset</span><span class="p">:</span> <span class="kt">AVURLAsset</span><span class="p">,</span> 
+                    <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                    <span class="nv">licenseUrl</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span>
+                    <span class="nv">appleCertUrl</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">())</span> 
+</code></pre>
+
+<p><code><font color="darkviolet">Added</font></code> <code>Token</code> 으로 라이선스를 획득하며 다운로드 할 수 있는 API가 추가됩니다.</p>
+
+<ul>
+<li>주어진 <code>Token</code> 에서 필요한 정보(Content ID) 얻어 라이선스 획득과 콘텐츠를 다운로드 할 수 있는 API가 추가됩니다.</li>
+</ul>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDownloadTask</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+                               <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> 
+                               <span class="nv">downloadOptions</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span> 
+                               <span class="nv">isCelluraAccess</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> 
+                               <span class="nv">downloadDelegate</span><span class="p">:</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">DownloadTask</span>
+</code></pre>
+
+<p><code><font color="green">Update</font></code> <code><a href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a></code>  클래스에 <code>User ID</code>와 <code>Key Rotation</code> 정보가 반영됩니다.</p>
+
+<ul>
+<li><code>Token</code> 에 추가된 <code>User ID</code>와 <code>Key Rotation</code> 정보를  <code><a href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a></code> 클래스에 반영됩니다.</li>
+<li><code>token</code> 프로퍼티에서 <code>policy</code> 프로퍼티로 이름이 변경됩니다.</li>
+</ul>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConTokenInfo</span> <span class="p">{</span>
+   <span class="c1">/// Contents ID</span>
+   <span class="k">let</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span>
+   <span class="c1">/// Site ID</span>
+   <span class="k">let</span> <span class="nv">siteId</span><span class="p">:</span> <span class="kt">String</span>
+   <span class="c1">/// DRM type</span>
+   <span class="k">let</span> <span class="nv">drmType</span><span class="p">:</span> <span class="kt">DrmType</span>
+   <span class="c1">/// Policy string</span>
+   <span class="k">let</span> <span class="nv">policy</span><span class="p">:</span> <span class="kt">String</span>
+   <span class="c1">/// User ID</span>
+   <span class="k">let</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span>
+   <span class="c1">/// Key Rotation</span>
+   <span class="k">let</span> <span class="nv">keyRotation</span><span class="p">:</span> <span class="kt">Bool</span>
+<span class="p">}</span>
+</code></pre>
+<h1 id='version-1-10-0' class='heading'>Version 1.10.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.10.0</strong></p>
+</blockquote>
+
+<p><code><font color="green">Update</font></code> <code>Xcode 12</code> 에서 빌드된 <code>Framework</code> 로 업데이트 됩니다.</p>
+
+<ul>
+<li><code>Xcode 12</code> 버전에서 빌드된 <code>PallyConFPSSDK.framework</code>가 배포됩니다.</li>
+</ul>
+
+<blockquote>
+<p>NOTE</p>
+
+<ul>
+<li>2020년 12월 이후에는 <code>PallyConFPSSDK.xcframework</code> 만 배포됩니다.</li>
+</ul>
+</blockquote>
+<h1 id='version-1-9-0' class='heading'>Version 1.9.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.9.0</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> <code>Multi-Key</code> , <code>Offline Rental</code> 을 지원합니다.</p>
+
+<ul>
+<li><code>Multi-Key</code>, <code>Offline Rental</code> 을 v1.9.0 버전부터 지원됩니다.</li>
+</ul>
+
+<p><code><font color="darkred">Remove</font></code> <code>existDownloadedLicense</code> 함수가 제거됩니다.</p>
+
+<ul>
+<li>SDK 버전 1.8.5에 추가되었던 <code>existDownloadedLicense</code> 함수가 제거됩니다.</li>
+<li><code>getOfflineLicenseExpireDate</code> 함수를 통해 라이선스 유무와 만료 날짜를 알수 있습니다.</li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code> <code>getOfflineLicenseExpireDate</code> 함수가 추가됩니다.</p>
+
+<ul>
+<li>iOS에서 <code>Offline License</code>가 디바이스에 있다면, 라이선스에 만료 날짜를 알수 있습니다.</li>
+</ul>
+<h1 id='version-1-8-8' class='heading'>Version 1.8.8</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.8.8</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> SDK가 <code>Xcode 11.5</code> 와 <code>swift 5.2.4</code>가  반영 됩니다. </p>
+
+<p><code><font color="darkviolet">Added</font></code> <code>XCframework</code> SDK가 추가됩니다.</p>
+<h1 id='version-1-8-7' class='heading'>Version 1.8.7</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.8.7</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> 컨텐츠 다운로드와 라이선스 다운로드가 함께 동작하도록 수정되었습니다. </p>
+
+<ul>
+<li>이전 버전에서는 컨텐츠 다운로드와 라이선스 다운로드가 별개로 동작하였습니다.</li>
+<li>이를 수정하여 <code><a href="Classes/DownloadTask.html">DownloadTask</a></code> 에서 같이 동작하도록 수정하였습니다.<br></li>
+</ul>
+<h1 id='version-1-8-6' class='heading'>Version 1.8.6</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.8.6</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> 컨텐츠 다운로드 시 <code>Cellular</code> 사용을 제한 할 수 있습니다.</p>
+
+<ul>
+<li><code>createDownloadTask</code> 함수에  <code>isCelluraAccess: Bool</code> 파라메터가 추가 되었습니다.</li>
+<li>Cellular 를 이용하지 않을 경우  <code>false</code> 로 설정합니다(default = true).</li>
+</ul>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">createDownloadTask</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> 
+                        <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> 
+                        <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> 
+                        <span class="nv">optionalId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> 
+                        <span class="nv">downloadOptions</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(),</span> 
+                        <span class="nv">isCelluraAccess</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> 
+                        <span class="nv">downloadDelegate</span><span class="p">:</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">DownloadTask</span>
+</code></pre>
+
+<p><code><font color="darkred">Remove</font></code> 시뮬레이터 라이브러리(<code>x86_64</code>, <code>i386</code>)가 제거된 SDK가 배포됩니다.</p>
+<h1 id='version-1-8-5' class='heading'>Version 1.8.5</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.8.5</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> 라이선스 존재 여부를 알수 있는 <code>existDownloadedLicense</code> 가 추가됩니다.</p>
+
+<ul>
+<li>라이선스가 존재할 경우 <code>true</code>, 그렇지 않으면 <code>false</code> 를 반환합니다.</li>
+</ul>
+<h1 id='version-1-8-4' class='heading'>Version 1.8.4</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.8.4</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> <code>Xcode 11.2</code>, <code>Swift 5.2</code> 에서 빌드된 iOS/tvOS SDK를 배포합니다.</p>
+
+<p><code><font color="green">Update</font></code> SDK에 포함된 시뮬레이터 라이브러리 제거 방법이 추가되었습니다.</p>
+<h1 id='version-1-8-3' class='heading'>Version 1.8.3</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.8.3</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> <code>Xcode 11</code>, <code>Swift 5.1</code> 에서 빌드된 iOS/tvOS SDK를 배포합니다.</p>
+<h1 id='version-1-8-2' class='heading'>Version 1.8.2</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.8.2</strong></p>
+</blockquote>
+
+<p><code><font color="Blue">Fixed</font></code> iOS 9 타겟에서 <code>Symbol not found</code> 발생하는 오류 수정하였습니다.</p>
+<h1 id='version-1-8-1' class='heading'>Version 1.8.1</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.8.1</strong></p>
+</blockquote>
+
+<p><code><font color="Blue">Fixed</font></code> 저장된 라이선스가 삭제되지 않는 버그를 수정하였습니다.</p>
+<h1 id='version-1-8' class='heading'>Version 1.8</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.8</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> SDK 인증 과정을 제거했습니다.</p>
+<h1 id='version-1-7' class='heading'>Version 1.7</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.7</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> Swift 5.0 지원과 Download 버그 수정되었습니다.</p>
+<h1 id='version-1-6-5' class='heading'>Version 1.6.5</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.6.5</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> Keychain에 접근 권한을 항상 접근하도록 변경하였습니다.</p>
+<h1 id='version-1-6-4' class='heading'>Version 1.6.4</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.6.4</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> Site ID 및 Site Key가 있을 경우에 SDK 인증을 진행하도록 수정하였습니다.</p>
+<h1 id='version-1-6-3' class='heading'>Version 1.6.3</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.6.3</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> Bandwidth 입력 시 해당 컨텐츠가 다운로드 되도록 다운로드 파라메터가 추가되었습니다. </p>
+<h1 id='version-1-6-2' class='heading'>Version 1.6.2</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.6.2</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> SDK 인증 실패 시 정보 삭제되도록 수정되었습니다.</p>
+<h1 id='version-1-6-1' class='heading'>Version 1.6.1</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.6.1</strong></p>
+</blockquote>
+
+<p><code><font color="Blue">Fixed</font></code> SDK 인증 기능 버그 수정하였습니다.</p>
+
+<p><code><font color="Blue">Fixed</font></code> Download API 오류를 수정하였습니다.</p>
+<h1 id='version-1-6' class='heading'>Version 1.6</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.6</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> Swift 4.2, iOS 12 지원</p>
+
+<ul>
+<li>Xcode 10, Swift 4.2 로 빌드 되었습니다.</li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code> SDK 인증 기능이 추가 되었습니다.</p>
+
+<ul>
+<li>SDK 정식 사용자 여부를 판별하기 위하여 SDK 인증 기능이 추가 되었습니다.</li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code> Download 관련 Exception 에 파일 패스가 추가되었습니다.</p>
+
+<ul>
+<li>이제부터 다운로드를 중단하거나 실패시 다운로드 중이었던 파일 패스를 Exception 을 통해 알 수 있습니다.</li>
+<li>DownloadUserCancel() -&gt; DownloadUserCancel(String)</li>
+</ul>
+<h1 id='version-1-5' class='heading'>Version 1.5</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.5</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> 라이브 키 로테이션 콘텐츠 재생 기능 추가</p>
+
+<ul>
+<li>키 로테이션 콘텐츠(일정 시간 단위로 DRM 키가 변경되는 콘텐츠) 를 재생 할 수 있게 되었습니다.</li>
+<li>prepare 시 liveKeyRotation 파라매터 추가 되었으며, 기본값은 false 입니다.</li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code> 오버로딩 prepare 함수 추가</p>
+
+<ul>
+<li>prepare(urlAsset: inout AVURLAsset, customData: String, appleCertUrl: String) 함수 추가</li>
+<li>변경된 FPS 인증서 서버 주소로 customData 를 이용해 라이선스를 획득 할 수 있습니다.</li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code> Objective-C 지원</p>
+
+<ul>
+<li>SDK에서 Objective-C 언어를 지원합니다.</li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code> 자막 다운로드 기능 추가</p>
+
+<ul>
+<li>자막파일이 포함된 HLS 콘텐츠일 경우 자막까지 같이 다운로드 합니다.</li>
+<li>downloadContent(_ contentId: String, didStartDownloadWithAsset asset:AVURLAsset, subtitleDisplayName: String) 델리게이트 파라매터 추가</li>
+<li>자막을 다운로드 시작할때 subtitleDisplayName 파라매터에서 Display Name 을 확인 가능합니다. 자막이 아닐 경우엔 빈문자열</li>
+</ul>
+<h1 id='version-1-4-1' class='heading'>Version 1.4.1</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.4</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> 샘플 프로젝트 오류 수정</p>
+
+<ul>
+<li>샘플 프로젝트에 SDK API에 없는 파라메터가 있어 이를 제거되었습니다.</li>
+</ul>
+<h1 id='version-1-4' class='heading'>Version 1.4</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.4</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> <code>Site ID</code> <code>Site Key</code> 없는 API 추가</p>
+
+<ul>
+<li><code>Site ID</code> <code>Site Key</code>이 없이 SDK를 사용가능하도록 API가 추가되었습니다.</li>
+<li>이 경우 <code>Client</code>와 <code>PallyCon License Server</code> 사이에 PallyCon 규격으로 전달할 수 있는 <code>중간서버(Proxy)</code>가 반드시 필요합니다.</li>
+<li>보다 자세한 사항은 문서를 확인하시기 바랍니다.</li>
+</ul>
+<h1 id='version-1-3' class='heading'>Version 1.3</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.3</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> 크롬캐스트 SDK 지원을 위한 API 추가</p>
+
+<ul>
+<li>크롬캐스트 SDK 를 사용하여 DRM 콘텐츠를 재생할 수 있도록 추가되었습니다.</li>
+</ul>
+<h1 id='version-1-2' class='heading'>Version 1.2</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.2</strong></p>
+</blockquote>
+
+<p><code><font color="red">Changed</font></code> 메소드의 파라매터 변경</p>
+
+<ul>
+<li>initialize 할때 userId 값을 받던것을 라이선스 획득할때 받는 것으로 수정됨.</li>
+</ul>
+
+<p><code><font color="red">Changed</font></code> 파라매터명 변경</p>
+
+<ul>
+<li>orderId -&gt; optionalId</li>
+</ul>
+
+<p><code><font color="red">Changed</font></code> 암호화에 사용된 라이브러리 변경</p>
+
+<ul>
+<li>고객이 직접 CryptSwift 를 참조할 필요가 없어졌습니다.</li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code> 라이선스 발급 방식 추가 - CustomData</p>
+
+<ul>
+<li>FPS HLS 콘텐츠의 라이선스를 CustomData 로 발급할 수 있도록 추가되었습니다.</li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code>
+getCustomDataInfo 메소드 추가</p>
+
+<ul>
+<li>암호화된 CustomData 를 확인할 수 있는 메소드가 추가되었습니다.</li>
+<li>해당 메소드는 PallyConCustomDataInfo 구조체로 반환됩니다.</li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code>
+PallyConSDKException.InvalidParameter() 추가</p>
+
+<ul>
+<li>파라매터가 잘못되었을때 반환되는 Exception 이 추가되었습니다.</li>
+</ul>
+<h1 id='version-1-1' class='heading'>Version 1.1</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.1</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> 라이선스 발급 방식 추가 - 토큰</p>
+
+<ul>
+<li>FPS HLS 콘텐츠의 라이선스를 토큰으로 발급할 수 있도록 수정되었습니다.</li>
+<li>기존 방식인 콘텐츠 정보로도 라이선스를 발급 받을 수 있습니다.</li>
+</ul>
+<h1 id='version-1-0' class='heading'>Version 1.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.0</strong></p>
+</blockquote>
+
+<p><code><font color="darkviolet">Added</font></code> PallyConFPSSDK 1.0 배포</p>
+
+<ul>
+<li>FPS HLS 콘텐츠의 스트리밍 재생과 로컬 다운로드 및 라이선스 저장이 가능하며, 다운로드 받은 콘텐츠를 오프라인 환경에서 재생할 수 있습니다.<br></li>
+</ul>
+
+<p><code><font color="darkviolet">Added</font></code> PallyConFPSSDK  Framework</p>
+
+<ul>
+<li>PallyConFPSSDK Framework : FPS HLS 콘텐츠를 재생할 수 있는 PallyConFPSSDK Framework이 추가되었습니다.</li>
+</ul>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2017 <a class="link" href="http://www.pallycon.com" target="_blank" rel="external noopener">INKA Entworks</a></p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
