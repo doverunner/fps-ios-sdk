@@ -1,0 +1,11 @@
+framework module PallyConFPSSDKTV {
+  umbrella header "PallyConFPSSDKTV.h"
+
+  export *
+  module * { export * }
+}
+
+module PallyConFPSSDKTV.Swift {
+    header "PallyConFPSSDKTV-ObjC.h"
+    requires objc
+}

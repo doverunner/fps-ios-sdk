@@ -1,0 +1,11 @@
+framework module PallyConFPSSDK {
+  umbrella header "PallyConFPSSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module PallyConFPSSDK.Swift {
+    header "PallyConFPSSDK-ObjC.h"
+    requires objc
+}
