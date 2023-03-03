@@ -6,6 +6,6 @@ framework module PallyConFPSSDKTV {
 }
 
 module PallyConFPSSDKTV.Swift {
-    header "PallyConFPSSDKTV-ObjC.h"
-    requires objc
+  header "PallyConFPSSDKTV-ObjC.h"
+  requires objc
 }

@@ -18,7 +18,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PallyConFPSSDK 1.17.1 Docs
+          PallyConFPSSDK 1.17.2 Docs
         </a>
         
       </p>
@@ -48,7 +48,13 @@
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/DownloadTask.html">DownloadTask</a>
+                <a class="nav-group-task-link" href="Classes/AES256CBC.html">AES256CBC</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Customer.html">Customer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/License.html">License</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PallyConCustomDataInfo.html">PallyConCustomDataInfo</a>
@@ -57,10 +63,7 @@
                 <a class="nav-group-task-link" href="Classes/PallyConFPSSDK.html">PallyConFPSSDK</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a>
+                <a class="nav-group-task-link" href="Classes.html#/PallyConTokenInfo">PallyConTokenInfo</a>
               </li>
             </ul>
           </li>
@@ -79,10 +82,21 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/AESCipher.html">AESCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions.html#/FPSLicenseDownloader">FPSLicenseDownloader</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/PallyConFPSDownloadDelegate.html">PallyConFPSDownloadDelegate</a>
+                <a class="nav-group-task-link" href="Protocols.html#/PallyConFPSDownloadDelegate">PallyConFPSDownloadDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicenseDelegate</a>
@@ -108,41 +122,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)DownloadTask"></a>
-                    <a name="//apple_ref/swift/Class/DownloadTask" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)DownloadTask">DownloadTask</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A class that receives remote AVURLAssets and downloads them locally. 
-You can create the instance by using (PallyConFPSSDK object).<code>createDownloadTask(url:contentId:optionalId:downloadDelegate:)</code>.
-You can also cancel current download using the same instance.</p>
-
-                        <a href="Classes/DownloadTask.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">DownloadTask</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConFPSSDK"></a>
+                    <a name="/"></a>
                     <a name="//apple_ref/swift/Class/PallyConFPSSDK" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConFPSSDK">PallyConFPSSDK</a>
+                    <a class="token" href="#/">PallyConFPSSDK</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -158,55 +140,15 @@ the DownloadTask object through the createDownloadTask method to download the co
 
                         <a href="Classes/PallyConFPSSDK.html" class="slightly-smaller">See more</a>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConFPSSDK</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
-                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo"></a>
-                    <a name="//apple_ref/swift/Class/PallyConHLSInfo" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo">PallyConHLSInfo</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>You can see the size of each HLS content track.
-The content size is entered in the m3u8 file with the tag <code>PallyCon Custome Info=</code>.</p>
-
-                        <a href="Classes/PallyConHLSInfo.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConHLSInfo</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo"></a>
+                    <a name="/"></a>
                     <a name="//apple_ref/swift/Class/PallyConTokenInfo" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a>
+                    <a class="token" href="#/">PallyConTokenInfo</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -232,24 +174,15 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
 </code></pre>
 
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConTokenInfo</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
-                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConCustomDataInfo"></a>
+                    <a name="/"></a>
                     <a name="//apple_ref/swift/Class/PallyConCustomDataInfo" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConCustomDataInfo">PallyConCustomDataInfo</a>
+                    <a class="token" href="#/">PallyConCustomDataInfo</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -270,14 +203,62 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
 
                         <a href="Classes/PallyConCustomDataInfo.html" class="slightly-smaller">See more</a>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConCustomDataInfo</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Class/AES256CBC" class="dashAnchor"></a>
+                    <a class="token" href="#/">AES256CBC</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Classes/AES256CBC.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Class/Customer" class="dashAnchor"></a>
+                    <a class="token" href="#/">Customer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Classes/Customer.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Class/License" class="dashAnchor"></a>
+                    <a class="token" href="#/">License</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Classes/License.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>

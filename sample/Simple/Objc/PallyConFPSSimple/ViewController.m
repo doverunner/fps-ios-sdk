@@ -36,7 +36,7 @@
     AVURLAsset *urlAsset = [[AVURLAsset alloc] initWithURL:contentUrl options:nil];
 
     // 2. Set parameters required for FPS content playback.
-    [_fpsSDK prepareWithUrlAsset:urlAsset token:PALLYCON_TOKEN licenseUrl:@"" appleCertUrl:@""];
+    [_fpsSDK prepareWithUrlAsset:urlAsset token:PALLYCON_TOKEN licenseUrl:@"" appleCertUrl:@"" licenseRenewalInterval:RenewalIntervalDefault];
     
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:urlAsset];
     AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
