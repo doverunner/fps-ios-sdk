@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PallyConSDKException Enumeration Reference</title>
+    <title>PallyConHLSInfo Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -11,9 +11,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Enum/PallyConSDKException" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/PallyConHLSInfo" class="dashAnchor"></a>
 
-    <a title="PallyConSDKException Enumeration Reference"></a>
+    <a title="PallyConHLSInfo Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -30,7 +30,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">PallyConFPSSDK Reference</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      PallyConSDKException Enumeration Reference
+      PallyConHLSInfo Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -95,15 +95,18 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>PallyConSDKException</h1>
+            <h1>PallyConHLSInfo</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PallyConSDKException</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConHLSInfo</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>List of errors which can occur in PallyCon FPS SDK</p>
+            <p>You can see the size of each HLS content track.
+The content size is entered in the m3u8 file with the tag <code>PallyCon Custome Info=</code>.</p>
 
           </div>
         </section>
@@ -115,9 +118,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO20DatabaseProcessErroryACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/DatabaseProcessError(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO20DatabaseProcessErroryACSScACmF">DatabaseProcessError(_:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)init:"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)init:">init(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -125,16 +128,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An error which occurs while processing database</p>
+                        <p>Creates DownloadTask instance for content download.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">DatabaseProcessError</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">hlsUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hlsUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL of content. (HLS m3u8 URL)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -142,9 +165,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO17InternalExceptionyACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/InternalException(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO17InternalExceptionyACSScACmF">InternalException(_:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getAllTrackInfo"></a>
+                    <a name="//apple_ref/swift/Method/getAllTrackInfo()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getAllTrackInfo">getAllTrackInfo()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -152,16 +175,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An error which occurs inside of the SDK unexpectedly</p>
+                        <p>Returns size information for all tracks in an m3u8 file.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">InternalException</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAllTrackInfo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>All track information or null value is returned.</p>
                       </div>
                     </section>
                   </div>
@@ -169,9 +197,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO20ServerConnectionFailyACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/ServerConnectionFail(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO20ServerConnectionFailyACSScACmF">ServerConnectionFail(_:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getVideoResolutionSize"></a>
+                    <a name="//apple_ref/swift/Method/getVideoResolutionSize()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getVideoResolutionSize">getVideoResolutionSize()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -179,16 +207,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An error which occurs when license server connection fails</p>
+                        <p>Returns the size by resolution in the video track.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ServerConnectionFail</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getVideoResolutionSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the video size by resolution or null.</p>
                       </div>
                     </section>
                   </div>
@@ -196,9 +229,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO12NetworkErroryACs0F0_pcACmF"></a>
-                    <a name="//apple_ref/swift/Element/NetworkError(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO12NetworkErroryACs0F0_pcACmF">NetworkError(_:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getVideoBitrateSiz"></a>
+                    <a name="//apple_ref/swift/Method/getVideoBitrateSiz()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getVideoBitrateSiz">getVideoBitrateSiz()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -206,16 +239,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A network error when connecting to license server</p>
+                        <p>Returns the size by bitrate in the video track.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">NetworkError</span><span class="p">(</span><span class="kt">Error</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getVideoBitrateSiz</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the video size per bitrate or null.</p>
                       </div>
                     </section>
                   </div>
@@ -223,9 +261,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO28AcquireLicenseFailFromServeryACSi_SStcACmF"></a>
-                    <a name="//apple_ref/swift/Element/AcquireLicenseFailFromServer(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO28AcquireLicenseFailFromServeryACSi_SStcACmF">AcquireLicenseFailFromServer(_:<wbr>_:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getHLSPallyConMeta"></a>
+                    <a name="//apple_ref/swift/Method/getHLSPallyConMeta()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getHLSPallyConMeta">getHLSPallyConMeta()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -233,16 +271,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An error responded by license server regarding license acquisition</p>
+                        <p>PallyCon Size Info Meta.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">AcquireLicenseFailFromServer</span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getHLSPallyConMeta</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Return Meta Informatrion or null.</p>
                       </div>
                     </section>
                   </div>
@@ -250,9 +293,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO25GetContentInformationFailyACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/GetContentInformationFail(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO25GetContentInformationFailyACSScACmF">GetContentInformationFail(_:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getAudioLanguageSize"></a>
+                    <a name="//apple_ref/swift/Method/getAudioLanguageSize()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getAudioLanguageSize">getAudioLanguageSize()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -260,16 +303,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An error which occurs when license server fails to find content info</p>
+                        <p>Returns the size for each language in the audio track.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">GetContentInformationFail</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAudioLanguageSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>For each language, return the audio size or null.</p>
                       </div>
                     </section>
                   </div>
@@ -277,9 +325,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO16InvalidParameteryACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/InvalidParameter(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO16InvalidParameteryACSScACmF">InvalidParameter(_:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getSubtitleLanguageSize"></a>
+                    <a name="//apple_ref/swift/Method/getSubtitleLanguageSize()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getSubtitleLanguageSize">getSubtitleLanguageSize()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -287,16 +335,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An error which occurs missing or invlid parameter</p>
+                        <p>Returns the size for each language in the text track.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">InvalidParameter</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getSubtitleLanguageSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Return subtitle size for each language or null.</p>
                       </div>
                     </section>
                   </div>
@@ -304,9 +357,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO18DownloadUserCancelyACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/DownloadUserCancel(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO18DownloadUserCancelyACSScACmF">DownloadUserCancel(_:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)extractPallyConHLSInfoAndReturnError:"></a>
+                    <a name="//apple_ref/swift/Method/extractPallyConHLSInfo()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)extractPallyConHLSInfoAndReturnError:">extractPallyConHLSInfo()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -314,96 +367,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An error which occurs when user cancels download</p>
+                        <p>Extracts content size information from .m3u8 files.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">DownloadUserCancel</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO20DownloadUnknownErroryACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/DownloadUnknownError(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO20DownloadUnknownErroryACSScACmF">DownloadUnknownError(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An error when Unknown.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">DownloadUnknownError</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO20DownloadDefaultErroryACs0G0_p_SStcACmF"></a>
-                    <a name="//apple_ref/swift/Element/DownloadDefaultError(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO20DownloadDefaultErroryACs0G0_p_SStcACmF">DownloadDefaultError(_:<wbr>_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An error when download content error</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">DownloadDefaultError</span><span class="p">(</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">String</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO21UnauthorizedUserErroryACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/UnauthorizedUserError(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO21UnauthorizedUserErroryACSScACmF">UnauthorizedUserError(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An error when unauthorized user used sdk
-you have to check the siteId</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">UnauthorizedUserError</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">extractPallyConHLSInfo</span><span class="p">()</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>

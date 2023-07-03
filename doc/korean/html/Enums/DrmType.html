@@ -18,7 +18,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PallyConFPSSDK 1.17.2 Docs
+          PallyConFPSSDK 1.17.3 Docs
         </a>
         
       </p>
@@ -48,13 +48,7 @@
             <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/AES256CBC.html">AES256CBC</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/Customer.html">Customer</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/License.html">License</a>
+                <a class="nav-group-task-link" href="../Classes/DownloadTask.html">DownloadTask</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PallyConCustomDataInfo.html">PallyConCustomDataInfo</a>
@@ -63,7 +57,10 @@
                 <a class="nav-group-task-link" href="../Classes/PallyConFPSSDK.html">PallyConFPSSDK</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes.html#/PallyConTokenInfo">PallyConTokenInfo</a>
+                <a class="nav-group-task-link" href="../Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a>
               </li>
             </ul>
           </li>
@@ -82,21 +79,10 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/AESCipher.html">AESCipher</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions.html#/FPSLicenseDownloader">FPSLicenseDownloader</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols.html#/PallyConFPSDownloadDelegate">PallyConFPSDownloadDelegate</a>
+                <a class="nav-group-task-link" href="../Protocols/PallyConFPSDownloadDelegate.html">PallyConFPSDownloadDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicenseDelegate</a>
@@ -110,6 +96,14 @@
         <section class="section">
           <div class="section-content top-matter">
             <h1>DrmType</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DrmType</span> <span class="p">:</span> <span class="kt">Int8</span></code></pre>
+
+                </div>
+              </div>
             <p>DRM type in token.</p>
 <pre class="highlight swift"><code><span class="k">case</span> <span class="n">playReady</span> <span class="o">=</span> <span class="mi">0</span>     <span class="c1">/// Microsoft PlayReady DRM</span>
 <span class="k">case</span> <span class="n">wideVine</span>          <span class="c1">/// Google WideVine DRM</span>
@@ -126,9 +120,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/c:@M@PallyConFPSSDK@E@DrmType@DrmTypePlayReady"></a>
                     <a name="//apple_ref/swift/Element/playReady" class="dashAnchor"></a>
-                    <a class="token" href="#/">playReady</a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@DrmType@DrmTypePlayReady">playReady</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -139,15 +133,23 @@
                         <p>Microsoft PlayReady DRM</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">playReady</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/c:@M@PallyConFPSSDK@E@DrmType@DrmTypeWideVine"></a>
                     <a name="//apple_ref/swift/Element/wideVine" class="dashAnchor"></a>
-                    <a class="token" href="#/">wideVine</a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@DrmType@DrmTypeWideVine">wideVine</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -158,15 +160,23 @@
                         <p>Google WideVine DRM</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">wideVine</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/c:@M@PallyConFPSSDK@E@DrmType@DrmTypeFairPlay"></a>
                     <a name="//apple_ref/swift/Element/fairPlay" class="dashAnchor"></a>
-                    <a class="token" href="#/">fairPlay</a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@DrmType@DrmTypeFairPlay">fairPlay</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -176,6 +186,14 @@
                       <div class="abstract">
                         <p>Apple FairPlay Streaming DRM</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fairPlay</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -189,7 +207,7 @@
     </div>
     <section class="footer">
       <p>© 2017 <a class="link" href="http://www.pallycon.com" target="_blank" rel="external noopener">INKA Entworks</a></p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

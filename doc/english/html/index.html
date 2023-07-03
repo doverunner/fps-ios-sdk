@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PallyConFPSSDK 1.17.2 Docs
+          PallyConFPSSDK 1.17.3 Docs
         </a>
         
       </p>
@@ -47,13 +47,7 @@
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/AES256CBC.html">AES256CBC</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/Customer.html">Customer</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/License.html">License</a>
+                <a class="nav-group-task-link" href="Classes/DownloadTask.html">DownloadTask</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PallyConCustomDataInfo.html">PallyConCustomDataInfo</a>
@@ -62,7 +56,10 @@
                 <a class="nav-group-task-link" href="Classes/PallyConFPSSDK.html">PallyConFPSSDK</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes.html#/PallyConTokenInfo">PallyConTokenInfo</a>
+                <a class="nav-group-task-link" href="Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a>
               </li>
             </ul>
           </li>
@@ -81,21 +78,10 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Extensions/AESCipher.html">AESCipher</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Extensions.html#/FPSLicenseDownloader">FPSLicenseDownloader</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols.html#/PallyConFPSDownloadDelegate">PallyConFPSDownloadDelegate</a>
+                <a class="nav-group-task-link" href="Protocols/PallyConFPSDownloadDelegate.html">PallyConFPSDownloadDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicenseDelegate</a>
@@ -109,7 +95,18 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <h1 id='version-1-17-2' class='heading'>Version 1.17.2</h1>
+            <h1 id='version-1-17-3' class='heading'>Version 1.17.3</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.17.3</strong></p>
+</blockquote>
+
+<p><font color="blue"><strong><code>Fixed</code></strong></font> Fixes error not playing on <code>iOS 17 Beta</code>.</p>
+
+<ul>
+<li>Fixes an error when acquiring a license on <code>iOS 17 Beta</code>.</li>
+</ul>
+<h1 id='version-1-17-2' class='heading'>Version 1.17.2</h1>
 
 <blockquote>
 <p><strong>What&rsquo;s New in Version 1.17.2</strong></p>
@@ -197,10 +194,10 @@
 <p><strong>What&rsquo;s New in Version 1.16.1</strong></p>
 </blockquote>
 
-<p><font color="green"><strong><code>Update</code></strong></font>  API is added to <code>DownloadTask</code>.</p>
+<p><font color="green"><strong><code>Update</code></strong></font>  API is added to <code><a href="Classes/DownloadTask.html">DownloadTask</a></code>.</p>
 
 <ul>
-<li>API with <code>AVAsetDownloadTask</code> applied to <code>DownloadTask</code> is provided.</li>
+<li>API with <code>AVAsetDownloadTask</code> applied to <code><a href="Classes/DownloadTask.html">DownloadTask</a></code> is provided.</li>
 <li>You can use it by setting <code>true</code> in the <code>isAVAssetDownloadTask</code> parameter.</li>
 </ul>
 <pre class="highlight swift"><code>    <span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
@@ -317,7 +314,7 @@
 <p><strong>What&rsquo;s New in Version 1.12.0</strong></p>
 </blockquote>
 
-<p><code><font color="darkviolet">Added</font></code> <code>PallyConHLSInfo</code> class to know the size of <code>HLS</code> files.</p>
+<p><code><font color="darkviolet">Added</font></code> <code><a href="Classes/PallyConHLSInfo.html">PallyConHLSInfo</a></code> class to know the size of <code>HLS</code> files.</p>
 
 <ul>
 <li>Content size per track is provided.</li>
@@ -368,10 +365,10 @@
                                <span class="nv">downloadDelegate</span><span class="p">:</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">DownloadTask</span>
 </code></pre>
 
-<p><code><font color="green">Update</font></code> <code>User ID</code> and <code>Key Rotation</code> information is updated in <code><a href="Classes.html#/PallyConTokenInfo">PallyConTokenInfo</a></code> class.</p>
+<p><code><font color="green">Update</font></code> <code>User ID</code> and <code>Key Rotation</code> information is updated in <code><a href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a></code> class.</p>
 
 <ul>
-<li>The <code>User ID</code> and <code>Key Rotation</code> information added to the token is updated in the <code><a href="Classes.html#/PallyConTokenInfo">PallyConTokenInfo</a></code> class.</li>
+<li>The <code>User ID</code> and <code>Key Rotation</code> information added to the token is updated in the <code><a href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a></code> class.</li>
 <li>The name is changed from the <code>token</code> property to the <code>policy</code> property.</li>
 </ul>
 <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConTokenInfo</span> <span class="p">{</span>
@@ -447,11 +444,11 @@
 <p><strong>What&rsquo;s New in Version 1.8.7</strong></p>
 </blockquote>
 
-<p><code><font color="red">Changed</font></code> Content download(<code>DownloadTask</code>) and license download have been modified to work together.</p>
+<p><code><font color="red">Changed</font></code> Content download(<code><a href="Classes/DownloadTask.html">DownloadTask</a></code>) and license download have been modified to work together.</p>
 
 <ul>
 <li>In previous versions, content downloads and license downloads worked separately.</li>
-<li>This has been modified to work with <code>DownloadTask</code>.</li>
+<li>This has been modified to work with <code><a href="Classes/DownloadTask.html">DownloadTask</a></code>.</li>
 </ul>
 <h1 id='version-1-8-6' class='heading'>Version 1.8.6</h1>
 
@@ -748,7 +745,7 @@ Add PallyConSDKException.InvalidParameter()</p>
     </div>
     <section class="footer">
       <p>© 2017 <a class="link" href="http://www.pallycon.com" target="_blank" rel="external noopener">INKA Entworks</a></p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

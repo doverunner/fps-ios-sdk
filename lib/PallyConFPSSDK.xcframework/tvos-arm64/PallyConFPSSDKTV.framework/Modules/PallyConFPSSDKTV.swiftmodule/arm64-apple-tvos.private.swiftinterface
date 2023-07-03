@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-tvos10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PallyConFPSSDKTV
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -46,8 +46,8 @@ import _StringProcessing
 }
 @objc public class PallyConFPSSDK : ObjectiveC.NSObject {
   public static let mainm3u8Scheme: Swift.String
-  @objc public init(fpsLicenseDelegate: PallyConFPSSDKTV.PallyConFPSLicenseDelegate?) throws
-  @objc public init(siteId: Swift.String, siteKey: Swift.String, fpsLicenseDelegate: PallyConFPSSDKTV.PallyConFPSLicenseDelegate?) throws
+  @objc public init(fpsLicenseDelegate: (any PallyConFPSSDKTV.PallyConFPSLicenseDelegate)?) throws
+  @objc public init(siteId: Swift.String, siteKey: Swift.String, fpsLicenseDelegate: (any PallyConFPSSDKTV.PallyConFPSLicenseDelegate)?) throws
   @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), licenseRenewalInterval: Swift.Int64 = RenewalInterval.Default.rawValue)
   @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String, contentId: Swift.String, token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), liveKeyRotation: Swift.Bool = false, licenseRenewalInterval: Swift.Int64 = RenewalInterval.Default.rawValue)
   @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String, contentId: Swift.String, optionalId: Swift.String, liveKeyRotation: Swift.Bool = false, licenseUrl: Swift.String = String())
@@ -76,7 +76,7 @@ public enum PallyConSDKException : Swift.Error {
   case DatabaseProcessError(Swift.String)
   case InternalException(Swift.String)
   case ServerConnectionFail(Swift.String)
-  case NetworkError(Swift.Error)
+  case NetworkError(any Swift.Error)
   case AcquireLicenseFailFromServer(Swift.Int, Swift.String)
   case GetContentInformationFail(Swift.String)
   case InvalidParameter(Swift.String)
@@ -84,7 +84,7 @@ public enum PallyConSDKException : Swift.Error {
 }
 @objc public protocol PallyConFPSLicenseDelegate : ObjectiveC.NSObjectProtocol {
   @objc func fpsLicenseDidSuccessAcquiring(contentId: Swift.String)
-  @objc func fpsLicense(contentId: Swift.String, didFailWithError error: Swift.Error)
+  @objc func fpsLicense(contentId: Swift.String, didFailWithError error: any Swift.Error)
   @objc optional func contentKeyRequest(keyData: Foundation.Data, requestData: [Swift.String : Swift.String]) -> Foundation.Data?
   @objc optional func resourceLoaderRequest(_ requestResource: AVFoundation.AVAssetResourceLoadingRequest) -> Swift.Bool
 }

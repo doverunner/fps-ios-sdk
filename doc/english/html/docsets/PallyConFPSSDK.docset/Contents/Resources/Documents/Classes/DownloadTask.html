@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RenewalInterval Enumeration Reference</title>
+    <title>DownloadTask Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -11,9 +11,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Enum/RenewalInterval" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/DownloadTask" class="dashAnchor"></a>
 
-    <a title="RenewalInterval Enumeration Reference"></a>
+    <a title="DownloadTask Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -30,7 +30,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">PallyConFPSSDK Reference</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      RenewalInterval Enumeration Reference
+      DownloadTask Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -95,23 +95,19 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>RenewalInterval</h1>
+            <h1>DownloadTask</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RenewalInterval</span> <span class="p">:</span> <span class="kt">Int64</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">DownloadTask</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>License Renewal Interval.
-It must be the same as the time(interval) specified in the PallyCon console.
-If it is longer than the specified time, a license expiration error occurs, and if it is smaller than the specified time, the license cost will increases.
-The value received from the PallyCon license server takes precedence over the API parameter value.</p>
-<pre class="highlight swift"><code><span class="k">case</span> <span class="kt">FiveMinute</span> <span class="o">=</span> <span class="mi">300</span>    <span class="c1">/// 300 Second</span>
-<span class="k">case</span> <span class="kt">TenMinute</span> <span class="o">=</span> <span class="mi">600</span>     <span class="c1">/// 600 Second</span>
-<span class="k">case</span> <span class="kt">FifteenMinute</span> <span class="o">=</span> <span class="mi">900</span> <span class="c1">/// 900 Second</span>
-</code></pre>
+            <p>A class that receives remote AVURLAssets and downloads them locally. 
+You can create the instance by using (PallyConFPSSDK object).<code>createDownloadTask(url:contentId:optionalId:downloadDelegate:)</code>.
+You can also cancel current download using the same instance.</p>
 
           </div>
         </section>
@@ -123,9 +119,9 @@ The value received from the PallyCon license server takes precedence over the AP
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalFiveMinute"></a>
-                    <a name="//apple_ref/swift/Element/FiveMinute" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalFiveMinute">FiveMinute</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)DownloadTask(im)resume"></a>
+                    <a name="//apple_ref/swift/Method/resume()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)DownloadTask(im)resume">resume()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -133,14 +129,17 @@ The value received from the PallyCon license server takes precedence over the AP
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>5 minutes</p>
+                        <p>Starts downloading content. 
+Previous download can be resumed if this method is called after <code><a href="../Classes/DownloadTask.html#/c:@M@PallyConFPSSDK@objc(cs)DownloadTask(im)cancel">cancel()</a></code> method without terminating the application.
+You need to check network availability before calling this method.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">FiveMinute</span> <span class="o">=</span> <span class="mi">300</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">resume</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -150,9 +149,9 @@ The value received from the PallyCon license server takes precedence over the AP
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalTenMinute"></a>
-                    <a name="//apple_ref/swift/Element/TenMinute" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalTenMinute">TenMinute</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)DownloadTask(im)cancel"></a>
+                    <a name="//apple_ref/swift/Method/cancel()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)DownloadTask(im)cancel">cancel()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -160,68 +159,15 @@ The value received from the PallyCon license server takes precedence over the AP
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>10 minutes</p>
+                        <p>Cancels current content download.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">TenMinute</span> <span class="o">=</span> <span class="mi">600</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalFifteenMinute"></a>
-                    <a name="//apple_ref/swift/Element/FifteenMinute" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalFifteenMinute">FifteenMinute</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>15 minutes</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">FifteenMinute</span> <span class="o">=</span> <span class="mi">900</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalDefault"></a>
-                    <a name="//apple_ref/swift/Element/Default" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalDefault">Default</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>0 minutes</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Default</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">cancel</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
