@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name  = 'PallyConFPSSDK'
-  s.version = '1.17.1'
+  s.version = '1.17.3'
   s.platform = :ios
   s.ios.deployment_target = "11.2"
   s.summary = 'PallyConDrm SDK for iOS'
