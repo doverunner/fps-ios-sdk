@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.ios.deployment_target = "12.0"
   s.summary = 'PallyConDrm SDK for iOS'
-  s.author = { 'InkaEntworks' => 'yhpark@inka.co.kr' }
+  s.author = { 'PallyCon' => 'yhpark@inka.co.kr' }
   s.homepage = 'https://github.com/inka-pallycon/pallycon-fps-ios-sdk'
   s.source = {
     :git => 'https://github.com/inka-pallycon/pallycon-fps-ios-sdk.git',
