@@ -18,7 +18,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PallyConFPSSDK 1.17.3 Docs
+          PallyConFPSSDK 2.0.0 Docs
         </a>
         
       </p>
@@ -51,7 +51,7 @@
                 <a class="nav-group-task-link" href="../Classes/DownloadTask.html">DownloadTask</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/PallyConCustomDataInfo.html">PallyConCustomDataInfo</a>
+                <a class="nav-group-task-link" href="../Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PallyConFPSSDK.html">PallyConFPSSDK</a>
@@ -60,7 +60,7 @@
                 <a class="nav-group-task-link" href="../Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a>
+                <a class="nav-group-task-link" href="../Classes/PallyConResult.html">PallyConResult</a>
               </li>
             </ul>
           </li>
@@ -68,10 +68,7 @@
             <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/DrmType.html">DrmType</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/PallyConSDKException.html">PallyConSDKException</a>
+                <a class="nav-group-task-link" href="../Enums/PallyConError.html">PallyConError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/RenewalInterval.html">RenewalInterval</a>
@@ -105,8 +102,8 @@
 
                 </div>
               </div>
-            <p>A class that receives remote AVURLAssets and downloads them locally. 
-You can create the instance by using (PallyConFPSSDK object).<code>createDownloadTask(url:contentId:optionalId:downloadDelegate:)</code>.
+            <p>A class that receives remote AVURLAssets and downloads them locally.
+You can create the instance by using (PallyConFPSSDK object).<code>createDownloadTask(config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:)</code>.
 You can also cancel current download using the same instance.</p>
 
           </div>
@@ -129,7 +126,7 @@ You can also cancel current download using the same instance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Starts downloading content. 
+                        <p>Starts downloading content.
 Previous download can be resumed if this method is called after <code><a href="../Classes/DownloadTask.html#/c:@M@PallyConFPSSDK@objc(cs)DownloadTask(im)cancel">cancel()</a></code> method without terminating the application.
 You need to check network availability before calling this method.</p>
 

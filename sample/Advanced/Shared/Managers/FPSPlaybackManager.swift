@@ -149,9 +149,10 @@ extension FPSPlaybackManager: URLSessionDelegate {
     
 }
 #endif
+    
 
 /// FPSPlaybackDelegate provides a common interface for FPSPlaybackManager to provide callbacks to its delegate.
-protocol FPSPlaybackDelegate: class {
+protocol FPSPlaybackDelegate: AnyObject {
     
     /// This is called when the internal AVPlayer in FPSPlaybackManager is ready to start playback.
     func playbackManager(_ playbackManager: FPSPlaybackManager, playerReadyToPlay player: AVPlayer)

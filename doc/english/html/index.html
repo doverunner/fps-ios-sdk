@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PallyConFPSSDK 1.17.3 Docs
+          PallyConFPSSDK 2.0.0 Docs
         </a>
         
       </p>
@@ -50,7 +50,7 @@
                 <a class="nav-group-task-link" href="Classes/DownloadTask.html">DownloadTask</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/PallyConCustomDataInfo.html">PallyConCustomDataInfo</a>
+                <a class="nav-group-task-link" href="Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PallyConFPSSDK.html">PallyConFPSSDK</a>
@@ -59,7 +59,7 @@
                 <a class="nav-group-task-link" href="Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a>
+                <a class="nav-group-task-link" href="Classes/PallyConResult.html">PallyConResult</a>
               </li>
             </ul>
           </li>
@@ -67,10 +67,7 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/DrmType.html">DrmType</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/PallyConSDKException.html">PallyConSDKException</a>
+                <a class="nav-group-task-link" href="Enums/PallyConError.html">PallyConError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/RenewalInterval.html">RenewalInterval</a>
@@ -95,7 +92,44 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <h1 id='version-1-17-3' class='heading'>Version 1.17.3</h1>
+            <h1 id='version-2-0-0' class='heading'>Version 2.0.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 2.0.0</strong></p>
+</blockquote>
+
+<p><font color="green"><strong><code>Update</code></strong></font>  <code><a href="Classes/PallyConFPSSDK.html">PallyConFPSSDK</a></code> API is updated.</p>
+
+<ul>
+<li>The 2.0 version API is added.</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="kt">Content</span> <span class="nv">config</span><span class="p">:</span> <span class="kt">PallyConDrmConfiguration</span><span class="p">)</span>
+  <span class="kd">func</span> <span class="nf">createDownloadTask</span><span class="p">(</span><span class="kt">Content</span> <span class="nv">config</span><span class="p">:</span> <span class="kt">PallyConDrmConfiguration</span><span class="p">,</span>
+                          <span class="nv">delegate</span><span class="p">:</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">?,</span>
+                          <span class="nv">downloadCellurAccess</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+                          <span class="nv">makeAssetDownloadTask</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                          <span class="nv">downloadMinimumBitrate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kt">String</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">DownloadTask</span><span class="p">?</span>
+  <span class="kd">func</span> <span class="nf">deleteLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+  <span class="kd">func</span> <span class="nf">getExpiryDateOfSavedLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+  <span class="kd">func</span> <span class="nf">getJsonforChromecastPlayback</span><span class="p">(</span><span class="nv">authData</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+</code></pre>
+
+<ul>
+<li>The SDK receives the information as <code><a href="Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a></code>.</li>
+<li>Receive the license acquisition result as <code><a href="Classes/PallyConResult.html">PallyConResult</a></code>.</li>
+<li>Delegate of SDK license, downloadTask is changed to Optional.</li>
+</ul>
+
+<blockquote>
+<p><strong>Note</strong></p>
+</blockquote>
+
+<ul>
+<li>When using the v2.0 SDK, there is a <code>Deprecated</code> API.</li>
+<li><code>Deprecated</code> APIs are valid for up to <code>6 months</code> from the v2.0 SDK release date, after which they may disappear without notice.</li>
+<li>Mixing 2.0 with existing SDKs and APIs can cause issues.</li>
+</ul>
+<h1 id='version-1-17-3' class='heading'>Version 1.17.3</h1>
 
 <blockquote>
 <p><strong>What&rsquo;s New in Version 1.17.3</strong></p>
@@ -365,10 +399,10 @@
                                <span class="nv">downloadDelegate</span><span class="p">:</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">DownloadTask</span>
 </code></pre>
 
-<p><code><font color="green">Update</font></code> <code>User ID</code> and <code>Key Rotation</code> information is updated in <code><a href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a></code> class.</p>
+<p><code><font color="green">Update</font></code> <code>User ID</code> and <code>Key Rotation</code> information is updated in <code>PallyConTokenInfo</code> class.</p>
 
 <ul>
-<li>The <code>User ID</code> and <code>Key Rotation</code> information added to the token is updated in the <code><a href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a></code> class.</li>
+<li>The <code>User ID</code> and <code>Key Rotation</code> information added to the token is updated in the <code>PallyConTokenInfo</code> class.</li>
 <li>The name is changed from the <code>token</code> property to the <code>policy</code> property.</li>
 </ul>
 <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConTokenInfo</span> <span class="p">{</span>

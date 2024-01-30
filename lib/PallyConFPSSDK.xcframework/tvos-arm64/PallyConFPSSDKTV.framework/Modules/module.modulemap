@@ -1,7 +1,7 @@
 framework module PallyConFPSSDKTV {
   umbrella header "PallyConFPSSDKTV.h"
-
   export *
+
   module * { export * }
 }
 

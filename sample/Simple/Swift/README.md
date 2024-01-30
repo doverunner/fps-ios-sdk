@@ -7,8 +7,8 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 
 ## Using the Sample
 
-- Build and run the sample on an actual device running iOS 9.0 or later using Xcode. The APIs demonstrated in this sample do not work on the iOS Simulator.
-- In viewDidLoad(), initialize PallyConFPSSDK, set license information in viewDidAppear(), and play AVFoundation.
+- Samples using the `PallyCon FPS SDK` run on real devices and do not work in the simulator.
+- In `viewDidLoad()`, initialize `PallyConFPSSDK`, set license information in `viewDidAppear()`, and play `AVFoundation`.
 - Check `Advanced Sample` to check the usage of various APIs in `PallyConFPSSDK`.
 
 
@@ -30,12 +30,14 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 - If you wish to add your own HLS streams to test with using this sample, you can do this by adding an entry into the `ViewController.swift` that is part of the Xcode Project.
 
     ~~~swift
-        // Service Integration Information
-        let pallyConSiteId      = "" 
-        let pallyConSiteKey     = ""
-        let pallyConToken       = ""
-        let contentPath         = ""
+    	// Service Integration Information
+      let CONTENT_URL     = ""
+      let CERTIFICATE_URL = ""
+      let CONTENT_ID      = ""
+      let PALLYCON_TOKEN  = ""
     ~~~
+
+- If you have registered an Apple certificate with PallyCon Server, please refer to the [PallyCon Guide](https://pallycon.com/docs/en/multidrm/clients/multidrm-native-integration/#fairplay) for the `CERTIFICATE_URL` value.
 
 
 
@@ -64,14 +66,6 @@ __ViewController.swift__:
 
 
 
-## Requirements
-
-### Runtime
-
-- iOS 9.0 or later
-
-
-
 ## PallyCon Multi-DRM Service
 
 PallyCon Multi-DRM Service description and inquiries are available at the address below.
@@ -91,7 +85,7 @@ PallyCon FairPlay Streaming(FPS) Simple 은 `PallyConFPSSDK` 프레임워크를 
 
 ## Using the Sample
 
-- 샘플은 Xcode에서 iOS 9.0 또는 이상의 실제 디바이스에서 빌드와 실행됩니다. 이 샘플에서 설명된 API는 iOS 시뮬레이터에서 작동하지 않습니다.
+- `PallyCon FPS SDK`를 사용하는 샘플은 실제 디바이스에서 실행되며 시뮬레이터에서 작동하지 않습니다.
 - viewDidLoad() 에서 `PallyConFPSSDK` 를 초기화하고 viewDidAppear()에서 라이선스 정보를 설정하고 `AVFoundation`을 통해 재생합니다.
 - `PallyConFPSSDK`에 다양한 API 사용을 확인하려면 `Advanced Sample`를 확인하시기 바랍니다.  
 
@@ -114,14 +108,14 @@ PallyCon FairPlay Streaming(FPS) Simple 은 `PallyConFPSSDK` 프레임워크를 
 - 만약 테스트 할 HLS 스트림이 있다면 Xcode 프로젝트에 `ViewController.swift` 파일에 콘텐츠 정보(HLS 스트림)와 서비스 연동 정보를 입력하면 됩니다.
 
     ~~~swift
-        // 서비스 연동 정보
-        let pallyConSiteId      = "" 
-        let pallyConSiteKey     = ""
-        let pallyConToken       = ""
-        let contentPath         = ""
+      // 서비스 연동 정보
+      let CONTENT_URL     = ""
+      let CERTIFICATE_URL = ""
+      let CONTENT_ID      = ""
+      let PALLYCON_TOKEN  = ""
     ~~~
 
-
+- PallyCon Server 에 Apple 인증서를 등록한 경우, `CERTIFICATE_URL` 값은 [PallyCon 가이드](https://pallycon.com/docs/ko/multidrm/clients/multidrm-native-integration/#fairplay) 를 참고하여 사용하시기 바랍니다.
 
 ### Application Transport Security
 
@@ -144,14 +138,6 @@ __ViewController.swift__:
 
 - `PallyConFPSSDK` 프레임워크를 활용하여 HLS 스트림을 어떻게 재생하는 메인 파일입니다. 
 - `서비스 연동 정보`와 `콘텐츠 정보(HLS)`를 입력하면 재생이 가능합니다.
-
-
-
-## Requirements
-
-### Runtime
-
-- iOS 9.0 or later
 
 
 

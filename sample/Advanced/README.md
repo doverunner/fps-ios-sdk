@@ -6,7 +6,7 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 
 ## Using the Sample
 
-- Build and run the sample on an actual device running iOS 9.0 or later using Xcode. The APIs demonstrated in this sample do not work on the iOS Simulator.
+- Build and run the sample on an actual device using Xcode. The APIs demonstrated in this sample do not work on the iOS Simulator.
 - This sample provides a list of HLS Streams that you can playback by tapping on the `UITableViewCell` corresponding to the stream. 
 - If you wish to manage the download of an HLS stream such as initiating an `DownloadTask`, canceling an already running `DownloadTask` or deleteting an already downloaded HLS stream from disk, you can accomplish this by tapping on the accessory button on the `UITableViewCell` corresponding to the stream you wish to manage.
 
@@ -19,10 +19,10 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 
 
 
-### Adding `PallyConFPSSDK.framework` or `PallyConFPSSDK.xcframework` to the Sample
+### Adding `PallyConFPSSDK.xcframework` to the Sample
 
-- Add `PallyConFPSSDK.framework` or `PallyConFPSSDK.xcframework`  to Xcode project target in `General` -> `Embedded Binaries`.
-- Add `PallyConFPSSDK.framework` or `PallyConFPSSDK.xcframework`  to the `Build Settings` -> `Search Paths` -> `Framework Search Paths` path.
+- Add `PallyConFPSSDK.xcframework`  to Xcode project target in `General` -> `Embedded Binaries`.
+- Add `PallyConFPSSDK.xcframework`  to the `Build Settings` -> `Search Paths` -> `Framework Search Paths` path.
 - Import the SDK header (`PallyConSDKManager.swift`).
 
 	~~~swift
@@ -39,19 +39,16 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 	~~~swift
 		OnlyStreaming	: If the HLS stream is not downloadable(persistent) content, OnlyStreaming is YES.
 		FPSCidKey	: Content ID of the HLS stream. If there is no token value, you must enter it.
-		FPSOptionalId	: HLS stream's OptionalID. No token value, enter if necessary.
 		ContentNameKey	: What the display name of the HLS stream should be in the sample.
 		ContentURL	: The URL of the HLS stream's master playlist.
 		FPSToken	: HLS stream's token.
 	~~~
-
+	
 - Enter the Service Integration Information in the`PallyConSDKManager.swift`file.
 
 	~~~swift
 		// Service Integration Information
-		let pallyConSiteId   = ""
-		let pallyConSiteKey  = ""
-		let pallyConUserId   = ""
+		let drmConfig = PallyConDrmConfiguration()
 	~~~
 
 
@@ -74,7 +71,7 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 
 ## Important Notes
 
-- This sample does not implement all the features of `PallyConFPSSDK.framework` or `PallyConFPSSDK.xcframework` and does not correspond to all app states.
+- This sample does not implement all the features of  `PallyConFPSSDK.xcframework` and does not correspond to all app states.
 
 
 
@@ -95,12 +92,6 @@ __FPSListManager.swift__:
 
 
 
-## Requirements
-
-### Runtime
-
-- iOS 9.0 or later
-
 ## PallyCon Multi-DRM Service
 
 PallyCon Multi-DRM Service description and inquiries are available at the address below.
@@ -120,7 +111,7 @@ PallyCon FairPlay Streaming(FPS) Advanced 는 `PallyConFPSSDK` 프레임워크�
 
 ## Using the Sample
 
-- 샘플은 Xcode에서 iOS 9.0 또는 이상의 실제 디바이스에서 빌드와 실행됩니다. 이 샘플에서 설명된 API는 iOS 시뮬레이터에서 작동하지 않습니다.
+- 샘플은 Xcode에서 실제 디바이스에서 빌드되어 실행됩니다. 이 샘플에서 설명된 API는 iOS 시뮬레이터에서 작동하지 않습니다.
 - 이 샘플은 스트림에 해당하는 `UITableViewCell`을 탭하여 재생할 수있는 HLS 스트림 목록을 제공합니다.
 - `DownloadTask`를 시작하거나, 이미 실행중인 `DownloadTask` 취소하거나 디스크에서 이미 다운로드 한 HLS 스트림을 삭제하는 것, 관리하고자하는 스트림에 해당하는 `UITableViewCell`의 액세서리 버튼을 탭하여이를 수행 할 수 있습니다.
 
@@ -133,10 +124,10 @@ PallyCon FairPlay Streaming(FPS) Advanced 는 `PallyConFPSSDK` 프레임워크�
 
 
 
-### 샘플에 `PallyConFPSSDK.framework` 또는 `PallyConFPSSDK.xcframework` 를 추가합니다.
+### 샘플에 `PallyConFPSSDK.xcframework` 를 추가합니다.
 
-- Xcode 프로젝트 타겟에 `General` -> `Embedded Binaries`에 `PallyConFPSSDK.framework` or `PallyConFPSSDK.xcframework` 을 추가합니다.
-- 추가한 `PallyConFPSSDK.framework` or `PallyConFPSSDK.xcframework` 경로를 `Build Settings` -> `Search Paths` -> `Framework Search Paths`에 입력합니다.
+- Xcode 프로젝트 타겟에 `General` -> `Embedded Binaries`에 `PallyConFPSSDK.xcframework` 을 추가합니다.
+- 추가한 `PallyConFPSSDK.xcframework` 경로를 `Build Settings` -> `Search Paths` -> `Framework Search Paths`에 입력합니다.
 - SDK 헤더를 `import` 합니다(`PallyConSDKManager.swift`).
 
 	~~~swift
@@ -152,19 +143,16 @@ PallyCon FairPlay Streaming(FPS) Advanced 는 `PallyConFPSSDK` 프레임워크�
 	~~~swift
 		OnlyStreaming	: HLS 스트림이 다운로드 가능한(persistent) 콘텐츠가 아니라면 YES 입니다.
 		FPSCidKey	: HLS 스트림의 콘텐츠 ID입니다. token 값이 없을 경우 입력해야 합니다.
-		FPSOptionalId	: HLS 스트림의 콘텐츠 OptionalId 입니다. token 값이 없고, 필요한 경우 입력합니다.
 		ContentNameKey	: HLS 스트림의 이름입니다. 앱 리스트에 표시됩니다.
 		ContentURL	: HLS 스트림 URL 입니다.
 		FPSToken	: HLS 스트림의 token 값 입니다.
 	~~~
-
+	
 - `PallyConSDKManager.swift` 파일에 서비스 연동 정보를 입력하면 됩니다.
 
 	~~~swift
 		// 서비스 연동 정보
-		let pallyConSiteId   = ""
-		let pallyConSiteKey  = ""
-		let pallyConUserId   = ""
+		let drmConfig = PallyConDrmConfiguration()
 	~~~
 
 
@@ -186,7 +174,7 @@ PallyCon FairPlay Streaming(FPS) Advanced 는 `PallyConFPSSDK` 프레임워크�
 
 ## Important Notes
 
-- 이 샘플이 `PallyConFPSSDK.framework` 또는 `PallyConFPSSDK.xcframework`  의 모든 기능을 구현되어 있지 않으며, 모든 앱 상태에 대응하지 않습니다.
+- 이 샘플이  `PallyConFPSSDK.xcframework`  의 모든 기능을 구현되어 있지 않으며, 모든 앱 상태에 대응하지 않습니다.
 
 
 
@@ -194,7 +182,7 @@ PallyCon FairPlay Streaming(FPS) Advanced 는 `PallyConFPSSDK` 프레임워크�
 
 __PallyConSDKManager.swift__: 
 
-- `PallyConFPSSDK.framework` 또는 `PallyConFPSSDK.xcframework` 를 이용하여 초기화, 라이선스 획득, 다운로드를 어떻게 하는지 보여주는 메인 클래스입니다.
+-  `PallyConFPSSDK.xcframework` 를 이용하여 초기화, 라이선스 획득, 다운로드를 어떻게 하는지 보여주는 메인 클래스입니다.
 - HLS 스트림 다운로드와 운영 방법을 알수 있습니다. 
 
 __FPSPlaybackKManager.swift__: 
@@ -206,12 +194,6 @@ __FPSListManager.swift__:
 - `Contents.plist`의 내용을 읽고 로드하는 클래스입니다.
 
 
-
-## Requirements
-
-### Runtime
-
--  iOS 9.0 or later
 
 
 

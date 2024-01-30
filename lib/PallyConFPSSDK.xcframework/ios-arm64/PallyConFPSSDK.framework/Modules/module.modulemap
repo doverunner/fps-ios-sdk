@@ -1,7 +1,7 @@
 framework module PallyConFPSSDK {
   umbrella header "PallyConFPSSDK.h"
-
   export *
+
   module * { export * }
 }
 

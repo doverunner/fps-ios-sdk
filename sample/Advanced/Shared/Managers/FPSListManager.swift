@@ -40,8 +40,8 @@ class FPSListManager: NSObject {
             guard let contentName = entry["ContentNameKey"] as? String,
                 let contentPlaylistURLString = entry["ContentURL"] as? String else { continue }
             
+            let keyId = (entry[FPSContent.Keys.keyId] as? String) ?? ""
             let contentId = (entry[FPSContent.Keys.cId] as? String) ?? ""
-            let optionalId = (entry[FPSContent.Keys.optionalId] as? String) ?? ""
             let token = (entry[FPSContent.Keys.token] as? String) ?? ""
             let liveKeyRotation = (entry[FPSContent.Keys.liveKeyRotation] as? Bool) ?? false
             let chromcastUrlPath = (entry[FPSContent.Keys.chromcastPlayUrlPath] as? String) ?? ""
@@ -49,7 +49,7 @@ class FPSListManager: NSObject {
 
             var fpsContent: FPSContent!
             // Get the FPSContent from
-            if #available(iOS 11.0, *), let fpsContent = PallyConSDKManager.sharedManager.localFpsContentForStream(with: contentId, optionalId: optionalId, token: token, contentName: contentName) {
+            if #available(iOS 10.0, *), let fpsContent = PallyConSDKManager.sharedManager.localFpsContentForStream(with: contentId, token: token, contentName: contentName) {
                 self.contents.append(fpsContent)
                 continue
             } else {
@@ -59,7 +59,7 @@ class FPSListManager: NSObject {
                 }
                 var urlAsset: AVURLAsset
                 if mainm3u8Scheme {
-                    guard let mainm3u8SchemeUrl = replaceURLWithScheme("https", contentPlaylistURL ) else {
+                    guard let mainm3u8SchemeUrl = replaceURLWithScheme("mainm3u8", contentPlaylistURL ) else {
                         continue
                     }
                     urlAsset = AVURLAsset(url: mainm3u8SchemeUrl)
@@ -67,7 +67,7 @@ class FPSListManager: NSObject {
                     urlAsset = AVURLAsset(url: contentPlaylistURL)
                 }
 
-                fpsContent = FPSContent(contentId, optionalId, token, liveKeyRotation, contentName, urlAsset, chromcastUrlPath, nil)
+                fpsContent = FPSContent(keyId, contentId, token, liveKeyRotation, contentName, urlAsset, chromcastUrlPath, nil)
             }
             
             if let isOnlyStreaming = entry["OnlyStreaming"] as? Bool, isOnlyStreaming {
@@ -88,7 +88,7 @@ class FPSListManager: NSObject {
         return URL(string: newUrlString)
     }
     
-    // MARK: FPSContent access
+    // MARK: FPSContent access    
     /// Returns the number of FPSContent.
     func numberOfContent(section: Int) -> Int {
         if section == 0 {

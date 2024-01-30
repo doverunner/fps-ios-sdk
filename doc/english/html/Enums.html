@@ -18,7 +18,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PallyConFPSSDK 1.17.3 Docs
+          PallyConFPSSDK 2.0.0 Docs
         </a>
         
       </p>
@@ -51,7 +51,7 @@
                 <a class="nav-group-task-link" href="Classes/DownloadTask.html">DownloadTask</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/PallyConCustomDataInfo.html">PallyConCustomDataInfo</a>
+                <a class="nav-group-task-link" href="Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PallyConFPSSDK.html">PallyConFPSSDK</a>
@@ -60,7 +60,7 @@
                 <a class="nav-group-task-link" href="Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a>
+                <a class="nav-group-task-link" href="Classes/PallyConResult.html">PallyConResult</a>
               </li>
             </ul>
           </li>
@@ -68,10 +68,7 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/DrmType.html">DrmType</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/PallyConSDKException.html">PallyConSDKException</a>
+                <a class="nav-group-task-link" href="Enums/PallyConError.html">PallyConError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/RenewalInterval.html">RenewalInterval</a>
@@ -108,9 +105,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14PallyConFPSSDK0aB12SDKExceptionO"></a>
-                    <a name="//apple_ref/swift/Enum/PallyConSDKException" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14PallyConFPSSDK0aB12SDKExceptionO">PallyConSDKException</a>
+                    <a name="/s:14PallyConFPSSDK0aB5ErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/PallyConError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB5ErrorO">PallyConError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -120,46 +117,13 @@
                       <div class="abstract">
                         <p>List of errors which can occur in PallyCon FPS SDK</p>
 
-                        <a href="Enums/PallyConSDKException.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/PallyConError.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PallyConSDKException</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@PallyConFPSSDK@E@DrmType"></a>
-                    <a name="//apple_ref/swift/Enum/DrmType" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@DrmType">DrmType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>DRM type in token.</p>
-<pre class="highlight swift"><code><span class="k">case</span> <span class="n">playReady</span> <span class="o">=</span> <span class="mi">0</span>     <span class="c1">/// Microsoft PlayReady DRM</span>
-<span class="k">case</span> <span class="n">wideVine</span>          <span class="c1">/// Google WideVine DRM</span>
-<span class="k">case</span> <span class="n">fairPlay</span>          <span class="c1">/// Apple FairPlay Streaming DRM</span>
-</code></pre>
-
-                        <a href="Enums/DrmType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DrmType</span> <span class="p">:</span> <span class="kt">Int8</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PallyConError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
 
                         </div>
                       </div>

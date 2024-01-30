@@ -15,20 +15,14 @@ import PallyConFPSSDKTV
 
 
 struct FPSContent {
+    
+    var keyId: String
     var contentId: String
-    
-    var optionalId: String
-    
     var token: String
-    
     var liveKeyRotation: Bool
-    
     var contentName: String
-    
     var urlAsset: AVURLAsset
-    
     var chromcastPlayUrlPath: String
-    
     var downloadDelegate: Any?
     
     init(_ contentId: String,
@@ -36,29 +30,19 @@ struct FPSContent {
          _ contentName: String,
          _ urlAsset: AVURLAsset
          ) {
-        self.init(contentId, "", token, false, contentName, urlAsset, "", nil)
+        self.init("", contentId, token, false, contentName, urlAsset, "", nil)
     }
     
-    
-    init(_ contentId: String,
-         _ token: String,
-         _ optionalId: String,
-         _ contentName: String,
-         _ urlAsset: AVURLAsset
-         ) {
-        self.init(contentId, optionalId, token, false, contentName, urlAsset, "", nil)
-    }
-    
-    init(_ contentId: String,
-         _ optionalId: String,
+    init(_ keyId: String,
+         _ contentId: String,
          _ token: String,
          _ liveKeyRotation: Bool,
          _ contentName: String,
          _ urlAsset: AVURLAsset,
          _ chromcastPlayUrlPath: String,
          _ downloadDelegate: Any?) {
+        self.keyId = keyId
         self.contentId = contentId
-        self.optionalId = optionalId
         self.token = token
         self.liveKeyRotation = liveKeyRotation
         self.contentName = contentName
@@ -90,10 +74,10 @@ extension FPSContent {
 extension FPSContent {
     struct Keys {
         
+        static let keyId = "KeyId"
+        
         static let cId = "FPSCidKey"
-        
-        static let optionalId = "FPSOptionalId"
-        
+       
         static let token = "FPSToken"
         
         static let liveKeyRotation = "FPSLiveKeyRotation"
@@ -108,6 +92,6 @@ extension FPSContent {
         
         static let chromcastPlayUrlPath = "ChromcastPlayUrlPath"
         
-        static let mainm3u8Scheme = "mainm3u8Scheme"
+        static let mainm3u8Scheme = "Mainm3u8Scheme"
     }
 }

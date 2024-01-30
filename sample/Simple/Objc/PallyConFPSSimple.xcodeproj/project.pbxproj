@@ -20,24 +20,11 @@
 		B4AFA90B2075E329005AF13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4AFA90A2075E329005AF13A /* Assets.xcassets */; };
 		B4AFA90E2075E329005AF13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4AFA90C2075E329005AF13A /* LaunchScreen.storyboard */; };
 		B4AFA9112075E329005AF13A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AFA9102075E329005AF13A /* main.m */; };
-		C11729742717336900F6FE10 /* PallyConFPSSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; };
-		C11729752717336900F6FE10 /* PallyConFPSSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C117297D2717338400F6FE10 /* PallyConFPSSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; };
 		C117297E2717338400F6FE10 /* PallyConFPSSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C11729762717336900F6FE10 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C11729752717336900F6FE10 /* PallyConFPSSDK.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C117297F2717338400F6FE10 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +36,19 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C1BBD9912AB1C1F800D1C319 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4289E52C24AAE25A00B24A96 /* PallyConFPSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PallyConFPSSDK.framework; path = ../../../../../temp/unity/lib/PallyConFPSSDK.framework; sourceTree = "<group>"; };
 		88A14E58220D653A00354DBE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B49AA6BF21352425000D95A6 /* PallyConFPSSimpleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PallyConFPSSimpleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49AA6C22135244D000D95A6 /* PallyConFPSSimpleTV-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PallyConFPSSimpleTV-Info.plist"; sourceTree = "<group>"; };
@@ -84,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C11729742717336900F6FE10 /* PallyConFPSSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */,
-				4289E52C24AAE25A00B24A96 /* PallyConFPSSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,7 +168,7 @@
 				B4AFA8FA2075E329005AF13A /* Sources */,
 				B4AFA8FB2075E329005AF13A /* Frameworks */,
 				B4AFA8FC2075E329005AF13A /* Resources */,
-				C11729762717336900F6FE10 /* Embed Frameworks */,
+				C1BBD9912AB1C1F800D1C319 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -467,7 +461,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PallyConFPSSimple/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +486,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PallyConFPSSimple/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

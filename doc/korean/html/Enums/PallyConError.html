@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PallyConHLSInfo Class Reference</title>
+    <title>PallyConError Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -11,9 +11,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/PallyConHLSInfo" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Enum/PallyConError" class="dashAnchor"></a>
 
-    <a title="PallyConHLSInfo Class Reference"></a>
+    <a title="PallyConError Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -30,7 +30,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">PallyConFPSSDK Reference</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      PallyConHLSInfo Class Reference
+      PallyConError Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -92,18 +92,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>PallyConHLSInfo</h1>
+            <h1>PallyConError</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConHLSInfo</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PallyConError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
 
                 </div>
               </div>
-            <p>You can see the size of each HLS content track.
-The content size is entered in the m3u8 file with the tag <code>PallyCon Custome Info=</code>.</p>
+            <p>List of errors which can occur in PallyCon FPS SDK</p>
 
           </div>
         </section>
@@ -115,9 +112,9 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)init:"></a>
-                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)init:">init(_:<wbr>)</a>
+                    <a name="/s:14PallyConFPSSDK0aB5ErrorO8databaseyACSS_tcACmF"></a>
+                    <a name="//apple_ref/swift/Element/database(comment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB5ErrorO8databaseyACSS_tcACmF">database(comment:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -125,36 +122,16 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates DownloadTask instance for content download.</p>
+                        <p>DataBase error</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">hlsUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">database</span><span class="p">(</span><span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>hlsUrl</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>URL of content. (HLS m3u8 URL)</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -162,9 +139,9 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getAllTrackInfo"></a>
-                    <a name="//apple_ref/swift/Method/getAllTrackInfo()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getAllTrackInfo">getAllTrackInfo()</a>
+                    <a name="/s:14PallyConFPSSDK0aB5ErrorO6serveryACSi_SStcACmF"></a>
+                    <a name="//apple_ref/swift/Element/server(errorCode:comment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB5ErrorO6serveryACSi_SStcACmF">server(errorCode:<wbr>comment:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -172,21 +149,16 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns size information for all tracks in an m3u8 file.</p>
+                        <p>Errors received from PallyCon Server</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAllTrackInfo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">server</span><span class="p">(</span><span class="nv">errorCode</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>All track information or null value is returned.</p>
                       </div>
                     </section>
                   </div>
@@ -194,9 +166,9 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getVideoResolutionSize"></a>
-                    <a name="//apple_ref/swift/Method/getVideoResolutionSize()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getVideoResolutionSize">getVideoResolutionSize()</a>
+                    <a name="/s:14PallyConFPSSDK0aB5ErrorO7networkyACSi_SStcACmF"></a>
+                    <a name="//apple_ref/swift/Element/network(errorCode:comment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB5ErrorO7networkyACSi_SStcACmF">network(errorCode:<wbr>comment:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -204,21 +176,16 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the size by resolution in the video track.</p>
+                        <p>Network error</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getVideoResolutionSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">network</span><span class="p">(</span><span class="nv">errorCode</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Returns the video size by resolution or null.</p>
                       </div>
                     </section>
                   </div>
@@ -226,9 +193,9 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getVideoBitrateSiz"></a>
-                    <a name="//apple_ref/swift/Method/getVideoBitrateSiz()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getVideoBitrateSiz">getVideoBitrateSiz()</a>
+                    <a name="/s:14PallyConFPSSDK0aB5ErrorO6systemyACSi_SStcACmF"></a>
+                    <a name="//apple_ref/swift/Element/system(errorCode:comment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB5ErrorO6systemyACSi_SStcACmF">system(errorCode:<wbr>comment:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -236,21 +203,16 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the size by bitrate in the video track.</p>
+                        <p>Key System Error</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getVideoBitrateSiz</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">system</span><span class="p">(</span><span class="nv">errorCode</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Returns the video size per bitrate or null.</p>
                       </div>
                     </section>
                   </div>
@@ -258,9 +220,9 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getHLSPallyConMeta"></a>
-                    <a name="//apple_ref/swift/Method/getHLSPallyConMeta()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getHLSPallyConMeta">getHLSPallyConMeta()</a>
+                    <a name="/s:14PallyConFPSSDK0aB5ErrorO8downloadyACSi_SStcACmF"></a>
+                    <a name="//apple_ref/swift/Element/download(errorCode:comment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB5ErrorO8downloadyACSi_SStcACmF">download(errorCode:<wbr>comment:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -268,21 +230,16 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>PallyCon Size Info Meta.</p>
+                        <p>download Errors.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getHLSPallyConMeta</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">download</span><span class="p">(</span><span class="nv">errorCode</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Return Meta Informatrion or null.</p>
                       </div>
                     </section>
                   </div>
@@ -290,9 +247,9 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getAudioLanguageSize"></a>
-                    <a name="//apple_ref/swift/Method/getAudioLanguageSize()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getAudioLanguageSize">getAudioLanguageSize()</a>
+                    <a name="/s:14PallyConFPSSDK0aB5ErrorO6failedyACSi_SStcACmF"></a>
+                    <a name="//apple_ref/swift/Element/failed(errorCode:comment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB5ErrorO6failedyACSi_SStcACmF">failed(errorCode:<wbr>comment:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -300,21 +257,16 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the size for each language in the audio track.</p>
+                        <p>Various failure errors.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAudioLanguageSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">failed</span><span class="p">(</span><span class="nv">errorCode</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>For each language, return the audio size or null.</p>
                       </div>
                     </section>
                   </div>
@@ -322,9 +274,9 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getSubtitleLanguageSize"></a>
-                    <a name="//apple_ref/swift/Method/getSubtitleLanguageSize()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)getSubtitleLanguageSize">getSubtitleLanguageSize()</a>
+                    <a name="/s:14PallyConFPSSDK0aB5ErrorO7invalidyACSS_tcACmF"></a>
+                    <a name="//apple_ref/swift/Element/invalid(comment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB5ErrorO7invalidyACSS_tcACmF">invalid(comment:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -332,21 +284,16 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the size for each language in the text track.</p>
+                        <p>Various invalid errors.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getSubtitleLanguageSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">invalid</span><span class="p">(</span><span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Return subtitle size for each language or null.</p>
                       </div>
                     </section>
                   </div>
@@ -354,9 +301,9 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)extractPallyConHLSInfoAndReturnError:"></a>
-                    <a name="//apple_ref/swift/Method/extractPallyConHLSInfo()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo(im)extractPallyConHLSInfoAndReturnError:">extractPallyConHLSInfo()</a>
+                    <a name="/s:14PallyConFPSSDK0aB5ErrorO7unknownyACSi_SStcACmF"></a>
+                    <a name="//apple_ref/swift/Element/unknown(errorCode:comment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB5ErrorO7unknownyACSi_SStcACmF">unknown(errorCode:<wbr>comment:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -364,15 +311,14 @@ The content size is entered in the m3u8 file with the tag <code>PallyCon Custome
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Extracts content size information from .m3u8 files.</p>
+                        <p>Unknow error</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">extractPallyConHLSInfo</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">unknown</span><span class="p">(</span><span class="nv">errorCode</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

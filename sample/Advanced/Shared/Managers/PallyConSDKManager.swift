@@ -22,9 +22,8 @@ import UIKit
 // This is customer-specific information.
 // you have to set customer information.
 // Shared -> Resources -> Contents.plist, enter content information.
-let pallyConSiteId = ""
-let pallyConSiteKey = ""
-let pallyConUserId = ""
+
+let CERTIFICATE_URL = ""
 
 let FPSDownloadProgressNotification: NSNotification.Name = NSNotification.Name(rawValue: "FPSDownloadProgressNotification")
 let FPSDownloadStateChangedNotification: NSNotification.Name = NSNotification.Name(rawValue: "FPSDownloadStateChangedNotification")
@@ -36,15 +35,7 @@ class PallyConSDKManager: NSObject {
      
      // PallyConFPSSDK initalize
      lazy var pallyConFPSSDK: PallyConFPSSDK? = {
-          do {
-               return try PallyConFPSSDK(siteId: pallyConSiteId, siteKey: pallyConSiteKey, fpsLicenseDelegate: self)
-          } catch PallyConSDKException.DatabaseProcessError(let message) {
-               print("PallyConFPSSDK initilize failed.\n\(message)")
-          } catch {
-               print("Error: \(error).\nUnkown Error")
-          }
-          
-          return nil
+          return PallyConFPSSDK()
      }()
      
      static let baseDownloadURL: URL = URL(fileURLWithPath: NSHomeDirectory())
@@ -53,40 +44,40 @@ class PallyConSDKManager: NSObject {
      fileprivate var downloadStatusMap = [String : String]()
      
      // Get fps content infomation on local
-     @available(iOS 11.0, *)
-     func localFpsContentForStream(with contentId: String, optionalId: String, token: String, contentName: String ) -> FPSContent? {
+     @available(iOS 10.0, *)
+     func localFpsContentForStream(with contentId: String, token: String, contentName: String ) -> FPSContent? {
           let userDefaults = UserDefaults.standard
           guard let localFileLocation = userDefaults.value(forKey: contentId) as? String else { return nil }
           
           let url = PallyConSDKManager.baseDownloadURL.appendingPathComponent(localFileLocation)
           let urlAsset = AVURLAsset(url: url)
           
-          let fpsContent = FPSContent(contentId, token, optionalId, contentName, urlAsset)
+          let fpsContent = FPSContent(contentId, token, contentName, urlAsset)
           
           return fpsContent
      }
      
      #if os(iOS)
      // download start
-     @available(iOS 11.0, *)
+     @available(iOS 11.2, *)
      func downloadStream(for fpsContent: FPSContent) {
           var content: FPSContent? = activeDownloadsMap[fpsContent.contentId]
           if content == nil {
                content = fpsContent
-               content!.downloadDelegate = FPSDownloaderDelegate(url: fpsContent.urlAsset.url, contentId: fpsContent.contentId, optionalId: fpsContent.optionalId, token: fpsContent.token)
-               activeDownloadsMap[content!.contentId] = content
+               content!.downloadDelegate = FPSDownloaderDelegate(url: fpsContent.urlAsset.url, keyId: fpsContent.keyId, contentId: fpsContent.contentId, token: fpsContent.token)
+                activeDownloadsMap[content!.contentId] = content
           }
           downloadStatusMap[content!.contentId] = FPSContent.DownloadState.downloading.rawValue
           
-          let task: FPSDownloaderDelegate = content!.downloadDelegate as! FPSDownloaderDelegate
-          task.startDownload()
-          
           let userInfo = [FPSContent.Keys.cId: fpsContent.contentId, FPSContent.Keys.downloadState: FPSContent.DownloadState.downloading.rawValue]
           NotificationCenter.default.post(name: FPSDownloadStateChangedNotification, object: nil, userInfo:  userInfo)
+          
+          let task: FPSDownloaderDelegate = content!.downloadDelegate as! FPSDownloaderDelegate
+          task.startDownload()
      }
      
      // pause download
-     @available(iOS 11.0, *)
+     @available(iOS 11.2, *)
      func pauseDownload(for fpsContent: FPSContent) {
           var task: FPSDownloaderDelegate?
           
@@ -105,7 +96,7 @@ class PallyConSDKManager: NSObject {
      }
      
      // cancel download
-     @available(iOS 11.0, *)
+     @available(iOS 11.2, *)
      func cancelDownload(for fpsContent: FPSContent) {
           var task: FPSDownloaderDelegate?
           
@@ -203,14 +194,36 @@ class PallyConSDKManager: NSObject {
  Get a error acquiring license
  */
 extension PallyConSDKManager: PallyConFPSLicenseDelegate {
-     func fpsLicenseDidSuccessAcquiring(contentId: String) {
-          print("acquireLicense sucesss. contents ID: \(contentId)")
-     }
      
-     func fpsLicense(contentId: String, didFailWithError error: Error) {
-          print("acquireLicense fail. contents ID: \(contentId), License Error: \(error)")
-          let userInfo: [String:Any] = [FPSContent.Keys.cId: contentId, FPSContent.Keys.acquireLicenseFail: error]
-          NotificationCenter.default.post(name: FPSAcquireLicenseFailNotification, object: nil, userInfo:  userInfo)
+     func license(result: PallyConResult) {
+          print("---------------------------- License Result ")
+          print("Content ID : \(result.contentId)")
+          print("Key ID     : \(String(describing: result.keyId))")
+          print("Expiry Date: \(String(describing: result.playbackExpiry))")
+          if result.isSuccess == false {
+               print("Error : \(String(describing: result.error?.localizedDescription))")
+               if let error = result.error {
+                    switch error {
+                    case .database(comment: let comment):
+                         print(comment)
+                    case .server(errorCode: let errorCode, comment: let comment):
+                         print("code : \(errorCode), comment: \(comment)")
+                    case .network(errorCode: let errorCode, comment: let comment):
+                         print("code : \(errorCode), comment: \(comment)")
+                    case .system(errorCode: let errorCode, comment: let comment):
+                         print("code : \(errorCode), comment: \(comment)")
+                    case .failed(errorCode: let errorCode, comment: let comment):
+                         print("code : \(errorCode), comment: \(comment)")
+                    case .unknown(errorCode: let errorCode, comment: let comment):
+                         print("code : \(errorCode), comment: \(comment)")
+                    case .invalid(comment: let comment):
+                         print("comment: \(comment)")
+                    default:
+                         print("comment: \(error)")
+                        break
+                    }
+               }
+          }
      }
      
      func replaceURLWithScheme(_ scheme: String, _ url: URL) -> URL? {
@@ -221,50 +234,57 @@ extension PallyConSDKManager: PallyConFPSLicenseDelegate {
          return URL(string: newUrlString)
      }
      
-     func resourceLoaderRequest(_ requestResource: AVAssetResourceLoadingRequest) -> Bool {
+     func resourceLoaderCallback(requestResource: AVAssetResourceLoadingRequest) -> Bool {
           // This is an example for applying `PallyConFPSSDK.mainm3u8Scheme` and testing the playback.
-          guard let originalUrl = requestResource.request.url?.absoluteString else {
-               return false
-          }
+          guard let originalUrl = requestResource.request.url?.absoluteString else { return false }
           
           guard let changeUrl = replaceURLWithScheme("https", URL(string: originalUrl)! ) else {
-               let error = PallyConSDKException.InvalidParameter("replace URL scheme error")
+               let error = PallyConError.invalid(comment: "replace URL scheme error")
                requestResource.finishLoading(with: error)
                return false
           }
+          print("---------> originalUrl : \(originalUrl)")
+          print("---------> changeUrl   : \(changeUrl)")
           
           guard let dataRequest = requestResource.dataRequest else {
-               let error = PallyConSDKException.InvalidParameter("loadingRequest.dataRequest error")
+               let error = PallyConError.invalid(comment: "loadingRequest.dataRequest error")
                requestResource.finishLoading(with: error)
                return false
           }
-          let task = URLSession.shared.dataTask(with: changeUrl) {
-                      [weak self] (data, response, error) in
-                      guard error == nil,
-                          let data = data else {
-                              requestResource.finishLoading(with: error)
-                              return
-                      }
+
+          let task = URLSession.shared.dataTask(with: changeUrl) { (data, response, error) in
+               guard error == nil, let data = data else {
+                    requestResource.finishLoading(with: error)
+                    return
+               }
+
+               guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {return}
+               let successRange = 200..<300
+               guard successRange.contains(statusCode) else {
+                    // handle response error
+                    print("http status code \(statusCode)")
+                    return
+               }
+               
                guard let string = String(data: data, encoding: .utf8) else { return }
-               print("download m3u8 : \(string)")
                dataRequest.respond(with: string.data(using: .utf8)!)
                requestResource.finishLoading()
+
           }
           task.resume()
           
           return true
      }
      
-     /*
-     func contentKeyRequest(keyData: Data, requestData: [String:String]) -> Data? {
-          
-          guard let url = URL(string: "https://license.pallycon.com/ri/licenseManager.do") else {
+
+     func licenseCallback(with spcData: Data, httpHeader header: [String : String]?) -> Data? {
+          guard let url = URL(string: "Request URL") else {
               return Data()
           }
           var request = URLRequest(url: url)
           request.httpMethod = "POST"
-          request.allHTTPHeaderFields = requestData
-          request.httpBody = keyData
+          request.allHTTPHeaderFields = header
+          request.httpBody = spcData
                     
           var task: URLSessionDataTask?
           
@@ -294,7 +314,8 @@ extension PallyConSDKManager: PallyConFPSLicenseDelegate {
           _ = semaphore.wait(timeout: .distantFuture)
           
           return returnData.data
-     }*/
+     }
+
 }
 
 extension UIApplication {

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OpensslObject.h"
+//#import "OpensslObject.h"
 
 //! Project version number for PallyConFPSSDK.
 FOUNDATION_EXPORT double PallyConFPSSDKVersionNumber;

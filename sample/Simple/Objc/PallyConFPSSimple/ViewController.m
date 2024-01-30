@@ -11,11 +11,12 @@
 
 // This is customer-specific information.
 // you have to set customer information.
-#define PALLYCON_SITE_ID        @""
-#define PALLYCON_SITE_KEY       @""
-#define PALLYCON_TOKEN          @""
-#define CONTENT_PATH            @""
+#define CERTIFICATE_URL     @""
+#define CONTENT_ID          @""
+#define PALLYCON_TOKEN      @""
+#define CONTENT_URL         @""
 
+@protocol PallyConFPSLicenseDelegate;
 
 @interface ViewController ()
 
@@ -28,15 +29,16 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     // 1. initialize a PallyConFPS SDK.
-    _fpsSDK = [[PallyConFPSSDK alloc] initWithSiteId:PALLYCON_SITE_ID siteKey:PALLYCON_SITE_KEY fpsLicenseDelegate:self error:nil];
+    _fpsSDK = [[PallyConFPSSDK alloc] init];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    NSURL *contentUrl = [NSURL URLWithString:CONTENT_PATH];
+    NSURL *contentUrl = [NSURL URLWithString:CONTENT_URL];
     AVURLAsset *urlAsset = [[AVURLAsset alloc] initWithURL:contentUrl options:nil];
 
     // 2. Set parameters required for FPS content playback.
-    [_fpsSDK prepareWithUrlAsset:urlAsset token:PALLYCON_TOKEN licenseUrl:@"" appleCertUrl:@"" licenseRenewalInterval:RenewalIntervalDefault];
+    PallyConDrmConfiguration* config = [[PallyConDrmConfiguration alloc] initWithAvURLAsset:urlAsset contentId:CONTENT_ID authData:PALLYCON_TOKEN certificateUrl:CERTIFICATE_URL delegate:self licenseUrl:nil keyIdList:nil licenseHttpHeader:nil licenseCookies:nil allowsKeyRotation:false renewalInterval:0];
+    [_fpsSDK prepareWithContent:config];
     
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:urlAsset];
     AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
@@ -50,25 +52,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)fpsLicenseDidSuccessAcquiringWithContentId:(NSString * _Nonnull)contentId {
-    NSLog(@"fpsLicenseDidSuccessAcquiringWithContentId (%@)", contentId);
-}
-
-- (void)fpsLicenseWithContentId:(NSString * _Nonnull)contentId didFailWithError:(NSError * _Nonnull)error {
-    NSLog(@"fpsLicenseWithContentId. Error Message (%@)", error.localizedDescription);
+- (void)licenseWithResult:(PallyConResult *)result {
+    NSLog(@"%@",result.contentId);
+    NSLog(@"%@",result.playbackExpiry);
+    if (result.isSuccess == false) {
+        NSLog(@"%@", [result getPallyConErrorForObjC]);
+    }
 }
 
 /*
-- (NSData *)contentKeyRequestWithKeyData:(NSData *)keyData requestData:(NSDictionary<NSString *,NSString *> *)requestData {
-        
+- (NSData *)licenseCallbackWith:(NSData *)spcData httpHeader:(NSDictionary<NSString *,NSString *> *)header {
     NSString *url = @"https://license.pallycon.com/ri/licenseManager.do";
    
     NSHTTPURLResponse *response;
     __strong NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]
                                                                     cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
     [request setHTTPMethod:@"POST"];
-    [request setAllHTTPHeaderFields:requestData];
-    [request setHTTPBody:keyData];
+    [request setAllHTTPHeaderFields:header];
+    [request setHTTPBody:spcData];
     
     NSData *rcvData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
     NSLog(@"Status Code : %d",  (int)response.statusCode);

@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PallyConFPSSDK 1.17.3 Docs
+          PallyConFPSSDK 2.0.0 Docs
         </a>
         
       </p>
@@ -50,7 +50,7 @@
                 <a class="nav-group-task-link" href="Classes/DownloadTask.html">DownloadTask</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/PallyConCustomDataInfo.html">PallyConCustomDataInfo</a>
+                <a class="nav-group-task-link" href="Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PallyConFPSSDK.html">PallyConFPSSDK</a>
@@ -59,7 +59,7 @@
                 <a class="nav-group-task-link" href="Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a>
+                <a class="nav-group-task-link" href="Classes/PallyConResult.html">PallyConResult</a>
               </li>
             </ul>
           </li>
@@ -67,10 +67,7 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/DrmType.html">DrmType</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/PallyConSDKException.html">PallyConSDKException</a>
+                <a class="nav-group-task-link" href="Enums/PallyConError.html">PallyConError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/RenewalInterval.html">RenewalInterval</a>
@@ -95,7 +92,44 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <h1 id='version-1-17-3' class='heading'>Version 1.17.3</h1>
+            <h1 id='version-2-0-0' class='heading'>Version 2.0.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 2.0.0</strong></p>
+</blockquote>
+
+<p><font color="green"><strong><code>Update</code></strong></font>  <code><a href="Classes/PallyConFPSSDK.html">PallyConFPSSDK</a></code> API 가 업데이트 됩니다.</p>
+
+<ul>
+<li>2.0 버전 API가 추가됩니다.</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="kt">Content</span> <span class="nv">config</span><span class="p">:</span> <span class="kt">PallyConDrmConfiguration</span><span class="p">)</span>
+  <span class="kd">func</span> <span class="nf">createDownloadTask</span><span class="p">(</span><span class="kt">Content</span> <span class="nv">config</span><span class="p">:</span> <span class="kt">PallyConDrmConfiguration</span><span class="p">,</span>
+                          <span class="nv">delegate</span><span class="p">:</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">?,</span>
+                          <span class="nv">downloadCellurAccess</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+                          <span class="nv">makeAssetDownloadTask</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                          <span class="nv">downloadMinimumBitrate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kt">String</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">DownloadTask</span><span class="p">?</span>
+  <span class="kd">func</span> <span class="nf">deleteLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+  <span class="kd">func</span> <span class="nf">getExpiryDateOfSavedLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+  <span class="kd">func</span> <span class="nf">getJsonforChromecastPlayback</span><span class="p">(</span><span class="nv">authData</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+</code></pre>
+
+<ul>
+<li>SDK가 <code><a href="Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a></code>으로 정보를 받습니다.</li>
+<li>라이선스 획득 결과를 <code><a href="Classes/PallyConResult.html">PallyConResult</a></code>로 알수 있습니다.</li>
+<li>SDK <code><a href="Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicenseDelegate</a></code>가 Optional로 변경됩니다.</li>
+</ul>
+
+<blockquote>
+<p><strong>Note</strong></p>
+</blockquote>
+
+<ul>
+<li>v2.0 SDK 사용시 <code>Deprecated</code> API가 있습니다.</li>
+<li><code>Deprecated</code> API는 2.0이 배포 날짜에서 6개월까지 유효하며, 이후 예고 없이 사라질수 있습니다.</li>
+<li>기존 SDK와 API와 2.0 버전의 API를 혼용하여 사용하면 문제가 발생할 수 있습니다.</li>
+</ul>
+<h1 id='version-1-17-3' class='heading'>Version 1.17.3</h1>
 
 <blockquote>
 <p><strong>What&rsquo;s New in Version 1.17.3</strong></p>
@@ -365,10 +399,10 @@
                                <span class="nv">downloadDelegate</span><span class="p">:</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">DownloadTask</span>
 </code></pre>
 
-<p><code><font color="green">Update</font></code> <code><a href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a></code>  클래스에 <code>User ID</code>와 <code>Key Rotation</code> 정보가 반영됩니다.</p>
+<p><code><font color="green">Update</font></code> <code>PallyConTokenInfo</code>  클래스에 <code>User ID</code>와 <code>Key Rotation</code> 정보가 반영됩니다.</p>
 
 <ul>
-<li><code>Token</code> 에 추가된 <code>User ID</code>와 <code>Key Rotation</code> 정보를  <code><a href="Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a></code> 클래스에 반영됩니다.</li>
+<li><code>Token</code> 에 추가된 <code>User ID</code>와 <code>Key Rotation</code> 정보를  <code>PallyConTokenInfo</code> 클래스에 반영됩니다.</li>
 <li><code>token</code> 프로퍼티에서 <code>policy</code> 프로퍼티로 이름이 변경됩니다.</li>
 </ul>
 <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConTokenInfo</span> <span class="p">{</span>

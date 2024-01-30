@@ -18,7 +18,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PallyConFPSSDK 1.17.3 Docs
+          PallyConFPSSDK 2.0.0 Docs
         </a>
         
       </p>
@@ -51,7 +51,7 @@
                 <a class="nav-group-task-link" href="../Classes/DownloadTask.html">DownloadTask</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/PallyConCustomDataInfo.html">PallyConCustomDataInfo</a>
+                <a class="nav-group-task-link" href="../Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PallyConFPSSDK.html">PallyConFPSSDK</a>
@@ -60,7 +60,7 @@
                 <a class="nav-group-task-link" href="../Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes.html#/c:@M@PallyConFPSSDK@objc(cs)PallyConTokenInfo">PallyConTokenInfo</a>
+                <a class="nav-group-task-link" href="../Classes/PallyConResult.html">PallyConResult</a>
               </li>
             </ul>
           </li>
@@ -68,10 +68,7 @@
             <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/DrmType.html">DrmType</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/PallyConSDKException.html">PallyConSDKException</a>
+                <a class="nav-group-task-link" href="../Enums/PallyConError.html">PallyConError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/RenewalInterval.html">RenewalInterval</a>
@@ -116,9 +113,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)fpsLicenseDidSuccessAcquiringWithContentId:"></a>
-                    <a name="//apple_ref/swift/Method/fpsLicenseDidSuccessAcquiring(contentId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)fpsLicenseDidSuccessAcquiringWithContentId:">fpsLicenseDidSuccessAcquiring(contentId:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)licenseWithResult:"></a>
+                    <a name="//apple_ref/swift/Method/license(result:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)licenseWithResult:">license(result:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -126,7 +123,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called when there is an success while acquiring license.</p>
+                        <p>Returns results from actions related to acquiring, deleting, saving, etc. licenses.</p>
 
                       </div>
                       <div class="declaration">
@@ -134,7 +131,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">fpsLicenseDidSuccessAcquiring</span><span class="p">(</span><span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">license</span><span class="p">(</span><span class="nv">result</span><span class="p">:</span> <span class="kt"><a href="../Classes/PallyConResult.html">PallyConResult</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -145,12 +142,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>contentId</em>
+                                <em>result</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>ID of the content which needs the license</p>
+                                  <p><code><a href="../Classes/PallyConResult.html">PallyConResult</a></code></p>
                                 </div>
                               </td>
                             </tr>
@@ -163,68 +160,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)fpsLicenseWithContentId:didFailWithError:"></a>
-                    <a name="//apple_ref/swift/Method/fpsLicense(contentId:didFailWithError:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)fpsLicenseWithContentId:didFailWithError:">fpsLicense(contentId:<wbr>didFailWithError:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called when there is an error while acquiring license.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">fpsLicense</span><span class="p">(</span><span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didFailWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>contentId</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>ID of the content which needs the license</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>error</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Information of the error.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)contentKeyRequestWithKeyData:requestData:"></a>
-                    <a name="//apple_ref/swift/Method/contentKeyRequest(keyData:requestData:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)contentKeyRequestWithKeyData:requestData:">contentKeyRequest(keyData:<wbr>requestData:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)licenseCallbackWith:httpHeader:"></a>
+                    <a name="//apple_ref/swift/Method/licenseCallback(with:httpHeader:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)licenseCallbackWith:httpHeader:">licenseCallback(with:<wbr>httpHeader:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -233,7 +171,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Protocol to allow content key requests. You can directly request the content key.
-Implement contentKeyRequest() to request a license and return Content key(Data).</p>
+Implement licenseCallback() to request a license and return Content key(Data).</p>
 
                       </div>
                       <div class="declaration">
@@ -241,7 +179,7 @@ Implement contentKeyRequest() to request a license and return Content key(Data).
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">contentKeyRequest</span><span class="p">(</span><span class="nv">keyData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">requestData</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">licenseCallback</span><span class="p">(</span><span class="n">with</span> <span class="nv">spcData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">httpHeader</span> <span class="nv">header</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -252,7 +190,7 @@ Implement contentKeyRequest() to request a license and return Content key(Data).
                             <tr>
                               <td>
                                 <code>
-                                <em>keyData</em>
+                                <em>spcData</em>
                                 </code>
                               </td>
                               <td>
@@ -264,12 +202,12 @@ Implement contentKeyRequest() to request a license and return Content key(Data).
                             <tr>
                               <td>
                                 <code>
-                                <em>requestData</em>
+                                <em>httpHeader</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>PallyCon Request Data</p>
+                                  <p>PallyCon Request http Header</p>
                                 </div>
                               </td>
                             </tr>
@@ -286,9 +224,9 @@ Implement contentKeyRequest() to request a license and return Content key(Data).
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)resourceLoaderRequest:"></a>
-                    <a name="//apple_ref/swift/Method/resourceLoaderRequest(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)resourceLoaderRequest:">resourceLoaderRequest(_:<wbr>)</a>
+                    <a name="/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)resourceLoaderCallbackWithRequestResource:"></a>
+                    <a name="//apple_ref/swift/Method/resourceLoaderCallback(requestResource:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(pl)PallyConFPSLicenseDelegate(im)resourceLoaderCallbackWithRequestResource:">resourceLoaderCallback(requestResource:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -298,7 +236,7 @@ Implement contentKeyRequest() to request a license and return Content key(Data).
                       <div class="abstract">
                         <p>You can modify the <code>requestResource</code> of <code>AVAssetResourceLoaderDelegate.resourceLoader()</code> used within PallyCon SDK as needed.
 (e.g. add subtitles to the m3u8 content you want to play)
-The <code>resourceLoaderRequest()</code> function is called when <code><a href="../Classes/PallyConFPSSDK.html#/s:14PallyConFPSSDKAAC14mainm3u8SchemeSSvpZ">PallyConFPSSDK.mainm3u8Scheme</a></code> is applied to the m3u8 URL.
+The <code>resourceLoaderCallback()</code> function is called when <code><a href="../Classes/PallyConFPSSDK.html#/s:14PallyConFPSSDKAAC14mainm3u8SchemeSSvpZ">PallyConFPSSDK.mainm3u8Scheme</a></code> is applied to the m3u8 URL.
 Example:</p>
 <pre class="highlight swift"><code><span class="c1">// Changed [https] URL Scheme to [PallyConFPSSDK.mainm3u8Scheme]</span>
 <span class="nv">https</span><span class="p">:</span><span class="c1">//somedomain.com/playlist.m3u8 -&gt; mainm3u8://somedomain.com/playlist.m3u8</span>
@@ -314,7 +252,7 @@ Example:</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">resourceLoaderRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">requestResource</span><span class="p">:</span> <span class="kt">AVAssetResourceLoadingRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">resourceLoaderCallback</span><span class="p">(</span><span class="nv">requestResource</span><span class="p">:</span> <span class="kt">AVAssetResourceLoadingRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>

@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PallyConFPSSDK
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios11.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PallyConFPSSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import CommonCrypto/*.CC_LONG*/
@@ -13,23 +13,41 @@ import Swift
 import UIKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 extension PallyConFPSSDK {
   @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
   @objc dynamic public func createDownloadTask(url: Foundation.URL, token: Swift.String, downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, downloadDelegate: (any PallyConFPSDownloadDelegate)?) -> DownloadTask
   @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
   @objc dynamic public func createDownloadTask(url: Foundation.URL, userId: Swift.String, contentId: Swift.String, token: Swift.String, downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, downloadDelegate: (any PallyConFPSDownloadDelegate)?) -> DownloadTask
   @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
   @objc dynamic public func createDownloadTask(url: Foundation.URL, userId: Swift.String, contentId: Swift.String, optionalId: Swift.String, downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, downloadDelegate: (any PallyConFPSDownloadDelegate)?) -> DownloadTask
   @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
   @objc dynamic public func createDownloadTask(url: Foundation.URL, contentId: Swift.String, licenseUrl: Swift.String, appleCertUrl: Swift.String, downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, downloadDelegate: (any PallyConFPSDownloadDelegate)?) -> DownloadTask
   @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
   @objc dynamic public func createDownloadTask(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String = String(), contentId: Swift.String, token: Swift.String = String(), licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, downloadDelegate: (any PallyConFPSDownloadDelegate)?) -> DownloadTask
   @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
   @objc dynamic public func createDownloadTask(url: Foundation.URL, userId: Swift.String = String(), contentId: Swift.String, optionalId: Swift.String = String(), token: Swift.String = String(), licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, isAVAssetDownloadTask: Swift.Bool, downloadDelegate: (any PallyConFPSDownloadDelegate)?) -> DownloadTask
   @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
   @objc dynamic public func createDownloadTask(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String = String(), contentId: Swift.String, token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, isAVAssetDownloadTask: Swift.Bool, downloadDelegate: (any PallyConFPSDownloadDelegate)?) -> DownloadTask
   @available(iOS 11.2, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
   @objc dynamic public func createDownloadTask(url: Foundation.URL, userId: Swift.String = String(), contentId: Swift.String, contentKeyIDList: [Swift.String], token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, isAVAssetDownloadTask: Swift.Bool = false, downloadDelegate: (any PallyConFPSDownloadDelegate)?) -> DownloadTask
+}
+extension PallyConFPSSDK {
+  @available(iOS 11.2, tvOS 11.0, *)
+  @objc dynamic public func prepare(Content config: PallyConDrmConfiguration)
+  @available(iOS 11.2, *)
+  @objc dynamic public func createDownloadTask(Content config: PallyConDrmConfiguration, delegate: (any PallyConFPSDownloadDelegate)?, downloadCellurAccess: Swift.Bool = true, makeAssetDownloadTask: Swift.Bool = false, downloadMinimumBitrate: Swift.String? = String()) -> DownloadTask?
+  @objc dynamic public func deleteLicense(ContentId id: Swift.String)
+  @objc dynamic public func getExpiryDateOfSavedLicense(ContentId id: Swift.String) -> Swift.String?
+  @objc dynamic public func getJsonforChromecastPlayback(authData: Swift.String) -> Any?
 }
 @available(iOS 10.0, *)
 @objc public class PallyConHLSInfo : ObjectiveC.NSObject {
@@ -53,7 +71,8 @@ extension PallyConFPSSDK {
     get
   }
 }
-@_hasMissingDesignatedInitializers @objc public class PallyConTokenInfo : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @available(iOS, deprecated)
+@objc public class PallyConTokenInfo : ObjectiveC.NSObject {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class PallyConCustomDataInfo : ObjectiveC.NSObject {
@@ -67,31 +86,81 @@ extension PallyConFPSSDK {
   case FiveMinute = 300
   case TenMinute = 600
   case FifteenMinute = 900
-  case Default = 0
+  case Zero = 0
   public init?(rawValue: Swift.Int64)
   public typealias RawValue = Swift.Int64
   public var rawValue: Swift.Int64 {
     get
   }
 }
-@objc public class PallyConFPSSDK : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc public class PallyConFPSSDK : ObjectiveC.NSObject {
   public static let mainm3u8Scheme: Swift.String
+  @objc override dynamic public init()
+  @available(iOS, deprecated, message: "Use the `init()` instead")
   @objc public init(fpsLicenseDelegate: (any PallyConFPSLicenseDelegate)?) throws
+  @available(iOS, deprecated, message: "Use the `init()` instead")
   @objc public init(siteId: Swift.String, siteKey: Swift.String, fpsLicenseDelegate: (any PallyConFPSLicenseDelegate)?) throws
-  @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), licenseRenewalInterval: Swift.Int64 = RenewalInterval.Default.rawValue)
-  @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String, contentId: Swift.String, token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), liveKeyRotation: Swift.Bool = false, licenseRenewalInterval: Swift.Int64 = RenewalInterval.Default.rawValue)
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: PallyConDrmConfiguration)` instead")
+  @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), licenseRenewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue)
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: PallyConDrmConfiguration)` instead")
+  @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String, contentId: Swift.String, token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), liveKeyRotation: Swift.Bool = false, licenseRenewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue)
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: PallyConDrmConfiguration)` instead")
   @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String, contentId: Swift.String, optionalId: Swift.String, liveKeyRotation: Swift.Bool = false, licenseUrl: Swift.String = String())
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: PallyConDrmConfiguration)` instead")
   @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, contentId: Swift.String, licenseUrl: Swift.String, appleCertUrl: Swift.String, liveKeyRotation: Swift.Bool = false)
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: PallyConDrmConfiguration)` instead")
   @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, customData: Swift.String) throws
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: PallyConDrmConfiguration)` instead")
   @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, customData: Swift.String, appleCertUrl: Swift.String) throws
   @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `getExpiryDateOfSavedLicense(contentId:)` instead")
   @objc public func getOfflineLicenseExpireDate(contentId: Swift.String) throws -> Swift.String
+  @available(iOS, deprecated, message: "Use the `delete(contentId:)` instead")
   @objc public func removeLicense(contentId: Swift.String) throws
+  @available(iOS, deprecated)
   @objc public func getCustomDataInfo(from customData: Swift.String) throws -> PallyConCustomDataInfo
+  @available(iOS, deprecated)
   @objc public func getCustomDataForChromcast(userId: Swift.String, contentId: Swift.String, optionalId: Swift.String) throws -> Any
+  @available(iOS, deprecated, message: "Use the `getChromcastLicenseRequestJson(authData:)` instead")
   @objc public func getCustomDataForChromcast(token: Swift.String) -> Any?
+  @available(iOS, deprecated)
   @objc public static func getTokenInfo(from token: Swift.String) throws -> PallyConTokenInfo
   @objc deinit
+}
+@objc public class PallyConDrmConfiguration : ObjectiveC.NSObject {
+  final public let avURLAsset: AVFoundation.AVURLAsset
+  final public let contentId: Swift.String
+  final public let authData: Swift.String
+  final public let certificateUrl: Swift.String
+  public var delegate: (any PallyConFPSLicenseDelegate)?
+  public var licenseUrl: Swift.String?
+  public var keyIdList: [Swift.String]?
+  public var licenseHttpHeader: [Swift.String : Swift.String]?
+  public var licenseCookies: Swift.String?
+  public var allowsKeyRotation: Swift.Bool
+  public var renewalInterval: Swift.Int64
+  @objc public init(avURLAsset: AVFoundation.AVURLAsset, contentId id: Swift.String, authData: Swift.String, certificateUrl url: Swift.String, delegate: (any PallyConFPSLicenseDelegate)? = nil, licenseUrl: Swift.String? = nil, keyIdList: [Swift.String]? = nil, licenseHttpHeader: [Swift.String : Swift.String]? = nil, licenseCookies: Swift.String? = nil, allowsKeyRotation: Swift.Bool = false, renewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue)
+  @objc deinit
+}
+@objc public class PallyConResult : ObjectiveC.NSObject {
+  @objc final public let contentId: Swift.String
+  @objc public var isSuccess: Foundation.NSNumber
+  @objc public var keyId: Swift.String?
+  @objc public var playbackExpiry: Swift.String?
+  public var error: PallyConError?
+  public init(contentId: Swift.String, isSuccess: Foundation.NSNumber = false as NSNumber, keyId: Swift.String? = nil, playbackExpiry: Swift.String? = nil, error: PallyConError? = nil)
+  @objc public func getPallyConErrorForObjC() -> (Swift.String)
+  @objc deinit
+}
+public enum PallyConError : Swift.Error {
+  case database(comment: Swift.String)
+  case server(errorCode: Swift.Int = -1, comment: Swift.String)
+  case network(errorCode: Swift.Int = -1, comment: Swift.String)
+  case system(errorCode: Swift.Int = -1, comment: Swift.String)
+  case download(errorCode: Swift.Int = -1, comment: Swift.String)
+  case failed(errorCode: Swift.Int = -1, comment: Swift.String)
+  case invalid(comment: Swift.String)
+  case unknown(errorCode: Swift.Int = -1, comment: Swift.String)
 }
 @_hasMissingDesignatedInitializers @available(iOS 11.0, *)
 @objc public class DownloadTask : ObjectiveC.NSObject {
@@ -99,6 +168,7 @@ extension PallyConFPSSDK {
   @objc public func cancel()
   @objc deinit
 }
+@available(iOS, deprecated, message: "Use the `PallyConError` instead")
 public enum PallyConSDKException : Swift.Error {
   case DatabaseProcessError(Swift.String)
   case InternalException(Swift.String)
@@ -132,10 +202,40 @@ public enum PallyConSDKException : Swift.Error {
   @objc func downloadContent(_ contentId: Swift.String, didLoad timeRange: CoreMedia.CMTimeRange, totalTimeRangesLoaded loadedTimeRanges: [Foundation.NSValue], timeRangeExpectedToLoad: CoreMedia.CMTimeRange)
 }
 @objc public protocol PallyConFPSLicenseDelegate : ObjectiveC.NSObjectProtocol {
-  @objc func fpsLicenseDidSuccessAcquiring(contentId: Swift.String)
-  @objc func fpsLicense(contentId: Swift.String, didFailWithError error: any Swift.Error)
+  @available(iOS, deprecated, message: "Use the license(result:) function instead.")
+  @objc optional func fpsLicenseDidSuccessAcquiring(contentId: Swift.String)
+  @available(iOS, deprecated, message: "Use the license(result:) function instead.")
+  @objc optional func fpsLicense(contentId: Swift.String, didFailWithError error: any Swift.Error)
+  @available(iOS, deprecated, message: "Use the licenseCallback(with:httpHeader:) function instead.")
   @objc optional func contentKeyRequest(keyData: Foundation.Data, requestData: [Swift.String : Swift.String]) -> Foundation.Data?
+  @available(iOS, deprecated, message: "Use the resourceLoaderCallback(requestResource:) function instead.")
   @objc optional func resourceLoaderRequest(_ requestResource: AVFoundation.AVAssetResourceLoadingRequest) -> Swift.Bool
+  @objc optional func license(result: PallyConResult)
+  @objc optional func licenseCallback(with spcData: Foundation.Data, httpHeader header: [Swift.String : Swift.String]?) -> Foundation.Data?
+  @objc optional func resourceLoaderCallback(requestResource: AVFoundation.AVAssetResourceLoadingRequest) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @objc(ContentKey) public class ContentKey : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension ContentKey {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ContentKey>
+  @objc @NSManaged dynamic public var keyData: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var keyId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var playbackExpiry: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var license: License? {
+    @objc get
+    @objc set
+  }
 }
 @objc @_inheritsConvenienceInitializers public class Customer : CoreData.NSManagedObject {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
@@ -151,16 +251,10 @@ extension Customer {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var license: Foundation.NSSet? {
+  @objc @NSManaged dynamic public var url: Swift.String? {
     @objc get
     @objc set
   }
-}
-extension Customer {
-  @objc(addLicenseObject:) @NSManaged dynamic public func addToLicense(_ value: License)
-  @objc(removeLicenseObject:) @NSManaged dynamic public func removeFromLicense(_ value: License)
-  @objc(addLicense:) @NSManaged dynamic public func addToLicense(_ values: Foundation.NSSet)
-  @objc(removeLicense:) @NSManaged dynamic public func removeFromLicense(_ values: Foundation.NSSet)
 }
 @objc @_inheritsConvenienceInitializers public class License : CoreData.NSManagedObject {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
@@ -196,7 +290,7 @@ extension License {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var customer: Customer? {
+  @objc @NSManaged dynamic public var contentkey: ContentKey? {
     @objc get
     @objc set
   }

@@ -139,7 +139,6 @@ class BasicTableViewCell: UITableViewCell {
     @objc func handleAcquireLicenseFailNotification(_ notification: NSNotification) {
         guard let contentId = notification.userInfo![FPSContent.Keys.cId] as? String,
             self.fpsContent?.contentId == contentId,
-            let optionalId = fpsContent?.optionalId,
             let token = fpsContent?.token,
             let contentName = fpsContent?.contentName,
             let error = notification.userInfo![FPSContent.Keys.acquireLicenseFail] as? Error else {
@@ -147,30 +146,32 @@ class BasicTableViewCell: UITableViewCell {
         }
         
         var errorMessage = ""
-        if let error = error as? PallyConSDKException {
+        if let error = error as? PallyConError {
             switch error {
-            case .ServerConnectionFail(let message):
-                errorMessage = "server connection fail = \(message)"
-            case .NetworkError(let networkError):
-                errorMessage = "Network Error = \(networkError)"
-            case .AcquireLicenseFailFromServer(let code, let message):
-                errorMessage = "ServerCode = \(code).\n\(message)"
-            case .DatabaseProcessError(let message):
-                errorMessage = "DB Error = \(message)"
-            case .InternalException(let message):
-                errorMessage = "SDK internal Error = \(message)"
+            case .database(comment: let comment):
+                errorMessage = comment
+            case .server(errorCode: let errorCode, comment: let comment):
+                errorMessage = "code : \(errorCode), comment: \(comment)"
+            case .network(errorCode: let errorCode, comment: let comment):
+                errorMessage = "code : \(errorCode), comment: \(comment)"
+            case .system(errorCode: let errorCode, comment: let comment):
+                errorMessage = "code : \(errorCode), comment: \(comment)"
+            case .failed(errorCode: let errorCode, comment: let comment):
+                errorMessage = "code : \(errorCode), comment: \(comment)"
+            case .unknown(errorCode: let errorCode, comment: let comment):
+                errorMessage = "code : \(errorCode), comment: \(comment)"
+            case .invalid(comment: let comment):
+                errorMessage = "comment: \(comment)"
             default:
-                print("Error: \(error). Unkown.")
+                errorMessage = "comment: \(error)"
                 break
             }
-        } else {
-            print("Error: \(error). Unkown")
         }
         
         // a error handling when acquire license.
         let alertView = UIAlertController(title: "License Failed", message: errorMessage, preferredStyle: .alert)
         alertView.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { Void in
-            if #available(iOS 11.0, *), let newFpsContent = PallyConSDKManager.sharedManager.localFpsContentForStream(with: contentId, optionalId: optionalId, token: token, contentName: contentName) {
+            if #available(iOS 11.0, *), let newFpsContent = PallyConSDKManager.sharedManager.localFpsContentForStream(with: contentId, token: token, contentName: contentName) {
                 self.delegate?.basicListTableViewCell(self, avPlayerAssetDidChange: newFpsContent.urlAsset)
             } else {
                 if let originalAsset = FPSListManager.sharedManager.getContentUrlAsset(contentId: contentId) {
@@ -186,7 +187,7 @@ class BasicTableViewCell: UITableViewCell {
     }
 }
 
-protocol BasicTableViewCellDelegate: class {
+protocol BasicTableViewCellDelegate: AnyObject {
     func basicListTableViewCell(_ cell: BasicTableViewCell, downloadStateDidChange newState: FPSContent.DownloadState)
     func basicListTableViewCell(_ cell: BasicTableViewCell, avPlayerAssetDidChange asset: AVURLAsset)
 }

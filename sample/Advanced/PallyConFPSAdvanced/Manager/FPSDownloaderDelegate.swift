@@ -11,19 +11,17 @@ import Foundation
 import AVFoundation
 import PallyConFPSSDK
 
-@available(iOS 11.0, *)
+@available(iOS 11.2, *)
 public class FPSDownloaderDelegate: NSObject {
     
     fileprivate var downloadTask: DownloadTask?
     
-    init(url: URL, contentId: String, optionalId: String, token: String) {
+    init(url: URL, keyId: String, contentId: String, token: String) {
         super.init()
 
-        if token.count > 0 {
-            downloadTask = PallyConSDKManager.sharedManager.pallyConFPSSDK?.createDownloadTask(url: url, userId: pallyConUserId, contentId: contentId, token: token, downloadDelegate: self)
-        } else {
-            downloadTask = PallyConSDKManager.sharedManager.pallyConFPSSDK?.createDownloadTask(url: url, userId: pallyConUserId, contentId: contentId, optionalId: optionalId, downloadOptions: "", downloadDelegate: self)
-        }
+        let videoAsset = AVURLAsset(url: url)
+        let config = PallyConDrmConfiguration(avURLAsset: videoAsset, contentId: contentId, authData: token, certificateUrl: CERTIFICATE_URL)
+        downloadTask = PallyConSDKManager.sharedManager.pallyConFPSSDK?.createDownloadTask(Content: config, delegate: self)
     }
     
     public func startDownload() {
@@ -36,7 +34,7 @@ public class FPSDownloaderDelegate: NSObject {
 }
 
 //MARK:- FPSDownloadDelegate protocol methods extension
-@available(iOS 11.0, *)
+@available(iOS 11.2, *)
 extension FPSDownloaderDelegate: PallyConFPSDownloadDelegate {
     public func downloadContent(_ contentId: String, didStartDownloadWithAsset asset: AVURLAsset, subtitleDisplayName: String) {
         print("didStartDownloadWithAsset contentId = \(contentId), displayName = \(subtitleDisplayName)")
@@ -50,23 +48,26 @@ extension FPSDownloaderDelegate: PallyConFPSDownloadDelegate {
        
         let userInfo: [String: Any] = [FPSContent.Keys.cId: contentId, FPSContent.Keys.downloadState: FPSContent.DownloadState.pause.rawValue]
         
-        if let error = error as? PallyConSDKException {
+        if let error = error as? PallyConError {
+            var message:String?
             switch error {
-            case .DownloadUserCancel(let filePath):
-                print("User Cancel Error \(filePath)")
+            case .download(errorCode: let errorCode, comment: let comment):
+                print("code : \(errorCode), comment: \(comment)")
                 break
-            case .DownloadUnknownError(let filePath):
-                print("Unknown Error \(filePath)")
+            case .unknown(errorCode: let errorCode, comment: let comment):
+                message = "Unknown Error: \(errorCode)\nComment: \(comment)"
                 break
-            case .DownloadDefaultError(let networkError, let filePath):
-                print("didStopWithError error = \(networkError) \(filePath)")
-                let alert = UIAlertController(title: "Download Failed", message: "If you want to download, please try again", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default))
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+            case .failed(errorCode: let errorCode, comment: let comment):
+                message = "Failed Error: \(errorCode)\nComment: \(comment)"
+                break
             default:
-                print("Error: \(error). Unkown.")
+                message = "Error: \(error.localizedDescription)"
                 break
             }
+            
+            let alert = UIAlertController(title: "Download Failed", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default))
+            UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
         }
         
         NotificationCenter.default.post(name: FPSDownloadStateChangedNotification, object: nil, userInfo: userInfo)
