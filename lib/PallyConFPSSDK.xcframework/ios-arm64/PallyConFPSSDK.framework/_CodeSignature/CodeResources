@@ -4,61 +4,61 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/PallyConFPSSDKTV-ObjC.h</key>
+		<key>Headers/PallyConFPSSDK-ObjC.h</key>
 		<data>
-		rgqtq/h2e1+ndu9jcyOvl09isOQ=
+		3naM4LO3/n2YTVvCWS9gsrdCdK4=
 		</data>
-		<key>Headers/PallyConFPSSDKTV.h</key>
+		<key>Headers/PallyConFPSSDK.h</key>
 		<data>
-		8okcW7hxitRw7N7mjvyUCCt99dI=
+		QWX7xR7j7qz92NW8dRQdAJXsV3E=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mbZSQYzqRTq0OBGPwxy6vylc/iM=
+		WtWD3GnqTpA6RsGO/N5h/+lZ2NE=
 		</data>
-		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.abi.json</key>
+		<key>Modules/PallyConFPSSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		XzytrBJFJJ7QXReaSQsImORLmx4=
+		U7Yoa6a7Dac1yGVy/1jr+A8EunU=
 		</data>
-		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.private.swiftinterface</key>
+		<key>Modules/PallyConFPSSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		QsWAOXDJyWK0HRKGQ1PnruAbM0s=
+		vBlIVBWCDHZgqovlI3taBj2YiDo=
 		</data>
-		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftdoc</key>
+		<key>Modules/PallyConFPSSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		LxXQd+AIpzvXIOsrNf16bSkCElQ=
+		Lr2H5mhNM5sdoIX9BjiMMFuxOYo=
 		</data>
-		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftinterface</key>
+		<key>Modules/PallyConFPSSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		QsWAOXDJyWK0HRKGQ1PnruAbM0s=
+		vBlIVBWCDHZgqovlI3taBj2YiDo=
 		</data>
-		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftmodule</key>
+		<key>Modules/PallyConFPSSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		P/7QQe08zUOyIcZ08BXR5SCDUrE=
+		pd6o6ee1gkQhaiXMSg+xT3r/zjs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		iaQprimPw6bwj8Q8HKwWX10R+mM=
+		RjYphLgFRCuJVY9NGWJFa/2Smy0=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 2.mom</key>
 		<data>
-		yT/D5/7PpJPYFsq0ncf+TiMa+aU=
+		KywRLjinlFggBb0ENRt8erl4Vso=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.mom</key>
 		<data>
-		/4J/aklikzVuxDyb1xb70lQkmjw=
+		kic21jY/kssdE74VdRgAs5DLFas=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.omo</key>
 		<data>
-		oI7tH2tGMtMVKZW/v8zLyzWxHCc=
+		BzMjAXcLGoTJOaZkPfJLU+8ioMA=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 4.mom</key>
 		<data>
-		Nytem5LsXQoYiZ4ROY06W140Emw=
+		E/kfH+zXAcODQur8hwEKw0EviFo=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel.mom</key>
 		<data>
-		Q+NYu0q3cCxH5VObSWGt4Q0cYxo=
+		hURME5LdOjzj/ZahPKXrHCxNoaQ=
 		</data>
 		<key>PallyConFPSModel.momd/VersionInfo.plist</key>
 		<data>
@@ -71,95 +71,95 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/PallyConFPSSDKTV-ObjC.h</key>
+		<key>Headers/PallyConFPSSDK-ObjC.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Z+MAPgsk72z3j6n07Jw+sc54aEtQC1OUc4x7YKGclE=
+			6pJCwfrk+MB6dLp5iq0ymFHwivSiLD93+MHvg/jtkC0=
 			</data>
 		</dict>
-		<key>Headers/PallyConFPSSDKTV.h</key>
+		<key>Headers/PallyConFPSSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZlbzorllolEhP5B94MOzqmrQ4B6IiIKiW2sZtzhtMsA=
+			it2Wl1p9/xmde4EV886PMbMGB9NvgHZMrmSw7gSdEDc=
 			</data>
 		</dict>
-		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.abi.json</key>
+		<key>Modules/PallyConFPSSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			idNS00P3sh+u6PyCoQlqNq2KTYlXhQy4ziTGlXkeFzk=
+			EfjquJZSeVL/juA8jCYR9gaVotorz+wwW11S/06vuaA=
 			</data>
 		</dict>
-		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.private.swiftinterface</key>
+		<key>Modules/PallyConFPSSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VVYwMIKgqIb0G0iXnaqGqn86AkVVBZppyDTI+4QhSlk=
+			Z1ceVWltCcTxQcgceuKwT5UTNPeI5+Ujmh/UQoENBvM=
 			</data>
 		</dict>
-		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftdoc</key>
+		<key>Modules/PallyConFPSSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5uSKy+ZqYc+m3dctqI4dVW1xRqHRtUNcBQ/tQYW7YWo=
+			M5TodZeMnfjMWhzF/htDG4zAy+Ivu5MB0bgT91FIPNg=
 			</data>
 		</dict>
-		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftinterface</key>
+		<key>Modules/PallyConFPSSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VVYwMIKgqIb0G0iXnaqGqn86AkVVBZppyDTI+4QhSlk=
+			Z1ceVWltCcTxQcgceuKwT5UTNPeI5+Ujmh/UQoENBvM=
 			</data>
 		</dict>
-		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftmodule</key>
+		<key>Modules/PallyConFPSSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QN6pzwwtKDna/bqyktmLlo1FZIxEhLTM0jqgKspnEOE=
+			wp+tCON08j8knhNdn3sAZW4MosLPkH9jtPfnkgKFBo0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TeyA0OEVJC8eejdUwoZGHZM6hAgOZSQLQGQPwEAPEcQ=
+			jnvoW6uZCdbUWJozN/Saly01Z8HGhFGni08oTEUZv6E=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 2.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QlVnDnATaWp8jpXEGnCx8zHSxoBNv5sSscunV0ggaT0=
+			IsqQDHdxApuOaJTP1zSqF9loMjlTabswlBPcbcQqo3Y=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fluU/zsgNrlN+mdw5xaHEoQ5Th8f0AQFWxJSaWnW6do=
+			Ce9Cs0rJ5+oiQWlgKhKp07NaL1Fw6m+DNSp9byDf4HU=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.omo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LlSS4h5tzd/qe+Nhd2CBldxPRdSdIel2RDiRN8yvpl8=
+			WjFaBSKZChPwM+rnWzvLIy1GHZDSikxzYeCRx5BCp/Y=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 4.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JIzKVZvBULWB90v9oV+/IEWn3KFXg7TPXpjvbAhuPzc=
+			RVfDvO/fdfknbXE/oVk5wRkSP8Dbvg0wmHzSlzm8vuU=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qLG8zI4yyHF7Ohs86NGCUarWJoklVZgJJfHPL929XlI=
+			1r89P9W+V4/jkM3wPmD7RmH4lW0Lc1J6B/DxQ+26aMo=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/VersionInfo.plist</key>
