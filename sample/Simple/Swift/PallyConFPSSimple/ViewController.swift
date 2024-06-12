@@ -39,7 +39,10 @@ class ViewController: UIViewController {
         
         let urlAsset = AVURLAsset(url: contentUrl)
         
-        let config = PallyConDrmConfiguration(avURLAsset: urlAsset, contentId: CONTENT_ID, authData: PALLYCON_TOKEN, certificateUrl: CERTIFICATE_URL)
+        let config = PallyConDrmConfiguration(avURLAsset: urlAsset,
+                                              contentId: CONTENT_ID,
+                                              certificateUrl: CERTIFICATE_URL,
+                                              authData: PALLYCON_TOKEN)
         // 2. Acquire a CustomData information
         fpsSDK?.prepare(Content: config)
         let playerItem = AVPlayerItem(asset: urlAsset)

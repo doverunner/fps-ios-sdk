@@ -3356,55 +3356,6 @@
           },
           {
             "kind": "Var",
-            "name": "authData",
-            "printedName": "authData",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC8authDataSSvp",
-            "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC8authDataSSvp",
-            "moduleName": "PallyConFPSSDK",
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC8authDataSSvg",
-                "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC8authDataSSvg",
-                "moduleName": "PallyConFPSSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "certificateUrl",
             "printedName": "certificateUrl",
             "children": [
@@ -3443,6 +3394,71 @@
                 "declKind": "Accessor",
                 "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC14certificateUrlSSvg",
                 "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC14certificateUrlSSvg",
+                "moduleName": "PallyConFPSSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "authData",
+            "printedName": "authData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC8authDataSSSgvp",
+            "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC8authDataSSSgvp",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC8authDataSSSgvg",
+                "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC8authDataSSSgvg",
                 "moduleName": "PallyConFPSSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -4250,7 +4266,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(avURLAsset:contentId:authData:certificateUrl:delegate:licenseUrl:keyIdList:licenseHttpHeader:licenseCookies:allowsKeyRotation:renewalInterval:)",
+            "printedName": "init(avURLAsset:contentId:certificateUrl:authData:delegate:licenseUrl:keyIdList:licenseHttpHeader:licenseCookies:allowsKeyRotation:renewalInterval:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4278,9 +4294,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -4395,10 +4420,10 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@PallyConFPSSDK@objc(cs)PallyConDrmConfiguration(im)initWithAvURLAsset:contentId:authData:certificateUrl:delegate:licenseUrl:keyIdList:licenseHttpHeader:licenseCookies:allowsKeyRotation:renewalInterval:",
-            "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC10avURLAsset9contentId8authData14certificateUrl8delegate07licenseM003keyI4List0O10HttpHeader0O7Cookies17allowsKeyRotation15renewalIntervalACSo10AVURLAssetC_S3SAA0aB18FPSLicenseDelegate_pSgSSSgSaySSGSgSDyS2SGSgASSbs5Int64Vtcfc",
+            "usr": "c:@M@PallyConFPSSDK@objc(cs)PallyConDrmConfiguration(im)initWithAvURLAsset:contentId:certificateUrl:authData:delegate:licenseUrl:keyIdList:licenseHttpHeader:licenseCookies:allowsKeyRotation:renewalInterval:",
+            "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC10avURLAsset9contentId14certificateUrl8authData8delegate07licenseK003keyI4List0O10HttpHeader0O7Cookies17allowsKeyRotation15renewalIntervalACSo10AVURLAssetC_S3SSgAA0aB18FPSLicenseDelegate_pSgAQSaySSGSgSDyS2SGSgAQSbs5Int64Vtcfc",
             "moduleName": "PallyConFPSSDK",
-            "objc_name": "initWithAvURLAsset:contentId:authData:certificateUrl:delegate:licenseUrl:keyIdList:licenseHttpHeader:licenseCookies:allowsKeyRotation:renewalInterval:",
+            "objc_name": "initWithAvURLAsset:contentId:certificateUrl:authData:delegate:licenseUrl:keyIdList:licenseHttpHeader:licenseCookies:allowsKeyRotation:renewalInterval:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -9812,14 +9837,14 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Interface.swift",
       "kind": "BooleanLiteral",
-      "offset": 2831,
+      "offset": 2816,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Interface.swift",
       "kind": "BooleanLiteral",
-      "offset": 2908,
+      "offset": 2893,
       "length": 5,
       "value": "false"
     },
@@ -10141,21 +10166,21 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConFPSSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 3426,
+      "offset": 3505,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConFPSSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 4626,
+      "offset": 4705,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConFPSSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 5772,
+      "offset": 5851,
       "length": 5,
       "value": "false"
     },
@@ -10204,14 +10229,14 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1189,
+      "offset": 1190,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1764,
+      "offset": 1772,
       "length": 5,
       "value": "false"
     },
@@ -10225,56 +10250,56 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2886,
+      "offset": 2894,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2337,
+      "offset": 2345,
       "length": 14,
       "value": "\"PallyConFPSSDK.PallyConResult\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5191,
+      "offset": 5199,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5268,
+      "offset": 5276,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5347,
+      "offset": 5355,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5428,
+      "offset": 5436,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5514,
+      "offset": 5522,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5656,
+      "offset": 5664,
       "length": 2,
       "value": "-1"
     },

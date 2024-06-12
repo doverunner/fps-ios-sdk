@@ -20,7 +20,10 @@ public class FPSDownloaderDelegate: NSObject {
         super.init()
 
         let videoAsset = AVURLAsset(url: url)
-        let config = PallyConDrmConfiguration(avURLAsset: videoAsset, contentId: contentId, authData: token, certificateUrl: CERTIFICATE_URL)
+        let config = PallyConDrmConfiguration(avURLAsset: videoAsset, 
+                                              contentId: contentId,
+                                              certificateUrl: CERTIFICATE_URL,
+                                              authData: token)
         downloadTask = PallyConSDKManager.sharedManager.pallyConFPSSDK?.createDownloadTask(Content: config, delegate: self)
     }
     

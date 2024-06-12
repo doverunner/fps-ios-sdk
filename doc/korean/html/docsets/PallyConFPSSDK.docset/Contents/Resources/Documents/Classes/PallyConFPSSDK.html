@@ -28,7 +28,9 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">PallyConFPSSDK Reference</a>
+      <a class="breadcrumb" href="../index.html">PallyConFPSSDK</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Classes.html">Classes</a>
       <img class="carat" src="../img/carat.png" alt=""/>
       PallyConFPSSDK Class Reference
     </p>
@@ -96,8 +98,7 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConFPSSDK</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConFPSSDK</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -131,7 +132,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">mainm3u8Scheme</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">mainm3u8Scheme</span> <span class="o">=</span> <span class="s">"mainm3u8"</span></code></pre>
 
                         </div>
                       </div>
@@ -192,7 +193,6 @@ If <code><a href="../Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicen
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">11.2</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="kt">Content</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a></span><span class="p">)</span></code></pre>
 
                         </div>
@@ -243,7 +243,6 @@ AVContentKeySession downloads the license first.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">11.2</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDownloadTask</span><span class="p">(</span><span class="kt">Content</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a></span><span class="p">,</span>
                                <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PallyConFPSDownloadDelegate.html">PallyConFPSDownloadDelegate</a></span><span class="p">?,</span>
                                <span class="nv">downloadCellurAccess</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
@@ -337,8 +336,7 @@ If <code><a href="../Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicen
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -385,8 +383,7 @@ If <code><a href="../Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicen
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getExpiryDateOfSavedLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getExpiryDateOfSavedLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -436,8 +433,7 @@ If <code><a href="../Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicen
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getJsonforChromecastPlayback</span><span class="p">(</span><span class="nv">authData</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getJsonforChromecastPlayback</span><span class="p">(</span><span class="nv">authData</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -476,7 +472,7 @@ If <code><a href="../Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicen
     </div>
     <section class="footer">
       <p>© 2017 <a class="link" href="http://www.pallycon.com" target="_blank" rel="external noopener">INKA Entworks</a></p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

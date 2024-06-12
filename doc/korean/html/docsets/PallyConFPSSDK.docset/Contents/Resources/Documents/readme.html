@@ -27,7 +27,9 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="index.html">PallyConFPSSDK Reference</a>
+      <a class="breadcrumb" href="index.html">PallyConFPSSDK</a>
+      <img class="carat" src="img/carat.png" alt=""/>
+      <a class="breadcrumb" href="Guides.html">Guides</a>
       <img class="carat" src="img/carat.png" alt=""/>
       README  Reference
     </p>
@@ -165,7 +167,10 @@ SDK 사용과 관련한 기술 문의는 <a href="https://pallycon.zendesk.com/h
 <span class="k">let</span> <span class="nv">urlAsset</span> <span class="o">=</span> <span class="kt">AVURLAsset</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"Content Url(m3u8)"</span><span class="p">)</span>
 
 <span class="c1">// 2. FPS 콘텐츠를 재생하기 전에 Token 정보를 설정하여 라이선스를 획득 준비를 합니다.</span>
-<span class="k">let</span> <span class="nv">config</span> <span class="o">=</span> <span class="kt">PallyConDrmConfiguration</span><span class="p">(</span><span class="nv">avURLAsset</span><span class="p">:</span> <span class="n">urlAsset</span><span class="p">,</span> <span class="nv">contentId</span><span class="p">:</span> <span class="s">"ContentID"</span><span class="p">,</span> <span class="nv">authData</span><span class="p">:</span> <span class="s">"Token or CustomData"</span><span class="p">,</span> <span class="nv">certificateUrl</span><span class="p">:</span> <span class="s">"Apple Certification URL"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">config</span> <span class="o">=</span> <span class="kt">PallyConDrmConfiguration</span><span class="p">(</span><span class="nv">avURLAsset</span><span class="p">:</span> <span class="n">urlAsset</span><span class="p">,</span> 
+                                      <span class="nv">contentId</span><span class="p">:</span> <span class="s">"ContentID"</span><span class="p">,</span> 
+                                      <span class="nv">certificateUrl</span><span class="p">:</span> <span class="s">"Apple Certification URL"</span><span class="p">,</span>
+                                      <span class="nv">authData</span><span class="p">:</span> <span class="s">"Token or CustomData"</span><span class="p">)</span>
 <span class="n">pallyconSdk</span><span class="o">.</span><span class="nf">prepare</span><span class="p">(</span><span class="kt">Content</span><span class="p">:</span> <span class="n">config</span><span class="p">)</span>
 
 </code></pre>
@@ -176,7 +181,10 @@ SDK 사용과 관련한 기술 문의는 <a href="https://pallycon.zendesk.com/h
 <span class="k">let</span> <span class="nv">pallyconSdk</span> <span class="o">=</span> <span class="kt">PallyConFPSSDK</span><span class="p">()</span>
 
 <span class="k">let</span> <span class="nv">urlAsset</span> <span class="o">=</span> <span class="kt">AVURLAsset</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"Content Url(m3u8)"</span><span class="p">)</span>
-<span class="k">let</span> <span class="nv">config</span> <span class="o">=</span> <span class="kt">PallyConDrmConfiguration</span><span class="p">(</span><span class="nv">avURLAsset</span><span class="p">:</span> <span class="n">urlAsset</span><span class="p">,</span> <span class="nv">contentId</span><span class="p">:</span> <span class="s">"ContentID"</span><span class="p">,</span> <span class="nv">authData</span><span class="p">:</span> <span class="s">"Token or CustomData"</span><span class="p">,</span> <span class="nv">certificateUrl</span><span class="p">:</span> <span class="s">"Apple Certification URL"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">config</span> <span class="o">=</span> <span class="kt">PallyConDrmConfiguration</span><span class="p">(</span><span class="nv">avURLAsset</span><span class="p">:</span> <span class="n">urlAsset</span><span class="p">,</span> 
+                                      <span class="nv">contentId</span><span class="p">:</span> <span class="s">"ContentID"</span><span class="p">,</span> 
+                                      <span class="nv">certificateUrl</span><span class="p">:</span> <span class="s">"Apple Certification URL"</span><span class="p">,</span> 
+                                      <span class="nv">authData</span><span class="p">:</span> <span class="s">"Token or CustomData"</span><span class="p">)</span>
 
 <span class="c1">// 2. FPS 콘텐츠 다운로드를 위해 DownloadTask 객체를 생성하고 라이선스 획득 준비를 합니다.</span>
 <span class="k">let</span> <span class="nv">downloadTask</span> <span class="o">=</span> <span class="n">pallyconSdk</span><span class="o">.</span><span class="nf">createDownloadTask</span><span class="p">(</span><span class="kt">Content</span><span class="p">:</span> <span class="n">config</span><span class="p">,</span> <span class="nv">downloadDelegate</span><span class="p">:</span><span class="s">"PallyConFPSDownloadDelegate"</span><span class="p">)</span>
@@ -206,7 +214,7 @@ SDK 사용과 관련한 기술 문의는 <a href="https://pallycon.zendesk.com/h
     </div>
     <section class="footer">
       <p>© 2017 <a class="link" href="http://www.pallycon.com" target="_blank" rel="external noopener">INKA Entworks</a></p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

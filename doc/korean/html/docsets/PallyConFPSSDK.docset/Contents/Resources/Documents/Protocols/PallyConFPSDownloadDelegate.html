@@ -28,7 +28,9 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">PallyConFPSSDK Reference</a>
+      <a class="breadcrumb" href="../index.html">PallyConFPSSDK</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Protocols.html">Protocols</a>
       <img class="carat" src="../img/carat.png" alt=""/>
       PallyConFPSDownloadDelegate Protocol Reference
     </p>
@@ -96,8 +98,7 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PallyConFPSDownloadDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
 
                 </div>
               </div>
@@ -131,8 +132,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didStartDownloadWithAsset</span> <span class="nv">asset</span><span class="p">:</span> <span class="kt">AVURLAsset</span><span class="p">,</span> <span class="nv">subtitleDisplayName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didStartDownloadWithAsset</span> <span class="nv">asset</span><span class="p">:</span><span class="kt">AVURLAsset</span><span class="p">,</span> <span class="nv">subtitleDisplayName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -203,8 +203,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">@objc</span>
-<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didStopWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didStopWithError</span> <span class="nv">error</span><span class="p">:</span><span class="kt">Error</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -263,7 +262,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">@objc</span>
 <span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didFinishDownloadingTo</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
 
                         </div>
@@ -323,7 +321,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">@objc</span>
 <span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didLoad</span> <span class="nv">timeRange</span><span class="p">:</span> <span class="kt">CMTimeRange</span><span class="p">,</span> <span class="n">totalTimeRangesLoaded</span> <span class="nv">loadedTimeRanges</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSValue</span><span class="p">],</span> <span class="nv">timeRangeExpectedToLoad</span><span class="p">:</span> <span class="kt">CMTimeRange</span><span class="p">)</span></code></pre>
 
                         </div>
@@ -395,7 +392,7 @@
     </div>
     <section class="footer">
       <p>© 2017 <a class="link" href="http://www.pallycon.com" target="_blank" rel="external noopener">INKA Entworks</a></p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

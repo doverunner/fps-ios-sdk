@@ -96,8 +96,8 @@ extension PallyConFPSSDKTV.PallyConFPSSDK {
 @objc public class PallyConDrmConfiguration : ObjectiveC.NSObject {
   final public let avURLAsset: AVFoundation.AVURLAsset
   final public let contentId: Swift.String
-  final public let authData: Swift.String
   final public let certificateUrl: Swift.String
+  final public let authData: Swift.String?
   public var delegate: (any PallyConFPSSDKTV.PallyConFPSLicenseDelegate)?
   public var licenseUrl: Swift.String?
   public var keyIdList: [Swift.String]?
@@ -105,7 +105,7 @@ extension PallyConFPSSDKTV.PallyConFPSSDK {
   public var licenseCookies: Swift.String?
   public var allowsKeyRotation: Swift.Bool
   public var renewalInterval: Swift.Int64
-  @objc public init(avURLAsset: AVFoundation.AVURLAsset, contentId id: Swift.String, authData: Swift.String, certificateUrl url: Swift.String, delegate: (any PallyConFPSSDKTV.PallyConFPSLicenseDelegate)? = nil, licenseUrl: Swift.String? = nil, keyIdList: [Swift.String]? = nil, licenseHttpHeader: [Swift.String : Swift.String]? = nil, licenseCookies: Swift.String? = nil, allowsKeyRotation: Swift.Bool = false, renewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue)
+  @objc public init(avURLAsset: AVFoundation.AVURLAsset, contentId id: Swift.String, certificateUrl url: Swift.String, authData: Swift.String? = nil, delegate: (any PallyConFPSSDKTV.PallyConFPSLicenseDelegate)? = nil, licenseUrl: Swift.String? = nil, keyIdList: [Swift.String]? = nil, licenseHttpHeader: [Swift.String : Swift.String]? = nil, licenseCookies: Swift.String? = nil, allowsKeyRotation: Swift.Bool = false, renewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue)
   @objc deinit
 }
 @objc public class PallyConResult : ObjectiveC.NSObject {

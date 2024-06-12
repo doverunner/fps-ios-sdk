@@ -279,8 +279,8 @@ class BasicTableViewController: UITableViewController {
                self.playerViewController = playerViewController
                let config = PallyConDrmConfiguration(avURLAsset: fpsContent.urlAsset,
                                                      contentId: fpsContent.contentId,
-                                                     authData: fpsContent.token,
-                                                     certificateUrl: CERTIFICATE_URL)
+                                                     certificateUrl: CERTIFICATE_URL,
+                                                     authData: fpsContent.token)
                PallyConSDKManager.sharedManager.pallyConFPSSDK?.prepare(Content: config)
                
                // Load the new FpsContent to playback into FPSPlaybackManager.

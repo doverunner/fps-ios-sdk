@@ -37,7 +37,7 @@
     AVURLAsset *urlAsset = [[AVURLAsset alloc] initWithURL:contentUrl options:nil];
 
     // 2. Set parameters required for FPS content playback.
-    PallyConDrmConfiguration* config = [[PallyConDrmConfiguration alloc] initWithAvURLAsset:urlAsset contentId:CONTENT_ID authData:PALLYCON_TOKEN certificateUrl:CERTIFICATE_URL delegate:self licenseUrl:nil keyIdList:nil licenseHttpHeader:nil licenseCookies:nil allowsKeyRotation:false renewalInterval:0];
+    PallyConDrmConfiguration* config = [[PallyConDrmConfiguration alloc] initWithAvURLAsset:urlAsset contentId:CONTENT_ID certificateUrl:CERTIFICATE_URL authData:PALLYCON_TOKEN delegate:self licenseUrl:nil keyIdList:nil licenseHttpHeader:nil licenseCookies:nil allowsKeyRotation:false renewalInterval:0];
     [_fpsSDK prepareWithContent:config];
     
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:urlAsset];

@@ -392,7 +392,7 @@ SWIFT_CLASS("_TtC14PallyConFPSSDK22PallyConCustomDataInfo")
 SWIFT_CLASS("_TtC14PallyConFPSSDK24PallyConDrmConfiguration")
 @interface PallyConDrmConfiguration : NSObject
 /// Ceate a PallyConDrmConfiguration Object
-- (nonnull instancetype)initWithAvURLAsset:(AVURLAsset * _Nonnull)avURLAsset contentId:(NSString * _Nonnull)id authData:(NSString * _Nonnull)authData certificateUrl:(NSString * _Nonnull)url delegate:(id <PallyConFPSLicenseDelegate> _Nullable)delegate licenseUrl:(NSString * _Nullable)licenseUrl keyIdList:(NSArray<NSString *> * _Nullable)keyIdList licenseHttpHeader:(NSDictionary<NSString *, NSString *> * _Nullable)licenseHttpHeader licenseCookies:(NSString * _Nullable)licenseCookies allowsKeyRotation:(BOOL)allowsKeyRotation renewalInterval:(int64_t)renewalInterval OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithAvURLAsset:(AVURLAsset * _Nonnull)avURLAsset contentId:(NSString * _Nonnull)id certificateUrl:(NSString * _Nonnull)url authData:(NSString * _Nullable)authData delegate:(id <PallyConFPSLicenseDelegate> _Nullable)delegate licenseUrl:(NSString * _Nullable)licenseUrl keyIdList:(NSArray<NSString *> * _Nullable)keyIdList licenseHttpHeader:(NSDictionary<NSString *, NSString *> * _Nullable)licenseHttpHeader licenseCookies:(NSString * _Nullable)licenseCookies allowsKeyRotation:(BOOL)allowsKeyRotation renewalInterval:(int64_t)renewalInterval OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
