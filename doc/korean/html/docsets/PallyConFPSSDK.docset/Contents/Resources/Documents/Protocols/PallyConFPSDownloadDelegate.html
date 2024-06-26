@@ -18,7 +18,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PallyConFPSSDK 2.1.0 Docs
+          PallyConFPSSDK 2.3.0 Docs
         </a>
         
       </p>
@@ -98,7 +98,8 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PallyConFPSDownloadDelegate</span><span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PallyConFPSDownloadDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
 
                 </div>
               </div>
@@ -132,7 +133,8 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didStartDownloadWithAsset</span> <span class="nv">asset</span><span class="p">:</span><span class="kt">AVURLAsset</span><span class="p">,</span> <span class="nv">subtitleDisplayName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+<span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didStartDownloadWithAsset</span> <span class="nv">asset</span><span class="p">:</span> <span class="kt">AVURLAsset</span><span class="p">,</span> <span class="nv">subtitleDisplayName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -203,7 +205,8 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
-<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didStopWithError</span> <span class="nv">error</span><span class="p">:</span><span class="kt">Error</span><span class="p">?)</span></code></pre>
+<span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didStopWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -262,6 +265,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
 <span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didFinishDownloadingTo</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
 
                         </div>
@@ -321,6 +325,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
 <span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didLoad</span> <span class="nv">timeRange</span><span class="p">:</span> <span class="kt">CMTimeRange</span><span class="p">,</span> <span class="n">totalTimeRangesLoaded</span> <span class="nv">loadedTimeRanges</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSValue</span><span class="p">],</span> <span class="nv">timeRangeExpectedToLoad</span><span class="p">:</span> <span class="kt">CMTimeRange</span><span class="p">)</span></code></pre>
 
                         </div>

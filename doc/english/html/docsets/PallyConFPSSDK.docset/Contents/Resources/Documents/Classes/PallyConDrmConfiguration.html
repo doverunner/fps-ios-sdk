@@ -18,7 +18,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PallyConFPSSDK 2.1.0 Docs
+          PallyConFPSSDK 2.3.0 Docs
         </a>
         
       </p>
@@ -98,7 +98,8 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConDrmConfiguration</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConDrmConfiguration</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -320,7 +321,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">licenseHttpHeader</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">licenseHttpHeader</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -374,7 +375,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allowsKeyRotation</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allowsKeyRotation</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -401,7 +402,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">renewalInterval</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="kt"><a href="../Enums/RenewalInterval.html">RenewalInterval</a></span><span class="o">.</span><span class="kt">Zero</span><span class="o">.</span><span class="n">rawValue</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">renewalInterval</span><span class="p">:</span> <span class="kt">Int64</span></code></pre>
 
                         </div>
                       </div>
@@ -428,7 +429,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">avURLAsset</span><span class="p">:</span> <span class="kt">AVURLAsset</span><span class="p">,</span> <span class="n"><a href="../Classes/PallyConDrmConfiguration.html#/s:14PallyConFPSSDK0aB16DrmConfigurationC9contentIdSSvp">contentId</a></span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n"><a href="../Classes/PallyConDrmConfiguration.html#/s:14PallyConFPSSDK0aB16DrmConfigurationC14certificateUrlSSvp">certificateUrl</a></span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">authData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">avURLAsset</span><span class="p">:</span> <span class="kt">AVURLAsset</span><span class="p">,</span> <span class="n"><a href="../Classes/PallyConDrmConfiguration.html#/s:14PallyConFPSSDK0aB16DrmConfigurationC9contentIdSSvp">contentId</a></span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n"><a href="../Classes/PallyConDrmConfiguration.html#/s:14PallyConFPSSDK0aB16DrmConfigurationC14certificateUrlSSvp">certificateUrl</a></span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">authData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicenseDelegate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">licenseUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keyIdList</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">licenseHttpHeader</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">licenseCookies</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">allowsKeyRotation</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">renewalInterval</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="kt"><a href="../Enums/RenewalInterval.html">RenewalInterval</a></span><span class="o">.</span><span class="kt">Zero</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span></code></pre>

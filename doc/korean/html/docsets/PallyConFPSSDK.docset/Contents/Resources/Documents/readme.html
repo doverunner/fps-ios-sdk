@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PallyConFPSSDK 2.1.0 Docs
+          PallyConFPSSDK 2.3.0 Docs
         </a>
         
       </p>
@@ -187,7 +187,8 @@ SDK 사용과 관련한 기술 문의는 <a href="https://pallycon.zendesk.com/h
                                       <span class="nv">authData</span><span class="p">:</span> <span class="s">"Token or CustomData"</span><span class="p">)</span>
 
 <span class="c1">// 2. FPS 콘텐츠 다운로드를 위해 DownloadTask 객체를 생성하고 라이선스 획득 준비를 합니다.</span>
-<span class="k">let</span> <span class="nv">downloadTask</span> <span class="o">=</span> <span class="n">pallyconSdk</span><span class="o">.</span><span class="nf">createDownloadTask</span><span class="p">(</span><span class="kt">Content</span><span class="p">:</span> <span class="n">config</span><span class="p">,</span> <span class="nv">downloadDelegate</span><span class="p">:</span><span class="s">"PallyConFPSDownloadDelegate"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">downloadTask</span> <span class="o">=</span> <span class="n">pallyconSdk</span><span class="o">.</span><span class="nf">createDownloadTask</span><span class="p">(</span><span class="kt">Content</span><span class="p">:</span> <span class="n">config</span><span class="p">,</span> 
+                                         <span class="nv">downloadDelegate</span><span class="p">:</span><span class="s">"PallyConFPSDownloadDelegate"</span><span class="p">)</span>
 
 <span class="c1">// 3. 콘텐츠 다운로드 시작</span>
 <span class="c1">// 이전에 다운로드 중단된 콘텐츠일 경우, 해당 콘텐츠를 이어서 받습니다.</span>

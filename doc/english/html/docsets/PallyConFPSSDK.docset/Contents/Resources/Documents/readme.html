@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PallyConFPSSDK 2.1.0 Docs
+          PallyConFPSSDK 2.3.0 Docs
         </a>
         
       </p>
@@ -192,7 +192,8 @@ For technical questions about using the SDK, please visit the <a href="https://p
                                       <span class="nv">authData</span><span class="p">:</span> <span class="s">"Token or CustomData"</span><span class="p">)</span>
 
 <span class="c1">// 2. To download FPS content, create a DownloadTask object and enter token information to prepare for license acquisition.</span>
-<span class="k">let</span> <span class="nv">downloadTask</span> <span class="o">=</span> <span class="n">pallyconSdk</span><span class="o">.</span><span class="nf">createDownloadTask</span><span class="p">(</span><span class="kt">Content</span><span class="p">:</span><span class="s">"Content URL"</span><span class="p">,</span> <span class="nv">downloadDelegate</span><span class="p">:</span><span class="s">"PallyConFPSDownloadDelegate"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">downloadTask</span> <span class="o">=</span> <span class="n">pallyconSdk</span><span class="o">.</span><span class="nf">createDownloadTask</span><span class="p">(</span><span class="kt">Content</span><span class="p">:</span> <span class="n">config</span><span class="p">,</span> 
+                                         <span class="nv">downloadDelegate</span><span class="p">:</span><span class="s">"PallyConFPSDownloadDelegate"</span><span class="p">)</span>
 
 <span class="c1">// 3. Start downloading content</span>
 <span class="c1">// If the content download was canceled previously, it will be resumed.</span>
