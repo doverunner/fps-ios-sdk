@@ -78,9 +78,11 @@ class BasicTableViewController: UITableViewController {
      
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
           let cell = tableView.dequeueReusableCell(withIdentifier: BasicTableViewCell.reuseIdentifier, for: indexPath) as! BasicTableViewCell
-          
+
           if indexPath.section == 0 {
-               //cell.accessoryType = .none
+               cell.accessoryType = .none
+          } else {
+               cell.accessoryType = .detailButton
           }
           
           let fpsContent = FPSListManager.sharedManager.fpsContent(section: indexPath.section, index: indexPath.row)
@@ -111,8 +113,9 @@ class BasicTableViewController: UITableViewController {
                     return
           }
           
-          #if os(iOS)
-               if #available(iOS 11.2, *) {
+#if os(iOS)
+          if #available(iOS 11.2, *) {
+               if indexPath.section == 1 {
                     let downloadState = PallyConSDKManager.sharedManager.downloadState(for: fpsContent)
                     
                     let alertAction: UIAlertAction
@@ -127,9 +130,7 @@ class BasicTableViewController: UITableViewController {
                                    
                               } else {
                                    let alert = UIAlertController(title: "Download Failed", message: "network connect failed", preferredStyle: .alert)
-                                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { Void in
-                                        self.tableView.reloadData()
-                                   }))
+                                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
                               }
                          }
@@ -145,9 +146,7 @@ class BasicTableViewController: UITableViewController {
                                    
                               } else {
                                    let alert = UIAlertController(title: "Download Failed", message: "network connect failed", preferredStyle: .alert)
-                                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { Void in
-                                        self.tableView.reloadData()
-                                   }))
+                                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                                    UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
                               }
                          }
@@ -174,28 +173,36 @@ class BasicTableViewController: UITableViewController {
                          }
                          
                          let alert = UIAlertController(title: "Offline License", message: message, preferredStyle: .alert)
-                         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { Void in
-                              self.tableView.reloadData()
-                         }))
+                         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                          UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
                     }
                     
                     let alertHLSSizeAction = UIAlertAction(title: "HLS Size", style: .default) { _ in
                          do {
+                              var message:String?
                               let urlString = fpsContent.urlAsset.url.absoluteString
-                              let m3u8Size = PallyConHLSInfo(urlString)
-                              try m3u8Size.extractPallyConHLSInfo()
-                              let resolution = m3u8Size.getVideoResolutionSize()
-                              let bitrate = m3u8Size.getVideoBitrateSiz()
-
-                              let message = resolution + "\n ------------------ \n" + bitrate
+                              if (Recharbility.isConnectedToNetwork()) {
+                                   if (urlString.hasPrefix("file:///")) {
+                                        message = "Downloaded content. \n Delete the content and check the HLS size."
+                                   } else {
+                                        let m3u8Size = PallyConHLSInfo(urlString)
+                                        try m3u8Size.extractPallyConHLSInfo()
+                                        let resolution = m3u8Size.getVideoResolutionSize()
+                                        let bitrate = m3u8Size.getVideoBitrateSiz()
+                                        message = resolution + "\n ------------------ \n" + bitrate
+                                   }
+                              } else {
+                                   let alert = UIAlertController(title: "Get HLS Size Failed", message: "network connect failed", preferredStyle: .alert)
+                                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                                   UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                              }
+                              
                               let alert = UIAlertController(title: "m3u8 Size", message: message, preferredStyle: .alert)
-                              alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { Void in
-                                   self.tableView.reloadData()
-                              }))
+                              alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                               UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                              
                          } catch {
-                              print("Error: \(error). Failed remove license")
+                              print("Error: \(error). Failed")
                          }
                     }
                     
@@ -222,7 +229,8 @@ class BasicTableViewController: UITableViewController {
                     
                     present(alertController, animated: true, completion: nil)
                }
-          #endif
+          }
+#endif
      }
      
      override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -253,10 +261,10 @@ class BasicTableViewController: UITableViewController {
           
           if segue.identifier == BasicTableViewController.presentPlayerViewControllerSegueIdentifier {
                guard let indexPath = self.tableView.indexPathForSelectedRow,
-                    let cell = tableView.cellForRow(at: indexPath) as? BasicTableViewCell,
-                    let playerViewController = segue.destination as? AVPlayerViewController,
-                    var fpsContent = cell.fpsContent else {
-                         return
+                     let cell = tableView.cellForRow(at: indexPath) as? BasicTableViewCell,
+                     let playerViewController = segue.destination as? AVPlayerViewController,
+                     var fpsContent = cell.fpsContent else {
+                    return
                }
                
                if let contentURL = fpsContent.urlAsset.url.absoluteURL.scheme, contentURL.hasPrefix("http")  {
@@ -280,7 +288,9 @@ class BasicTableViewController: UITableViewController {
                let config = PallyConDrmConfiguration(avURLAsset: fpsContent.urlAsset,
                                                      contentId: fpsContent.contentId,
                                                      certificateUrl: CERTIFICATE_URL,
-                                                     authData: fpsContent.token)
+                                                     authData: fpsContent.token,
+                                                     delegate: PallyConSDKManager.sharedManager,
+                                                     keyIdList: [fpsContent.keyId])
                PallyConSDKManager.sharedManager.pallyConFPSSDK?.prepare(Content: config)
                
                // Load the new FpsContent to playback into FPSPlaybackManager.
@@ -340,8 +350,16 @@ extension BasicTableViewController: FPSPlaybackDelegate {
                /// underlyingError.code == -42799 : This error code is returned when a security update is issued and the existing persistent key format is no loger supported. In this case, the application must request a new persistent key from server.
                /// underlyingError.code == -42800 : This error code is returned when persistent key is expired.
                switch underlyingError.code {
-               case -42800:
-                    message = "license is expired"
+               case -42656: message = "Lease duration has expired."
+               case -42668: message = "The CKC passed in for processing is not valid."
+               case -42672: message = "A certificate is not supplied when creating SPC."
+               case -42673: message = "assetId is not supplied when creating an SPC."
+               case -42674: message = "Version list is not supplied when creating an SPC."
+               case -42675: message = "The assetID supplied to SPC creation is not valid."
+               case -42676: message = "An error occurred during SPC creation."
+               case -42679: message = "The certificate supplied for SPC creation is not valid."
+               case -42681: message = "The version list supplied to SPC creation is not valid."
+               case -42783: message = "The certificate supplied for SPC is not valid and is possibly revoked."
                case -42799:
                     if fpsContent != nil {
                          let pallyConFpsSdk = PallyConSDKManager.sharedManager.pallyConFPSSDK
@@ -352,6 +370,8 @@ extension BasicTableViewController: FPSPlaybackDelegate {
                          }
                     }
                     message = "you have to re-try acquire license"
+               case -42800: message = "offline license is expired"
+               case -42803: message = "offline key is invalid"
                default:
                     if underlyingError.code == -1002 {
                          print("Invalid URL")
