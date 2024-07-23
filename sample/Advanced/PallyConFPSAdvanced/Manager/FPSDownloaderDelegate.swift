@@ -23,7 +23,9 @@ public class FPSDownloaderDelegate: NSObject {
         let config = PallyConDrmConfiguration(avURLAsset: videoAsset, 
                                               contentId: contentId,
                                               certificateUrl: CERTIFICATE_URL,
-                                              authData: token)
+                                              authData: token,
+                                              delegate: PallyConSDKManager.sharedManager,
+                                              keyIdList: [keyId])
         downloadTask = PallyConSDKManager.sharedManager.pallyConFPSSDK?.createDownloadTask(Content: config, delegate: self)
     }
     
