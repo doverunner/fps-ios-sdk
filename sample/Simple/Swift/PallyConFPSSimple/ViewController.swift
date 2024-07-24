@@ -15,7 +15,7 @@ import PallyConFPSSDK
 import PallyConFPSSDKTV
 #endif
 
-let CERTIFICATE_URL = "https://license-global.pallycon.com/ri/fpsKeyManager.do?siteId=DEMO"
+let CERTIFICATE_URL = "https://license-global.pallycon.com/ri/fpsKeyManager.do?siteId=????"
 let CONTENT_ID      = ""
 let PALLYCON_TOKEN  = ""
 let CONTENT_URL     = ""

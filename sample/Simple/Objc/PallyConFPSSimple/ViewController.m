@@ -11,7 +11,7 @@
 
 // This is customer-specific information.
 // you have to set customer information.
-#define CERTIFICATE_URL     @""
+#define CERTIFICATE_URL     @"https://license-global.pallycon.com/ri/fpsKeyManager.do?siteId=????"
 #define CONTENT_ID          @""
 #define PALLYCON_TOKEN      @""
 #define CONTENT_URL         @""

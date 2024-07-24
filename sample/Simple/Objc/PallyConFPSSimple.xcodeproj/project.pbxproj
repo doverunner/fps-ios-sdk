@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		B4AFA9112075E329005AF13A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AFA9102075E329005AF13A /* main.m */; };
 		C117297D2717338400F6FE10 /* PallyConFPSSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; };
 		C117297E2717338400F6FE10 /* PallyConFPSSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C17F9A812C50E1E700B3B57B /* PallyConFPSSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; };
+		C17F9A822C50E1E700B3B57B /* PallyConFPSSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C17F9A822C50E1E700B3B57B /* PallyConFPSSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17F9A812C50E1E700B3B57B /* PallyConFPSSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
