@@ -20,7 +20,7 @@ public class FPSDownloaderDelegate: NSObject {
         super.init()
 
         let videoAsset = AVURLAsset(url: url)
-        let config = PallyConDrmConfiguration(avURLAsset: videoAsset, 
+        let config = PallyConDrmConfiguration(avURLAsset: videoAsset,
                                               contentId: contentId,
                                               certificateUrl: CERTIFICATE_URL,
                                               authData: token,
