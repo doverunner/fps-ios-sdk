@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		88FAEDD622EAC24800796DC6 /* Contents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88FAEDD522EAC24800796DC6 /* Contents.plist */; };
 		88FAEDD722EAC24800796DC6 /* Contents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88FAEDD522EAC24800796DC6 /* Contents.plist */; };
-		C11729712717335D00F6FE10 /* PallyConFPSSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7727171DD500FAC0BE /* PallyConFPSSDK.xcframework */; };
-		C11729722717335D00F6FE10 /* PallyConFPSSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7727171DD500FAC0BE /* PallyConFPSSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C11729802717339000F6FE10 /* PallyConFPSSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7727171DD500FAC0BE /* PallyConFPSSDK.xcframework */; };
-		C11729812717339000F6FE10 /* PallyConFPSSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7727171DD500FAC0BE /* PallyConFPSSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C156B3531E7F72CE00344598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C156B3521E7F72CE00344598 /* AppDelegate.swift */; };
 		C156B3581E7F72CE00344598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C156B3561E7F72CE00344598 /* Main.storyboard */; };
 		C156B35A1E7F72CE00344598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C156B3591E7F72CE00344598 /* Assets.xcassets */; };
@@ -33,6 +29,8 @@
 		C161E1BD1E4C38D60020086C /* FPSPlaybackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161E1BC1E4C38D60020086C /* FPSPlaybackManager.swift */; };
 		C16A098F1E640957001DBA86 /* PallyConSDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A098D1E640957001DBA86 /* PallyConSDKManager.swift */; };
 		C16A09911E640957001DBA86 /* Recharbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A098E1E640957001DBA86 /* Recharbility.swift */; };
+		C17F9A7F2C50D73C00B3B57B /* PallyConFPSSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17F9A7E2C50D73C00B3B57B /* PallyConFPSSDK.xcframework */; };
+		C17F9A802C50D73C00B3B57B /* PallyConFPSSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C17F9A7E2C50D73C00B3B57B /* PallyConFPSSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1BD570E1E65655700912599 /* FPSDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD570D1E65655700912599 /* FPSDownloaderDelegate.swift */; };
 		C1D5E6E820200EB5003F4302 /* PallyConFPSAdvancedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D5E6E720200EB5003F4302 /* PallyConFPSAdvancedUITests.swift */; };
 		C1DFA3E8202454AE00F570F6 /* TestCaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95FFB1F207F33002FB94C /* TestCaseUtils.swift */; };
@@ -58,24 +56,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C11729732717335D00F6FE10 /* Embed Frameworks */ = {
+		C135161D2A4A8E72000638DC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C11729722717335D00F6FE10 /* PallyConFPSSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C11729822717339000F6FE10 /* Embed Frameworks */ = {
+		C14F6CEA2C2BEDCA00AFD0BA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C11729812717339000F6FE10 /* PallyConFPSSDK.xcframework in Embed Frameworks */,
+				C17F9A802C50D73C00B3B57B /* PallyConFPSSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +82,7 @@
 /* Begin PBXFileReference section */
 		88316F7A22115363000DBF10 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		88FAEDD522EAC24800796DC6 /* Contents.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Contents.plist; sourceTree = "<group>"; };
+		C1305D16283CD162007D328B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C156B3501E7F72CE00344598 /* PallyConFPSAdvancedTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PallyConFPSAdvancedTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C156B3521E7F72CE00344598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C156B3571E7F72CE00344598 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,7 +102,7 @@
 		C161E1BC1E4C38D60020086C /* FPSPlaybackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPSPlaybackManager.swift; sourceTree = "<group>"; };
 		C16A098D1E640957001DBA86 /* PallyConSDKManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = PallyConSDKManager.swift; sourceTree = "<group>"; };
 		C16A098E1E640957001DBA86 /* Recharbility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recharbility.swift; sourceTree = "<group>"; };
-		C18B6F7727171DD500FAC0BE /* PallyConFPSSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PallyConFPSSDK.xcframework; path = ../../lib/PallyConFPSSDK.xcframework; sourceTree = "<group>"; };
+		C17F9A7E2C50D73C00B3B57B /* PallyConFPSSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PallyConFPSSDK.xcframework; path = ../../lib/PallyConFPSSDK.xcframework; sourceTree = "<group>"; };
 		C1BD570D1E65655700912599 /* FPSDownloaderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPSDownloaderDelegate.swift; sourceTree = "<group>"; };
 		C1D5E6E720200EB5003F4302 /* PallyConFPSAdvancedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PallyConFPSAdvancedUITests.swift; sourceTree = "<group>"; };
 		C1F95FF61F207E73002FB94C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C11729712717335D00F6FE10 /* PallyConFPSSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C11729802717339000F6FE10 /* PallyConFPSSDK.xcframework in Frameworks */,
+				C17F9A7F2C50D73C00B3B57B /* PallyConFPSSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,19 +144,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01636AD65ABF508EC8158792 /* Pods */ = {
+		60C7D44DEF3EE7CCCB33E662 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		819731B21E41D9A900A45899 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C18B6F7727171DD500FAC0BE /* PallyConFPSSDK.xcframework */,
+				C17F9A7E2C50D73C00B3B57B /* PallyConFPSSDK.xcframework */,
+				C1305D16283CD162007D328B /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF695F83ABDE9B6D61B0146A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		C156B3511E7F72CE00344598 /* PallyConFPSAdvancedTV */ = {
@@ -182,8 +180,8 @@
 				C15E15C41E32008700A84BB9 /* Shared */,
 				C1F95FF51F207E73002FB94C /* PallyConFPSAdvancedTests */,
 				C15E156D1E30A9AD00A84BB9 /* Products */,
-				819731B21E41D9A900A45899 /* Frameworks */,
-				01636AD65ABF508EC8158792 /* Pods */,
+				60C7D44DEF3EE7CCCB33E662 /* Frameworks */,
+				AF695F83ABDE9B6D61B0146A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -287,7 +285,7 @@
 				C156B34C1E7F72CE00344598 /* Sources */,
 				C156B34D1E7F72CE00344598 /* Frameworks */,
 				C156B34E1E7F72CE00344598 /* Resources */,
-				C11729732717335D00F6FE10 /* Embed Frameworks */,
+				C135161D2A4A8E72000638DC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,13 +300,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C15E15941E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "PallyConFPSAdvanced" */;
 			buildPhases = (
-				DF09D1B283639458D96766AB /* [CP] Check Pods Manifest.lock */,
 				C15E15681E30A9AD00A84BB9 /* Sources */,
 				C15E15691E30A9AD00A84BB9 /* Frameworks */,
 				C15E156A1E30A9AD00A84BB9 /* Resources */,
-				C422A72336804FE2F39F6326 /* [CP] Embed Pods Frameworks */,
-				FEE068F3D4EE0919988D0DFF /* [CP] Copy Pods Resources */,
-				C11729822717339000F6FE10 /* Embed Frameworks */,
+				C14F6CEA2C2BEDCA00AFD0BA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -457,67 +452,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		C422A72336804FE2F39F6326 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PallyConFPSAdvanced/Pods-PallyConFPSAdvanced-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PallyConFPSAdvanced/Pods-PallyConFPSAdvanced-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF09D1B283639458D96766AB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PallyConFPSAdvanced-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FEE068F3D4EE0919988D0DFF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PallyConFPSAdvanced/Pods-PallyConFPSAdvanced-resources.sh",
-				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-ios-4.5.1_static/GoogleCast.framework/GoogleCastCoreResources.bundle",
-				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-ios-4.5.1_static/GoogleCast.framework/GoogleCastUIResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastCoreResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastUIResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PallyConFPSAdvanced/Pods-PallyConFPSAdvanced-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		C156B34C1E7F72CE00344598 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -609,11 +543,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
-				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../lib\"",
-				);
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/PallyConFPSAdvancedTV/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -624,7 +555,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -634,11 +565,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
-				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../lib\"",
-				);
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/PallyConFPSAdvancedTV/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,7 +577,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -657,7 +585,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -718,7 +645,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -773,25 +699,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				BITCODE_GENERATION_MODE = "";
+				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					../../lib,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PallyConFPSAdvanced/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 					"$(inherited)",
 				);
+				PODS_PODFILE_DIR_PATH = "${SRCROOT}/.";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSAdvanced;
 				PRODUCT_NAME = PallyConFPS;
 				PROVISIONING_PROFILE = "";
@@ -806,30 +731,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				BITCODE_GENERATION_MODE = "";
+				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					../../lib,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PallyConFPSAdvanced/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 					"$(inherited)",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				PODS_PODFILE_DIR_PATH = "${SRCROOT}/.";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSAdvanced;
 				PRODUCT_NAME = PallyConFPS;
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "PallyCon Distribution";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;

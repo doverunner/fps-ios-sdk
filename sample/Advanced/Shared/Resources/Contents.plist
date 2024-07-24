@@ -4,29 +4,31 @@
 <array>
 	<dict>
 		<key>FPSCidKey</key>
-		<string></string>
+		<string>content id</string>
+		<key>Mainm3u8Scheme</key>
+		<false/>
 		<key>ContentURL</key>
-		<string></string>
+		<string>content url</string>
 		<key>ContentNameKey</key>
-		<string></string>
+		<string>streaming content </string>
 		<key>OnlyStreaming</key>
 		<true/>
 		<key>FPSToken</key>
-		<string></string>
+		<string>AuthData</string>
 	</dict>
 	<dict>
 		<key>FPSCidKey</key>
-		<string></string>
-		<key>ContentURL</key>
-		<string></string>
-		<key>FPSToken</key>
-		<string></string>
-		<key>ContentNameKey</key>
-		<string></string>
-		<key>OnlyStreaming</key>
-		<false/>
+		<string>content id</string>
 		<key>Mainm3u8Scheme</key>
 		<false/>
+		<key>ContentURL</key>
+		<string>content url</string>
+		<key>ContentNameKey</key>
+		<string>downloadecontent</string>
+		<key>OnlyStreaming</key>
+		<false/>
+		<key>FPSToken</key>
+		<string>AuthData</string>
 	</dict>
 </array>
 </plist>
