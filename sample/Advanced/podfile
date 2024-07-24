@@ -1,4 +1,4 @@
 target 'PallyConFPSAdvanced' do
   use_frameworks!
-  pod 'google-cast-sdk'
+  pod 'google-cast-sdk', '4.6.1'
 end
