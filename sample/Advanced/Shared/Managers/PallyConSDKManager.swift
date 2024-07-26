@@ -244,7 +244,6 @@ extension PallyConSDKManager: PallyConFPSLicenseDelegate {
                return false
           }
           
-          
           print("---------> originalUrl : \(originalUrl)")
           print("---------> changeUrl   : \(changeUrl)")
           if originalUrl.hasSuffix("m3u8") == false {
@@ -280,8 +279,6 @@ extension PallyConSDKManager: PallyConFPSLicenseDelegate {
                }
                
                guard let string = String(data: data, encoding: .utf8) else { return }
-               
-               let dataString = "#EXTM3U\n## Generated with https://github.com/google/shaka-packager version 443519aeb3-release\n\n#EXT-X-MEDIA:TYPE=AUDIO,URI=\"https://d17bdh57mci8eq.cloudfront.net/Contents/hls/audio/mp4a/und/stream.m3u8\",GROUP-ID=\"audio\",NAME=\"und_mp4a\",AUTOSELECT=YES,CHANNELS=\"2\"\n\n#EXT-X-STREAM-INF:BANDWIDTH=4854819,AVERAGE-BANDWIDTH=3208671,CODECS=\"avc1.640028,mp4a.40.2\",RESOLUTION=1920x1080,AUDIO=\"audio\"\nhttps://d17bdh57mci8eq.cloudfront.net/Contents/hls/video/avc1/1/stream.m3u8\n\n#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=2027392,AVERAGE-BANDWIDTH=714334,CODECS=\"avc1.640028\",RESOLUTION=1920x1080,URI=\"https://d17bdh57mci8eq.cloudfront.net/Contents/hls/video/avc1/1/iframe.m3u8\"\n"
                dataRequest.respond(with: string.data(using: .utf8)!)
                requestResource.finishLoading()
 
