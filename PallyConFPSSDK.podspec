@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     :tag => 'v2.3.0'
   }
   s.vendored_frameworks = 'lib/PallyConFPSSDK.xcframework'
-  s.swift_versions = '5.10'
+  s.swift_versions = '5.0'
 
   s.user_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
