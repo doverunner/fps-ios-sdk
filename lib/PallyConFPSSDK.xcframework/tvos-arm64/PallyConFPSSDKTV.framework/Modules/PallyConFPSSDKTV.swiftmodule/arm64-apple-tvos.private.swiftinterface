@@ -110,11 +110,17 @@ extension PallyConFPSSDKTV.PallyConFPSSDK {
 }
 @objc public class PallyConResult : ObjectiveC.NSObject {
   @objc final public let contentId: Swift.String
-  @objc public var isSuccess: Foundation.NSNumber
+  @objc public var isSuccess: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isSuccessNumber: Foundation.NSNumber {
+    get
+  }
   @objc public var keyId: Swift.String?
-  @objc public var playbackExpiry: Swift.String?
+  @objc public var offlineExpiry: PallyConFPSSDKTV.PallyConOfflineExpiryDate?
   public var error: PallyConFPSSDKTV.PallyConError?
-  public init(contentId: Swift.String, isSuccess: Foundation.NSNumber = false as NSNumber, keyId: Swift.String? = nil, playbackExpiry: Swift.String? = nil, error: PallyConFPSSDKTV.PallyConError? = nil)
+  public init(contentId: Swift.String, isSuccess: Swift.Bool = false, keyId: Swift.String? = nil, offlineExpiry: PallyConFPSSDKTV.PallyConOfflineExpiryDate? = nil, error: PallyConFPSSDKTV.PallyConError? = nil)
   @objc public func getPallyConErrorForObjC() -> (Swift.String)
   @objc deinit
 }
@@ -127,6 +133,32 @@ public enum PallyConError : Swift.Error {
   case failed(errorCode: Swift.Int = -1, comment: Swift.String)
   case invalid(comment: Swift.String)
   case unknown(errorCode: Swift.Int = -1, comment: Swift.String)
+}
+@objc public class PallyConOfflineExpiryDate : ObjectiveC.NSObject {
+  public var offlineLicenseDownloadedDate: Foundation.Date? {
+    get
+  }
+  public var rentalExpiryDate: Foundation.Date? {
+    get
+  }
+  public var playbackExpiryDate: Foundation.Date? {
+    get
+  }
+  public var rentalDuration: Swift.String? {
+    get
+  }
+  public var playbackDuration: Swift.String? {
+    get
+  }
+  public var licenseDuration: Swift.String? {
+    get
+  }
+  @objc public init(downloadDate: Foundation.Date? = nil, rentalDuration: Swift.String? = nil, playbackDuration: Swift.String? = nil, licenseDuration: Swift.String? = nil)
+  public func update(downloadDate: Foundation.Date)
+  public func update(licenseDuration: Swift.String)
+  public func update(rentalDuration: Swift.String)
+  public func update(playbackDuration: Swift.String)
+  @objc deinit
 }
 @available(tvOS, deprecated, message: "Use the `PallyConError` instead")
 public enum PallyConSDKException : Swift.Error {
@@ -212,6 +244,10 @@ extension PallyConFPSSDKTV.License {
     @objc get
     @objc set
   }
+  @objc @NSManaged dynamic public var key_id: Swift.String? {
+    @objc get
+    @objc set
+  }
   @objc @NSManaged dynamic public var licenseType: Swift.String? {
     @objc get
     @objc set
@@ -221,6 +257,14 @@ extension PallyConFPSSDKTV.License {
     @objc set
   }
   @objc @NSManaged dynamic public var persistentKey: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var playback_duration: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var rental_duration: Swift.String? {
     @objc get
     @objc set
   }

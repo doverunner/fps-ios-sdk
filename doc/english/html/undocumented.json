@@ -9,8 +9,50 @@
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 75,
-      "symbol": "PallyConResult.init(contentId:isSuccess:keyId:playbackExpiry:error:)",
+      "line": 81,
+      "symbol": "PallyConResult.init(contentId:isSuccess:keyId:offlineExpiry:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
+      "line": 161,
+      "symbol": "PallyConOfflineExpiryDate.init(downloadDate:rentalDuration:playbackDuration:licenseDuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
+      "line": 191,
+      "symbol": "PallyConOfflineExpiryDate.update(downloadDate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
+      "line": 195,
+      "symbol": "PallyConOfflineExpiryDate.update(licenseDuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
+      "line": 199,
+      "symbol": "PallyConOfflineExpiryDate.update(rentalDuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
+      "line": 204,
+      "symbol": "PallyConOfflineExpiryDate.update(playbackDuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
+      "line": 209,
+      "symbol": "PallyConOfflineExpiryDate.updateAll(downloadDate:rentalDuration:playbackDuration:licenseDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

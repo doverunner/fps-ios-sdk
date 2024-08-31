@@ -367,9 +367,12 @@ SWIFT_CLASS("_TtC14PallyConFPSSDK7License")
 @property (nonatomic, copy) NSString * _Nullable cId;
 @property (nonatomic, copy) NSDate * _Nullable downloadDate;
 @property (nonatomic, copy) NSDate * _Nullable duration;
+@property (nonatomic, copy) NSString * _Nullable key_id;
 @property (nonatomic, copy) NSString * _Nullable licenseType;
 @property (nonatomic, copy) NSString * _Nullable optionalId;
 @property (nonatomic, copy) NSData * _Nullable persistentKey;
+@property (nonatomic, copy) NSString * _Nullable playback_duration;
+@property (nonatomic, copy) NSString * _Nullable rental_duration;
 @property (nonatomic, copy) NSString * _Nullable userId;
 @property (nonatomic, strong) ContentKey * _Nullable contentkey;
 @end
@@ -498,6 +501,7 @@ SWIFT_CLASS("_TtC14PallyConFPSSDK14PallyConFPSSDK")
 + (PallyConTokenInfo * _Nullable)getTokenInfoFrom:(NSString * _Nonnull)token error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1);
 @end
 
+@class PallyConOfflineExpiryDate;
 
 @interface PallyConFPSSDK (SWIFT_EXTENSION(PallyConFPSSDK))
 /// The <code>prepare(config:)</code> function sets the information to request a license for <code>FairPlay Streaming</code> content.
@@ -538,7 +542,14 @@ SWIFT_CLASS("_TtC14PallyConFPSSDK14PallyConFPSSDK")
 ///
 /// returns:
 /// Returns the expiration date in UTC (GMT) time.
-- (NSString * _Nullable)getExpiryDateOfSavedLicenseWithContentId:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)getExpiryDateOfSavedLicenseWithContentId:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Use the `getOfflineLicenseExpiryDate(find contentId: String)` instead");
+/// If the license is stored, return the expiration date.
+/// \param contentId Content ID
+///
+///
+/// returns:
+/// Returns <code>PallyConOfflineExpiryDate</code>.
+- (PallyConOfflineExpiryDate * _Nonnull)getOfflineLicenseExpiryDateWithFind:(NSString * _Nonnull)contentId SWIFT_WARN_UNUSED_RESULT;
 /// Get a json data for play in chromcast.
 /// \param authData token or customData string of the content to be played.
 ///
@@ -605,6 +616,15 @@ SWIFT_CLASS("_TtC14PallyConFPSSDK15PallyConHLSInfo") SWIFT_AVAILABILITY(ios,intr
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+/// Offline licence expiry information class.
+SWIFT_CLASS("_TtC14PallyConFPSSDK25PallyConOfflineExpiryDate")
+@interface PallyConOfflineExpiryDate : NSObject
+- (nonnull instancetype)initWithDownloadDate:(NSDate * _Nullable)downloadDate rentalDuration:(NSString * _Nullable)rentalDuration playbackDuration:(NSString * _Nullable)playbackDuration licenseDuration:(NSString * _Nullable)licenseDuration OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class NSNumber;
 
 /// License acquisition result information.
@@ -613,11 +633,13 @@ SWIFT_CLASS("_TtC14PallyConFPSSDK14PallyConResult")
 /// Content ID
 @property (nonatomic, readonly, copy) NSString * _Nonnull contentId;
 /// Indicates success or failure. false is 0. true is 1 or non-zero values.
-@property (nonatomic, strong) NSNumber * _Nonnull isSuccess;
+@property (nonatomic) BOOL isSuccess;
+/// NSNumber representation of isSuccess for Objective-C compatibility
+@property (nonatomic, readonly, strong) NSNumber * _Nonnull isSuccessNumber;
 /// Content Key ID
 @property (nonatomic, copy) NSString * _Nullable keyId;
 /// The expiration date for that <code>contentId</code>, if any, is displayed.
-@property (nonatomic, copy) NSString * _Nullable playbackExpiry;
+@property (nonatomic, strong) PallyConOfflineExpiryDate * _Nullable offlineExpiry;
 /// This is a function that allows you to check the contents of an error in Objective-C.
 /// In Swift, you can check PallyConError.error.
 - (NSString * _Nonnull)getPallyConErrorForObjC SWIFT_WARN_UNUSED_RESULT;

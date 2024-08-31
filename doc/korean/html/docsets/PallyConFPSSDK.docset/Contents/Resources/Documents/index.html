@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PallyConFPSSDK 2.3.0 Docs
+          PallyConFPSSDK 2.4.0 Docs
         </a>
         
       </p>
@@ -57,6 +57,9 @@
                 <a class="nav-group-task-link" href="Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PallyConOfflineExpiryDate.html">PallyConOfflineExpiryDate</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PallyConResult.html">PallyConResult</a>
               </li>
             </ul>
@@ -90,7 +93,41 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <h1 id='version-2-3-0' class='heading'>Version 2.3.0</h1>
+            <h1 id='version-2-4-0' class='heading'>Version 2.4.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 2.4.0</strong></p>
+</blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/PallyConOfflineExpiryDate.html">PallyConOfflineExpiryDate</a></code> 가 추가됩니다.</p>
+
+<ul>
+<li>오프라인 라이선스 만료 정보 클래스가 추가됩니다..</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConOfflineExpiryDate</span> <span class="p">{</span>
+    <span class="c1">/// Offline license downloaded date.</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">offlineLicenseDownloadedDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span>
+    <span class="c1">/// Rental expiry date: `offlineLicenseDownloadedDate` + `rentalDuration`</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">rentalExpiryDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span>
+    <span class="c1">/// Playback expiry date: `offlineLicenseDownloadedDate` + `playbackDuration`</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">playbackExpiryDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span>
+    <span class="c1">/// Rental duration in seconds</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">rentalDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+    <span class="c1">/// Playback duration in seconds</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">playbackDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+    <span class="c1">/// Policy v1 - Offline license expiry date</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">licenseDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code>getOfflineLicenseExpiryDate</code> 가 추가됩니다.</p>
+
+<ul>
+<li>입력한 Content ID의 만료 정보를 반환합니다.</li>
+</ul>
+<pre class="highlight plaintext"><code>  func getOfflineLicenseExpiryDate(find contentId: String) -&gt; PallyConOfflineExpiryDate
+</code></pre>
+<h1 id='version-2-3-0' class='heading'>Version 2.3.0</h1>
 
 <blockquote>
 <p><strong>What&rsquo;s New in Version 2.3.0</strong></p>
@@ -163,6 +200,13 @@
 <li><code>Deprecated</code> API는 2.0이 배포 날짜에서 6개월까지 유효하며, 이후 예고 없이 사라질수 있습니다.</li>
 <li>기존 SDK와 API와 2.0 버전의 API를 혼용하여 사용하면 문제가 발생할 수 있습니다.</li>
 </ul>
+<h1 id='version-1-17-4' class='heading'>Version 1.17.4</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.17.4</strong></p>
+</blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> iOS Simulator 라이브러리가 추가됩니다.</p>
 <h1 id='version-1-17-3' class='heading'>Version 1.17.3</h1>
 
 <blockquote>

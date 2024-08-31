@@ -6,8 +6,8 @@
 //  Copyright © 2017년 INKA Entworks. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-//#import "OpensslObject.h"
 
 //! Project version number for PallyConFPSSDK.
 FOUNDATION_EXPORT double PallyConFPSSDKVersionNumber;

@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PallyConFPSSDK 2.3.0 Docs
+          PallyConFPSSDK 2.4.0 Docs
         </a>
         
       </p>
@@ -57,6 +57,9 @@
                 <a class="nav-group-task-link" href="Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PallyConOfflineExpiryDate.html">PallyConOfflineExpiryDate</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PallyConResult.html">PallyConResult</a>
               </li>
             </ul>
@@ -90,7 +93,37 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <h1 id='version-2-3-0' class='heading'>Version 2.3.0</h1>
+            <h1 id='version-2-4-0' class='heading'>Version 2.4.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 2.4.0</strong></p>
+</blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/PallyConOfflineExpiryDate.html">PallyConOfflineExpiryDate</a></code> is added.</p>
+
+<ul>
+<li>An offline licence expiry information class is added.</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConOfflineExpiryDate</span> <span class="p">{</span>
+    <span class="c1">/// Offline license downloaded date.</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">offlineLicenseDownloadedDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span>
+    <span class="c1">/// Rental expiry date: `offlineLicenseDownloadedDate` + `rentalDuration`</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">rentalExpiryDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span>
+    <span class="c1">/// Playback expiry date: `offlineLicenseDownloadedDate` + `playbackDuration`</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">playbackExpiryDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span>
+    <span class="c1">/// Rental duration in seconds</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">rentalDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+    <span class="c1">/// Playback duration in seconds</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">playbackDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+    <span class="c1">/// Policy v1 - Offline license expiry date</span>
+    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">licenseDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code>getOfflineLicenseExpiryDate</code> is added.</p>
+<pre class="highlight plaintext"><code>  func getOfflineLicenseExpiryDate(find contentId: String) -&gt; PallyConOfflineExpiryDate
+</code></pre>
+<h1 id='version-2-3-0' class='heading'>Version 2.3.0</h1>
 
 <blockquote>
 <p><strong>What&rsquo;s New in Version 2.3.0</strong></p>
@@ -163,6 +196,13 @@
 <li><code>Deprecated</code> APIs are valid for up to <code>6 months</code> from the v2.0 SDK release date, after which they may disappear without notice.</li>
 <li>Mixing 2.0 with existing SDKs and APIs can cause issues.</li>
 </ul>
+<h1 id='version-1-17-4' class='heading'>Version 1.17.4</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 1.17.4</strong></p>
+</blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> iOS Simulator library is added.</p>
 <h1 id='version-1-17-3' class='heading'>Version 1.17.3</h1>
 
 <blockquote>

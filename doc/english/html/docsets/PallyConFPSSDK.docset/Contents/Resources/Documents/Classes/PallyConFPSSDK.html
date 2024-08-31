@@ -18,7 +18,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PallyConFPSSDK 2.3.0 Docs
+          PallyConFPSSDK 2.4.0 Docs
         </a>
         
       </p>
@@ -60,6 +60,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PallyConOfflineExpiryDate.html">PallyConOfflineExpiryDate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PallyConResult.html">PallyConResult</a>
@@ -387,7 +390,8 @@ If <code><a href="../Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicen
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use the `getOfflineLicenseExpiryDate(find contentId: String﹚` instead"</span><span class="p">)</span>
+<span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">getExpiryDateOfSavedLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
@@ -414,6 +418,57 @@ If <code><a href="../Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicen
                       <div>
                         <h4>Return Value</h4>
                         <p>Returns the expiration date in UTC (GMT) time.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@PallyConFPSSDK@objc(cs)PallyConFPSSDK(im)getOfflineLicenseExpiryDateWithFind:"></a>
+                    <a name="//apple_ref/swift/Method/getOfflineLicenseExpiryDate(find:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@PallyConFPSSDK@objc(cs)PallyConFPSSDK(im)getOfflineLicenseExpiryDateWithFind:">getOfflineLicenseExpiryDate(find:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the license is stored, return the expiration date.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOfflineLicenseExpiryDate</span><span class="p">(</span><span class="n">find</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PallyConOfflineExpiryDate.html">PallyConOfflineExpiryDate</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Content ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns <code><a href="../Classes/PallyConOfflineExpiryDate.html">PallyConOfflineExpiryDate</a></code>.</p>
                       </div>
                     </section>
                   </div>

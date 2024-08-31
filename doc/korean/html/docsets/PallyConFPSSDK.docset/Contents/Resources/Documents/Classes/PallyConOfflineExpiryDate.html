@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RenewalInterval Enumeration Reference</title>
+    <title>PallyConOfflineExpiryDate Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -11,9 +11,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Enum/RenewalInterval" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/PallyConOfflineExpiryDate" class="dashAnchor"></a>
 
-    <a title="RenewalInterval Enumeration Reference"></a>
+    <a title="PallyConOfflineExpiryDate Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -30,9 +30,9 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">PallyConFPSSDK</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      <a class="breadcrumb" href="../Enums.html">Enumerations</a>
+      <a class="breadcrumb" href="../Classes.html">Classes</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      RenewalInterval Enumeration Reference
+      PallyConOfflineExpiryDate Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -97,23 +97,16 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>RenewalInterval</h1>
+            <h1>PallyConOfflineExpiryDate</h1>
               <div class="declaration">
                 <div class="language">
                   
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RenewalInterval</span> <span class="p">:</span> <span class="kt">Int64</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">PallyConOfflineExpiryDate</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>License Renewal Interval.
-It must be the same as the time(interval) specified in the PallyCon console.
-If it is longer than the specified time, a license expiration error occurs, and if it is smaller than the specified time, the license cost will increases.
-The value received from the PallyCon license server takes precedence over the API parameter value.</p>
-<pre class="highlight swift"><code><span class="k">case</span> <span class="kt">FiveMinute</span> <span class="o">=</span> <span class="mi">300</span>    <span class="c1">/// 300 Second</span>
-<span class="k">case</span> <span class="kt">TenMinute</span> <span class="o">=</span> <span class="mi">600</span>     <span class="c1">/// 600 Second</span>
-<span class="k">case</span> <span class="kt">FifteenMinute</span> <span class="o">=</span> <span class="mi">900</span> <span class="c1">/// 900 Second</span>
-</code></pre>
+            <p>Offline licence expiry information class.</p>
 
           </div>
         </section>
@@ -125,9 +118,9 @@ The value received from the PallyCon license server takes precedence over the AP
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalFiveMinute"></a>
-                    <a name="//apple_ref/swift/Element/FiveMinute" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalFiveMinute">FiveMinute</a>
+                    <a name="/s:14PallyConFPSSDK0aB17OfflineExpiryDateC024offlineLicenseDownloadedF010Foundation0F0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/offlineLicenseDownloadedDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB17OfflineExpiryDateC024offlineLicenseDownloadedF010Foundation0F0VSgvp">offlineLicenseDownloadedDate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -135,14 +128,14 @@ The value received from the PallyCon license server takes precedence over the AP
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>5 minutes</p>
+                        <p>Offline license downloaded date.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">FiveMinute</span> <span class="o">=</span> <span class="mi">300</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">offlineLicenseDownloadedDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -152,9 +145,9 @@ The value received from the PallyCon license server takes precedence over the AP
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalTenMinute"></a>
-                    <a name="//apple_ref/swift/Element/TenMinute" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalTenMinute">TenMinute</a>
+                    <a name="/s:14PallyConFPSSDK0aB17OfflineExpiryDateC06rentaleF010Foundation0F0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/rentalExpiryDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB17OfflineExpiryDateC06rentaleF010Foundation0F0VSgvp">rentalExpiryDate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -162,14 +155,14 @@ The value received from the PallyCon license server takes precedence over the AP
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>10 minutes</p>
+                        <p>Rental expiry date: <code><a href="../Classes/PallyConOfflineExpiryDate.html#/s:14PallyConFPSSDK0aB17OfflineExpiryDateC024offlineLicenseDownloadedF010Foundation0F0VSgvp">offlineLicenseDownloadedDate</a></code> + <code><a href="../Classes/PallyConOfflineExpiryDate.html#/s:14PallyConFPSSDK0aB17OfflineExpiryDateC14rentalDurationSSSgvp">rentalDuration</a></code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">TenMinute</span> <span class="o">=</span> <span class="mi">600</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">rentalExpiryDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -179,9 +172,9 @@ The value received from the PallyCon license server takes precedence over the AP
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalFifteenMinute"></a>
-                    <a name="//apple_ref/swift/Element/FifteenMinute" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalFifteenMinute">FifteenMinute</a>
+                    <a name="/s:14PallyConFPSSDK0aB17OfflineExpiryDateC08playbackeF010Foundation0F0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/playbackExpiryDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB17OfflineExpiryDateC08playbackeF010Foundation0F0VSgvp">playbackExpiryDate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -189,14 +182,14 @@ The value received from the PallyCon license server takes precedence over the AP
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>15 minutes</p>
+                        <p>Playback expiry date: <code><a href="../Classes/PallyConOfflineExpiryDate.html#/s:14PallyConFPSSDK0aB17OfflineExpiryDateC024offlineLicenseDownloadedF010Foundation0F0VSgvp">offlineLicenseDownloadedDate</a></code> + <code><a href="../Classes/PallyConOfflineExpiryDate.html#/s:14PallyConFPSSDK0aB17OfflineExpiryDateC16playbackDurationSSSgvp">playbackDuration</a></code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">FifteenMinute</span> <span class="o">=</span> <span class="mi">900</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">playbackExpiryDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -206,9 +199,9 @@ The value received from the PallyCon license server takes precedence over the AP
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalZero"></a>
-                    <a name="//apple_ref/swift/Element/Zero" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PallyConFPSSDK@E@RenewalInterval@RenewalIntervalZero">Zero</a>
+                    <a name="/s:14PallyConFPSSDK0aB17OfflineExpiryDateC14rentalDurationSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/rentalDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB17OfflineExpiryDateC14rentalDurationSSSgvp">rentalDuration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -216,14 +209,68 @@ The value received from the PallyCon license server takes precedence over the AP
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>0 minutes</p>
+                        <p>Rental duration in seconds</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Zero</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">rentalDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK0aB17OfflineExpiryDateC16playbackDurationSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/playbackDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB17OfflineExpiryDateC16playbackDurationSSSgvp">playbackDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Playback duration in seconds</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">playbackDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK0aB17OfflineExpiryDateC15licenseDurationSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/licenseDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK0aB17OfflineExpiryDateC15licenseDurationSSSgvp">licenseDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Policy v1 - Offline license expiry date</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">licenseDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

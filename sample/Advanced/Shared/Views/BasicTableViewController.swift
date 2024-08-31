@@ -166,10 +166,12 @@ class BasicTableViewController: UITableViewController {
                     
                     let alertExistLicenseAction = UIAlertAction(title: "Exsit License", style: .default) { _ in
                          var message: String
-                         if let expireDate = PallyConSDKManager.sharedManager.pallyConFPSSDK?.getExpiryDateOfSavedLicense(ContentId: fpsContent.contentId) {
-                              message = "Expire Date : " + expireDate
-                         } else {
-                              message = "No Offline License"
+                         if let expire_date = PallyConSDKManager.sharedManager.pallyConFPSSDK?.getOfflineLicenseExpiryDate(find: fpsContent.contentId) {
+                              message = "Policy v1 \n" +
+                                        "license date  : \(expire_date.licenseDuration) \n" +
+                                        "Policy v2 \n" +
+                                        "rental date   : \(expire_date.rentalExpiryDate) \n" +
+                                        "playback date : \(expire_date.playbackExpiryDate)"
                          }
                          
                          let alert = UIAlertController(title: "Offline License", message: message, preferredStyle: .alert)

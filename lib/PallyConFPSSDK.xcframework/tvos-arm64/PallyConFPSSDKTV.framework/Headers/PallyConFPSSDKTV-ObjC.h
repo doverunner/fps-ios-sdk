@@ -350,9 +350,12 @@ SWIFT_CLASS("_TtC16PallyConFPSSDKTV7License")
 @property (nonatomic, copy) NSString * _Nullable cId;
 @property (nonatomic, copy) NSDate * _Nullable downloadDate;
 @property (nonatomic, copy) NSDate * _Nullable duration;
+@property (nonatomic, copy) NSString * _Nullable key_id;
 @property (nonatomic, copy) NSString * _Nullable licenseType;
 @property (nonatomic, copy) NSString * _Nullable optionalId;
 @property (nonatomic, copy) NSData * _Nullable persistentKey;
+@property (nonatomic, copy) NSString * _Nullable playback_duration;
+@property (nonatomic, copy) NSString * _Nullable rental_duration;
 @property (nonatomic, copy) NSString * _Nullable userId;
 @property (nonatomic, strong) ContentKey * _Nullable contentkey;
 @end
@@ -462,6 +465,15 @@ SWIFT_CLASS("_TtC16PallyConFPSSDKTV14PallyConFPSSDK")
 - (id _Nullable)getJsonforChromecastPlaybackWithAuthData:(NSString * _Nonnull)authData SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+/// Offline licence expiry information class.
+SWIFT_CLASS("_TtC16PallyConFPSSDKTV25PallyConOfflineExpiryDate")
+@interface PallyConOfflineExpiryDate : NSObject
+- (nonnull instancetype)initWithDownloadDate:(NSDate * _Nullable)downloadDate rentalDuration:(NSString * _Nullable)rentalDuration playbackDuration:(NSString * _Nullable)playbackDuration licenseDuration:(NSString * _Nullable)licenseDuration OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class NSNumber;
 
 /// License acquisition result information.
@@ -470,11 +482,13 @@ SWIFT_CLASS("_TtC16PallyConFPSSDKTV14PallyConResult")
 /// Content ID
 @property (nonatomic, readonly, copy) NSString * _Nonnull contentId;
 /// Indicates success or failure. false is 0. true is 1 or non-zero values.
-@property (nonatomic, strong) NSNumber * _Nonnull isSuccess;
+@property (nonatomic) BOOL isSuccess;
+/// NSNumber representation of isSuccess for Objective-C compatibility
+@property (nonatomic, readonly, strong) NSNumber * _Nonnull isSuccessNumber;
 /// Content Key ID
 @property (nonatomic, copy) NSString * _Nullable keyId;
 /// The expiration date for that <code>contentId</code>, if any, is displayed.
-@property (nonatomic, copy) NSString * _Nullable playbackExpiry;
+@property (nonatomic, strong) PallyConOfflineExpiryDate * _Nullable offlineExpiry;
 /// This is a function that allows you to check the contents of an error in Objective-C.
 /// In Swift, you can check PallyConError.error.
 - (NSString * _Nonnull)getPallyConErrorForObjC SWIFT_WARN_UNUSED_RESULT;
