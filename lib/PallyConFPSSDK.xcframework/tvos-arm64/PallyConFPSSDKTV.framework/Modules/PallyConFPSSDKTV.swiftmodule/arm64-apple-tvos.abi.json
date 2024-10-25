@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "PallyConFPSSDKTV",
+    "printedName": "PallyConFPSSDKTV",
     "children": [
       {
         "kind": "Import",
@@ -251,6 +251,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -334,6 +348,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -631,6 +659,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -939,6 +981,20 @@
         ],
         "enumRawTypeName": "Int64",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1817,6 +1873,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -2203,7 +2273,23 @@
           "AccessControl",
           "Final"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -3513,6 +3599,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -4252,6 +4352,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -4832,6 +4946,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Error",
@@ -5455,6 +5583,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -5980,6 +6122,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -6372,6 +6528,22 @@
           "AccessControl",
           "ObjC",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -6932,6 +7104,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -7445,6 +7631,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -8786,6 +8986,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -8918,27 +9132,6 @@
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
-      "kind": "IntegerLiteral",
-      "offset": 230,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
-      "kind": "IntegerLiteral",
-      "offset": 241,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
-      "kind": "IntegerLiteral",
-      "offset": 259,
-      "length": 8,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
       "kind": "BooleanLiteral",
       "offset": 620,
       "length": 5,
@@ -8946,48 +9139,6 @@
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
-      "kind": "StringLiteral",
-      "offset": 318,
-      "length": 17,
-      "value": "\"PallyConFPSSDKTV.PallyConTokenInfo\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
-      "kind": "StringLiteral",
-      "offset": 849,
-      "length": 22,
-      "value": "\"PallyConFPSSDKTV.PallyConCustomDataInfo\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1885,
-      "length": 3,
-      "value": "300"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1929,
-      "length": 3,
-      "value": "600"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1977,
-      "length": 3,
-      "value": "900"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2015,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
       "kind": "IntegerLiteral",
       "offset": 1885,
       "length": 3,
@@ -9048,55 +9199,6 @@
       "offset": 342,
       "length": 9,
       "value": "\"nothing\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/DatabaseController.swift",
-      "kind": "StringLiteral",
-      "offset": 227,
-      "length": 10,
-      "value": "\"complete\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/DatabaseController.swift",
-      "kind": "StringLiteral",
-      "offset": 255,
-      "length": 7,
-      "value": "\"pause\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/DatabaseController.swift",
-      "kind": "StringLiteral",
-      "offset": 279,
-      "length": 6,
-      "value": "\"fail\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/DatabaseController.swift",
-      "kind": "StringLiteral",
-      "offset": 309,
-      "length": 13,
-      "value": "\"downloading\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/DatabaseController.swift",
-      "kind": "StringLiteral",
-      "offset": 342,
-      "length": 9,
-      "value": "\"nothing\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/DatabaseController.swift",
-      "kind": "StringLiteral",
-      "offset": 400,
-      "length": 8,
-      "value": "\"rental\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/DatabaseController.swift",
-      "kind": "StringLiteral",
-      "offset": 425,
-      "length": 6,
-      "value": "\"less\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/DatabaseController.swift",
@@ -9199,83 +9301,6 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 231,
-      "length": 10,
-      "value": "\"Customer\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 261,
-      "length": 9,
-      "value": "\"License\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 293,
-      "length": 12,
-      "value": "\"ContentKey\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 347,
-      "length": 5,
-      "value": "\"cId\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 376,
-      "length": 10,
-      "value": "\"duration\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 409,
-      "length": 15,
-      "value": "\"persistentKey\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 440,
-      "length": 8,
-      "value": "\"userId\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 474,
-      "length": 14,
-      "value": "\"downloadDate\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 507,
-      "length": 8,
-      "value": "\"key_id\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 545,
-      "length": 19,
-      "value": "\"playback_duration\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 592,
-      "length": 17,
-      "value": "\"rental_duration\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
       "offset": 347,
       "length": 5,
       "value": "\"cId\""
@@ -9349,48 +9374,6 @@
       "offset": 710,
       "length": 9,
       "value": "\"keyData\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 653,
-      "length": 7,
-      "value": "\"keyId\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 677,
-      "length": 16,
-      "value": "\"playbackExpiry\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 710,
-      "length": 9,
-      "value": "\"keyData\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 765,
-      "length": 5,
-      "value": "\"url\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 787,
-      "length": 10,
-      "value": "\"siteCert\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 813,
-      "length": 8,
-      "value": "\"siteId\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/PallyConCoreDataManager.swift",
@@ -9475,13 +9458,6 @@
       "offset": 1770,
       "length": 44,
       "value": "\"com.inka.apple-samplecode.resourcerequests\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/FPSLicenseDownloader.swift",
-      "kind": "StringLiteral",
-      "offset": 1046,
-      "length": 20,
-      "value": "\"PallyConFPSSDKTV.FPSLicenseDownloader\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/CoreDataStack.swift",
@@ -9600,90 +9576,6 @@
       "kind": "IntegerLiteral",
       "offset": 9125,
       "length": 5,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9107,
-      "length": 9,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9118,
-      "length": 5,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9125,
-      "length": 5,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9107,
-      "length": 9,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9118,
-      "length": 5,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9125,
-      "length": 5,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12764,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12767,
-      "length": 6,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12775,
-      "length": 6,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12764,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12767,
-      "length": 6,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/AES.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12775,
-      "length": 6,
       "value": "3"
     },
     {
@@ -9827,13 +9719,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConLicenseManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1805,
-      "length": 22,
-      "value": "\"PallyConFPSSDKTV.PallyConLicenseManager\""
-    },
-    {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1190,
@@ -9843,79 +9728,58 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1772,
+      "offset": 1773,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 276,
-      "length": 24,
-      "value": "\"PallyConFPSSDKTV.PallyConDrmConfiguration\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 3131,
+      "offset": 3132,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 2345,
-      "length": 14,
-      "value": "\"PallyConFPSSDKTV.PallyConResult\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 4876,
+      "offset": 4877,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 4953,
+      "offset": 4954,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5032,
+      "offset": 5033,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5113,
+      "offset": 5114,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5199,
+      "offset": 5200,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5341,
+      "offset": 5342,
       "length": 2,
       "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 5435,
-      "length": 25,
-      "value": "\"PallyConFPSSDKTV.PallyConOfflineExpiryDate\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/DateExtension.swift",
@@ -9951,13 +9815,6 @@
       "offset": 494,
       "length": 10,
       "value": "\"SV004005\""
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConSDKAuthorize.swift",
-      "kind": "StringLiteral",
-      "offset": 305,
-      "length": 20,
-      "value": "\"PallyConFPSSDKTV.PallyConSDKAuthorize\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/StringExtension.swift",
