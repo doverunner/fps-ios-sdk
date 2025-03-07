@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/PallyConFPSSDKTV-ObjC.h</key>
 		<data>
-		Bn0Sh7pb9yRZEy7x/cb0oZpamq0=
+		mfloSGyQvqKTYOh9RJ03+MVDeXk=
 		</data>
 		<key>Headers/PallyConFPSSDKTV.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CUb0uFjh5WBEFzsVjvTd4Bj1rUE=
+		B/lGnTd6vrMfmzfM+4J2V227+vs=
 		</data>
 		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.abi.json</key>
 		<data>
-		BkI3hJiOO8wwldGRSPxKHm+x2Z8=
+		ajUd0Z81ZMR55mk5sjD+6IILDao=
 		</data>
 		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.private.swiftinterface</key>
 		<data>
-		zP7SCsA6Ol2gXgPLGoelc94lMx0=
+		RtCx97Ew3Xfs1Q8/Lg/JFLfSD60=
 		</data>
 		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftdoc</key>
 		<data>
-		f3XooNIeJ8bJ0RSjlzq3PrhFTs8=
+		JqHfepxR/1WjUY5jmGiUJSoLoxc=
 		</data>
 		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftinterface</key>
 		<data>
-		zP7SCsA6Ol2gXgPLGoelc94lMx0=
+		RtCx97Ew3Xfs1Q8/Lg/JFLfSD60=
 		</data>
 		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftmodule</key>
 		<data>
-		LXXP8Runf6Zq8edsrDdWW5WBFRQ=
+		wRd4vVDiH4G9HCLj/oLhNwm8Ies=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 2.mom</key>
 		<data>
-		TEFnSVeIHTAjzFNlCUb2xzvru0E=
+		j0n3LY6z+EYgPPthuCJ5xFQN9cQ=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.mom</key>
 		<data>
-		UKIJVZ1zwoVLz6PQ5nWNUgrkHVA=
+		vqiNClSzd3LUSSfnsFtTaeuq0Pg=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.omo</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 4.mom</key>
 		<data>
-		wlzP4B2detbYn1ZULeZutgl8Aug=
+		bJGmxCEdxpgDDJpvWw173Rs0XV4=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel.mom</key>
 		<data>
-		0sVH+PEenkjLAiIKCjBPR6MIDok=
+		i9KxA8ekEuUPfPIqLmXtm0pGH4M=
 		</data>
 		<key>PallyConFPSModel.momd/VersionInfo.plist</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JCY93SRPKdovWfzew9cfV2BZ36rbw8kCAaxe6s7nwyo=
+			Su91s49KbKzkK7Mj7KZTPiPpUDrOlMxYroOP6HPLYQo=
 			</data>
 		</dict>
 		<key>Headers/PallyConFPSSDKTV.h</key>
@@ -89,35 +89,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CxdQ/DT87coQC2e7wXoDXjfn7+E0gveibetuVR9WL+4=
+			XVW5/jF4n+ltiGAwrTixK571m6+iNJjMYTs08u1UCKE=
 			</data>
 		</dict>
 		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X0S1vYCrjAGcUkwk2+ydXPR5Q74P17N8nT5fWQjdXjQ=
+			Y6JmEjWizIScPAZpLurdLzOZCZ5+wy0SVLQYkaU7L3s=
 			</data>
 		</dict>
 		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YLjjRi5Jh4NSuPWEc4TNGNdU9zhtGNUhmAqysCMq87A=
+			GVrM7opPbxFUhtNt4MkzJEJR8Y1XpqWMND0w0u1v3k8=
 			</data>
 		</dict>
 		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X0S1vYCrjAGcUkwk2+ydXPR5Q74P17N8nT5fWQjdXjQ=
+			Y6JmEjWizIScPAZpLurdLzOZCZ5+wy0SVLQYkaU7L3s=
 			</data>
 		</dict>
 		<key>Modules/PallyConFPSSDKTV.swiftmodule/arm64-apple-tvos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tGVNPnAa1/TGsHx5+K1ELHhrgugwjkB0onWFQNSaMLg=
+			hpP60miAbMiFoo1hQc/hSQKZmalqzwtGs0SmFYVARcU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -131,14 +131,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1T1X1i6Hi7RVraDHj7MlQrwjxPice4XtuJtmVqoHtc0=
+			g1PeMHHLwuKm2nF8DlqHRDX8eg6pREGE2nW3C5lHrF0=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U323gDb313k5ZCioctkToZYfuDySFILbxwafzps9FVg=
+			cY81zTen+lYedGjdXdu3JX3N1oVAf+cH/Mav96Y/hxM=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.omo</key>
@@ -152,14 +152,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hsc7DHNsRYS1e8IlWNchTMijQ8zlo1g5o7LYArX8JDQ=
+			tZQHyLIsrtS/xsEW2Gc3FsPu7gkSFbqNRGkxIKocbLw=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9kHiDw8w+4rYAO8vcP8cLBJxwQvpWCV1xCN87MXPamM=
+			6FrdXaInsbafz6/ViD9yy54aBxmsODHH+nwervlFGQ8=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/VersionInfo.plist</key>

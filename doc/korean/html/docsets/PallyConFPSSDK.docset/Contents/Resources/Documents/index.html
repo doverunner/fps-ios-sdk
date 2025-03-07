@@ -48,6 +48,36 @@
                 <a class="nav-group-task-link" href="Classes/DownloadTask.html">DownloadTask</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HLSTracksPlaylistParser.html">HLSTracksPlaylistParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HLSTracksPlaylistParser/PallyConCustomInfo.html">– PallyConCustomInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HLSTracksPlaylistParser/Tracks.html">– Tracks</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HLSTracksPlaylistParser/AudioTrack.html">– AudioTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HLSTracksPlaylistParser/TextTrack.html">– TextTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HLSTracksPlaylistParser/VideoTrack.html">– VideoTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HLSTracksPlaylistParser/HLSManifest.html">– HLSManifest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HLSTracksPlaylistParser/VideoStream.html">– VideoStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HLSTracksPlaylistParser/AudioStream.html">– AudioStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HLSTracksPlaylistParser/SubtitleStream.html">– SubtitleStream</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a>
               </li>
               <li class="nav-group-task">
@@ -99,6 +129,19 @@
 <p><strong>What&rsquo;s New in Version 2.4.0</strong></p>
 </blockquote>
 
+<p><font color="red"><strong><code>Changed</code></strong></font> SDK 최소 지원 버전이 <code>iOS 13.0</code>으로 변경됩니다.</p>
+
+<p><font color="red"><strong><code>Changed</code></strong></font> <code><a href="Classes/PallyConDrmConfiguration.html#/s:14PallyConFPSSDK0aB16DrmConfigurationC15renewalIntervals5Int64Vvp">PallyConDrmConfiguration.renewalInterval</a></code> 운영 방식이 변경됩니다.</p>
+
+<ul>
+<li>license renewal 을 사용할 때 콘솔에 설정한 값으로 <code><a href="Classes/PallyConDrmConfiguration.html#/s:14PallyConFPSSDK0aB16DrmConfigurationC15renewalIntervals5Int64Vvp">PallyConDrmConfiguration.renewalInterval</a></code> 에 반드시 설정해줘야 합니다.
+
+<ul>
+<li>콘솔에서 renewal 설정 없이 <code><a href="Classes/PallyConDrmConfiguration.html#/s:14PallyConFPSSDK0aB16DrmConfigurationC15renewalIntervals5Int64Vvp">PallyConDrmConfiguration.renewalInterval</a></code> 설정만으로 동작하지 않습니다.</li>
+<li>추가적인 궁금증이 있다면 헬프데스크로 문의주시기 바랍니다.</li>
+</ul></li>
+</ul>
+
 <p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/PallyConOfflineExpiryDate.html">PallyConOfflineExpiryDate</a></code> 가 추가됩니다.</p>
 
 <ul>
@@ -115,8 +158,6 @@
     <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">rentalDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
     <span class="c1">/// Playback duration in seconds</span>
     <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">playbackDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
-    <span class="c1">/// Policy v1 - Offline license expiry date</span>
-    <span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">licenseDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
   <span class="p">}</span>
 </code></pre>
 
@@ -127,6 +168,29 @@
 </ul>
 <pre class="highlight plaintext"><code>  func getOfflineLicenseExpiryDate(find contentId: String) -&gt; PallyConOfflineExpiryDate
 </code></pre>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/HLSTracksPlaylistParser.html">HLSTracksPlaylistParser</a></code> 클래스가 추가됩니다.</p>
+
+<ul>
+<li><code><a href="Classes/HLSTracksPlaylistParser.html">HLSTracksPlaylistParser</a></code> 클래스는 <code>m3u8</code> 파일에서 다운로드 받을 Track 정보를 제공합니다.</li>
+<li>`HLSTracksPlaylistParser.HLSManifest&rsquo; 를 통해 Track 정보를 알수 있습니다.
+
+<ul>
+<li><code>Advanced</code> Sample을 참고하세요.</li>
+</ul></li>
+</ul>
+
+<p><font color="darkred"><strong><code>Remove</code></strong></font> <code>PallyConDrmConfiguration.keyIdList</code> 가 제거됩니다.</p>
+
+<ul>
+<li>라이선스 요청 시 keyIdList 입력 없이 가능합니다.</li>
+</ul>
+
+<p><font color="darkred"><strong><code>Remove</code></strong></font> <code>PallyConDrmConfiguration.allowsKeyRotation</code> 이 제거됩니다.</p>
+
+<ul>
+<li><code>AuthData</code> 를 이용하여 제어할 수 있습니다.</li>
+</ul>
 <h1 id='version-2-3-0' class='heading'>Version 2.3.0</h1>
 
 <blockquote>
@@ -850,7 +914,7 @@ PallyConSDKException.InvalidParameter() 추가</p>
     </div>
     <section class="footer">
       <p>© 2017 <a class="link" href="http://www.pallycon.com" target="_blank" rel="external noopener">INKA Entworks</a></p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

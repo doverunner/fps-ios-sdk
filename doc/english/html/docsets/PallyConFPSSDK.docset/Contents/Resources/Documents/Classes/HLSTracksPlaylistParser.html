@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HLSTracksPlaylistParser Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/HLSTracksPlaylistParser" class="dashAnchor"></a>
+
+    <a title="HLSTracksPlaylistParser Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          PallyConFPSSDK 2.4.0 Docs
+        </a>
+        
+      </p>
+    
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">PallyConFPSSDK</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Classes.html">Classes</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      HLSTracksPlaylistParser Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DownloadTask.html">DownloadTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSTracksPlaylistParser.html">HLSTracksPlaylistParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSTracksPlaylistParser/PallyConCustomInfo.html">– PallyConCustomInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSTracksPlaylistParser/Tracks.html">– Tracks</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSTracksPlaylistParser/AudioTrack.html">– AudioTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSTracksPlaylistParser/TextTrack.html">– TextTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSTracksPlaylistParser/VideoTrack.html">– VideoTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSTracksPlaylistParser/HLSManifest.html">– HLSManifest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSTracksPlaylistParser/VideoStream.html">– VideoStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSTracksPlaylistParser/AudioStream.html">– AudioStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSTracksPlaylistParser/SubtitleStream.html">– SubtitleStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PallyConDrmConfiguration.html">PallyConDrmConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PallyConFPSSDK.html">PallyConFPSSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PallyConHLSInfo.html">PallyConHLSInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PallyConOfflineExpiryDate.html">PallyConOfflineExpiryDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PallyConResult.html">PallyConResult</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PallyConError.html">PallyConError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RenewalInterval.html">RenewalInterval</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PallyConFPSDownloadDelegate.html">PallyConFPSDownloadDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PallyConFPSLicenseDelegate.html">PallyConFPSLicenseDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>HLSTracksPlaylistParser</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">HLSTracksPlaylistParser</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>A parser for HLS (HTTP Live Streaming) playlist files that extracts track information.</p>
+
+<p>This class provides functionality to download and parse HLS master playlists (.m3u8 files),
+extracting information about available video, audio, and subtitle streams. It also handles
+PallyCon DRM-related custom information if present in the manifest.</p>
+
+<p>Use this class to:</p>
+
+<ul>
+<li>Download HLS manifest files from a URL</li>
+<li>Parse manifests to extract media stream information</li>
+<li>Access structured information about available tracks and their properties</li>
+</ul>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Models"></a>
+                <a name="//apple_ref/swift/Section/Models" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Models"></a>
+                  <h3 class="section-name"><span>Models</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV"></a>
+                    <a name="//apple_ref/swift/Struct/PallyConCustomInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV">PallyConCustomInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the information entered when using PallyCon Packager.</p>
+
+                        <a href="../Classes/HLSTracksPlaylistParser/PallyConCustomInfo.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PallyConCustomInfo</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV"></a>
+                    <a name="//apple_ref/swift/Struct/Tracks" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV">Tracks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A structure that stores media track information.
+Contains information about audio, video, and text (subtitle) tracks.</p>
+
+                        <a href="../Classes/HLSTracksPlaylistParser/Tracks.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Tracks</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV"></a>
+                    <a name="//apple_ref/swift/Struct/AudioTrack" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV">AudioTrack</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A structure that stores audio track information.</p>
+
+                        <a href="../Classes/HLSTracksPlaylistParser/AudioTrack.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AudioTrack</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV"></a>
+                    <a name="//apple_ref/swift/Struct/TextTrack" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV">TextTrack</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A structure that stores text (subtitle) track information.</p>
+
+                        <a href="../Classes/HLSTracksPlaylistParser/TextTrack.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TextTrack</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV"></a>
+                    <a name="//apple_ref/swift/Struct/VideoTrack" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV">VideoTrack</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A structure that stores video track information.</p>
+
+                        <a href="../Classes/HLSTracksPlaylistParser/VideoTrack.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VideoTrack</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV"></a>
+                    <a name="//apple_ref/swift/Struct/HLSManifest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV">HLSManifest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A structure that stores HLS manifest information.
+Contains video, audio, subtitle streams, PallyCon information, and raw content from the parsed HLS manifest.</p>
+
+                        <a href="../Classes/HLSTracksPlaylistParser/HLSManifest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HLSManifest</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV"></a>
+                    <a name="//apple_ref/swift/Struct/VideoStream" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV">VideoStream</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A structure that stores video stream information.</p>
+
+                        <a href="../Classes/HLSTracksPlaylistParser/VideoStream.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VideoStream</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV"></a>
+                    <a name="//apple_ref/swift/Struct/AudioStream" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV">AudioStream</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A structure that stores audio stream information.</p>
+
+                        <a href="../Classes/HLSTracksPlaylistParser/AudioStream.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AudioStream</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV"></a>
+                    <a name="//apple_ref/swift/Struct/SubtitleStream" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV">SubtitleStream</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A structure that stores subtitle stream information.</p>
+
+                        <a href="../Classes/HLSTracksPlaylistParser/SubtitleStream.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SubtitleStream</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializer"></a>
+                <a name="//apple_ref/swift/Section/Initializer" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initializer"></a>
+                  <h3 class="section-name"><span>Initializer</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@PallyConFPSSDK@objc(cs)HLSTracksPlaylistParser(im)init"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PallyConFPSSDK@objc(cs)HLSTracksPlaylistParser(im)init">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HLSTracksPlaylistParser의 기본 생성자입니다.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Methods"></a>
+                <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Methods"></a>
+                  <h3 class="section-name"><span>Methods</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14PallyConFPSSDK23HLSTracksPlaylistParserC24downloadAndParseManifest4fromAC11HLSManifestVSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/downloadAndParseManifest(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14PallyConFPSSDK23HLSTracksPlaylistParserC24downloadAndParseManifest4fromAC11HLSManifestVSS_tKF">downloadAndParseManifest(from:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Downloads and parses an HLS manifest from the specified URL.</p>
+
+<p>This method synchronously downloads and parses the manifest to return an <code><a href="../Classes/HLSTracksPlaylistParser/HLSManifest.html">HLSManifest</a></code> object.
+Network communication is handled synchronously using a semaphore internally.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>The following errors may occur:</p>
+
+<ul>
+<li>Invalid URL format</li>
+<li>Network connection issues</li>
+<li>Server response errors</li>
+<li>Download failure or content decoding failure</li>
+<li>Invalid manifest format</li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">downloadAndParseManifest</span><span class="p">(</span><span class="n">from</span> <span class="nv">urlString</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/HLSTracksPlaylistParser/HLSManifest.html">HLSManifest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL string of the manifest file.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code><a href="../Classes/HLSTracksPlaylistParser/HLSManifest.html">HLSManifest</a></code> object containing the parsed HLS manifest information.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2017 <a class="link" href="http://www.pallycon.com" target="_blank" rel="external noopener">INKA Entworks</a></p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

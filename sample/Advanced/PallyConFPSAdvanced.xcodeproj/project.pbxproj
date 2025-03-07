@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		88FAEDD622EAC24800796DC6 /* Contents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88FAEDD522EAC24800796DC6 /* Contents.plist */; };
 		88FAEDD722EAC24800796DC6 /* Contents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88FAEDD522EAC24800796DC6 /* Contents.plist */; };
+		C10B289B2D7B2A9A009FA84A /* TrackSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B289A2D7B2A9A009FA84A /* TrackSelectViewController.swift */; };
 		C156B3531E7F72CE00344598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C156B3521E7F72CE00344598 /* AppDelegate.swift */; };
 		C156B3581E7F72CE00344598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C156B3561E7F72CE00344598 /* Main.storyboard */; };
 		C156B35A1E7F72CE00344598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C156B3591E7F72CE00344598 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 /* Begin PBXFileReference section */
 		88316F7A22115363000DBF10 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		88FAEDD522EAC24800796DC6 /* Contents.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Contents.plist; sourceTree = "<group>"; };
+		C10B289A2D7B2A9A009FA84A /* TrackSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSelectViewController.swift; sourceTree = "<group>"; };
 		C1305D16283CD162007D328B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C156B3501E7F72CE00344598 /* PallyConFPSAdvancedTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PallyConFPSAdvancedTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C156B3521E7F72CE00344598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			children = (
 				C15E15D01E3582EB00A84BB9 /* BasicTableViewCell.swift */,
 				C15E15C91E32009F00A84BB9 /* BasicTableViewController.swift */,
+				C10B289A2D7B2A9A009FA84A /* TrackSelectViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				C15E15701E30A9AD00A84BB9 /* AppDelegate.swift in Sources */,
 				C15E15DC1E359ECC00A84BB9 /* FPSListManager.swift in Sources */,
 				C16A098F1E640957001DBA86 /* PallyConSDKManager.swift in Sources */,
+				C10B289B2D7B2A9A009FA84A /* TrackSelectViewController.swift in Sources */,
 				C15E15CA1E32009F00A84BB9 /* BasicTableViewController.swift in Sources */,
 				C161E1BD1E4C38D60020086C /* FPSPlaybackManager.swift in Sources */,
 				C15E15D31E35935700A84BB9 /* FPSContent.swift in Sources */,

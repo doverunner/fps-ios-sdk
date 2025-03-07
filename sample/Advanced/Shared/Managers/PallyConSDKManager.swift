@@ -60,11 +60,15 @@ class PallyConSDKManager: NSObject {
      #if os(iOS)
      // download start
      @available(iOS 11.2, *)
-     func downloadStream(for fpsContent: FPSContent) {
+     func downloadStream(for fpsContent: FPSContent, minimumBitrate: String = String()) {
           var content: FPSContent? = activeDownloadsMap[fpsContent.contentId]
           if content == nil {
                content = fpsContent
-               content!.downloadDelegate = FPSDownloaderDelegate(url: fpsContent.urlAsset.url, keyId: fpsContent.keyId, contentId: fpsContent.contentId, token: fpsContent.token)
+               if minimumBitrate != String() {
+                    content!.downloadDelegate = FPSDownloaderDelegate(url: fpsContent.urlAsset.url, contentId: fpsContent.contentId, token: fpsContent.token, minimumBitrate: minimumBitrate)
+               } else {
+                    content!.downloadDelegate = FPSDownloaderDelegate(url: fpsContent.urlAsset.url, contentId: fpsContent.contentId, token: fpsContent.token)
+               }
                 activeDownloadsMap[content!.contentId] = content
           }
           downloadStatusMap[content!.contentId] = FPSContent.DownloadState.downloading.rawValue
@@ -199,7 +203,6 @@ extension PallyConSDKManager: PallyConFPSLicenseDelegate {
           print("---------------------------- License Result ")
           print("Content ID : \(result.contentId)")
           print("Key ID     : \(String(describing: result.keyId))")
-          print("Expiry Date: \(String(describing: result.playbackExpiry))")
           if result.isSuccess == false {
                print("Error : \(String(describing: result.error?.localizedDescription))")
                if let error = result.error {

@@ -60,6 +60,16 @@
       },
       {
         "kind": "Import",
+        "name": "CoreData",
+        "printedName": "CoreData",
+        "declKind": "Import",
+        "moduleName": "PallyConFPSSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -295,10 +305,12 @@
         "usr": "c:@M@PallyConFPSSDK@objc(cs)PallyConHLSInfo",
         "mangledName": "$s14PallyConFPSSDK0aB7HLSInfoC",
         "moduleName": "PallyConFPSSDK",
+        "deprecated": true,
         "intro_iOS": "10.0",
         "declAttributes": [
           "AccessControl",
           "ObjC",
+          "Available",
           "Available",
           "RawDocComment"
         ],
@@ -370,16 +382,6 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreData",
-        "printedName": "CoreData",
-        "declKind": "Import",
-        "moduleName": "PallyConFPSSDK",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -2241,7 +2243,8 @@
               "AccessControl",
               "ObjC",
               "Available",
-              "Available"
+              "Available",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -3037,6 +3040,48 @@
           },
           {
             "kind": "Function",
+            "name": "getHLSTracks",
+            "printedName": "getHLSTracks(Content:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Result",
+                "printedName": "Swift.Result<PallyConFPSSDK.HLSTracksPlaylistParser.HLSManifest, PallyConFPSSDK.PallyConError>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HLSManifest",
+                    "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.HLSManifest",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PallyConError",
+                    "printedName": "PallyConFPSSDK.PallyConError",
+                    "usr": "s:14PallyConFPSSDK0aB5ErrorO"
+                  }
+                ],
+                "usr": "s:s6ResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14PallyConFPSSDKAAC12getHLSTracks7Contents6ResultOyAA0E14PlaylistParserC11HLSManifestVAA0aB5ErrorOGSS_tF",
+            "mangledName": "$s14PallyConFPSSDKAAC12getHLSTracks7Contents6ResultOyAA0E14PlaylistParserC11HLSManifestVAA0aB5ErrorOGSS_tF",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "deleteLicense",
             "printedName": "deleteLicense(ContentId:)",
             "children": [
@@ -3810,141 +3855,6 @@
           },
           {
             "kind": "Var",
-            "name": "keyIdList",
-            "printedName": "keyIdList",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC9keyIdListSaySSGSgvp",
-            "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC9keyIdListSaySSGSgvp",
-            "moduleName": "PallyConFPSSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC9keyIdListSaySSGSgvg",
-                "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC9keyIdListSaySSGSgvg",
-                "moduleName": "PallyConFPSSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC9keyIdListSaySSGSgvs",
-                "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC9keyIdListSaySSGSgvs",
-                "moduleName": "PallyConFPSSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC9keyIdListSaySSGSgvM",
-                "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC9keyIdListSaySSGSgvM",
-                "moduleName": "PallyConFPSSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "licenseHttpHeader",
             "printedName": "licenseHttpHeader",
             "children": [
@@ -4209,93 +4119,6 @@
           },
           {
             "kind": "Var",
-            "name": "allowsKeyRotation",
-            "printedName": "allowsKeyRotation",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC17allowsKeyRotationSbvp",
-            "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC17allowsKeyRotationSbvp",
-            "moduleName": "PallyConFPSSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC17allowsKeyRotationSbvg",
-                "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC17allowsKeyRotationSbvg",
-                "moduleName": "PallyConFPSSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC17allowsKeyRotationSbvs",
-                "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC17allowsKeyRotationSbvs",
-                "moduleName": "PallyConFPSSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14PallyConFPSSDK0aB16DrmConfigurationC17allowsKeyRotationSbvM",
-                "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC17allowsKeyRotationSbvM",
-                "moduleName": "PallyConFPSSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "renewalInterval",
             "printedName": "renewalInterval",
             "children": [
@@ -4384,7 +4207,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(avURLAsset:contentId:certificateUrl:authData:delegate:licenseUrl:keyIdList:licenseHttpHeader:licenseCookies:allowsKeyRotation:renewalInterval:)",
+            "printedName": "init(avURLAsset:contentId:certificateUrl:authData:delegate:licenseUrl:licenseHttpHeader:licenseCookies:renewalInterval:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4458,29 +4281,6 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
                 "printedName": "[Swift.String : Swift.String]?",
                 "children": [
                   {
@@ -4524,13 +4324,6 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "Int64",
                 "printedName": "Swift.Int64",
                 "hasDefaultArg": true,
@@ -4538,10 +4331,10 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@PallyConFPSSDK@objc(cs)PallyConDrmConfiguration(im)initWithAvURLAsset:contentId:certificateUrl:authData:delegate:licenseUrl:keyIdList:licenseHttpHeader:licenseCookies:allowsKeyRotation:renewalInterval:",
-            "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC10avURLAsset9contentId14certificateUrl8authData8delegate07licenseK003keyI4List0O10HttpHeader0O7Cookies17allowsKeyRotation15renewalIntervalACSo10AVURLAssetC_S3SSgAA0aB18FPSLicenseDelegate_pSgAQSaySSGSgSDyS2SGSgAQSbs5Int64Vtcfc",
+            "usr": "c:@M@PallyConFPSSDK@objc(cs)PallyConDrmConfiguration(im)initWithAvURLAsset:contentId:certificateUrl:authData:delegate:licenseUrl:licenseHttpHeader:licenseCookies:renewalInterval:",
+            "mangledName": "$s14PallyConFPSSDK0aB16DrmConfigurationC10avURLAsset9contentId14certificateUrl8authData8delegate07licenseK00O10HttpHeader0O7Cookies15renewalIntervalACSo10AVURLAssetC_S3SSgAA0aB18FPSLicenseDelegate_pSgAOSDyS2SGSgAOs5Int64Vtcfc",
             "moduleName": "PallyConFPSSDK",
-            "objc_name": "initWithAvURLAsset:contentId:certificateUrl:authData:delegate:licenseUrl:keyIdList:licenseHttpHeader:licenseCookies:allowsKeyRotation:renewalInterval:",
+            "objc_name": "initWithAvURLAsset:contentId:certificateUrl:authData:delegate:licenseUrl:licenseHttpHeader:licenseCookies:renewalInterval:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -6285,71 +6078,9 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "licenseDuration",
-            "printedName": "licenseDuration",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14PallyConFPSSDK0aB17OfflineExpiryDateC15licenseDurationSSSgvp",
-            "mangledName": "$s14PallyConFPSSDK0aB17OfflineExpiryDateC15licenseDurationSSSgvp",
-            "moduleName": "PallyConFPSSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14PallyConFPSSDK0aB17OfflineExpiryDateC15licenseDurationSSSgvg",
-                "mangledName": "$s14PallyConFPSSDK0aB17OfflineExpiryDateC15licenseDurationSSSgvg",
-                "moduleName": "PallyConFPSSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(downloadDate:rentalDuration:playbackDuration:licenseDuration:)",
+            "printedName": "init(downloadDate:rentalDuration:playbackDuration:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6401,28 +6132,13 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@PallyConFPSSDK@objc(cs)PallyConOfflineExpiryDate(im)initWithDownloadDate:rentalDuration:playbackDuration:licenseDuration:",
-            "mangledName": "$s14PallyConFPSSDK0aB17OfflineExpiryDateC08downloadF014rentalDuration08playbackI007licenseI0AC10Foundation0F0VSg_SSSgA2Ltcfc",
+            "usr": "c:@M@PallyConFPSSDK@objc(cs)PallyConOfflineExpiryDate(im)initWithDownloadDate:rentalDuration:playbackDuration:",
+            "mangledName": "$s14PallyConFPSSDK0aB17OfflineExpiryDateC08downloadF014rentalDuration08playbackI0AC10Foundation0F0VSg_SSSgAKtcfc",
             "moduleName": "PallyConFPSSDK",
-            "objc_name": "initWithDownloadDate:rentalDuration:playbackDuration:licenseDuration:",
+            "objc_name": "initWithDownloadDate:rentalDuration:playbackDuration:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -6449,32 +6165,6 @@
             "declKind": "Func",
             "usr": "s:14PallyConFPSSDK0aB17OfflineExpiryDateC6update08downloadF0y10Foundation0F0V_tF",
             "mangledName": "$s14PallyConFPSSDK0aB17OfflineExpiryDateC6update08downloadF0y10Foundation0F0V_tF",
-            "moduleName": "PallyConFPSSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "update",
-            "printedName": "update(licenseDuration:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:14PallyConFPSSDK0aB17OfflineExpiryDateC6update15licenseDurationySS_tF",
-            "mangledName": "$s14PallyConFPSSDK0aB17OfflineExpiryDateC6update15licenseDurationySS_tF",
             "moduleName": "PallyConFPSSDK",
             "declAttributes": [
               "AccessControl"
@@ -6745,6 +6435,3021 @@
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PallyConFPSSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HLSTracksPlaylistParser",
+        "printedName": "HLSTracksPlaylistParser",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "PallyConCustomInfo",
+            "printedName": "PallyConCustomInfo",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "duration",
+                "printedName": "duration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV8durationSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV8durationSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV8durationSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV8durationSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "outputFormat",
+                "printedName": "outputFormat",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV12outputFormatSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV12outputFormatSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV12outputFormatSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV12outputFormatSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "tracks",
+                "printedName": "tracks",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tracks",
+                    "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.Tracks",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV6tracksAC6TracksVvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV6tracksAC6TracksVvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tracks",
+                        "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.Tracks",
+                        "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV6tracksAC6TracksVvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV6tracksAC6TracksVvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "version",
+                "printedName": "version",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV7versionSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV7versionSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV7versionSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV7versionSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PallyConCustomInfo",
+                    "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.PallyConCustomInfo",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "PallyConFPSSDK",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV6encode2toys7Encoder_p_tKF",
+                "moduleName": "PallyConFPSSDK",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Tracks",
+            "printedName": "Tracks",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "audio",
+                "printedName": "audio",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.AudioTrack]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.AudioTrack]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AudioTrack",
+                            "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.AudioTrack",
+                            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV5audioSayAC10AudioTrackVGSgvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV5audioSayAC10AudioTrackVGSgvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.AudioTrack]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.AudioTrack]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AudioTrack",
+                                "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.AudioTrack",
+                                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV5audioSayAC10AudioTrackVGSgvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV5audioSayAC10AudioTrackVGSgvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "text",
+                "printedName": "text",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.TextTrack]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.TextTrack]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TextTrack",
+                            "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.TextTrack",
+                            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV4textSayAC9TextTrackVGSgvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV4textSayAC9TextTrackVGSgvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.TextTrack]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.TextTrack]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "TextTrack",
+                                "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.TextTrack",
+                                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV4textSayAC9TextTrackVGSgvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV4textSayAC9TextTrackVGSgvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "video",
+                "printedName": "video",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.VideoTrack]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.VideoTrack]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VideoTrack",
+                            "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.VideoTrack",
+                            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV5videoSayAC10VideoTrackVGSgvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV5videoSayAC10VideoTrackVGSgvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.VideoTrack]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.VideoTrack]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "VideoTrack",
+                                "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.VideoTrack",
+                                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV5videoSayAC10VideoTrackVGSgvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV5videoSayAC10VideoTrackVGSgvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tracks",
+                    "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.Tracks",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV6encode2toys7Encoder_p_tKF",
+                "moduleName": "PallyConFPSSDK",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC6TracksV",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "AudioTrack",
+            "printedName": "AudioTrack",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "language",
+                "printedName": "language",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV8languageSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV8languageSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV8languageSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV8languageSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "path",
+                "printedName": "path",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV4pathSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV4pathSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV4pathSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV4pathSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "size",
+                "printedName": "size",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV4sizeSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV4sizeSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV4sizeSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV4sizeSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "trackName",
+                "printedName": "trackName",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV9trackNameSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV9trackNameSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV9trackNameSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV9trackNameSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AudioTrack",
+                    "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.AudioTrack",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "PallyConFPSSDK",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV6encode2toys7Encoder_p_tKF",
+                "moduleName": "PallyConFPSSDK",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10AudioTrackV",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "TextTrack",
+            "printedName": "TextTrack",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "language",
+                "printedName": "language",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV8languageSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV8languageSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV8languageSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV8languageSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "path",
+                "printedName": "path",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV4pathSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV4pathSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV4pathSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV4pathSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "size",
+                "printedName": "size",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV4sizeSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV4sizeSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV4sizeSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV4sizeSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "trackName",
+                "printedName": "trackName",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV9trackNameSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV9trackNameSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV9trackNameSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV9trackNameSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TextTrack",
+                    "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.TextTrack",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "PallyConFPSSDK",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV6encode2toys7Encoder_p_tKF",
+                "moduleName": "PallyConFPSSDK",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC9TextTrackV",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "VideoTrack",
+            "printedName": "VideoTrack",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "bitrate",
+                "printedName": "bitrate",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV7bitrateSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV7bitrateSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV7bitrateSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV7bitrateSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "path",
+                "printedName": "path",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV4pathSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV4pathSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV4pathSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV4pathSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "resolution",
+                "printedName": "resolution",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV10resolutionSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV10resolutionSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV10resolutionSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV10resolutionSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "size",
+                "printedName": "size",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV4sizeSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV4sizeSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV4sizeSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV4sizeSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoTrack",
+                    "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.VideoTrack",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "PallyConFPSSDK",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV6encode2toys7Encoder_p_tKF",
+                "moduleName": "PallyConFPSSDK",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC10VideoTrackV",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "HLSManifest",
+            "printedName": "HLSManifest",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "videos",
+                "printedName": "videos",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.VideoStream]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VideoStream",
+                        "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.VideoStream",
+                        "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV6videosSayAC11VideoStreamVGvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV6videosSayAC11VideoStreamVGvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.VideoStream]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VideoStream",
+                            "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.VideoStream",
+                            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV6videosSayAC11VideoStreamVGvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV6videosSayAC11VideoStreamVGvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "audios",
+                "printedName": "audios",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.AudioStream]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AudioStream",
+                        "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.AudioStream",
+                        "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV6audiosSayAC11AudioStreamVGvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV6audiosSayAC11AudioStreamVGvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.AudioStream]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AudioStream",
+                            "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.AudioStream",
+                            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV6audiosSayAC11AudioStreamVGvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV6audiosSayAC11AudioStreamVGvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "subtitles",
+                "printedName": "subtitles",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.SubtitleStream]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SubtitleStream",
+                        "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.SubtitleStream",
+                        "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV9subtitlesSayAC14SubtitleStreamVGvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV9subtitlesSayAC14SubtitleStreamVGvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[PallyConFPSSDK.HLSTracksPlaylistParser.SubtitleStream]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SubtitleStream",
+                            "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.SubtitleStream",
+                            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV9subtitlesSayAC14SubtitleStreamVGvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV9subtitlesSayAC14SubtitleStreamVGvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "pallyConInfo",
+                "printedName": "pallyConInfo",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.PallyConCustomInfo?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PallyConCustomInfo",
+                        "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.PallyConCustomInfo",
+                        "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV05pallyB4InfoAC0ab6CustomI0VSgvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV05pallyB4InfoAC0ab6CustomI0VSgvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.PallyConCustomInfo?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PallyConCustomInfo",
+                            "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.PallyConCustomInfo",
+                            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC0aB10CustomInfoV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV05pallyB4InfoAC0ab6CustomI0VSgvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV05pallyB4InfoAC0ab6CustomI0VSgvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "rawContent",
+                "printedName": "rawContent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV10rawContentSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV10rawContentSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV10rawContentSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV10rawContentSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "VideoStream",
+            "printedName": "VideoStream",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "bandwidth",
+                "printedName": "bandwidth",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV9bandwidthSivp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV9bandwidthSivp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV9bandwidthSivg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV9bandwidthSivg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "averageBandwidth",
+                "printedName": "averageBandwidth",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV16averageBandwidthSiSgvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV16averageBandwidthSiSgvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Int?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV16averageBandwidthSiSgvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV16averageBandwidthSiSgvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "codecs",
+                "printedName": "codecs",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV6codecsSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV6codecsSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV6codecsSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV6codecsSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "resolution",
+                "printedName": "resolution",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV10resolutionSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV10resolutionSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV10resolutionSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV10resolutionSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "frameRate",
+                "printedName": "frameRate",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV9frameRateSdvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV9frameRateSdvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV9frameRateSdvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV9frameRateSdvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "uri",
+                "printedName": "uri",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV3uriSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV3uriSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV3uriSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV3uriSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11VideoStreamV",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "AudioStream",
+            "printedName": "AudioStream",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "type",
+                "printedName": "type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV4typeSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV4typeSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV4typeSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV4typeSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "uri",
+                "printedName": "uri",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV3uriSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV3uriSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV3uriSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV3uriSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "groupId",
+                "printedName": "groupId",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV7groupIdSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV7groupIdSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV7groupIdSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV7groupIdSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "language",
+                "printedName": "language",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV8languageSSSgvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV8languageSSSgvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV8languageSSSgvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV8languageSSSgvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "name",
+                "printedName": "name",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV4nameSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV4nameSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV4nameSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV4nameSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "isDefault",
+                "printedName": "isDefault",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV9isDefaultSbvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV9isDefaultSbvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV9isDefaultSbvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV9isDefaultSbvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "autoselect",
+                "printedName": "autoselect",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV10autoselectSbvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV10autoselectSbvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV10autoselectSbvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV10autoselectSbvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "channels",
+                "printedName": "channels",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV8channelsSSSgvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV8channelsSSSgvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV8channelsSSSgvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV8channelsSSSgvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC11AudioStreamV",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "SubtitleStream",
+            "printedName": "SubtitleStream",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "type",
+                "printedName": "type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV4typeSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV4typeSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV4typeSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV4typeSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "uri",
+                "printedName": "uri",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV3uriSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV3uriSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV3uriSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV3uriSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "groupId",
+                "printedName": "groupId",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV7groupIdSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV7groupIdSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV7groupIdSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV7groupIdSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "language",
+                "printedName": "language",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV8languageSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV8languageSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV8languageSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV8languageSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "name",
+                "printedName": "name",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV4nameSSvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV4nameSSvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV4nameSSvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV4nameSSvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "isDefault",
+                "printedName": "isDefault",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV9isDefaultSbvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV9isDefaultSbvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV9isDefaultSbvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV9isDefaultSbvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "autoselect",
+                "printedName": "autoselect",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV10autoselectSbvp",
+                "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV10autoselectSbvp",
+                "moduleName": "PallyConFPSSDK",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV10autoselectSbvg",
+                    "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV10autoselectSbvg",
+                    "moduleName": "PallyConFPSSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC14SubtitleStreamV",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HLSTracksPlaylistParser",
+                "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser",
+                "usr": "c:@M@PallyConFPSSDK@objc(cs)HLSTracksPlaylistParser"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PallyConFPSSDK@objc(cs)HLSTracksPlaylistParser(im)init",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserCACycfc",
+            "moduleName": "PallyConFPSSDK",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "downloadAndParseManifest",
+            "printedName": "downloadAndParseManifest(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HLSManifest",
+                "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.HLSManifest",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC24downloadAndParseManifest4fromAC11HLSManifestVSS_tKF",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC24downloadAndParseManifest4fromAC11HLSManifestVSS_tKF",
+            "moduleName": "PallyConFPSSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "printDetailedInfo",
+            "printedName": "printDetailedInfo(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HLSManifest",
+                "printedName": "PallyConFPSSDK.HLSTracksPlaylistParser.HLSManifest",
+                "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC11HLSManifestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14PallyConFPSSDK23HLSTracksPlaylistParserC17printDetailedInfoyyAC11HLSManifestVF",
+            "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC17printDetailedInfoyyAC11HLSManifestVF",
+            "moduleName": "PallyConFPSSDK",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PallyConFPSSDK@objc(cs)HLSTracksPlaylistParser",
+        "mangledName": "$s14PallyConFPSSDK23HLSTracksPlaylistParserC",
+        "moduleName": "PallyConFPSSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
@@ -7762,6 +10467,16 @@
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PallyConFPSSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -11031,114 +13746,79 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Download.swift",
       "kind": "BooleanLiteral",
-      "offset": 677,
+      "offset": 700,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Download.swift",
       "kind": "BooleanLiteral",
-      "offset": 2094,
+      "offset": 2117,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Download.swift",
       "kind": "BooleanLiteral",
-      "offset": 3670,
+      "offset": 3693,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Download.swift",
       "kind": "BooleanLiteral",
-      "offset": 5193,
+      "offset": 5216,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Download.swift",
       "kind": "BooleanLiteral",
-      "offset": 7029,
+      "offset": 7052,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Download.swift",
       "kind": "BooleanLiteral",
-      "offset": 8885,
+      "offset": 8908,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Download.swift",
       "kind": "BooleanLiteral",
-      "offset": 11022,
+      "offset": 11045,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Download.swift",
       "kind": "BooleanLiteral",
-      "offset": 13035,
+      "offset": 13058,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Download.swift",
       "kind": "BooleanLiteral",
-      "offset": 13112,
+      "offset": 13135,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Interface.swift",
       "kind": "BooleanLiteral",
-      "offset": 2840,
+      "offset": 4280,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConFPSSDK+Interface.swift",
       "kind": "BooleanLiteral",
-      "offset": 2917,
+      "offset": 4357,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConHLSInfo.swift",
-      "kind": "Dictionary",
-      "offset": 589,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConHLSInfo.swift",
-      "kind": "Dictionary",
-      "offset": 653,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConHLSInfo.swift",
-      "kind": "Dictionary",
-      "offset": 718,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConHLSInfo.swift",
-      "kind": "Dictionary",
-      "offset": 786,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConHLSInfo.swift",
-      "kind": "Dictionary",
-      "offset": 841,
-      "length": 3,
-      "value": "[]"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/CoreDataStack.swift",
@@ -11223,6 +13903,41 @@
       "offset": 2888,
       "length": 25,
       "value": "\"PallyConFPSModel.sqlite\""
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConHLSInfo.swift",
+      "kind": "Dictionary",
+      "offset": 690,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConHLSInfo.swift",
+      "kind": "Dictionary",
+      "offset": 754,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConHLSInfo.swift",
+      "kind": "Dictionary",
+      "offset": 819,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConHLSInfo.swift",
+      "kind": "Dictionary",
+      "offset": 887,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConHLSInfo.swift",
+      "kind": "Dictionary",
+      "offset": 942,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConInCustomStructs.swift",
@@ -11346,21 +14061,21 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConFPSSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 3505,
+      "offset": 3475,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConFPSSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 4705,
+      "offset": 4675,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConFPSSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 5851,
+      "offset": 5821,
       "length": 5,
       "value": "false"
     },
@@ -11381,84 +14096,70 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConLicenseManager.swift",
       "kind": "StringLiteral",
-      "offset": 1877,
+      "offset": 1803,
       "length": 5,
       "value": "\"skd\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConLicenseManager.swift",
       "kind": "StringLiteral",
-      "offset": 2006,
+      "offset": 1932,
       "length": 32,
       "value": "\"com.inka.pallycon.requestQueue\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/PallyConLicenseManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2262,
+      "offset": 2188,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1190,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1773,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3132,
+      "offset": 2736,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 4877,
+      "offset": 4481,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 4954,
+      "offset": 4558,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5033,
+      "offset": 4637,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5114,
+      "offset": 4718,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5200,
+      "offset": 4804,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/PallyConDrmConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5342,
+      "offset": 4946,
       "length": 2,
       "value": "-1"
     },
@@ -11489,6 +14190,27 @@
       "offset": 6283,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/HLSTracksPlaylistParser.swift",
+      "kind": "StringLiteral",
+      "offset": 1379,
+      "length": 15,
+      "value": "\"output_format\""
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/HLSTracksPlaylistParser.swift",
+      "kind": "StringLiteral",
+      "offset": 2856,
+      "length": 12,
+      "value": "\"track_name\""
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/PallyConFPSSDK\/HLSTracksPlaylistParser.swift",
+      "kind": "StringLiteral",
+      "offset": 3470,
+      "length": 12,
+      "value": "\"track_name\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/FPSLicenseDownloader.swift",
@@ -11706,6 +14428,41 @@
       "offset": 49771,
       "length": 3050,
       "value": "[0x0, 0xe0b0d09, 0x1c161a12, 0x121d171b, 0x382c3424, 0x3627392d, 0x243a2e36, 0x2a31233f, 0x70586848, 0x7e536541, 0x6c4e725a, 0x62457f53, 0x48745c6c, 0x467f5165, 0x5462467e, 0x5a694b77, 0xe0b0d090, 0xeebbdd99, 0xfca6ca82, 0xf2adc78b, 0xd89ce4b4, 0xd697e9bd, 0xc48afea6, 0xca81f3af, 0x90e8b8d8, 0x9ee3b5d1, 0x8cfea2ca, 0x82f5afc3, 0xa8c48cfc, 0xa6cf81f5, 0xb4d296ee, 0xbad99be7, 0xdb7bbb3b, 0xd570b632, 0xc76da129, 0xc966ac20, 0xe3578f1f, 0xed5c8216, 0xff41950d, 0xf14a9804, 0xab23d373, 0xa528de7a, 0xb735c961, 0xb93ec468, 0x930fe757, 0x9d04ea5e, 0x8f19fd45, 0x8112f04c, 0x3bcb6bab, 0x35c066a2, 0x27dd71b9, 0x29d67cb0, 0x3e75f8f, 0xdec5286, 0x1ff1459d, 0x11fa4894, 0x4b9303e3, 0x45980eea, 0x578519f1, 0x598e14f8, 0x73bf37c7, 0x7db43ace, 0x6fa92dd5, 0x61a220dc, 0xadf66d76, 0xa3fd607f, 0xb1e07764, 0xbfeb7a6d, 0x95da5952, 0x9bd1545b, 0x89cc4340, 0x87c74e49, 0xddae053e, 0xd3a50837, 0xc1b81f2c, 0xcfb31225, 0xe582311a, 0xeb893c13, 0xf9942b08, 0xf79f2601, 0x4d46bde6, 0x434db0ef, 0x5150a7f4, 0x5f5baafd, 0x756a89c2, 0x7b6184cb, 0x697c93d0, 0x67779ed9, 0x3d1ed5ae, 0x3315d8a7, 0x2108cfbc, 0x2f03c2b5, 0x532e18a, 0xb39ec83, 0x1924fb98, 0x172ff691, 0x768dd64d, 0x7886db44, 0x6a9bcc5f, 0x6490c156, 0x4ea1e269, 0x40aaef60, 0x52b7f87b, 0x5cbcf572, 0x6d5be05, 0x8deb30c, 0x1ac3a417, 0x14c8a91e, 0x3ef98a21, 0x30f28728, 0x22ef9033, 0x2ce49d3a, 0x963d06dd, 0x98360bd4, 0x8a2b1ccf, 0x842011c6, 0xae1132f9, 0xa01a3ff0, 0xb20728eb, 0xbc0c25e2, 0xe6656e95, 0xe86e639c, 0xfa737487, 0xf478798e, 0xde495ab1, 0xd04257b8, 0xc25f40a3, 0xcc544daa, 0x41f7daec, 0x4ffcd7e5, 0x5de1c0fe, 0x53eacdf7, 0x79dbeec8, 0x77d0e3c1, 0x65cdf4da, 0x6bc6f9d3, 0x31afb2a4, 0x3fa4bfad, 0x2db9a8b6, 0x23b2a5bf, 0x9838680, 0x7888b89, 0x15959c92, 0x1b9e919b, 0xa1470a7c, 0xaf4c0775, 0xbd51106e, 0xb35a1d67, 0x996b3e58, 0x97603351, 0x857d244a, 0x8b762943, 0xd11f6234, 0xdf146f3d, 0xcd097826, 0xc302752f, 0xe9335610, 0xe7385b19, 0xf5254c02, 0xfb2e410b, 0x9a8c61d7, 0x94876cde, 0x869a7bc5, 0x889176cc, 0xa2a055f3, 0xacab58fa, 0xbeb64fe1, 0xb0bd42e8, 0xead4099f, 0xe4df0496, 0xf6c2138d, 0xf8c91e84, 0xd2f83dbb, 0xdcf330b2, 0xceee27a9, 0xc0e52aa0, 0x7a3cb147, 0x7437bc4e, 0x662aab55, 0x6821a65c, 0x42108563, 0x4c1b886a, 0x5e069f71, 0x500d9278, 0xa64d90f, 0x46fd406, 0x1672c31d, 0x1879ce14, 0x3248ed2b, 0x3c43e022, 0x2e5ef739, 0x2055fa30, 0xec01b79a, 0xe20aba93, 0xf017ad88, 0xfe1ca081, 0xd42d83be, 0xda268eb7, 0xc83b99ac, 0xc63094a5, 0x9c59dfd2, 0x9252d2db, 0x804fc5c0, 0x8e44c8c9, 0xa475ebf6, 0xaa7ee6ff, 0xb863f1e4, 0xb668fced, 0xcb1670a, 0x2ba6a03, 0x10a77d18, 0x1eac7011, 0x349d532e, 0x3a965e27, 0x288b493c, 0x26804435, 0x7ce90f42, 0x72e2024b, 0x60ff1550, 0x6ef41859, 0x44c53b66, 0x4ace366f, 0x58d32174, 0x56d82c7d, 0x377a0ca1, 0x397101a8, 0x2b6c16b3, 0x25671bba, 0xf563885, 0x15d358c, 0x13402297, 0x1d4b2f9e, 0x472264e9, 0x492969e0, 0x5b347efb, 0x553f73f2, 0x7f0e50cd, 0x71055dc4, 0x63184adf, 0x6d1347d6, 0xd7cadc31, 0xd9c1d138, 0xcbdcc623, 0xc5d7cb2a, 0xefe6e815, 0xe1ede51c, 0xf3f0f207, 0xfdfbff0e, 0xa792b479, 0xa999b970, 0xbb84ae6b, 0xb58fa362, 0x9fbe805d, 0x91b58d54, 0x83a89a4f, 0x8da39746]"
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/MovpkgParser.swift",
+      "kind": "Array",
+      "offset": 322,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/MovpkgParser.swift",
+      "kind": "BooleanLiteral",
+      "offset": 942,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/MovpkgParser.swift",
+      "kind": "StringLiteral",
+      "offset": 982,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/MovpkgParser.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1021,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/MovpkgParser.swift",
+      "kind": "Dictionary",
+      "offset": 1305,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/Utils\/StringExtension.swift",

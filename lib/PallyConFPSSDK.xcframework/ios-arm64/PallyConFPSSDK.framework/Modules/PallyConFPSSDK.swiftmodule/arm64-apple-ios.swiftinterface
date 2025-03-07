@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios11.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PallyConFPSSDK
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios12.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PallyConFPSSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import CommonCrypto/*.CC_LONG*/
@@ -45,6 +45,7 @@ extension PallyConFPSSDK {
   @objc dynamic public func prepare(Content config: PallyConDrmConfiguration)
   @available(iOS 11.2, *)
   @objc dynamic public func createDownloadTask(Content config: PallyConDrmConfiguration, delegate: (any PallyConFPSDownloadDelegate)?, downloadCellurAccess: Swift.Bool = true, makeAssetDownloadTask: Swift.Bool = false, downloadMinimumBitrate: Swift.String? = String()) -> DownloadTask?
+  public func getHLSTracks(Content url: Swift.String) -> Swift.Result<HLSTracksPlaylistParser.HLSManifest, PallyConError>
   @objc dynamic public func deleteLicense(ContentId id: Swift.String)
   @available(iOS, deprecated, message: "Use the `getOfflineLicenseExpiryDate(find contentId: String)` instead")
   @objc dynamic public func getExpiryDateOfSavedLicense(ContentId id: Swift.String) -> Swift.String?
@@ -52,6 +53,7 @@ extension PallyConFPSSDK {
   @objc dynamic public func getJsonforChromecastPlayback(authData: Swift.String) -> Any?
 }
 @available(iOS 10.0, *)
+@available(iOS, deprecated, message: "Use the `HLSTracksPlaylistParser.PallyConCustomInfo` instead")
 @objc public class PallyConHLSInfo : ObjectiveC.NSObject {
   @objc public init(_ hlsUrl: Swift.String)
   @objc public func getAllTrackInfo() -> Swift.String
@@ -136,12 +138,10 @@ extension PallyConFPSSDK {
   final public let authData: Swift.String?
   public var delegate: (any PallyConFPSLicenseDelegate)?
   public var licenseUrl: Swift.String?
-  public var keyIdList: [Swift.String]?
   public var licenseHttpHeader: [Swift.String : Swift.String]?
   public var licenseCookies: Swift.String?
-  public var allowsKeyRotation: Swift.Bool
   public var renewalInterval: Swift.Int64
-  @objc public init(avURLAsset: AVFoundation.AVURLAsset, contentId id: Swift.String, certificateUrl url: Swift.String, authData: Swift.String? = nil, delegate: (any PallyConFPSLicenseDelegate)? = nil, licenseUrl: Swift.String? = nil, keyIdList: [Swift.String]? = nil, licenseHttpHeader: [Swift.String : Swift.String]? = nil, licenseCookies: Swift.String? = nil, allowsKeyRotation: Swift.Bool = false, renewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue)
+  @objc public init(avURLAsset: AVFoundation.AVURLAsset, contentId id: Swift.String, certificateUrl url: Swift.String, authData: Swift.String? = nil, delegate: (any PallyConFPSLicenseDelegate)? = nil, licenseUrl: Swift.String? = nil, licenseHttpHeader: [Swift.String : Swift.String]? = nil, licenseCookies: Swift.String? = nil, renewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue)
   @objc deinit
 }
 @objc public class PallyConResult : ObjectiveC.NSObject {
@@ -186,12 +186,8 @@ public enum PallyConError : Swift.Error {
   public var playbackDuration: Swift.String? {
     get
   }
-  public var licenseDuration: Swift.String? {
-    get
-  }
-  @objc public init(downloadDate: Foundation.Date? = nil, rentalDuration: Swift.String? = nil, playbackDuration: Swift.String? = nil, licenseDuration: Swift.String? = nil)
+  @objc public init(downloadDate: Foundation.Date? = nil, rentalDuration: Swift.String? = nil, playbackDuration: Swift.String? = nil)
   public func update(downloadDate: Foundation.Date)
-  public func update(licenseDuration: Swift.String)
   public func update(rentalDuration: Swift.String)
   public func update(playbackDuration: Swift.String)
   @objc deinit
@@ -201,6 +197,87 @@ public enum PallyConError : Swift.Error {
   @objc public func resume()
   @objc public func cancel()
   @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class HLSTracksPlaylistParser : ObjectiveC.NSObject {
+  public struct PallyConCustomInfo : Swift.Codable {
+    public let duration: Swift.String
+    public let outputFormat: Swift.String
+    public let tracks: HLSTracksPlaylistParser.Tracks
+    public let version: Swift.String
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct Tracks : Swift.Codable {
+    public let audio: [HLSTracksPlaylistParser.AudioTrack]?
+    public let text: [HLSTracksPlaylistParser.TextTrack]?
+    public let video: [HLSTracksPlaylistParser.VideoTrack]?
+    public init(from decoder: any Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+  public struct AudioTrack : Swift.Codable {
+    public let language: Swift.String
+    public let path: Swift.String
+    public let size: Swift.String
+    public let trackName: Swift.String
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct TextTrack : Swift.Codable {
+    public let language: Swift.String
+    public let path: Swift.String
+    public let size: Swift.String
+    public let trackName: Swift.String
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct VideoTrack : Swift.Codable {
+    public let bitrate: Swift.String
+    public let path: Swift.String
+    public let resolution: Swift.String
+    public let size: Swift.String
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct HLSManifest {
+    public let videos: [HLSTracksPlaylistParser.VideoStream]
+    public let audios: [HLSTracksPlaylistParser.AudioStream]
+    public let subtitles: [HLSTracksPlaylistParser.SubtitleStream]
+    public let pallyConInfo: HLSTracksPlaylistParser.PallyConCustomInfo?
+    public let rawContent: Swift.String
+  }
+  public struct VideoStream {
+    public let bandwidth: Swift.Int
+    public let averageBandwidth: Swift.Int?
+    public let codecs: Swift.String
+    public let resolution: Swift.String
+    public let frameRate: Swift.Double
+    public let uri: Swift.String
+  }
+  public struct AudioStream {
+    public let type: Swift.String
+    public let uri: Swift.String
+    public let groupId: Swift.String
+    public let language: Swift.String?
+    public let name: Swift.String
+    public let isDefault: Swift.Bool
+    public let autoselect: Swift.Bool
+    public let channels: Swift.String?
+  }
+  public struct SubtitleStream {
+    public let type: Swift.String
+    public let uri: Swift.String
+    public let groupId: Swift.String
+    public let language: Swift.String
+    public let name: Swift.String
+    public let isDefault: Swift.Bool
+    public let autoselect: Swift.Bool
+  }
+  @objc override dynamic public init()
+  public func downloadAndParseManifest(from urlString: Swift.String) throws -> HLSTracksPlaylistParser.HLSManifest
+  @objc deinit
+}
+extension HLSTracksPlaylistParser {
+  public func printDetailedInfo(_ manifest: HLSTracksPlaylistParser.HLSManifest)
 }
 @available(iOS, deprecated, message: "Use the `PallyConError` instead")
 public enum PallyConSDKException : Swift.Error {

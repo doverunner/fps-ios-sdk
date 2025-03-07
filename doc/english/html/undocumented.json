@@ -8,51 +8,44 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/HLSTracksPlaylistParser.swift",
+      "line": 608,
+      "symbol": "HLSTracksPlaylistParser.printDetailedInfo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 81,
+      "line": 76,
       "symbol": "PallyConResult.init(contentId:isSuccess:keyId:offlineExpiry:error:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 161,
-      "symbol": "PallyConOfflineExpiryDate.init(downloadDate:rentalDuration:playbackDuration:licenseDuration:)",
+      "line": 154,
+      "symbol": "PallyConOfflineExpiryDate.init(downloadDate:rentalDuration:playbackDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 191,
+      "line": 182,
       "symbol": "PallyConOfflineExpiryDate.update(downloadDate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 195,
-      "symbol": "PallyConOfflineExpiryDate.update(licenseDuration:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 199,
+      "line": 186,
       "symbol": "PallyConOfflineExpiryDate.update(rentalDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 204,
+      "line": 191,
       "symbol": "PallyConOfflineExpiryDate.update(playbackDuration:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 209,
-      "symbol": "PallyConOfflineExpiryDate.updateAll(downloadDate:rentalDuration:playbackDuration:licenseDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -86,57 +79,64 @@
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 16,
+      "line": 17,
       "symbol": "PallyConFPSSDK.createDownloadTask(url:token:downloadOptions:isCelluraAccess:downloadDelegate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 35,
+      "line": 36,
       "symbol": "PallyConFPSSDK.createDownloadTask(url:userId:contentId:token:downloadOptions:isCelluraAccess:downloadDelegate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 58,
+      "line": 59,
       "symbol": "PallyConFPSSDK.createDownloadTask(url:userId:contentId:optionalId:downloadOptions:isCelluraAccess:downloadDelegate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 81,
+      "line": 82,
       "symbol": "PallyConFPSSDK.createDownloadTask(url:contentId:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:downloadDelegate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 106,
+      "line": 107,
       "symbol": "PallyConFPSSDK.createDownloadTask(urlAsset:userId:contentId:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:downloadDelegate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 132,
+      "line": 133,
       "symbol": "PallyConFPSSDK.createDownloadTask(url:userId:contentId:optionalId:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:isAVAssetDownloadTask:downloadDelegate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 164,
+      "line": 165,
       "symbol": "PallyConFPSSDK.createDownloadTask(urlAsset:userId:contentId:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:isAVAssetDownloadTask:downloadDelegate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 193,
+      "line": 194,
       "symbol": "PallyConFPSSDK.createDownloadTask(url:userId:contentId:contentKeyIDList:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:isAVAssetDownloadTask:downloadDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Interface.swift",
+      "line": 102,
+      "symbol": "PallyConFPSSDK.getHLSTracks(Content:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

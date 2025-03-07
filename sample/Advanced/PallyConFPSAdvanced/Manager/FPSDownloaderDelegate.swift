@@ -16,7 +16,7 @@ public class FPSDownloaderDelegate: NSObject {
     
     fileprivate var downloadTask: DownloadTask?
     
-    init(url: URL, keyId: String, contentId: String, token: String) {
+    init(url: URL, contentId: String, token: String) {
         super.init()
 
         let videoAsset = AVURLAsset(url: url)
@@ -24,9 +24,19 @@ public class FPSDownloaderDelegate: NSObject {
                                               contentId: contentId,
                                               certificateUrl: CERTIFICATE_URL,
                                               authData: token,
-                                              delegate: PallyConSDKManager.sharedManager,
-                                              keyIdList: [keyId])
+                                              delegate: PallyConSDKManager.sharedManager)
         downloadTask = PallyConSDKManager.sharedManager.pallyConFPSSDK?.createDownloadTask(Content: config, delegate: self)
+    }
+    
+    init(url: URL, contentId: String, token: String, minimumBitrate: String ) {
+        super.init()
+        let videoAsset = AVURLAsset(url: url)
+        let config = PallyConDrmConfiguration(avURLAsset: videoAsset,
+                                              contentId: contentId,
+                                              certificateUrl: CERTIFICATE_URL,
+                                              authData: token,
+                                              delegate: PallyConSDKManager.sharedManager)
+        downloadTask = PallyConSDKManager.sharedManager.pallyConFPSSDK?.createDownloadTask(Content: config, delegate: self, downloadMinimumBitrate: minimumBitrate)
     }
     
     public func startDownload() {

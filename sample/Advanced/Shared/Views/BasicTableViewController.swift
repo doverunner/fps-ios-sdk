@@ -18,6 +18,7 @@ import AVKit
 #endif
 
 import MediaPlayer
+import SwiftUI
 
 class BasicTableViewController: UITableViewController {
      // MARK: UIViewController
@@ -53,6 +54,28 @@ class BasicTableViewController: UITableViewController {
                playerViewController?.player = nil
                playerViewController = nil
           }
+     }
+     
+     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+          super.viewWillTransition(to: size, with: coordinator)
+          coordinator.animate(alongsideTransition: { _ in
+               self.resetSafeAreaInsets()
+               self.adjustSafeAreaInsets()
+          })
+     }
+     
+     private func adjustSafeAreaInsets() {
+          if let topVC = UIApplication.topViewController() {
+               let topInset = topVC.view.safeAreaInsets.top
+               print("topInset: \(topInset)")
+               topVC.additionalSafeAreaInsets = UIEdgeInsets(top: topInset-52, left: 0, bottom: 0, right: 0)
+          }
+     }
+     
+     private func resetSafeAreaInsets() {
+         if let topVC = UIApplication.topViewController() {
+             topVC.additionalSafeAreaInsets = .zero
+         }
      }
      
      // MARK: - Table view data source
@@ -141,9 +164,22 @@ class BasicTableViewController: UITableViewController {
                     case .notDownloaded:
                          alertAction = UIAlertAction(title: "Download", style: .default) { _ in
                               // you have to connect on the online for the content download.
-                              if (Recharbility.isConnectedToNetwork()) {
-                                   PallyConSDKManager.sharedManager.downloadStream(for: fpsContent)
-                                   
+                              if Recharbility.isConnectedToNetwork() {
+                                   let parser = HLSTracksPlaylistParser()
+                                   do {
+                                        let manifest = try parser.downloadAndParseManifest(from: fpsContent.urlAsset.url.absoluteString)
+                                        
+                                        let popupView = PopupView(isPresented: .constant(true), manifest: manifest, fpsContent: fpsContent)
+                                        let hostingController = UIHostingController(rootView: popupView)
+                                        
+                                        hostingController.modalPresentationStyle = .overFullScreen
+                                        hostingController.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+                                        hostingController.preferredContentSize = CGSize(width: 300, height: 200)
+
+                                        self.present(hostingController, animated: true)
+                                   } catch {
+                                        print("Error parsing playlist: \(error)")
+                                   }
                               } else {
                                    let alert = UIAlertController(title: "Download Failed", message: "network connect failed", preferredStyle: .alert)
                                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -165,12 +201,9 @@ class BasicTableViewController: UITableViewController {
                     }
                     
                     let alertExistLicenseAction = UIAlertAction(title: "Exsit License", style: .default) { _ in
-                         var message: String
+                         var message: String = String()
                          if let expire_date = PallyConSDKManager.sharedManager.pallyConFPSSDK?.getOfflineLicenseExpiryDate(find: fpsContent.contentId) {
-                              message = "Policy v1 \n" +
-                                        "license date  : \(expire_date.licenseDuration) \n" +
-                                        "Policy v2 \n" +
-                                        "rental date   : \(expire_date.rentalExpiryDate) \n" +
+                              message = "rental date   : \(expire_date.rentalExpiryDate) \n" +
                                         "playback date : \(expire_date.playbackExpiryDate)"
                          }
                          
@@ -287,12 +320,14 @@ class BasicTableViewController: UITableViewController {
                
                // Grab a reference for the destinationViewController to use in later delegate callbacks from FPSPlaybackManager.
                self.playerViewController = playerViewController
+               
+               // The previous AVURLAsset session expires, so a new one must be created.
+               fpsContent.urlAsset = AVURLAsset(url: fpsContent.urlAsset.url)
                let config = PallyConDrmConfiguration(avURLAsset: fpsContent.urlAsset,
                                                      contentId: fpsContent.contentId,
                                                      certificateUrl: CERTIFICATE_URL,
                                                      authData: fpsContent.token,
-                                                     delegate: PallyConSDKManager.sharedManager,
-                                                     keyIdList: [fpsContent.keyId])
+                                                     delegate: PallyConSDKManager.sharedManager)
                PallyConSDKManager.sharedManager.pallyConFPSSDK?.prepare(Content: config)
                
                // Load the new FpsContent to playback into FPSPlaybackManager.
