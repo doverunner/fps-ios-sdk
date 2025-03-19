@@ -64,7 +64,6 @@ extension ViewController: PallyConFPSLicenseDelegate
         print("---------------------------- License Result ")
         print("Content ID : \(result.contentId)")
         print("Key ID     : \(String(describing: result.keyId))")
-        print("Expiry Date: \(String(describing: result.playbackExpiry))")
         if result.isSuccess == false {
             print("Error : \(String(describing: result.error?.localizedDescription))")
             if let error = result.error {

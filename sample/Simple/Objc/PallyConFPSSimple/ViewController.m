@@ -54,7 +54,6 @@
 
 - (void)licenseWithResult:(PallyConResult *)result {
     NSLog(@"%@",result.contentId);
-    NSLog(@"%@",result.playbackExpiry);
     if (result.isSuccess == false) {
         NSLog(@"%@", [result getPallyConErrorForObjC]);
     }
