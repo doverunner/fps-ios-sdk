@@ -1,150 +1,220 @@
 {
   "warnings": [
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/FPSContentDownloader.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/DoveRunnerFairPlay+Download.swift",
+      "line": 17,
+      "symbol": "DoveRunnerFairPlay.createDownloadTask(url:userId:contentId:token:downloadOptions:isCelluraAccess:downloadDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/DoveRunnerFairPlay+Download.swift",
+      "line": 40,
+      "symbol": "DoveRunnerFairPlay.createDownloadTask(url:userId:contentId:optionalId:downloadOptions:isCelluraAccess:downloadDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/DoveRunnerFairPlay+Download.swift",
+      "line": 63,
+      "symbol": "DoveRunnerFairPlay.createDownloadTask(url:contentId:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:downloadDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/DoveRunnerFairPlay+Download.swift",
+      "line": 88,
+      "symbol": "DoveRunnerFairPlay.createDownloadTask(urlAsset:userId:contentId:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:downloadDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/DoveRunnerFairPlay+Download.swift",
+      "line": 114,
+      "symbol": "DoveRunnerFairPlay.createDownloadTask(url:userId:contentId:optionalId:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:isAVAssetDownloadTask:downloadDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/DoveRunnerFairPlay+Download.swift",
+      "line": 146,
+      "symbol": "DoveRunnerFairPlay.createDownloadTask(urlAsset:userId:contentId:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:isAVAssetDownloadTask:downloadDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/DoveRunnerFairPlay+Download.swift",
+      "line": 175,
+      "symbol": "DoveRunnerFairPlay.createDownloadTask(url:userId:contentId:contentKeyIDList:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:isAVAssetDownloadTask:downloadDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/DoveRunnerFairPlay+Interface.swift",
+      "line": 112,
+      "symbol": "DoveRunnerFairPlay.getHLSTracks(Content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FPSContentDownloader.swift",
       "line": 200,
       "symbol": "FPSContentDownloader",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/HLSTracksPlaylistParser.swift",
-      "line": 608,
-      "symbol": "HLSTracksPlaylistParser.printDetailedInfo(_:)",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
+      "line": 80,
+      "symbol": "LicenseResult.init(contentId:isSuccess:keyId:offlineExpiry:error:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 76,
-      "symbol": "PallyConResult.init(contentId:isSuccess:keyId:offlineExpiry:error:)",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
+      "line": 158,
+      "symbol": "OfflineExpiryDate.init(downloadDate:rentalDuration:playbackDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 154,
-      "symbol": "PallyConOfflineExpiryDate.init(downloadDate:rentalDuration:playbackDuration:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 182,
-      "symbol": "PallyConOfflineExpiryDate.update(downloadDate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
       "line": 186,
-      "symbol": "PallyConOfflineExpiryDate.update(rentalDuration:)",
+      "symbol": "OfflineExpiryDate.update(downloadDate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConDrmConfiguration.swift",
-      "line": 191,
-      "symbol": "PallyConOfflineExpiryDate.update(playbackDuration:)",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
+      "line": 190,
+      "symbol": "OfflineExpiryDate.update(rentalDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSLicenseDelegate.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
+      "line": 195,
+      "symbol": "OfflineExpiryDate.update(playbackDuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayLicenseDelegate.swift",
       "line": 18,
-      "symbol": "PallyConFPSLicenseDelegate.fpsLicenseDidSuccessAcquiring(contentId:)",
+      "symbol": "FairPlayLicenseDelegate.fpsLicenseDidSuccessAcquiring(contentId:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSLicenseDelegate.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayLicenseDelegate.swift",
       "line": 21,
-      "symbol": "PallyConFPSLicenseDelegate.fpsLicense(contentId:didFailWithError:)",
+      "symbol": "FairPlayLicenseDelegate.fpsLicense(contentId:didFailWithError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSLicenseDelegate.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayLicenseDelegate.swift",
       "line": 24,
-      "symbol": "PallyConFPSLicenseDelegate.contentKeyRequest(keyData:requestData:)",
+      "symbol": "FairPlayLicenseDelegate.contentKeyRequest(keyData:requestData:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSLicenseDelegate.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayLicenseDelegate.swift",
       "line": 27,
-      "symbol": "PallyConFPSLicenseDelegate.resourceLoaderRequest(_:)",
+      "symbol": "FairPlayLicenseDelegate.resourceLoaderRequest(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 17,
-      "symbol": "PallyConFPSSDK.createDownloadTask(url:token:downloadOptions:isCelluraAccess:downloadDelegate:)",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/HLSPlaylistParser.swift",
+      "line": 608,
+      "symbol": "HLSPlaylistParser.printDetailedInfo(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 36,
-      "symbol": "PallyConFPSSDK.createDownloadTask(url:userId:contentId:token:downloadOptions:isCelluraAccess:downloadDelegate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 59,
-      "symbol": "PallyConFPSSDK.createDownloadTask(url:userId:contentId:optionalId:downloadOptions:isCelluraAccess:downloadDelegate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 82,
-      "symbol": "PallyConFPSSDK.createDownloadTask(url:contentId:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:downloadDelegate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 107,
-      "symbol": "PallyConFPSSDK.createDownloadTask(urlAsset:userId:contentId:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:downloadDelegate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 133,
-      "symbol": "PallyConFPSSDK.createDownloadTask(url:userId:contentId:optionalId:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:isAVAssetDownloadTask:downloadDelegate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 165,
-      "symbol": "PallyConFPSSDK.createDownloadTask(urlAsset:userId:contentId:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:isAVAssetDownloadTask:downloadDelegate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Download.swift",
-      "line": 194,
-      "symbol": "PallyConFPSSDK.createDownloadTask(url:userId:contentId:contentKeyIDList:token:licenseUrl:appleCertUrl:downloadOptions:isCelluraAccess:isAVAssetDownloadTask:downloadDelegate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConFPSSDK+Interface.swift",
-      "line": 102,
-      "symbol": "PallyConFPSSDK.getHLSTracks(Content:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/PallyConFPSSDK/PallyConSDKException.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/PallyConSDKException.swift",
       "line": 13,
       "symbol": "PallyConSDKException",
       "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 46,
+      "symbol": "DoveRunnerFairPlay.init(fpsLicenseDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 53,
+      "symbol": "DoveRunnerFairPlay.init(siteId:siteKey:fpsLicenseDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 62,
+      "symbol": "DoveRunnerFairPlay.prepare(urlAsset:userId:contentId:token:licenseUrl:appleCertUrl:liveKeyRotation:licenseRenewalInterval:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 83,
+      "symbol": "DoveRunnerFairPlay.prepare(urlAsset:userId:contentId:optionalId:liveKeyRotation:licenseUrl:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 97,
+      "symbol": "DoveRunnerFairPlay.prepare(urlAsset:contentId:licenseUrl:appleCertUrl:liveKeyRotation:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 113,
+      "symbol": "DoveRunnerFairPlay.prepare(urlAsset:customData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 130,
+      "symbol": "DoveRunnerFairPlay.prepare(urlAsset:customData:appleCertUrl:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 148,
+      "symbol": "DoveRunnerFairPlay.getOfflineLicenseExpireDate(contentId:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 159,
+      "symbol": "DoveRunnerFairPlay.removeLicense(contentId:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 164,
+      "symbol": "DoveRunnerFairPlay.getCustomDataForChromcast(userId:contentId:optionalId:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/DoveRunnerFairPlay.swift",
+      "line": 181,
+      "symbol": "DoveRunnerFairPlay.getCustomDataForChromcast(token:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -162,135 +232,16 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 46,
-      "symbol": "PallyConFPSSDK.init(fpsLicenseDelegate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 53,
-      "symbol": "PallyConFPSSDK.init(siteId:siteKey:fpsLicenseDelegate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 63,
-      "symbol": "PallyConFPSSDK.prepare(urlAsset:token:licenseUrl:appleCertUrl:licenseRenewalInterval:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 84,
-      "symbol": "PallyConFPSSDK.prepare(urlAsset:userId:contentId:token:licenseUrl:appleCertUrl:liveKeyRotation:licenseRenewalInterval:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 105,
-      "symbol": "PallyConFPSSDK.prepare(urlAsset:userId:contentId:optionalId:liveKeyRotation:licenseUrl:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 119,
-      "symbol": "PallyConFPSSDK.prepare(urlAsset:contentId:licenseUrl:appleCertUrl:liveKeyRotation:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 135,
-      "symbol": "PallyConFPSSDK.prepare(urlAsset:customData:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 152,
-      "symbol": "PallyConFPSSDK.prepare(urlAsset:customData:appleCertUrl:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 170,
-      "symbol": "PallyConFPSSDK.getOfflineLicenseExpireDate(contentId:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 181,
-      "symbol": "PallyConFPSSDK.removeLicense(contentId:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 186,
-      "symbol": "PallyConFPSSDK.getCustomDataInfo(from:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 193,
-      "symbol": "PallyConFPSSDK.getCustomDataForChromcast(userId:contentId:optionalId:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 210,
-      "symbol": "PallyConFPSSDK.getCustomDataForChromcast(token:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConFPSSDK.swift",
-      "line": 222,
-      "symbol": "PallyConFPSSDK.getTokenInfo(from:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConInCustomStructs.swift",
-      "line": 12,
-      "symbol": "DrmType",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConInCustomStructs.swift",
-      "line": 19,
-      "symbol": "PallyConTokenInfo",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConInCustomStructs.swift",
-      "line": 37,
-      "symbol": "PallyConCustomDataInfo",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConLicenseManager.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/FairPlayLicenseManager.swift",
       "line": 13,
-      "symbol": "PallyConLicenseManager",
+      "symbol": "FairPlayLicenseManager",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/PallyConLicenseManager.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/FairPlayLicenseManager.swift",
       "line": 13,
-      "symbol": "PallyConLicenseManager",
+      "symbol": "FairPlayLicenseManager",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
@@ -316,42 +267,42 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/PallyConFPSSDK.build/Release-iphoneos/PallyConFPSSDK.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/ContentKey+CoreDataClass.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/ContentKey+CoreDataClass.swift",
       "line": 14,
       "symbol": "ContentKey",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/PallyConFPSSDK.build/Release-iphoneos/PallyConFPSSDK.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/ContentKey+CoreDataClass.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/ContentKey+CoreDataClass.swift",
       "line": 14,
       "symbol": "ContentKey",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/PallyConFPSSDK.build/Release-iphoneos/PallyConFPSSDK.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/Customer+CoreDataClass.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/Customer+CoreDataClass.swift",
       "line": 14,
       "symbol": "Customer",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/PallyConFPSSDK.build/Release-iphoneos/PallyConFPSSDK.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/Customer+CoreDataClass.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/Customer+CoreDataClass.swift",
       "line": 14,
       "symbol": "Customer",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/PallyConFPSSDK.build/Release-iphoneos/PallyConFPSSDK.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/License+CoreDataClass.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/License+CoreDataClass.swift",
       "line": 14,
       "symbol": "License",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/PallyConFPSSDK.build/Release-iphoneos/PallyConFPSSDK.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/License+CoreDataClass.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/License+CoreDataClass.swift",
       "line": 14,
       "symbol": "License",
       "symbol_kind": "source.lang.swift.decl.extension",

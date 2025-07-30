@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DoveRunnerFairPlay Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/DoveRunnerFairPlay" class="dashAnchor"></a>
+
+    <a title="DoveRunnerFairPlay Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          DoveRunnerFairPlay 2.5.0 Docs
+        </a>
+        
+      </p>
+    
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">DoveRunnerFairPlay</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Classes.html">Classes</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      DoveRunnerFairPlay Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DoveRunnerFairPlay.html">DoveRunnerFairPlay</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DownloadTask.html">DownloadTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FairPlayConfiguration.html">FairPlayConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSPlaylistParser.html">HLSPlaylistParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSPlaylistParser/ContentPackInfo.html">– ContentPackInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSPlaylistParser/HLSManifest.html">– HLSManifest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LicenseResult.html">LicenseResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/OfflineExpiryDate.html">OfflineExpiryDate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RenewalInterval.html">RenewalInterval</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SDKError.html">SDKError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FairPlayDownloadDelegate.html">FairPlayDownloadDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FairPlayLicenseDelegate.html">FairPlayLicenseDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>DoveRunnerFairPlay</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">DoveRunnerFairPlay</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a <code>DoveRunnerFairPlay</code> class that can license FPS content and download content.
+<code><a href="../Protocols/FairPlayLicenseDelegate.html">FairPlayLicenseDelegate</a></code> is used to handle errors while acquiring license.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18DoveRunnerFairPlayAAC14mainm3u8SchemeSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/mainm3u8Scheme" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18DoveRunnerFairPlayAAC14mainm3u8SchemeSSvpZ">mainm3u8Scheme</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>URL Scheme that must be applied when using the <code>FairPlayLicenseDelegate.resourceLoaderRequest()</code> function.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">mainm3u8Scheme</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)init"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)init">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates and initializes an DoveRunnerFairPlay.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Methods"></a>
+                <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Methods"></a>
+                  <h3 class="section-name"><span>Methods</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)prepareWithDrm:"></a>
+                    <a name="//apple_ref/swift/Method/prepare(drm:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)prepareWithDrm:">prepare(drm:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>prepare(config:)</code> function sets the information to request a license for <code>FairPlay Streaming</code> content.
+If <code><a href="../Protocols/FairPlayLicenseDelegate.html">FairPlayLicenseDelegate</a></code> is set, <code><a href="../Protocols/FairPlayLicenseDelegate.html#/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayLicenseDelegate(im)licenseWithResult:">FairPlayLicenseDelegate.license(result:)</a></code> returns the result.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p><code><a href="../Enums/SDKError.html">SDKError</a></code> Occurs when there is an error while storing data in license Database.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">11.2</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="n">drm</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Classes/FairPlayConfiguration.html">FairPlayConfiguration</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>config</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>FairPlayConfiguration.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)createDownloadTaskWithDrm:delegate:downloadCellurAccess:makeAssetDownloadTask:downloadMinimumBitrate:"></a>
+                    <a name="//apple_ref/swift/Method/createDownloadTask(drm:delegate:downloadCellurAccess:makeAssetDownloadTask:downloadMinimumBitrate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)createDownloadTaskWithDrm:delegate:downloadCellurAccess:makeAssetDownloadTask:downloadMinimumBitrate:">createDownloadTask(drm:<wbr>delegate:<wbr>downloadCellurAccess:<wbr>makeAssetDownloadTask:<wbr>downloadMinimumBitrate:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create DownloadTask with AVAssetDownloadTask or  AVAggregateAssetDownloadTask.
+And download offline license with AVContentKeySession.
+Ex) If the content size is small, DownloadTask may be terminated first, and license acquisition may fail.
+AVContentKeySession downloads the license first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">11.2</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDownloadTask</span><span class="p">(</span><span class="n">drm</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Classes/FairPlayConfiguration.html">FairPlayConfiguration</a></span><span class="p">,</span>
+                               <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FairPlayDownloadDelegate.html">FairPlayDownloadDelegate</a></span><span class="p">?,</span>
+                               <span class="nv">downloadCellurAccess</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+                               <span class="nv">makeAssetDownloadTask</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                               <span class="nv">downloadMinimumBitrate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kt">String</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DownloadTask.html">DownloadTask</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>config</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>FairPlayConfiguration.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isMakeAssetDownloadTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Download the content using <code>AVAssetDownloadTask</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>downloadMinimumBitrate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>download the m3u8 bandwith(option).
+                     You must enter a value greater than the bandwidth you want to download.
+                     Defaults is highest bandwidth is downloaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Registers callback for download delegate. This callback is required to get content download status.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Classes/DownloadTask.html">DownloadTask</a></code> is returned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)deleteLicenseWithContentId:"></a>
+                    <a name="//apple_ref/swift/Method/deleteLicense(ContentId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)deleteLicenseWithContentId:">deleteLicense(ContentId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delete the stored license.
+If <code><a href="../Protocols/FairPlayLicenseDelegate.html">FairPlayLicenseDelegate</a></code> is set, <code><a href="../Protocols/FairPlayLicenseDelegate.html#/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayLicenseDelegate(im)licenseWithResult:">FairPlayLicenseDelegate.license(result:)</a></code> returns the result.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Content ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)getExpiryDateOfSavedLicenseWithContentId:"></a>
+                    <a name="//apple_ref/swift/Method/getExpiryDateOfSavedLicense(ContentId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)getExpiryDateOfSavedLicenseWithContentId:">getExpiryDateOfSavedLicense(ContentId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the license is stored, return the expiration date.
+If <code><a href="../Protocols/FairPlayLicenseDelegate.html">FairPlayLicenseDelegate</a></code> is set, <code><a href="../Protocols/FairPlayLicenseDelegate.html#/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayLicenseDelegate(im)licenseWithResult:">FairPlayLicenseDelegate.license(result:)</a></code> returns the result.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use the `getOfflineLicenseExpiryDate(find contentId: String﹚` instead"</span><span class="p">)</span>
+<span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getExpiryDateOfSavedLicense</span><span class="p">(</span><span class="kt">ContentId</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Content ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the expiration date in UTC (GMT) time.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)getOfflineLicenseExpiryDateWithFind:"></a>
+                    <a name="//apple_ref/swift/Method/getOfflineLicenseExpiryDate(find:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)getOfflineLicenseExpiryDateWithFind:">getOfflineLicenseExpiryDate(find:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the license is stored, return the expiration date.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getOfflineLicenseExpiryDate</span><span class="p">(</span><span class="n">find</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/OfflineExpiryDate.html">OfflineExpiryDate</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Content ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns <code><a href="../Classes/OfflineExpiryDate.html">OfflineExpiryDate</a></code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)getJsonforChromecastPlaybackWithAuthData:"></a>
+                    <a name="//apple_ref/swift/Method/getJsonforChromecastPlayback(authData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@DoveRunnerFairPlay@objc(cs)DoveRunnerFairPlay(im)getJsonforChromecastPlaybackWithAuthData:">getJsonforChromecastPlayback(authData:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get a json data for play in chromcast.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getJsonforChromecastPlayback</span><span class="p">(</span><span class="nv">authData</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>authData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>token or customData string of the content to be played.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Json data or <code>nil</code></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2017 <a class="link" href="http://www.doverunner.com" target="_blank" rel="external noopener">DovrRunner</a></p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

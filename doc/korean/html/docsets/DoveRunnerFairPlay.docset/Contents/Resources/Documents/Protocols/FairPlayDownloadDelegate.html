@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FairPlayDownloadDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/FairPlayDownloadDelegate" class="dashAnchor"></a>
+
+    <a title="FairPlayDownloadDelegate Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          DoveRunnerFairPlay 2.5.0 Docs
+        </a>
+        
+      </p>
+    
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">DoveRunnerFairPlay</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Protocols.html">Protocols</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      FairPlayDownloadDelegate Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DoveRunnerFairPlay.html">DoveRunnerFairPlay</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DownloadTask.html">DownloadTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FairPlayConfiguration.html">FairPlayConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSPlaylistParser.html">HLSPlaylistParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSPlaylistParser/ContentPackInfo.html">– ContentPackInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HLSPlaylistParser/HLSManifest.html">– HLSManifest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LicenseResult.html">LicenseResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/OfflineExpiryDate.html">OfflineExpiryDate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RenewalInterval.html">RenewalInterval</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SDKError.html">SDKError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FairPlayDownloadDelegate.html">FairPlayDownloadDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FairPlayLicenseDelegate.html">FairPlayLicenseDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>FairPlayDownloadDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FairPlayDownloadDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>The delegate can be used to get callback for starting download, download progress, error and completion.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayDownloadDelegate(im)downloadContent:didStartDownloadWithAsset:subtitleDisplayName:"></a>
+                    <a name="//apple_ref/swift/Method/downloadContent(_:didStartDownloadWithAsset:subtitleDisplayName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayDownloadDelegate(im)downloadContent:didStartDownloadWithAsset:subtitleDisplayName:">downloadContent(_:<wbr>didStartDownloadWithAsset:<wbr>subtitleDisplayName:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>It is called when the download begins, and is called several times if the subtitle file of the downloaded content exists.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didStartDownloadWithAsset</span> <span class="nv">asset</span><span class="p">:</span> <span class="kt">AVURLAsset</span><span class="p">,</span> <span class="nv">subtitleDisplayName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the content which is being downloaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>asset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AVURLAsset instance of the content which is being downloaded. You can playback the content while donwloading by using this instance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subtitleDisplayName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>if there is subtitle of the content, it is the display name</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayDownloadDelegate(im)downloadContent:didStopWithError:"></a>
+                    <a name="//apple_ref/swift/Method/downloadContent(_:didStopWithError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayDownloadDelegate(im)downloadContent:didStopWithError:">downloadContent(_:<wbr>didStopWithError:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when an error occurs during download and when canceling download.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didStopWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the content which is being downloaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Information of the error</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayDownloadDelegate(im)downloadContent:didFinishDownloadingTo:"></a>
+                    <a name="//apple_ref/swift/Method/downloadContent(_:didFinishDownloadingTo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayDownloadDelegate(im)downloadContent:didFinishDownloadingTo:">downloadContent(_:<wbr>didFinishDownloadingTo:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>It is called when the content download is complete, and you can check the location of the downloaded content via the location parameter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didFinishDownloadingTo</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the content which is downloaded</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>location</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The location of the downloaded content</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayDownloadDelegate(im)downloadContent:didLoad:totalTimeRangesLoaded:timeRangeExpectedToLoad:"></a>
+                    <a name="//apple_ref/swift/Method/downloadContent(_:didLoad:totalTimeRangesLoaded:timeRangeExpectedToLoad:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@DoveRunnerFairPlay@objc(pl)FairPlayDownloadDelegate(im)downloadContent:didLoad:totalTimeRangesLoaded:timeRangeExpectedToLoad:">downloadContent(_:<wbr>didLoad:<wbr>totalTimeRangesLoaded:<wbr>timeRangeExpectedToLoad:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>It is called continuously during downloading and you can check progress information as below.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">downloadContent</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">didLoad</span> <span class="nv">timeRange</span><span class="p">:</span> <span class="kt">CMTimeRange</span><span class="p">,</span> <span class="n">totalTimeRangesLoaded</span> <span class="nv">loadedTimeRanges</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSValue</span><span class="p">],</span> <span class="nv">timeRangeExpectedToLoad</span><span class="p">:</span> <span class="kt">CMTimeRange</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the content which is being downloaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeRange</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A CMTimeRange indicating the time range loaded since the last time this method was called.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loadedTimeRanges</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A NSArray of NSValues of CMTimeRanges indicating all the time ranges loaded by this asset download task.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeRangeExpectedToLoad</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A CMTimeRange indicating the single time range that is expected to be loaded when the download is complete.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2017 <a class="link" href="http://www.doverunner.com" target="_blank" rel="external noopener">DovrRunner</a></p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
