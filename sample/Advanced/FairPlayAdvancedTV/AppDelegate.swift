@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  PallyConFPSBasicTV
+//  DoveRunnerFairPlayBasicTV
 //
-//  Created by PallyCon on 2017. 3. 20..
-//  Copyright © 2017년 INKA Entworks. All rights reserved.
+//  Created by DRM Team on 2017. 3. 20..
+//  Copyright © 2017년 DoveRunner. All rights reserved.
 //
 
 import UIKit
@@ -43,4 +43,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 

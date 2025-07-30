@@ -1,7 +1,7 @@
 //
-//  Copyright © 2017년 INKA ENTWORKS INC. All rights reserved.
+//  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //
-//  PallyCon Team (http://www.pallycon.com)
+//  DoveRunner Team (http://www.doverunner.com)
 //
 //  BasicTableViewController class is main view in sample.
 //
@@ -11,10 +11,10 @@ import UIKit
 import AVFoundation
 import AVKit
 #if os(iOS)
-     import PallyConFPSSDK
+     import DoveRunnerFairPlay
      import GoogleCast
 #else
-     import PallyConFPSSDKTV
+     import DoveRunnerFairPlayTV
 #endif
 
 import MediaPlayer
@@ -139,7 +139,7 @@ class BasicTableViewController: UITableViewController {
 #if os(iOS)
           if #available(iOS 11.2, *) {
                if indexPath.section == 1 {
-                    let downloadState = PallyConSDKManager.sharedManager.downloadState(for: fpsContent)
+                    let downloadState = SDKManager.sharedManager.downloadState(for: fpsContent)
                     
                     let alertAction: UIAlertAction
                     var alertAction2: UIAlertAction?
@@ -149,7 +149,7 @@ class BasicTableViewController: UITableViewController {
                          alertAction = UIAlertAction(title: "Download", style: .default) { _ in
                               // you have to connect on the online for the content download.
                               if (Recharbility.isConnectedToNetwork()) {
-                                   PallyConSDKManager.sharedManager.downloadStream(for: fpsContent)
+                                   SDKManager.sharedManager.downloadStream(for: fpsContent)
                                    
                               } else {
                                    let alert = UIAlertController(title: "Download Failed", message: "network connect failed", preferredStyle: .alert)
@@ -159,7 +159,7 @@ class BasicTableViewController: UITableViewController {
                          }
                          
                          alertAction2 = UIAlertAction(title: "Cancel", style: .default) { _ in
-                              PallyConSDKManager.sharedManager.cancelDownload(for: fpsContent)
+                              SDKManager.sharedManager.cancelDownload(for: fpsContent)
                          }
                     case .notDownloaded:
                          alertAction = UIAlertAction(title: "Download", style: .default) { _ in
@@ -188,21 +188,21 @@ class BasicTableViewController: UITableViewController {
                          }
                     case .downloading:
                          alertAction = UIAlertAction(title: "Pause", style: .default) { _ in
-                              PallyConSDKManager.sharedManager.pauseDownload(for: fpsContent)
+                              SDKManager.sharedManager.pauseDownload(for: fpsContent)
                          }
                     case .downloaded:
                          alertAction = UIAlertAction(title: "Delete", style: .default) { _ in
-                              PallyConSDKManager.sharedManager.deleteFPSContent(for: fpsContent)
+                              SDKManager.sharedManager.deleteFPSContent(for: fpsContent)
                          }
                     }
                     
                     let alertRemoveLicenseAction = UIAlertAction(title: "Remove License", style: .default) { _ in
-                         PallyConSDKManager.sharedManager.pallyConFPSSDK?.deleteLicense(ContentId: fpsContent.contentId)
+                         SDKManager.sharedManager.doverunnerSdk?.deleteLicense(ContentId: fpsContent.contentId)
                     }
                     
                     let alertExistLicenseAction = UIAlertAction(title: "Exsit License", style: .default) { _ in
                          var message: String = String()
-                         if let expire_date = PallyConSDKManager.sharedManager.pallyConFPSSDK?.getOfflineLicenseExpiryDate(find: fpsContent.contentId) {
+                         if let expire_date = SDKManager.sharedManager.doverunnerSdk?.getOfflineLicenseExpiryDate(find: fpsContent.contentId) {
                               message = "rental date   : \(expire_date.rentalExpiryDate) \n" +
                                         "playback date : \(expire_date.playbackExpiryDate)"
                          }
@@ -211,36 +211,7 @@ class BasicTableViewController: UITableViewController {
                          alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                          UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
                     }
-                    
-                    let alertHLSSizeAction = UIAlertAction(title: "HLS Size", style: .default) { _ in
-                         do {
-                              var message:String?
-                              let urlString = fpsContent.urlAsset.url.absoluteString
-                              if (Recharbility.isConnectedToNetwork()) {
-                                   if (urlString.hasPrefix("file:///")) {
-                                        message = "Downloaded content. \n Delete the content and check the HLS size."
-                                   } else {
-                                        let m3u8Size = PallyConHLSInfo(urlString)
-                                        try m3u8Size.extractPallyConHLSInfo()
-                                        let resolution = m3u8Size.getVideoResolutionSize()
-                                        let bitrate = m3u8Size.getVideoBitrateSiz()
-                                        message = resolution + "\n ------------------ \n" + bitrate
-                                   }
-                              } else {
-                                   let alert = UIAlertController(title: "Get HLS Size Failed", message: "network connect failed", preferredStyle: .alert)
-                                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                                   UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-                              }
-                              
-                              let alert = UIAlertController(title: "m3u8 Size", message: message, preferredStyle: .alert)
-                              alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                              UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-                              
-                         } catch {
-                              print("Error: \(error). Failed")
-                         }
-                    }
-                    
+                   
                     let alertController = UIAlertController(title: fpsContent.contentName, message: "Select from the following options:", preferredStyle: .actionSheet)
                     alertController.addAction(alertAction)
                     alertController.addAction(alertExistLicenseAction)
@@ -323,12 +294,12 @@ class BasicTableViewController: UITableViewController {
                
                // The previous AVURLAsset session expires, so a new one must be created.
                fpsContent.urlAsset = AVURLAsset(url: fpsContent.urlAsset.url)
-               let config = PallyConDrmConfiguration(avURLAsset: fpsContent.urlAsset,
-                                                     contentId: fpsContent.contentId,
-                                                     certificateUrl: CERTIFICATE_URL,
-                                                     authData: fpsContent.token,
-                                                     delegate: PallyConSDKManager.sharedManager)
-               PallyConSDKManager.sharedManager.pallyConFPSSDK?.prepare(Content: config)
+               let config = FairPlayConfiguration(avURLAsset: fpsContent.urlAsset,
+                                                  contentId: fpsContent.contentId,
+                                                  certificateUrl: CERTIFICATE_URL,
+                                                  authData: fpsContent.token,
+                                                  delegate: SDKManager.sharedManager)
+               SDKManager.sharedManager.doverunnerSdk?.prepare(drm: config)
                
                // Load the new FpsContent to playback into FPSPlaybackManager.
                FPSPlaybackManager.sharedManager.setFpsContentForPlayback(fpsContent)
@@ -388,7 +359,7 @@ extension BasicTableViewController: FPSPlaybackDelegate {
                /// underlyingError.code == -42800 : This error code is returned when persistent key is expired.
                switch underlyingError.code {
                case -42656: message = "Lease duration has expired."
-               case -42668: message = "The CKC passed in for processing is not valid."
+               case -42668: message = "The CKC passed in for processing is not valid. Persistent value check."
                case -42672: message = "A certificate is not supplied when creating SPC."
                case -42673: message = "assetId is not supplied when creating an SPC."
                case -42674: message = "Version list is not supplied when creating an SPC."
@@ -399,9 +370,9 @@ extension BasicTableViewController: FPSPlaybackDelegate {
                case -42783: message = "The certificate supplied for SPC is not valid and is possibly revoked."
                case -42799:
                     if fpsContent != nil {
-                         let pallyConFpsSdk = PallyConSDKManager.sharedManager.pallyConFPSSDK
+                         let doverunner = SDKManager.sharedManager.doverunnerSdk
                          do {
-                              try pallyConFpsSdk?.removeLicense(contentId: fpsContent!.contentId)
+                              try doverunner?.removeLicense(contentId: fpsContent!.contentId)
                          } catch {
                               print("Error: \(error). Failed remove license")
                          }
@@ -423,27 +394,29 @@ extension BasicTableViewController: FPSPlaybackDelegate {
                     } else if underlyingError.code == -1202 {
                          print("Invalid Htts/ssl request")
                     } else if underlyingError.code == -9814 {
-                         print("디바이스 시간이 현재 시간이 아니므로 현재 시간으로 변경해야 한다.")
+                         print("The device time is not the current time, so you need to change it to the current time.")
                     } else if underlyingError.code == -9802 {
                          print("the server not supporting-Forward Secrecy")
                     } else if underlyingError.code == -12885 {
                          print("지원되지 않는 암호화 형식")
                     } else if underlyingError.code == -12645 {
-                         print("시스템 내부 오류. 포괄적인 오류이기 때문에 요약되지 않음")
+                         print("System internal error. Not summarised because it is a comprehensive error")
                     } else if underlyingError.code == -12642 {
-                         print("HLS 재생 목록에 오류가 있음")
+                         print("HLS playlist has an error")
                     } else if underlyingError.code == -12875 {
-                         print("요청 시간 초과되었을 때")
+                         print("When a request times out")
                     } else if underlyingError.code == -12160 {
-                         print("라이선스가 유효하지 않은데 재생 시도하는 경우")
+                         print("If you try to play when your licence is invalid")
                     } else if underlyingError.code == -12660 {
-                         print("HTTP 403 Forbidden 오류와 같다")
+                         print("It's like an HTTP 403 Forbidden error")
                     } else if underlyingError.code == -12645 {
-                         print("long .ts 비디오 파일이 10초 동안 응답이 없음")
+                         print("long .ts video file is unresponsive for 10 seconds")
                     } else if underlyingError.code == -12318 {
-                         print("비디오 .ts 파일 비트 전송률이 m3u8 선언과 다름 - 지정된 대역폭 초과")
+                         print("Video .ts file bitrate differs from m3u8 declaration - exceeds specified bandwidth")
                     } else if underlyingError.code == -12642 {
-                         print("라이브 m3u8이 오래동안 변경되지 않았음 - 재생 목록 파일이 2회 연속 읽기에 변경되지 않음")
+                         print("Live M3U8 has not changed for a long time - playlist file has not changed on 2 consecutive reads")
+                    } else {
+                         message = "\(String(describing: error))"
                     }
                     break
                }
@@ -475,7 +448,7 @@ extension BasicTableViewController: FPSPlaybackDelegate {
                metadata.setString(fpsContent.chromcastPlayUrlPath, forKey: "posterUrl")
                
                // the getting customdata used in chromcast. for Token
-               var jsonData = PallyConSDKManager.sharedManager.pallyConFPSSDK?.getJsonforChromecastPlayback(authData: fpsContent.token)
+               var jsonData = SDKManager.sharedManager.doverunnerSdk?.getJsonforChromecastPlayback(authData: fpsContent.token)
                let mediaInfo = GCKMediaInformation(contentID: fpsContent.chromcastPlayUrlPath,
                                                    streamType: GCKMediaStreamType.buffered,
                                                    contentType: "application/dash+xml",

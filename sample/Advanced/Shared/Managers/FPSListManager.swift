@@ -1,7 +1,7 @@
 //
-//  Copyright © 2017년 INKA ENTWORKS INC. All rights reserved.
+//  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //
-//  PallyCon Team (http://www.pallycon.com)
+//  DRM Team
 //
 //  A FPSListManager class is the list manager for FPS content
 //
@@ -40,7 +40,6 @@ class FPSListManager: NSObject {
             guard let contentName = entry["ContentNameKey"] as? String,
                 let contentPlaylistURLString = entry["ContentURL"] as? String else { continue }
             
-            let keyId = (entry[FPSContent.Keys.keyId] as? String) ?? ""
             let contentId = (entry[FPSContent.Keys.cId] as? String) ?? ""
             let token = (entry[FPSContent.Keys.token] as? String) ?? ""
             let liveKeyRotation = (entry[FPSContent.Keys.liveKeyRotation] as? Bool) ?? false
@@ -49,7 +48,7 @@ class FPSListManager: NSObject {
 
             var fpsContent: FPSContent!
             // Get the FPSContent from
-            if #available(iOS 10.0, *), let fpsContent = PallyConSDKManager.sharedManager.localFpsContentForStream(with: contentId, token: token, contentName: contentName) {
+            if #available(iOS 10.0, *), let fpsContent = SDKManager.sharedManager.localFpsContentForStream(with: contentId, token: token, contentName: contentName) {
                 self.contents.append(fpsContent)
                 continue
             } else {
@@ -67,7 +66,7 @@ class FPSListManager: NSObject {
                     urlAsset = AVURLAsset(url: contentPlaylistURL)
                 }
 
-                fpsContent = FPSContent(keyId, contentId, token, liveKeyRotation, contentName, urlAsset, chromcastUrlPath, nil)
+                fpsContent = FPSContent(contentId, token, liveKeyRotation, contentName, urlAsset, chromcastUrlPath, nil)
             }
             
             if let isOnlyStreaming = entry["OnlyStreaming"] as? Bool, isOnlyStreaming {
@@ -88,7 +87,7 @@ class FPSListManager: NSObject {
         return URL(string: newUrlString)
     }
     
-    // MARK: FPSContent access    
+    // MARK: FPSContent access
     /// Returns the number of FPSContent.
     func numberOfContent(section: Int) -> Int {
         if section == 0 {
@@ -150,3 +149,4 @@ class FPSListManager: NSObject {
         return urlAsset
     }
 }
+

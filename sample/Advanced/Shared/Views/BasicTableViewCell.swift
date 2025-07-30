@@ -1,7 +1,7 @@
 //
-//  Copyright © 2017년 INKA ENTWORKS INC. All rights reserved.
+//  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //
-//  PallyCon Team (http://www.pallycon.com)
+//  DoveRunner Team (http://www.doverunner.com)
 //
 //  BasicTableViewCell class is tableViewCell for the FPS Contents
 //
@@ -12,9 +12,9 @@ import AVFoundation
 import AVKit
 
 #if os(iOS)
-import PallyConFPSSDK
+import DoveRunnerFairPlay
 #else
-import PallyConFPSSDKTV
+import DoveRunnerFairPlayTV
 #endif
 
 class BasicTableViewCell: UITableViewCell {
@@ -35,7 +35,7 @@ class BasicTableViewCell: UITableViewCell {
             if let fpsContent = fpsContent {    
                 contentNameLabel.text = fpsContent.contentName
                 if #available(iOS 11.0, *) {
-                    let downloadState: FPSContent.DownloadState = PallyConSDKManager.sharedManager.downloadState(for: fpsContent)
+                    let downloadState: FPSContent.DownloadState = SDKManager.sharedManager.downloadState(for: fpsContent)
                     switch downloadState {
                     case .downloaded, .notDownloaded:
                         downloadProgressView.isHidden = true
@@ -114,7 +114,7 @@ class BasicTableViewCell: UITableViewCell {
             switch downloadState {
             case .pause:
                 if #available(iOS 11.0, *) {
-                        PallyConSDKManager.sharedManager.pauseDownloadStatus(for: contentId)
+                    SDKManager.sharedManager.pauseDownloadStatus(for: contentId)
                 }
             case .downloading:
                 self.downloadProgressView.isHidden = false
@@ -146,7 +146,7 @@ class BasicTableViewCell: UITableViewCell {
         }
         
         var errorMessage = ""
-        if let error = error as? PallyConError {
+        if let error = error as? SDKError {
             switch error {
             case .database(comment: let comment):
                 errorMessage = comment
@@ -171,7 +171,7 @@ class BasicTableViewCell: UITableViewCell {
         // a error handling when acquire license.
         let alertView = UIAlertController(title: "License Failed", message: errorMessage, preferredStyle: .alert)
         alertView.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { Void in
-            if #available(iOS 11.0, *), let newFpsContent = PallyConSDKManager.sharedManager.localFpsContentForStream(with: contentId, token: token, contentName: contentName) {
+            if #available(iOS 11.0, *), let newFpsContent = SDKManager.sharedManager.localFpsContentForStream(with: contentId, token: token, contentName: contentName) {
                 self.delegate?.basicListTableViewCell(self, avPlayerAssetDidChange: newFpsContent.urlAsset)
             } else {
                 if let originalAsset = FPSListManager.sharedManager.getContentUrlAsset(contentId: contentId) {

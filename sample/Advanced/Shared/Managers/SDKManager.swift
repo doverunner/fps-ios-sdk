@@ -1,20 +1,19 @@
 //
-//  Copyright © 2017년 INKA ENTWORKS INC. All rights reserved.
+//  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //
-//  PallyCon Team (http://www.pallycon.com)
+//  DoveRunner DRM Team (http://www.doverunner.com)
 //
-//  MARK: This class is sample using PallyConFPSSDK.
-//  A PallyConSDKManger class decribes the overall usage of PallyConFPSSDK.
+//  MARK: This class is sample using DoveRunnerFairPlay.
+//  A SDKManager class decribes the overall usage of DoveRunnerFairPlay.
 //
-
 
 import Foundation
 import AVFoundation
 import UIKit
 #if os(iOS)
-     import PallyConFPSSDK
+     import DoveRunnerFairPlay
 #else
-     import PallyConFPSSDKTV
+     import DoveRunnerFairPlayTV
 #endif
 
 
@@ -23,19 +22,19 @@ import UIKit
 // you have to set customer information.
 // Shared -> Resources -> Contents.plist, enter content information.
 
-let CERTIFICATE_URL = "https://license-global.pallycon.com/ri/fpsKeyManager.do?siteId=????"
+let CERTIFICATE_URL = "https://drm-license.doverunner.com/ri/fpsKeyManager.do?siteId=XXXX"
 
 let FPSDownloadProgressNotification: NSNotification.Name = NSNotification.Name(rawValue: "FPSDownloadProgressNotification")
 let FPSDownloadStateChangedNotification: NSNotification.Name = NSNotification.Name(rawValue: "FPSDownloadStateChangedNotification")
 let FPSAcquireLicenseSuccessNotification: NSNotification.Name = NSNotification.Name(rawValue: "FPSAcquireLicenseSuccessNotification")
 let FPSAcquireLicenseFailNotification: NSNotification.Name = NSNotification.Name(rawValue: "FPSAcquireLicenseFailNotification")
 
-class PallyConSDKManager: NSObject {
-     static let sharedManager = PallyConSDKManager()
+class SDKManager: NSObject {
+     static let sharedManager = SDKManager()
      
-     // PallyConFPSSDK initalize
-     lazy var pallyConFPSSDK: PallyConFPSSDK? = {
-          return PallyConFPSSDK()
+     // DoveRunnerFairPlay initalize
+     lazy var doverunnerSdk: DoveRunnerFairPlay? = {
+          return DoveRunnerFairPlay()
      }()
      
      static let baseDownloadURL: URL = URL(fileURLWithPath: NSHomeDirectory())
@@ -49,7 +48,7 @@ class PallyConSDKManager: NSObject {
           let userDefaults = UserDefaults.standard
           guard let localFileLocation = userDefaults.value(forKey: contentId) as? String else { return nil }
           
-          let url = PallyConSDKManager.baseDownloadURL.appendingPathComponent(localFileLocation)
+          let url = SDKManager.baseDownloadURL.appendingPathComponent(localFileLocation)
           let urlAsset = AVURLAsset(url: url)
           
           let fpsContent = FPSContent(contentId, token, contentName, urlAsset)
@@ -128,9 +127,9 @@ class PallyConSDKManager: NSObject {
           let userDefaults = UserDefaults.standard
           
           if let localFileLocation = userDefaults.value(forKey: fpsContent.contentId) as? String {
-               let localFilePath = PallyConSDKManager.baseDownloadURL.appendingPathComponent(localFileLocation).path
+               let localFilePath = SDKManager.baseDownloadURL.appendingPathComponent(localFileLocation).path
                
-               if localFilePath == PallyConSDKManager.baseDownloadURL.path {
+               if localFilePath == SDKManager.baseDownloadURL.path {
                     return .notDownloaded
                }
                
@@ -161,11 +160,11 @@ class PallyConSDKManager: NSObject {
           
           do {
                if let localFileLocation = userDefaults.value(forKey: fpsContent.contentId) as? String {
-                    let localFileLocation = PallyConSDKManager.baseDownloadURL.appendingPathComponent(localFileLocation)
+                    let localFileLocation = SDKManager.baseDownloadURL.appendingPathComponent(localFileLocation)
                     try FileManager.default.removeItem(at: localFileLocation)
                     
                     userDefaults.removeObject(forKey: fpsContent.contentId)
-                    try self.pallyConFPSSDK?.removeLicense(contentId: fpsContent.contentId)
+                    try self.doverunnerSdk?.removeLicense(contentId: fpsContent.contentId)
                     activeDownloadsMap.removeValue(forKey: fpsContent.contentId)
                     
                     var userInfo: [String:Any] = [FPSContent.Keys.cId: fpsContent.contentId, FPSContent.Keys.downloadState: FPSContent.DownloadState.notDownloaded.rawValue]
@@ -194,36 +193,55 @@ class PallyConSDKManager: NSObject {
 }
 
 /**
- Extend `PallyConSDKManager` to conform to the `PallyConFPSLicenseDelegate` protocol.
+ Extend `SDKManager` to conform to the `FairPlayLicenseDelegate` protocol.
  Get a error acquiring license
  */
-extension PallyConSDKManager: PallyConFPSLicenseDelegate {
+extension SDKManager: FairPlayLicenseDelegate {
      
-     func license(result: PallyConResult) {
+     func license(result: LicenseResult) {
           print("---------------------------- License Result ")
           print("Content ID : \(result.contentId)")
           print("Key ID     : \(String(describing: result.keyId))")
+
+          var message: String?
           if result.isSuccess == false {
                print("Error : \(String(describing: result.error?.localizedDescription))")
                if let error = result.error {
                     switch error {
                     case .database(comment: let comment):
                          print(comment)
+                         message = comment
                     case .server(errorCode: let errorCode, comment: let comment):
                          print("code : \(errorCode), comment: \(comment)")
+                         message = "code : \(errorCode), comment: \(comment)"
                     case .network(errorCode: let errorCode, comment: let comment):
                          print("code : \(errorCode), comment: \(comment)")
+                         message = "code : \(errorCode), comment: \(comment)"
                     case .system(errorCode: let errorCode, comment: let comment):
                          print("code : \(errorCode), comment: \(comment)")
+                         message = "code : \(errorCode), comment: \(comment)"
                     case .failed(errorCode: let errorCode, comment: let comment):
                          print("code : \(errorCode), comment: \(comment)")
+                         message = "code : \(errorCode), comment: \(comment)"
                     case .unknown(errorCode: let errorCode, comment: let comment):
                          print("code : \(errorCode), comment: \(comment)")
+                         message = "code : \(errorCode), comment: \(comment)"
                     case .invalid(comment: let comment):
                          print("comment: \(comment)")
+                         message = "comment: \(comment)"
                     default:
                          print("comment: \(error)")
+                         message = "comment: \(error)"
                         break
+                    }
+               }
+               DispatchQueue.main.async {
+                    if let topVC = UIApplication.topViewController() {
+                         let alert = UIAlertController(title: "License Failed", message: message, preferredStyle: .alert)
+                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { Void in
+                              topVC.dismiss(animated: true, completion: nil)
+                         }))
+                         topVC.present(alert, animated: true, completion: nil)
                     }
                }
           }
@@ -238,11 +256,11 @@ extension PallyConSDKManager: PallyConFPSLicenseDelegate {
      }
      
      func resourceLoaderCallback(requestResource: AVAssetResourceLoadingRequest) -> Bool {
-          // This is an example for applying `PallyConFPSSDK.mainm3u8Scheme` and testing the playback.
+          // This is an example for applying `DoveRunnerFairPlay.mainm3u8Scheme` and testing the playback.
           guard let originalUrl = requestResource.request.url?.absoluteString else { return false }
           
           guard let changeUrl = replaceURLWithScheme("https", URL(string: originalUrl)! ) else {
-               let error = PallyConError.invalid(comment: "replace URL scheme error")
+               let error = SDKError.invalid(comment: "replace URL scheme error")
                requestResource.finishLoading(with: error)
                return false
           }
@@ -262,7 +280,7 @@ extension PallyConSDKManager: PallyConFPSLicenseDelegate {
 
           
           guard let dataRequest = requestResource.dataRequest else {
-               let error = PallyConError.invalid(comment: "loadingRequest.dataRequest error")
+               let error = SDKError.invalid(comment: "loadingRequest.dataRequest error")
                requestResource.finishLoading(with: error)
                return false
           }

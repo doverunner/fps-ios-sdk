@@ -1,6 +1,6 @@
-# PallyConFPSAdvanced : HLS Stream download and Playback
+# FairPlayAdvanced : HLS Stream download and Playback
 
-This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP Live Streams hosted on remote servers as well as how to persist the HLS streams on disk for offline playback.
+This sample demonstrates how to use the `DoveRunnerFairPlay` framework to play HTTP Live Streams hosted on remote servers as well as how to persist the HLS streams on disk for offline playback.
 
 
 
@@ -15,18 +15,18 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 ### Adding `GoogleCast.framework` to the Sample
 
 - Advanced Sample requires [`GoogleCast.framework`](https://developers.google.com/cast/docs/developers#ios).
-- Install(`pod intstall`) the `GoogleCast.framework` using [`COCOAPODS`](https://cocoapods.org/) and run the generated `PallyConfPSAdvanced.xcworkspace`.
+- Install(`pod intstall`) the `GoogleCast.framework` using [`COCOAPODS`](https://cocoapods.org/) and run the generated `FairPlayAdvanced.xcworkspace`.
 
 
 
-### Adding `PallyConFPSSDK.xcframework` to the Sample
+### Adding `DoveRunnerFairPlay.xcframework` to the Sample
 
-- Add `PallyConFPSSDK.xcframework`  to Xcode project target in `General` -> `Embedded Binaries`.
-- Add `PallyConFPSSDK.xcframework`  to the `Build Settings` -> `Search Paths` -> `Framework Search Paths` path.
-- Import the SDK header (`PallyConSDKManager.swift`).
+- Add `DoveRunnerFairPlay.xcframework`  to Xcode project target in `General` -> `Embedded Binaries`.
+- Add `DoveRunnerFairPlay.xcframework`  to the `Build Settings` -> `Search Paths` -> `Framework Search Paths` path.
+- Import the SDK header (`SDKManager.swift`).
 
 	~~~swift
-		import PallyConFPSSDK
+		import DoveRunnerFairPlay
 	~~~
 
 
@@ -44,11 +44,11 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 		FPSToken	: HLS stream's token.
 	~~~
 	
-- Enter the Service Integration Information in the`PallyConSDKManager.swift`file.
+- Enter the Service Integration Information in the`SDKManager.swift`file.
 
 	~~~swift
 		// Service Integration Information
-		let drmConfig = PallyConDrmConfiguration()
+		let drmConfig = FairPlayConfiguration()
 	~~~
 
 
@@ -71,15 +71,15 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 
 ## Important Notes
 
-- This sample does not implement all the features of  `PallyConFPSSDK.xcframework` and does not correspond to all app states.
+- This sample does not implement all the features of  `DoveRunnerFairPlay.xcframework` and does not correspond to all app states.
 
 
 
 ## Main Files
 
-__PallyConSDKManager.swift__: 
+__SDKManager.swift__: 
 
-- PallyConSDKManager is the main class in this sample that demonstrates how to manage downloading HLS streams.  
+- SDKManager is the main class in this sample that demonstrates how to manage downloading HLS streams.  
 - It includes APIs for starting and canceling downloads, deleting existing assets off the users device, and monitoring the download progress.
 
 __FPSPlaybackKManager.swift__: 
@@ -92,20 +92,20 @@ __FPSListManager.swift__:
 
 
 
-## PallyCon Multi-DRM Service
+## DoveRunner Multi-DRM Service
 
-PallyCon Multi-DRM Service description and inquiries are available at the address below.
-- [PallyCon Homepage](https://www.pallycon.com)
-- [PallyCon Multi-DRM Document](https://docs.pallycon.com)
+DoveRunner Multi-DRM Service description and inquiries are available at the address below.
+- [DoveRunner Homepage](https://www.doverunner.com)
+- [DoveRunner Multi-DRM Document](https://docs.doverunner.com)
 
 
 ---
 
 
 
-# PallyConFPSAdvanced : HLS 스트림 다운로드와 PallyCon FPS SDK 사용 설명
+# FairPlayAdvanced : HLS 스트림 다운로드와 DoveRunnerFairPlay SDK 사용 설명
 
-PallyCon FairPlay Streaming(FPS) Advanced 는 `PallyConFPSSDK` 프레임워크를 어떻게 사용하는지 `Swift`로 구현된 프로젝트입니다.
+DoveRunner FairPlay Streaming(FPS) Advanced 는 `DoveRunnerFairPlay` 프레임워크를 어떻게 사용하는지 `Swift`로 구현된 프로젝트입니다.
 
 
 
@@ -120,18 +120,18 @@ PallyCon FairPlay Streaming(FPS) Advanced 는 `PallyConFPSSDK` 프레임워크�
 ### Adding `GoogleCast.framework` to the Sample
 
 - Sample -> Advanced 샘플은 [`GoogleCast.framework`](https://developers.google.com/cast/docs/developers#ios)가 필요합니다.
-- [`COCOAPODS`](https://cocoapods.org/)을 이용하여 `GoogleCast.framework`을 설치(`pod intstall`)하고 생성된 `PallyConFPSAdvanced.xcworkspace` 를 실행합니다. 
+- [`COCOAPODS`](https://cocoapods.org/)을 이용하여 `GoogleCast.framework`을 설치(`pod intstall`)하고 생성된 `FairPlayAdvanced.xcworkspace` 를 실행합니다. 
 
 
 
-### 샘플에 `PallyConFPSSDK.xcframework` 를 추가합니다.
+### 샘플에 `DoveRunnerFairPlay.xcframework` 를 추가합니다.
 
-- Xcode 프로젝트 타겟에 `General` -> `Embedded Binaries`에 `PallyConFPSSDK.xcframework` 을 추가합니다.
-- 추가한 `PallyConFPSSDK.xcframework` 경로를 `Build Settings` -> `Search Paths` -> `Framework Search Paths`에 입력합니다.
-- SDK 헤더를 `import` 합니다(`PallyConSDKManager.swift`).
+- Xcode 프로젝트 타겟에 `General` -> `Embedded Binaries`에 `DoveRunnerFairPlay.xcframework` 을 추가합니다.
+- 추가한 `DoveRunnerFairPlay.xcframework` 경로를 `Build Settings` -> `Search Paths` -> `Framework Search Paths`에 입력합니다.
+- SDK 헤더를 `import` 합니다(`SDKManager.swift`).
 
 	~~~swift
-		import PallyConFPSSDK
+		import DoveRunnerFairPlay
 	~~~
 
 
@@ -148,11 +148,11 @@ PallyCon FairPlay Streaming(FPS) Advanced 는 `PallyConFPSSDK` 프레임워크�
 		FPSToken	: HLS 스트림의 token 값 입니다.
 	~~~
 	
-- `PallyConSDKManager.swift` 파일에 서비스 연동 정보를 입력하면 됩니다.
+- `SDKManager.swift` 파일에 서비스 연동 정보를 입력하면 됩니다.
 
 	~~~swift
 		// 서비스 연동 정보
-		let drmConfig = PallyConDrmConfiguration()
+		let drmConfig = FairPlayConfiguration()
 	~~~
 
 
@@ -174,15 +174,15 @@ PallyCon FairPlay Streaming(FPS) Advanced 는 `PallyConFPSSDK` 프레임워크�
 
 ## Important Notes
 
-- 이 샘플이  `PallyConFPSSDK.xcframework`  의 모든 기능을 구현되어 있지 않으며, 모든 앱 상태에 대응하지 않습니다.
+- 이 샘플이  `DOVERUNNERFairPlay.xcframework`  의 모든 기능을 구현되어 있지 않으며, 모든 앱 상태에 대응하지 않습니다.
 
 
 
 ## Main Files
 
-__PallyConSDKManager.swift__: 
+__SDKManager.swift__: 
 
--  `PallyConFPSSDK.xcframework` 를 이용하여 초기화, 라이선스 획득, 다운로드를 어떻게 하는지 보여주는 메인 클래스입니다.
+-  `DOVERUNNERFairPlay.xcframework` 를 이용하여 초기화, 라이선스 획득, 다운로드를 어떻게 하는지 보여주는 메인 클래스입니다.
 - HLS 스트림 다운로드와 운영 방법을 알수 있습니다. 
 
 __FPSPlaybackKManager.swift__: 
@@ -197,12 +197,12 @@ __FPSListManager.swift__:
 
 
 
-## PallyCon 멀티 DRM 서비스
+## DoveRunner 멀티 DRM 서비스
 
-PallyCon 멀티 DRM 서비스 설명과 문의 사항은 아래 주소로 제공됩니다.
-- [PallyCon Homepage](https://www.pallycon.com)
-- [PallyCon Multi-DRM Document](https://docs.pallycon.com)
+DoveRunner 멀티 DRM 서비스 설명과 문의 사항은 아래 주소로 제공됩니다.
+- [DoveRunner Homepage](https://www.doverunner.com)
+- [DoveRunner Multi-DRM Document](https://docs.doverunner.com)
 
 
 
-Copyright (C) 2019 INKA Entworks. All rights reserved.
+Copyright (C) 2019 DoveRunner. All rights reserved.

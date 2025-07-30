@@ -1,16 +1,16 @@
 //
-//  Copyright © 2017년 INKA ENTWORKS INC. All rights reserved.
+//  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //
-//  PallyCon Team (http://www.pallycon.com)
+//  DoveRunner Team (http://www.doverunner.com)
 //
 //  FPSContent struct for FPS contents.
 //
 
 import AVFoundation
 #if os(iOS)
-import PallyConFPSSDK
+import DoveRunnerFairPlay
 #else
-import PallyConFPSSDKTV
+import DoveRunnerFairPlayTV
 #endif
 
 

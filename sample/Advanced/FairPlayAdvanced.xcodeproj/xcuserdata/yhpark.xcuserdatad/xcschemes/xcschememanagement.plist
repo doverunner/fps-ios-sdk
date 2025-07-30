@@ -4,15 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PallyConFPSAdvanced.xcscheme_^#shared#^_</key>
+		<key>FairPlayAdvanced.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>PallyConFPSAdvancedTV.xcscheme_^#shared#^_</key>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C156B34F1E7F72CE00344598</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C15E156B1E30A9AD00A84BB9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C15E157F1E30A9AD00A84BB9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C15E158A1E30A9AD00A84BB9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

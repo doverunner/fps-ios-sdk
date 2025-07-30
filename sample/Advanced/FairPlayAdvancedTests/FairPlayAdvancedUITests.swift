@@ -1,15 +1,15 @@
 //
-//  PallyConFPSBasicUITests.swift
-//  PallyConFPSBasicUITests
+//  FairPlayAdvancedUITests.swift
+//  FairPlayAdvancedUITests
 //
-//  Created by PallyCon on 2018. 1. 30..
-//  Copyright © 2018년 INKA Entworks. All rights reserved.
+//  Created by DRM Team on 2018. 1. 30..
+//  Copyright © 2018년 DoveRunner. All rights reserved.
 //
 
 import XCTest
 import AVKit
 
-class PallyConFPSBasicUITests: XCTestCase {
+class FairPlayAdvancedUITests: XCTestCase {
     var app: XCUIApplication!
     
     override func setUp() {

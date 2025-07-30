@@ -1,13 +1,13 @@
 //
 //  TestCaseUtils.swift
-//  PallyConFPSSDK
+//  DoveRunnerFairPlay
 //
-//  Created by INKA on 2017. 1. 20..
-//  Copyright © 2017년 INKA. All rights reserved.
+//  Created by DoveRunner on 2017. 1. 20..
+//  Copyright © 2017년 DoveRunner. All rights reserved.
 //
 
 import XCTest
-@testable import PallyConFPSSDK
+@testable import DoveRunnerFairPlay
 
 class TestCaseUtil: NSObject {
     

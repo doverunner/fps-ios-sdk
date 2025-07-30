@@ -1,14 +1,14 @@
 //
-//  PallyConFPSBasicTests.swift
-//  PallyConFPSBasic
+//  FairPlayAdvancedTests.swift
+//  FairPlayAdvanced
 //
-//  Created by PallyCon on 2017. 7. 20..
-//  Copyright © 2017년 INKA Entworks. All rights reserved.
+//  Created by DoveRunner on 2017. 7. 20..
+//  Copyright © 2017년 DoveRunner. All rights reserved.
 //
 
 import XCTest
 
-class PallyConFPSBasicTests: XCTestCase {
+class FairPlayAdvancedTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

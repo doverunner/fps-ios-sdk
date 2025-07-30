@@ -1,7 +1,7 @@
 //
-//  Copyright © 2017년 INKA ENTWORKS INC. All rights reserved.
+//  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //  
-//  PallyCon Team (http://www.pallycon.com)
+//  DoveRunner Team (http://www.doverunner.com)
 //
 //  A class Recharbility is created to verify that the current terminal is connected to the network.
 //
