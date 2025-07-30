@@ -1,0 +1,11 @@
+framework module DoveRunnerFairPlay {
+  umbrella header "DoveRunnerFairPlay.h"
+  export *
+
+  module * { export * }
+}
+
+module DoveRunnerFairPlay.Swift {
+  header "DoveRunnerFairPlay-ObjC.h"
+  requires objc
+}

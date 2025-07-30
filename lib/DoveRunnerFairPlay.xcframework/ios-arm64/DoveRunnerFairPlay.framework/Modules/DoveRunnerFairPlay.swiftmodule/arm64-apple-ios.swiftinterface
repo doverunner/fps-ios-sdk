@@ -1,0 +1,381 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios12.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name DoveRunnerFairPlay
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import AVFoundation
+import CommonCrypto/*.CC_LONG*/
+import CommonCrypto/*.CC_MD5*/
+import CommonCrypto/*.CC_MD5_DIGEST_LENGTH*/
+import CoreData
+@_exported import DoveRunnerFairPlay
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension DoveRunnerFairPlay {
+  @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
+  @objc dynamic public func createDownloadTask(url: Foundation.URL, userId: Swift.String, contentId: Swift.String, token: Swift.String, downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, downloadDelegate: (any FairPlayDownloadDelegate)?) -> DownloadTask
+  @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
+  @objc dynamic public func createDownloadTask(url: Foundation.URL, userId: Swift.String, contentId: Swift.String, optionalId: Swift.String, downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, downloadDelegate: (any FairPlayDownloadDelegate)?) -> DownloadTask
+  @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
+  @objc dynamic public func createDownloadTask(url: Foundation.URL, contentId: Swift.String, licenseUrl: Swift.String, appleCertUrl: Swift.String, downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, downloadDelegate: (any FairPlayDownloadDelegate)?) -> DownloadTask
+  @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
+  @objc dynamic public func createDownloadTask(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String = String(), contentId: Swift.String, token: Swift.String = String(), licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, downloadDelegate: (any FairPlayDownloadDelegate)?) -> DownloadTask
+  @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
+  @objc dynamic public func createDownloadTask(url: Foundation.URL, userId: Swift.String = String(), contentId: Swift.String, optionalId: Swift.String = String(), token: Swift.String = String(), licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, isAVAssetDownloadTask: Swift.Bool, downloadDelegate: (any FairPlayDownloadDelegate)?) -> DownloadTask
+  @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
+  @objc dynamic public func createDownloadTask(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String = String(), contentId: Swift.String, token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, isAVAssetDownloadTask: Swift.Bool, downloadDelegate: (any FairPlayDownloadDelegate)?) -> DownloadTask
+  @available(iOS 11.2, *)
+  @available(iOS, deprecated, message: "Use the `createDownloadTask(_ config:downloadCellerAccess:isMakeAssetDownloadTask:downloadMinimumBitrate:delegate:` instead")
+  @objc dynamic public func createDownloadTask(url: Foundation.URL, userId: Swift.String = String(), contentId: Swift.String, contentKeyIDList: [Swift.String], token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), downloadOptions: Swift.String = String(), isCelluraAccess: Swift.Bool = true, isAVAssetDownloadTask: Swift.Bool = false, downloadDelegate: (any FairPlayDownloadDelegate)?) -> DownloadTask
+}
+extension DoveRunnerFairPlay {
+  @available(iOS 11.2, tvOS 11.0, *)
+  @objc dynamic public func prepare(drm config: FairPlayConfiguration)
+  @available(iOS 11.2, *)
+  @objc dynamic public func createDownloadTask(drm config: FairPlayConfiguration, delegate: (any FairPlayDownloadDelegate)?, downloadCellurAccess: Swift.Bool = true, makeAssetDownloadTask: Swift.Bool = false, downloadMinimumBitrate: Swift.String? = String()) -> DownloadTask?
+  public func getHLSTracks(Content url: Swift.String) -> Swift.Result<HLSPlaylistParser.HLSManifest, SDKError>
+  @objc dynamic public func deleteLicense(ContentId id: Swift.String)
+  @available(iOS, deprecated, message: "Use the `getOfflineLicenseExpiryDate(find contentId: String)` instead")
+  @objc dynamic public func getExpiryDateOfSavedLicense(ContentId id: Swift.String) -> Swift.String?
+  @objc dynamic public func getOfflineLicenseExpiryDate(find contentId: Swift.String) -> OfflineExpiryDate
+  @objc dynamic public func getJsonforChromecastPlayback(authData: Swift.String) -> Any?
+}
+@_inheritsConvenienceInitializers @objc public class DoveRunnerFairPlay : ObjectiveC.NSObject {
+  public static let mainm3u8Scheme: Swift.String
+  @objc override dynamic public init()
+  @available(iOS, deprecated, message: "Use the `init()` instead")
+  @objc public init(fpsLicenseDelegate: (any FairPlayLicenseDelegate)?) throws
+  @available(iOS, deprecated, message: "Use the `init()` instead")
+  @objc public init(siteId: Swift.String, siteKey: Swift.String, fpsLicenseDelegate: (any FairPlayLicenseDelegate)?) throws
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: FairPlayConfiguration)` instead")
+  @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String, contentId: Swift.String, token: Swift.String, licenseUrl: Swift.String = String(), appleCertUrl: Swift.String = String(), liveKeyRotation: Swift.Bool = false, licenseRenewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue)
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: FairPlayConfiguration)` instead")
+  @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, userId: Swift.String, contentId: Swift.String, optionalId: Swift.String, liveKeyRotation: Swift.Bool = false, licenseUrl: Swift.String = String())
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: FairPlayConfiguration)` instead")
+  @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, contentId: Swift.String, licenseUrl: Swift.String, appleCertUrl: Swift.String, liveKeyRotation: Swift.Bool = false)
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: FairPlayConfiguration)` instead")
+  @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, customData: Swift.String) throws
+  @available(iOS, deprecated, message: "Use the `prepare(_ config: FairPlayConfiguration)` instead")
+  @objc public func prepare(urlAsset: AVFoundation.AVURLAsset, customData: Swift.String, appleCertUrl: Swift.String) throws
+  @available(iOS 11.0, *)
+  @available(iOS, deprecated, message: "Use the `getExpiryDateOfSavedLicense(contentId:)` instead")
+  @objc public func getOfflineLicenseExpireDate(contentId: Swift.String) throws -> Swift.String
+  @available(iOS, deprecated, message: "Use the `delete(contentId:)` instead")
+  @objc public func removeLicense(contentId: Swift.String) throws
+  @available(iOS, deprecated)
+  @objc public func getCustomDataForChromcast(userId: Swift.String, contentId: Swift.String, optionalId: Swift.String) throws -> Any
+  @available(iOS, deprecated, message: "Use the `getJsonforChromecastPlayback(authData:)` instead")
+  @objc public func getCustomDataForChromcast(token: Swift.String) -> Any?
+  @objc deinit
+}
+@objc public class FairPlayConfiguration : ObjectiveC.NSObject {
+  final public let avURLAsset: AVFoundation.AVURLAsset
+  final public let contentId: Swift.String
+  final public let certificateUrl: Swift.String
+  final public let authData: Swift.String?
+  public var delegate: (any FairPlayLicenseDelegate)?
+  public var licenseUrl: Swift.String?
+  public var licenseHttpHeader: [Swift.String : Swift.String]?
+  public var licenseCookies: Swift.String?
+  public var renewalInterval: Swift.Int64
+  public var sendCmcdAsHTTPHeaders: Swift.Bool
+  @objc public init(avURLAsset: AVFoundation.AVURLAsset, contentId id: Swift.String, certificateUrl url: Swift.String, authData: Swift.String? = nil, delegate: (any FairPlayLicenseDelegate)? = nil, licenseUrl: Swift.String? = nil, licenseHttpHeader: [Swift.String : Swift.String]? = nil, licenseCookies: Swift.String? = nil, renewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue, sendCmcd: Swift.Bool = false)
+  @objc deinit
+}
+@objc public class LicenseResult : ObjectiveC.NSObject {
+  @objc final public let contentId: Swift.String
+  @objc public var isSuccess: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isSuccessNumber: Foundation.NSNumber {
+    get
+  }
+  @objc public var keyId: Swift.String?
+  @objc public var offlineExpiry: OfflineExpiryDate?
+  public var error: SDKError?
+  public init(contentId: Swift.String, isSuccess: Swift.Bool = false, keyId: Swift.String? = nil, offlineExpiry: OfflineExpiryDate? = nil, error: SDKError? = nil)
+  @objc public func getSDKErrorForObjC() -> Swift.String
+  @objc deinit
+}
+public enum SDKError : Swift.Error {
+  case database(comment: Swift.String)
+  case server(errorCode: Swift.Int = -1, comment: Swift.String)
+  case network(errorCode: Swift.Int = -1, comment: Swift.String)
+  case system(errorCode: Swift.Int = -1, comment: Swift.String)
+  case download(errorCode: Swift.Int = -1, comment: Swift.String)
+  case failed(errorCode: Swift.Int = -1, comment: Swift.String)
+  case invalid(comment: Swift.String)
+  case unknown(errorCode: Swift.Int = -1, comment: Swift.String)
+}
+@objc public class OfflineExpiryDate : ObjectiveC.NSObject {
+  public var offlineLicenseDownloadedDate: Foundation.Date? {
+    get
+  }
+  public var rentalExpiryDate: Foundation.Date? {
+    get
+  }
+  public var playbackExpiryDate: Foundation.Date? {
+    get
+  }
+  public var rentalDuration: Swift.String? {
+    get
+  }
+  public var playbackDuration: Swift.String? {
+    get
+  }
+  @objc public init(downloadDate: Foundation.Date? = nil, rentalDuration: Swift.String? = nil, playbackDuration: Swift.String? = nil)
+  public func update(downloadDate: Foundation.Date)
+  public func update(rentalDuration: Swift.String)
+  public func update(playbackDuration: Swift.String)
+  @objc deinit
+}
+@objc public enum RenewalInterval : Swift.Int64 {
+  case FiveMinute = 300
+  case TenMinute = 600
+  case FifteenMinute = 900
+  case Zero = 0
+  public init?(rawValue: Swift.Int64)
+  public typealias RawValue = Swift.Int64
+  public var rawValue: Swift.Int64 {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 11.0, *)
+@objc public class DownloadTask : ObjectiveC.NSObject {
+  @objc public func resume()
+  @objc public func cancel()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class HLSPlaylistParser : ObjectiveC.NSObject {
+  public struct ContentPackInfo : Swift.Codable {
+    public let duration: Swift.String
+    public let outputFormat: Swift.String
+    public let tracks: HLSPlaylistParser.ContentPackInfo.Tracks
+    public let version: Swift.String
+    public struct Tracks : Swift.Codable {
+      public let audio: [HLSPlaylistParser.ContentPackInfo.AudioTrack]?
+      public let text: [HLSPlaylistParser.ContentPackInfo.TextTrack]?
+      public let video: [HLSPlaylistParser.ContentPackInfo.VideoTrack]?
+      public init(from decoder: any Swift.Decoder) throws
+      public func encode(to encoder: any Swift.Encoder) throws
+    }
+    public struct AudioTrack : Swift.Codable {
+      public let language: Swift.String
+      public let path: Swift.String
+      public let size: Swift.String
+      public let trackName: Swift.String
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct TextTrack : Swift.Codable {
+      public let language: Swift.String
+      public let path: Swift.String
+      public let size: Swift.String
+      public let trackName: Swift.String
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct VideoTrack : Swift.Codable {
+      public let bitrate: Swift.String
+      public let path: Swift.String
+      public let resolution: Swift.String
+      public let size: Swift.String
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct HLSManifest {
+    public let videos: [HLSPlaylistParser.HLSManifest.VideoStream]
+    public let audios: [HLSPlaylistParser.HLSManifest.AudioStream]
+    public let subtitles: [HLSPlaylistParser.HLSManifest.SubtitleStream]
+    public let packInfo: HLSPlaylistParser.ContentPackInfo?
+    public let rawContent: Swift.String
+    public struct VideoStream {
+      public let bandwidth: Swift.Int
+      public let averageBandwidth: Swift.Int?
+      public let codecs: Swift.String
+      public let resolution: Swift.String
+      public let frameRate: Swift.Double
+      public let uri: Swift.String
+    }
+    public struct AudioStream {
+      public let type: Swift.String
+      public let uri: Swift.String
+      public let groupId: Swift.String
+      public let language: Swift.String?
+      public let name: Swift.String
+      public let isDefault: Swift.Bool
+      public let autoselect: Swift.Bool
+      public let channels: Swift.String?
+    }
+    public struct SubtitleStream {
+      public let type: Swift.String
+      public let uri: Swift.String
+      public let groupId: Swift.String
+      public let language: Swift.String
+      public let name: Swift.String
+      public let isDefault: Swift.Bool
+      public let autoselect: Swift.Bool
+    }
+  }
+  @objc override dynamic public init()
+  public func downloadAndParseManifest(from urlString: Swift.String) throws -> HLSPlaylistParser.HLSManifest
+  @objc deinit
+}
+extension HLSPlaylistParser {
+  public func printDetailedInfo(_ manifest: HLSPlaylistParser.HLSManifest)
+}
+@available(iOS, deprecated, message: "Use the `SDKError` instead")
+public enum PallyConSDKException : Swift.Error {
+  case DatabaseProcessError(Swift.String)
+  case InternalException(Swift.String)
+  case ServerConnectionFail(Swift.String)
+  case NetworkError(any Swift.Error)
+  case AcquireLicenseFailFromServer(Swift.Int, Swift.String)
+  case GetContentInformationFail(Swift.String)
+  case InvalidParameter(Swift.String)
+  case DownloadUserCancel(Swift.String)
+  case DownloadUnknownError(Swift.String)
+  case DownloadDefaultError(any Swift.Error, Swift.String)
+  case UnauthorizedUserError(Swift.String)
+}
+@_hasMissingDesignatedInitializers final public class AES256CBC {
+  final public class func encryptString(_ str: Swift.String, password: Swift.String) -> Swift.String?
+  final public class func decryptString(_ str: Swift.String, password: Swift.String) -> Swift.String?
+  final public class func generatePassword() -> Swift.String
+  final public class func randomText(_ length: Swift.Int, justLowerCase: Swift.Bool = false, whitespace: Swift.Bool = false) -> Swift.String
+  final public class func aesEncrypt(_ str: Swift.String, key: Swift.String, iv: Swift.String) throws -> Swift.String
+  final public class func aesDecrypt(_ str: Swift.String, key: Swift.String, iv: Swift.String) throws -> Swift.String
+  @objc deinit
+}
+@objc public protocol FairPlayDownloadDelegate : ObjectiveC.NSObjectProtocol {
+  @available(iOS 10.0, *)
+  @objc func downloadContent(_ contentId: Swift.String, didStartDownloadWithAsset asset: AVFoundation.AVURLAsset, subtitleDisplayName: Swift.String)
+  @available(iOS 10.0, *)
+  @objc func downloadContent(_ contentId: Swift.String, didStopWithError error: (any Swift.Error)?)
+  @available(iOS 10.0, *)
+  @objc func downloadContent(_ contentId: Swift.String, didFinishDownloadingTo location: Foundation.URL)
+  @available(iOS 10.0, *)
+  @objc func downloadContent(_ contentId: Swift.String, didLoad timeRange: CoreMedia.CMTimeRange, totalTimeRangesLoaded loadedTimeRanges: [Foundation.NSValue], timeRangeExpectedToLoad: CoreMedia.CMTimeRange)
+}
+@objc public protocol FairPlayLicenseDelegate : ObjectiveC.NSObjectProtocol {
+  @available(iOS, deprecated, message: "Use the license(result:) function instead.")
+  @objc optional func fpsLicenseDidSuccessAcquiring(contentId: Swift.String)
+  @available(iOS, deprecated, message: "Use the license(result:) function instead.")
+  @objc optional func fpsLicense(contentId: Swift.String, didFailWithError error: any Swift.Error)
+  @available(iOS, deprecated, message: "Use the licenseCallback(with:httpHeader:) function instead.")
+  @objc optional func contentKeyRequest(keyData: Foundation.Data, requestData: [Swift.String : Swift.String]) -> Foundation.Data?
+  @available(iOS, deprecated, message: "Use the resourceLoaderCallback(requestResource:) function instead.")
+  @objc optional func resourceLoaderRequest(_ requestResource: AVFoundation.AVAssetResourceLoadingRequest) -> Swift.Bool
+  @objc optional func license(result: LicenseResult)
+  @objc optional func licenseCallback(with spcData: Foundation.Data, httpHeader header: [Swift.String : Swift.String]?) -> Foundation.Data?
+  @objc optional func resourceLoaderCallback(requestResource: AVFoundation.AVAssetResourceLoadingRequest) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @objc(ContentKey) public class ContentKey : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension ContentKey {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ContentKey>
+  @objc @NSManaged dynamic public var keyData: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var keyId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var playbackExpiry: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var license: License? {
+    @objc get
+    @objc set
+  }
+}
+@objc @_inheritsConvenienceInitializers public class Customer : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Customer {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Customer>
+  @objc @NSManaged dynamic public var siteCert: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var siteId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var url: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@objc @_inheritsConvenienceInitializers public class License : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension License {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<License>
+  @objc @NSManaged dynamic public var cId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var downloadDate: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var duration: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var key_id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var licenseType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var optionalId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var persistentKey: Foundation.Data? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var playback_duration: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var rental_duration: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var userId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var contentkey: ContentKey? {
+    @objc get
+    @objc set
+  }
+}
+extension RenewalInterval : Swift.Equatable {}
+extension RenewalInterval : Swift.Hashable {}
+extension RenewalInterval : Swift.RawRepresentable {}

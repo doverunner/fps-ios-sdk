@@ -1,0 +1,11 @@
+framework module DoveRunnerFairPlayTV {
+  umbrella header "DoveRunnerFairPlayTV.h"
+  export *
+
+  module * { export * }
+}
+
+module DoveRunnerFairPlayTV.Swift {
+  header "DoveRunnerFairPlayTV-ObjC.h"
+  requires objc
+}
