@@ -1,24 +1,24 @@
 //
 //  ViewController.h
-//  PallyConFPSSimple
+//  DoveRunnerFairPlayObjC
 //
-//  Created by PallyCon on 2018. 4. 5..
-//  Copyright © 2018년 inka. All rights reserved.
+//  Created by DRM Team on 2018. 4. 5..
+//  Copyright © 2018년 DoveRunner. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <AVKit/AVKit.h>
 
 #if TARGET_OS_IOS
-#import <PallyConFPSSDK/PallyConFPSSDK-ObjC.h>
+#import <DoveRunnerFairPlay/DoveRunnerFairPlay-ObjC.h>
 #else
-#import <PallyConFPSSDKTV/PallyConFPSSDKTV-ObjC.h>
+#import <DoveRunnerFairPlayTV/DoveRunnerFairPlayTV-ObjC.h>
 #endif
 
 
-@interface ViewController : UIViewController <PallyConFPSLicenseDelegate>
+@interface ViewController : UIViewController <FairPlayLicenseDelegate>
 
-@property (strong, nonatomic) PallyConFPSSDK *fpsSDK;
+@property (strong, nonatomic) DoveRunnerFairPlay *doverunnerSdk;
 
 @end
 

@@ -1,9 +1,9 @@
 //
 //  ViewController.m
-//  PallyConFPSSimple
+//  DoveRunnerFairPlayObjC
 //
-//  Created by PallyCon on 2018. 4. 5..
-//  Copyright © 2018년 inka. All rights reserved.
+//  Created by DRM Team on 2018. 4. 5..
+//  Copyright © 2018년 DoveRunner. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -11,12 +11,12 @@
 
 // This is customer-specific information.
 // you have to set customer information.
-#define CERTIFICATE_URL     @"https://license-global.pallycon.com/ri/fpsKeyManager.do?siteId=????"
-#define CONTENT_ID          @""
-#define PALLYCON_TOKEN      @""
-#define CONTENT_URL         @""
+#define CERTIFICATE_URL   @"https://drm-license.doverunner.com/ri/fpsKeyManager.do?siteId=XXXX"
+#define CONTENT_ID        @""
+#define CONTENT_URL       @""
+#define CONTENT_AUTHDATA  @""
 
-@protocol PallyConFPSLicenseDelegate;
+@protocol FairPlayLicenseDelegate;
 
 @interface ViewController ()
 
@@ -28,8 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    // 1. initialize a PallyConFPS SDK.
-    _fpsSDK = [[PallyConFPSSDK alloc] init];
+    // 1. initialize a DoveRunnerFairPlay SDK.
+    _doverunnerSdk = [[DoveRunnerFairPlay alloc] init];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -37,8 +37,8 @@
     AVURLAsset *urlAsset = [[AVURLAsset alloc] initWithURL:contentUrl options:nil];
 
     // 2. Set parameters required for FPS content playback.
-    PallyConDrmConfiguration* config = [[PallyConDrmConfiguration alloc] initWithAvURLAsset:urlAsset contentId:CONTENT_ID certificateUrl:CERTIFICATE_URL authData:PALLYCON_TOKEN delegate:self licenseUrl:nil licenseHttpHeader:nil licenseCookies:nil renewalInterval:0];
-    [_fpsSDK prepareWithContent:config];
+    FairPlayConfiguration* config = [[FairPlayConfiguration alloc] initWithAvURLAsset:urlAsset contentId:CONTENT_ID certificateUrl:CERTIFICATE_URL authData:CONTENT_AUTHDATA delegate:self licenseUrl:nil licenseHttpHeader:nil licenseCookies:nil renewalInterval:0 sendCmcd:false];
+    [_doverunnerSdk prepareWithDrm:config];
     
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:urlAsset];
     AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
@@ -52,16 +52,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)licenseWithResult:(PallyConResult *)result {
+- (void)licenseWithResult:(LicenseResult *)result {
     NSLog(@"%@",result.contentId);
     if (result.isSuccess == false) {
-        NSLog(@"%@", [result getPallyConErrorForObjC]);
+        NSLog(@"%@", [result getSDKErrorForObjC]);
     }
 }
 
 /*
 - (NSData *)licenseCallbackWith:(NSData *)spcData httpHeader:(NSDictionary<NSString *,NSString *> *)header {
-    NSString *url = @"https://license.pallycon.com/ri/licenseManager.do";
+    NSString *url = @"https://drm-license.doverunner.com/ri/licenseManager.do";
    
     NSHTTPURLResponse *response;
     __strong NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]

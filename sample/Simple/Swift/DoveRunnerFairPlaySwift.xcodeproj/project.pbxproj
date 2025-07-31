@@ -52,8 +52,8 @@
 		B49AA6A921351F43000D95A6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B49AA6AB21351F72000D95A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4C1E4D021351DEF00EF1806 /* FairPlayPlaybackTV-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FairPlayPlaybackTV-Info.plist"; sourceTree = "<group>"; };
-		B4E249AE2134D6E200E65D76 /* DoveRunnerFairPlayPlaybackTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveRunnerFairPlayPlaybackTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4F8EA1A207B04E9006FDB56 /* DoveRunnerFairPlayPlayback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveRunnerFairPlayPlayback.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E249AE2134D6E200E65D76 /* DoveRunnerFairPlaySwiftTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveRunnerFairPlaySwiftTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F8EA1A207B04E9006FDB56 /* DoveRunnerFairPlaySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveRunnerFairPlaySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F8EA1D207B04E9006FDB56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F8EA1F207B04E9006FDB56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4F8EA22207B04E9006FDB56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 		B4F8EA1B207B04E9006FDB56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B4F8EA1A207B04E9006FDB56 /* DoveRunnerFairPlayPlayback.app */,
-				B4E249AE2134D6E200E65D76 /* DoveRunnerFairPlayPlaybackTV.app */,
+				B4F8EA1A207B04E9006FDB56 /* DoveRunnerFairPlaySwift.app */,
+				B4E249AE2134D6E200E65D76 /* DoveRunnerFairPlaySwiftTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,9 +136,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B4E2499D2134D6E200E65D76 /* DoveRunnerFairPlayPlaybackTV */ = {
+		B4E2499D2134D6E200E65D76 /* DoveRunnerFairPlaySwiftTV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4E249AB2134D6E200E65D76 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayPlaybackTV" */;
+			buildConfigurationList = B4E249AB2134D6E200E65D76 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlaySwiftTV" */;
 			buildPhases = (
 				B4E249A02134D6E200E65D76 /* Sources */,
 				B4E249A32134D6E200E65D76 /* Frameworks */,
@@ -149,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = DoveRunnerFairPlayPlaybackTV;
+			name = DoveRunnerFairPlaySwiftTV;
 			productName = PallyConFPSSimple;
-			productReference = B4E249AE2134D6E200E65D76 /* DoveRunnerFairPlayPlaybackTV.app */;
+			productReference = B4E249AE2134D6E200E65D76 /* DoveRunnerFairPlaySwiftTV.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B4F8EA19207B04E9006FDB56 /* DoveRunnerFairPlayPlayback */ = {
+		B4F8EA19207B04E9006FDB56 /* DoveRunnerFairPlaySwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4F8EA2C207B04E9006FDB56 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayPlayback" */;
+			buildConfigurationList = B4F8EA2C207B04E9006FDB56 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlaySwift" */;
 			buildPhases = (
 				B4F8EA16207B04E9006FDB56 /* Sources */,
 				B4F8EA17207B04E9006FDB56 /* Frameworks */,
@@ -167,9 +167,9 @@
 			);
 			dependencies = (
 			);
-			name = DoveRunnerFairPlayPlayback;
+			name = DoveRunnerFairPlaySwift;
 			productName = PallyConFPSSimple;
-			productReference = B4F8EA1A207B04E9006FDB56 /* DoveRunnerFairPlayPlayback.app */;
+			productReference = B4F8EA1A207B04E9006FDB56 /* DoveRunnerFairPlaySwift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +192,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B4F8EA15207B04E9006FDB56 /* Build configuration list for PBXProject "DoveRunnerFairPlayPlayback" */;
+			buildConfigurationList = B4F8EA15207B04E9006FDB56 /* Build configuration list for PBXProject "DoveRunnerFairPlaySwift" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -205,8 +205,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4F8EA19207B04E9006FDB56 /* DoveRunnerFairPlayPlayback */,
-				B4E2499D2134D6E200E65D76 /* DoveRunnerFairPlayPlaybackTV */,
+				B4F8EA19207B04E9006FDB56 /* DoveRunnerFairPlaySwift */,
+				B4E2499D2134D6E200E65D76 /* DoveRunnerFairPlaySwiftTV */,
 			);
 		};
 /* End PBXProject section */
@@ -453,7 +453,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.sdk.fps.ios.playback.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.sdk.fps.ios.swift.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -479,7 +479,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.sdk.fps.ios.playback.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.sdk.fps.ios.swift.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -490,7 +490,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B4E249AB2134D6E200E65D76 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayPlaybackTV" */ = {
+		B4E249AB2134D6E200E65D76 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlaySwiftTV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4E249AC2134D6E200E65D76 /* Debug */,
@@ -499,7 +499,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4F8EA15207B04E9006FDB56 /* Build configuration list for PBXProject "DoveRunnerFairPlayPlayback" */ = {
+		B4F8EA15207B04E9006FDB56 /* Build configuration list for PBXProject "DoveRunnerFairPlaySwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4F8EA2A207B04E9006FDB56 /* Debug */,
@@ -508,7 +508,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4F8EA2C207B04E9006FDB56 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayPlayback" */ = {
+		B4F8EA2C207B04E9006FDB56 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlaySwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4F8EA2D207B04E9006FDB56 /* Debug */,

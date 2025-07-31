@@ -48,7 +48,7 @@ class FPSListManager: NSObject {
 
             var fpsContent: FPSContent!
             // Get the FPSContent from
-            if #available(iOS 10.0, *), let fpsContent = SDKManager.sharedManager.localFpsContentForStream(with: contentId, token: token, contentName: contentName) {
+            if #available(iOS 10.0, *), var fpsContent = SDKManager.sharedManager.localFpsContentForStream(with: contentId, token: token, contentName: contentName) {
                 self.contents.append(fpsContent)
                 continue
             } else {

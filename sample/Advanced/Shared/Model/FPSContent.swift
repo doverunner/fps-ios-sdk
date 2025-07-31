@@ -1,7 +1,7 @@
 //
 //  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //
-//  DoveRunner Team (http://www.doverunner.com)
+//  DRM Team
 //
 //  FPSContent struct for FPS contents.
 //
@@ -16,7 +16,6 @@ import DoveRunnerFairPlayTV
 
 struct FPSContent {
     
-    var keyId: String
     var contentId: String
     var token: String
     var liveKeyRotation: Bool
@@ -30,18 +29,16 @@ struct FPSContent {
          _ contentName: String,
          _ urlAsset: AVURLAsset
          ) {
-        self.init("", contentId, token, false, contentName, urlAsset, "", nil)
+        self.init(contentId, token, false, contentName, urlAsset, "", nil)
     }
     
-    init(_ keyId: String,
-         _ contentId: String,
+    init(_ contentId: String,
          _ token: String,
          _ liveKeyRotation: Bool,
          _ contentName: String,
          _ urlAsset: AVURLAsset,
          _ chromcastPlayUrlPath: String,
          _ downloadDelegate: Any?) {
-        self.keyId = keyId
         self.contentId = contentId
         self.token = token
         self.liveKeyRotation = liveKeyRotation
@@ -74,8 +71,6 @@ extension FPSContent {
 extension FPSContent {
     struct Keys {
         
-        static let keyId = "KeyId"
-        
         static let cId = "FPSCidKey"
        
         static let token = "FPSToken"
@@ -95,3 +90,4 @@ extension FPSContent {
         static let mainm3u8Scheme = "Mainm3u8Scheme"
     }
 }
+

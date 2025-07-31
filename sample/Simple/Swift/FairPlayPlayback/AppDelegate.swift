@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  PallyConFPSSimple
+//  DoveRunnerFairPlayPlayback Sample
 //
-//  Created by PallyCon on 2018. 4. 9..
-//  Copyright © 2018년 inka. All rights reserved.
+//  Created by DRM Team on 2018. 4. 9..
+//  Copyright © 2025 DoveRunner. All rights reserved.
 //
 
 import UIKit

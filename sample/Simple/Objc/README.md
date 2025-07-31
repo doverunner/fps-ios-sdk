@@ -1,26 +1,26 @@
+# DoveRunnerFairPlay SDK Ojbective-C Sample
+### A simple DoveRunnerFairPlay SDK Objective-C sample
 
-# PallyConFPSSimple : A simple PallyConFPSSDK sample
-
-This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP Live Streams hosted on remote servers as `Objective-C` language.
+This sample demonstrates how to use the `DoveRunnerFairPlay` framework to play HTTP Live Streams hosted on remote servers as `Objective-C` language.
 
 
 
 ## Using the Sample
 
-- Samples using the `PallyCon FPS SDK` run on real devices and do not work in the simulator.
-- In `viewDidLoad()`, initialize `PallyConFPSSDK`, set license information in `viewDidAppear()`, and play `AVFoundation`.
-- Check `Advanced Sample` to check the usage of various APIs in `PallyConFPSSDK`.
+- Samples using the `DoveRunnerFairPlay` SDK  run on real devices and do not work in the simulator.
+- In `viewDidLoad()`, initialize `DoveRunnerFairPlay`, set license information in `viewDidAppear()`, and play `AVFoundation`.
+- Check `Advanced Sample` to check the usage of various APIs in `DoveRunnerFairPlay`.
 
 
 
-### Adding `PallyConFPSSDK.xcframework` to the Sample
+### Adding `DoveRunnerFairPlay.xcframework` to the Sample
 
-- Add `PallyConFPSSDK.xcframework` to Xcode project target in `General` -> `Embedded Binaries`.
-- Add `PallyConFPSSDK.xcframework` to the `Build Settings` -> `Search Paths` -> `Framework Search Paths` path.
+- Add `DoveRunnerFairPlay.xcframework` to Xcode project target in `General` -> `Embedded Binaries`.
+- Add `DoveRunnerFairPlay.xcframework` to the `Build Settings` -> `Search Paths` -> `Framework Search Paths` path.
 - Import the SDK header (`ViewController.m`).
 
     ~~~objectivec
-    	#import <PallyConFPSSDK/PallyConFPSSDK-ObjC.h>
+    	#import <DoveRunnerFairPlay/DoveRunnerFairPlay-ObjC.h>
     ~~~
 
 
@@ -30,14 +30,14 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 - If you wish to add your own HLS streams to test with using this sample, you can do this by adding an entry into the `ViewController.m` that is part of the Xcode Project.
 
 	~~~objectivec
-		// Service Integration Information
-	  #define CONTENT_URL         @""
-	  #define CERTIFICATE_URL     @""
-	  #define CONTENT_ID          @""
-	  #define PALLYCON_TOKEN      @""
+   // Service Integration Information
+   #define CERTIFICATE_URL     @""
+   #define CONTENT_ID          @""
+   #define CONTENT_URL         @""
+   #define CONTENT_AUTHDATA    @""
 	~~~
 
-- \- If you have registered an Apple certificate with PallyCon Server, please refer to the [PallyCon Guide](https://pallycon.com/docs/en/multidrm/clients/multidrm-native-integration/#fairplay) for the `CERTIFICATE_URL` value.
+- \- If you have registered an Apple certificate with DoveRunner Server, please refer to the [DoveRunner Guide](https://doverunner.com/docs/content-security/multi-drm/clients/fairplay-ios/) for the `CERTIFICATE_URL` value.
 
 ### Application Transport Security
 
@@ -59,44 +59,46 @@ This sample demonstrates how to use the `PallyConFPSSDK` framework to play HTTP 
 
 __ViewController.m__: 
 
-- It is the main file to play HLS stream using `PallyConFPSSDK` framework.
+- It is the main file to play HLS stream using `DoveRunnerFairPlay` framework.
 - Playback is possible by inputting `Service Integration Information` and `Content Information`.
 
 
 
-## PallyCon Multi-DRM Service
+## Multi-DRM Service
 
-PallyCon Multi-DRM Service description and inquiries are available at the address below.
-- [PallyCon Homepage](https://www.pallycon.com)
-- [PallyCon Multi-DRM Document](https://pallycon.com/docs/en/)
+Multi-DRM Service description and inquiries are available at the address below.
+- [Homepage](https://www.doverunner.com)
+- [Multi-DRM Document](https://doverunner.com/docs/content-security/multi-drm/)
 
 
 ---
 
 
 
-# PallyConFPSSimple : 심플한 PallyCon FPS SDK 사용 설명
+# DoveRunnerFairPlay SDK Ojbective-C Sample
 
-PallyCon FairPlay Streaming(FPS) Simple 은 `PallyConFPSSDK` 프레임워크를 어떻게 사용하는지 `Objective-C`로 심플하게 구현된 프로젝트입니다.
+### 심플한 DoveRunnerFairPlay SDK 사용 설명
+
+DoveRunner FairPlay Streaming(FPS) Simple 은 `DoveRunnerFairPlay` 프레임워크를 어떻게 사용하는지 `Objective-C`로 심플하게 구현된 프로젝트입니다.
 
 
 
 ## Using the Sample
 
-- `PallyCon FPS SDK`를 사용하는 샘플은 실제 디바이스에서 실행되며 시뮬레이터에서 작동하지 않습니다.
-- viewDidLoad() 에서 `PallyConFPSSDK` 를 초기화하고 viewDidAppear()에서 라이선스 정보를 설정하고 `AVFoundation` 통해 재생합니다.
-- `PallyConFPSSDK`에 다양한 API 사용을 확인하려면 `Advanced Sample`를 확인하시기 바랍니다.  
+- `DoveRunnerFairPlay` SDK 를 사용하는 샘플은 실제 디바이스에서 실행되며 시뮬레이터에서 작동하지 않습니다.
+- viewDidLoad() 에서 `DoveRunnerFairPlay` 를 초기화하고 viewDidAppear()에서 라이선스 정보를 설정하고 `AVFoundation` 통해 재생합니다.
+- `DoveRunnerFairPlay`에 다양한 API 사용을 확인하려면 `Advanced Sample`를 확인하시기 바랍니다.  
 
 
 
-### Adding `PallyConFPSSDK.xcframework` to the Sample
+### Adding `DoveRunnerFairPlay.xcframework` to the Sample
 
-- Xcode 프로젝트 타겟에 `General` -> `Embedded Binaries`에 `PallyConFPSSDK.xcframework`을 추가합니다.
-- 추가한 `PallyConFPSSDK.xcframework` 경로를 `Build Settings` -> `Search Paths` -> `Framework Search Paths`에 입력합니다.
+- Xcode 프로젝트 타겟에 `General` -> `Embedded Binaries`에 `DoveRunnerFairPlay.xcframework`을 추가합니다.
+- 추가한 `DoveRunnerFairPlay.xcframework` 경로를 `Build Settings` -> `Search Paths` -> `Framework Search Paths`에 입력합니다.
 - SDK 헤더를 `import` 합니다.
 
     ~~~objectivec
-    	#import <PallyConFPSSDK/PallyConFPSSDK-ObjC.h>
+    	#import <DoveRunnerFairPlay/DoveRunnerFairPlay-ObjC.h>
     ~~~
 
 
@@ -106,14 +108,14 @@ PallyCon FairPlay Streaming(FPS) Simple 은 `PallyConFPSSDK` 프레임워크를 
 - 만약 테스트 할 HLS 스트림이 있다면 Xcode 프로젝트에 `ViewController.m` 파일에 콘텐츠 정보(HLS 스트림)와 서비스 연동 정보를 입력하면 됩니다.
 
 	~~~objectivec
-		// 서비스 연동 정보
-	  #define CONTENT_URL         @""
-	  #define CERTIFICATE_URL     @""
-	  #define CONTENT_ID          @""
-	  #define PALLYCON_TOKEN      @""
+   // Service Integration Information
+   #define CERTIFICATE_URL     @""
+   #define CONTENT_ID          @""
+   #define LICENSE_AUTHDATA    @""
+   #define CONTENT_URL         @""
 	~~~
 
-- PallyCon Server 에 Apple 인증서를 등록한 경우, `CERTIFICATE_URL` 값은 [PallyCon 가이드](https://pallycon.com/docs/ko/multidrm/clients/multidrm-native-integration/#fairplay) 를 참고하여 사용하시기 바랍니다.
+- DoveRunner Server 에 Apple 인증서를 등록한 경우, `CERTIFICATE_URL` 값은 [DoveRunner Guide](https://doverunner.com/docs/content-security/multi-drm/clients/fairplay-ios/)  를 참고하여 사용하시기 바랍니다.
 
 ### Application Transport Security
 
@@ -134,18 +136,17 @@ PallyCon FairPlay Streaming(FPS) Simple 은 `PallyConFPSSDK` 프레임워크를 
 
 __ViewController.m__: 
 
-- `PallyConFPSSDK` 프레임워크를 활용하여 HLS 스트림을 어떻게 재생하는 메인 파일입니다. 
+- `DoveRunnerFairPlay` 프레임워크를 활용하여 HLS 스트림을 어떻게 재생하는 메인 파일입니다. 
 - `서비스 연동 정보`와 `콘텐츠 정보(HLS)`를 입력하면 재생이 가능합니다.
 
 
 
-## PallyCon 멀티 DRM 서비스
+## 멀티 DRM 서비스
 
-PallyCon 멀티 DRM 서비스 설명과 문의 사항은 아래 주소로 제공됩니다.
-- [PallyCon Homepage](https://www.pallycon.com)
-- [PallyCon Multi-DRM Document](https://pallycon.com/docs/ko/)
+멀티 DRM 서비스 설명과 문의 사항은 아래 주소로 제공됩니다.
+- [Homepage](https://www.doverunner.com)
+- [Multi-DRM Document](https://doverunner.com/docs/content-security/multi-drm/)
 
 
 
-Copyright (C) 2019 INKA Entworks. All rights reserved.
-
+Copyright (C) 2025 DoveRunner. All rights reserved.

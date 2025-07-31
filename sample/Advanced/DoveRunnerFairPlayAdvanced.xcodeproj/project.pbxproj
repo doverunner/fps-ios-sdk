@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,6 +33,8 @@
 		C1BD570E1E65655700912599 /* FPSDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD570D1E65655700912599 /* FPSDownloaderDelegate.swift */; };
 		C1D5E6E820200EB5003F4302 /* FairPlayAdvancedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D5E6E720200EB5003F4302 /* FairPlayAdvancedUITests.swift */; };
 		C1DFA3E8202454AE00F570F6 /* TestCaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95FFB1F207F33002FB94C /* TestCaseUtils.swift */; };
+		C1ED2AED2E3ADCB700196CE2 /* DoveRunnerFairPlay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1ED2AEA2E3ACC9800196CE2 /* DoveRunnerFairPlay.xcframework */; };
+		C1ED2AEE2E3ADCB700196CE2 /* DoveRunnerFairPlay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1ED2AEA2E3ACC9800196CE2 /* DoveRunnerFairPlay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1F95FFA1F207E73002FB94C /* FairPlayAdvancedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95FF81F207E73002FB94C /* FairPlayAdvancedTests.swift */; };
 		C1F95FFC1F207F33002FB94C /* TestCaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95FFB1F207F33002FB94C /* TestCaseUtils.swift */; };
 /* End PBXBuildFile section */
@@ -65,12 +67,13 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C14F6CEA2C2BEDCA00AFD0BA /* Embed Frameworks */ = {
+		C1ED2AEF2E3ADCB700196CE2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C1ED2AEE2E3ADCB700196CE2 /* DoveRunnerFairPlay.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,18 +85,16 @@
 		88FAEDD522EAC24800796DC6 /* Contents.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Contents.plist; sourceTree = "<group>"; };
 		C10B289A2D7B2A9A009FA84A /* TrackSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSelectViewController.swift; sourceTree = "<group>"; };
 		C1305D16283CD162007D328B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		C156B3501E7F72CE00344598 /* FairPlayAdvancedTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairPlayAdvancedTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C156B3501E7F72CE00344598 /* DRFairPlayTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRFairPlayTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C156B3521E7F72CE00344598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C156B3571E7F72CE00344598 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C156B3591E7F72CE00344598 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C156B35B1E7F72CE00344598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C15E156C1E30A9AD00A84BB9 /* PallyConFPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = PallyConFPS.app; path = "/Users/yhpark/work/pallycon/_github/fps/pallycon-fps-ios-sdk/sample/Advanced/build/Debug-iphoneos/PallyConFPS.app"; sourceTree = "<absolute>"; };
 		C15E156F1E30A9AD00A84BB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C15E15741E30A9AD00A84BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C15E15761E30A9AD00A84BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C15E157B1E30A9AD00A84BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C15E15801E30A9AD00A84BB9 /* FairPlayAdvancedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FairPlayAdvancedTests.xctest; path = "/Users/yhpark/work/pallycon/_github/fps/pallycon-fps-ios-sdk/sample/Advanced/build/Debug-iphoneos/PallyConFPS.app/PlugIns/FairPlayAdvancedTests.xctest"; sourceTree = "<absolute>"; };
-		C15E158B1E30A9AD00A84BB9 /* FairPlayAdvancedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairPlayAdvancedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C15E158B1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvancedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoveRunnerFairPlayAdvancedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15E15C91E32009F00A84BB9 /* BasicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
 		C15E15D01E3582EB00A84BB9 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
 		C15E15D21E35935700A84BB9 /* FPSContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPSContent.swift; sourceTree = "<group>"; };
@@ -103,6 +104,9 @@
 		C16A098E1E640957001DBA86 /* Recharbility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recharbility.swift; sourceTree = "<group>"; };
 		C1BD570D1E65655700912599 /* FPSDownloaderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPSDownloaderDelegate.swift; sourceTree = "<group>"; };
 		C1D5E6E720200EB5003F4302 /* FairPlayAdvancedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairPlayAdvancedUITests.swift; sourceTree = "<group>"; };
+		C1ED2AE22E3A10F400196CE2 /* DoveRunnerFairPlayAdvancedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoveRunnerFairPlayAdvancedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1ED2AE32E3A118100196CE2 /* DRFairPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRFairPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1ED2AEA2E3ACC9800196CE2 /* DoveRunnerFairPlay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DoveRunnerFairPlay.xcframework; path = ../../lib/DoveRunnerFairPlay.xcframework; sourceTree = "<group>"; };
 		C1F95FF61F207E73002FB94C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1F95FF71F207E73002FB94C /* FairPlayAdvancedTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FairPlayAdvancedTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C1F95FF81F207E73002FB94C /* FairPlayAdvancedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairPlayAdvancedTests.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1ED2AED2E3ADCB700196CE2 /* DoveRunnerFairPlay.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,16 +149,10 @@
 		60C7D44DEF3EE7CCCB33E662 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1ED2AEA2E3ACC9800196CE2 /* DoveRunnerFairPlay.xcframework */,
 				C1305D16283CD162007D328B /* AVFoundation.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AF695F83ABDE9B6D61B0146A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		C156B3511E7F72CE00344598 /* FairPlayAdvancedTV */ = {
@@ -177,15 +176,16 @@
 				C1F95FF51F207E73002FB94C /* FairPlayAdvancedTests */,
 				C15E156D1E30A9AD00A84BB9 /* Products */,
 				60C7D44DEF3EE7CCCB33E662 /* Frameworks */,
-				AF695F83ABDE9B6D61B0146A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		C15E156D1E30A9AD00A84BB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C15E158B1E30A9AD00A84BB9 /* FairPlayAdvancedUITests.xctest */,
-				C156B3501E7F72CE00344598 /* FairPlayAdvancedTV.app */,
+				C15E158B1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvancedUITests.xctest */,
+				C156B3501E7F72CE00344598 /* DRFairPlayTV.app */,
+				C1ED2AE22E3A10F400196CE2 /* DoveRunnerFairPlayAdvancedTests.xctest */,
+				C1ED2AE32E3A118100196CE2 /* DRFairPlay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -273,9 +273,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C156B34F1E7F72CE00344598 /* FairPlayAdvancedTV */ = {
+		C156B34F1E7F72CE00344598 /* DoveRunnerFairPlayAdvancedTV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C156B3721E7F72CF00344598 /* Build configuration list for PBXNativeTarget "FairPlayAdvancedTV" */;
+			buildConfigurationList = C156B3721E7F72CF00344598 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayAdvancedTV" */;
 			buildPhases = (
 				C156B34C1E7F72CE00344598 /* Sources */,
 				C156B34D1E7F72CE00344598 /* Frameworks */,
@@ -286,32 +286,32 @@
 			);
 			dependencies = (
 			);
-			name = FairPlayAdvancedTV;
+			name = DoveRunnerFairPlayAdvancedTV;
 			productName = PallyConFPSBasicTV;
-			productReference = C156B3501E7F72CE00344598 /* FairPlayAdvancedTV.app */;
+			productReference = C156B3501E7F72CE00344598 /* DRFairPlayTV.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C15E156B1E30A9AD00A84BB9 /* FairPlayAdvanced */ = {
+		C15E156B1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvanced */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C15E15941E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "FairPlayAdvanced" */;
+			buildConfigurationList = C15E15941E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayAdvanced" */;
 			buildPhases = (
 				C15E15681E30A9AD00A84BB9 /* Sources */,
 				C15E15691E30A9AD00A84BB9 /* Frameworks */,
 				C15E156A1E30A9AD00A84BB9 /* Resources */,
-				C14F6CEA2C2BEDCA00AFD0BA /* Embed Frameworks */,
+				C1ED2AEF2E3ADCB700196CE2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FairPlayAdvanced;
+			name = DoveRunnerFairPlayAdvanced;
 			productName = PallyConFPSBasic;
-			productReference = C15E156C1E30A9AD00A84BB9 /* PallyConFPS.app */;
+			productReference = C1ED2AE32E3A118100196CE2 /* DRFairPlay.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C15E157F1E30A9AD00A84BB9 /* FairPlayAdvancedTests */ = {
+		C15E157F1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvancedTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C15E15971E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "FairPlayAdvancedTests" */;
+			buildConfigurationList = C15E15971E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayAdvancedTests" */;
 			buildPhases = (
 				C15E157C1E30A9AD00A84BB9 /* Sources */,
 				C15E157D1E30A9AD00A84BB9 /* Frameworks */,
@@ -322,14 +322,14 @@
 			dependencies = (
 				C15E15821E30A9AD00A84BB9 /* PBXTargetDependency */,
 			);
-			name = FairPlayAdvancedTests;
+			name = DoveRunnerFairPlayAdvancedTests;
 			productName = PallyConFPSBasicTests;
-			productReference = C15E15801E30A9AD00A84BB9 /* FairPlayAdvancedTests.xctest */;
+			productReference = C1ED2AE22E3A10F400196CE2 /* DoveRunnerFairPlayAdvancedTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C15E158A1E30A9AD00A84BB9 /* FairPlayAdvancedUITests */ = {
+		C15E158A1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvancedUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C15E159A1E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "FairPlayAdvancedUITests" */;
+			buildConfigurationList = C15E159A1E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayAdvancedUITests" */;
 			buildPhases = (
 				C15E15871E30A9AD00A84BB9 /* Sources */,
 				C15E15881E30A9AD00A84BB9 /* Frameworks */,
@@ -340,9 +340,9 @@
 			dependencies = (
 				C15E158D1E30A9AD00A84BB9 /* PBXTargetDependency */,
 			);
-			name = FairPlayAdvancedUITests;
+			name = DoveRunnerFairPlayAdvancedUITests;
 			productName = PallyConFPSBasicUITests;
-			productReference = C15E158B1E30A9AD00A84BB9 /* FairPlayAdvancedUITests.xctest */;
+			productReference = C15E158B1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvancedUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -388,7 +388,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C15E15671E30A9AD00A84BB9 /* Build configuration list for PBXProject "FairPlayAdvanced" */;
+			buildConfigurationList = C15E15671E30A9AD00A84BB9 /* Build configuration list for PBXProject "DoveRunnerFairPlayAdvanced" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -402,10 +402,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C15E156B1E30A9AD00A84BB9 /* FairPlayAdvanced */,
-				C156B34F1E7F72CE00344598 /* FairPlayAdvancedTV */,
-				C15E157F1E30A9AD00A84BB9 /* FairPlayAdvancedTests */,
-				C15E158A1E30A9AD00A84BB9 /* FairPlayAdvancedUITests */,
+				C15E156B1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvanced */,
+				C156B34F1E7F72CE00344598 /* DoveRunnerFairPlayAdvancedTV */,
+				C15E157F1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvancedTests */,
+				C15E158A1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvancedUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -503,12 +503,12 @@
 /* Begin PBXTargetDependency section */
 		C15E15821E30A9AD00A84BB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C15E156B1E30A9AD00A84BB9 /* FairPlayAdvanced */;
+			target = C15E156B1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvanced */;
 			targetProxy = C15E15811E30A9AD00A84BB9 /* PBXContainerItemProxy */;
 		};
 		C15E158D1E30A9AD00A84BB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C15E156B1E30A9AD00A84BB9 /* FairPlayAdvanced */;
+			target = C15E156B1E30A9AD00A84BB9 /* DoveRunnerFairPlayAdvanced */;
 			targetProxy = C15E158C1E30A9AD00A84BB9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -540,11 +540,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/PallyConFPSAdvancedTV/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.fps.tvos.sample.advanced;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../lib\"",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/FairPlayAdvancedTV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.fps.sdk.tvos.sample.advanced;
+				PRODUCT_NAME = DRFairPlayTV;
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -559,11 +565,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/PallyConFPSAdvancedTV/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.fps.tvos.sample.advanced;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../lib\"",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/FairPlayAdvancedTV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.fps.sdk.tvos.sample.advanced;
+				PRODUCT_NAME = DRFairPlayTV;
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -678,7 +690,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -694,19 +707,26 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../lib\"",
+				);
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/PallyConFPSAdvanced/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FairPlayAdvanced/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks @loader_path/Frameworks $(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(inherited)",
+				);
 				PODS_PODFILE_DIR_PATH = "${SRCROOT}/.";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.fps.ios.sample.advanced;
-				PRODUCT_NAME = PallyConFPS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.fps.sdk.ios.sample.advanced;
+				PRODUCT_NAME = DRFairPlay;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FairPlayAdvancedTests/FairPlayAdvancedTests-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -722,20 +742,27 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../lib\"",
+				);
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/PallyConFPSAdvanced/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FairPlayAdvanced/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks @loader_path/Frameworks $(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(inherited)",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PODS_PODFILE_DIR_PATH = "${SRCROOT}/.";
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.fps.sample.advanced;
-				PRODUCT_NAME = PallyConFPS;
+				PRODUCT_NAME = DRFairPlay;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FairPlayAdvancedTests/FairPlayAdvancedTests-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -748,7 +775,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PallyConFPSBasicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSBasicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
@@ -766,7 +797,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PallyConFPSBasicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSBasicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
@@ -782,7 +817,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PallyConFPSBasicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSBasicUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
@@ -798,7 +837,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PallyConFPSBasicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSBasicUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
@@ -810,7 +853,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C156B3721E7F72CF00344598 /* Build configuration list for PBXNativeTarget "FairPlayAdvancedTV" */ = {
+		C156B3721E7F72CF00344598 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayAdvancedTV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C156B3731E7F72CF00344598 /* Debug */,
@@ -819,7 +862,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C15E15671E30A9AD00A84BB9 /* Build configuration list for PBXProject "FairPlayAdvanced" */ = {
+		C15E15671E30A9AD00A84BB9 /* Build configuration list for PBXProject "DoveRunnerFairPlayAdvanced" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C15E15921E30A9AD00A84BB9 /* Debug */,
@@ -828,7 +871,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C15E15941E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "FairPlayAdvanced" */ = {
+		C15E15941E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayAdvanced" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C15E15951E30A9AD00A84BB9 /* Debug */,
@@ -837,7 +880,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C15E15971E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "FairPlayAdvancedTests" */ = {
+		C15E15971E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayAdvancedTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C15E15981E30A9AD00A84BB9 /* Debug */,
@@ -846,7 +889,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C15E159A1E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "FairPlayAdvancedUITests" */ = {
+		C15E159A1E30A9AD00A84BB9 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayAdvancedUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C15E159B1E30A9AD00A84BB9 /* Debug */,

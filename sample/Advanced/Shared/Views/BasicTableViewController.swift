@@ -1,7 +1,7 @@
 //
 //  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //
-//  DoveRunner Team (http://www.doverunner.com)
+//  DRM Team
 //
 //  BasicTableViewController class is main view in sample.
 //
@@ -154,7 +154,7 @@ class BasicTableViewController: UITableViewController {
                               } else {
                                    let alert = UIAlertController(title: "Download Failed", message: "network connect failed", preferredStyle: .alert)
                                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                                   UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                                   self.present(alert, animated: true)
                               }
                          }
                          
@@ -165,17 +165,21 @@ class BasicTableViewController: UITableViewController {
                          alertAction = UIAlertAction(title: "Download", style: .default) { _ in
                               // you have to connect on the online for the content download.
                               if Recharbility.isConnectedToNetwork() {
-                                   let parser = HLSTracksPlaylistParser()
+                                   let parser = HLSPlaylistParser()
                                    do {
                                         let manifest = try parser.downloadAndParseManifest(from: fpsContent.urlAsset.url.absoluteString)
                                         
-                                        let popupView = PopupView(isPresented: .constant(true), manifest: manifest, fpsContent: fpsContent)
-                                        let hostingController = UIHostingController(rootView: popupView)
+                                        let selectView = HLSTrackSelectView(isPresented: .constant(true), manifest: manifest, fpsContent: fpsContent)
+                                        let hostingController = UIHostingController(rootView: selectView)
                                         
+                                        // 팝업 스타일 설정
                                         hostingController.modalPresentationStyle = .overFullScreen
                                         hostingController.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+                                        
+                                        // 팝업 크기 설정
                                         hostingController.preferredContentSize = CGSize(width: 300, height: 200)
-
+                                        
+                                        // 팝업 표시
                                         self.present(hostingController, animated: true)
                                    } catch {
                                         print("Error parsing playlist: \(error)")
@@ -183,7 +187,7 @@ class BasicTableViewController: UITableViewController {
                               } else {
                                    let alert = UIAlertController(title: "Download Failed", message: "network connect failed", preferredStyle: .alert)
                                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                                   UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                                   self.present(alert, animated: true)
                               }
                          }
                     case .downloading:
@@ -203,19 +207,18 @@ class BasicTableViewController: UITableViewController {
                     let alertExistLicenseAction = UIAlertAction(title: "Exsit License", style: .default) { _ in
                          var message: String = String()
                          if let expire_date = SDKManager.sharedManager.doverunnerSdk?.getOfflineLicenseExpiryDate(find: fpsContent.contentId) {
-                              message = "rental date   : \(expire_date.rentalExpiryDate) \n" +
-                                        "playback date : \(expire_date.playbackExpiryDate)"
+                              message = "rental date   : \(String(describing: expire_date.rentalExpiryDate)) \n" +
+                              "playback date : \(String(describing: expire_date.playbackExpiryDate))"
                          }
                          
                          let alert = UIAlertController(title: "Offline License", message: message, preferredStyle: .alert)
                          alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                         UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                         self.present(alert, animated: true)
                     }
-                   
+              
                     let alertController = UIAlertController(title: fpsContent.contentName, message: "Select from the following options:", preferredStyle: .actionSheet)
                     alertController.addAction(alertAction)
                     alertController.addAction(alertExistLicenseAction)
-                    alertController.addAction(alertHLSSizeAction)
                     if let action = alertAction2 {
                          alertController.addAction(action)
                     }
@@ -225,10 +228,7 @@ class BasicTableViewController: UITableViewController {
                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
                     
                     if UIDevice.current.userInterfaceIdiom == .pad {
-                         guard let popoverController = alertController.popoverPresentationController else {
-                              return
-                         }
-                         
+                         guard let popoverController = alertController.popoverPresentationController else { return }
                          popoverController.sourceView = cell
                          popoverController.sourceRect = cell.bounds
                     }
@@ -280,7 +280,7 @@ class BasicTableViewController: UITableViewController {
                          alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { Void in
                               self.tableView.reloadData()
                          }))
-                         UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+                         self.present(alert, animated: true)
                          return
                     }
                } else {
@@ -292,13 +292,13 @@ class BasicTableViewController: UITableViewController {
                // Grab a reference for the destinationViewController to use in later delegate callbacks from FPSPlaybackManager.
                self.playerViewController = playerViewController
                
-               // The previous AVURLAsset session expires, so a new one must be created.
                fpsContent.urlAsset = AVURLAsset(url: fpsContent.urlAsset.url)
                let config = FairPlayConfiguration(avURLAsset: fpsContent.urlAsset,
                                                   contentId: fpsContent.contentId,
                                                   certificateUrl: CERTIFICATE_URL,
                                                   authData: fpsContent.token,
-                                                  delegate: SDKManager.sharedManager)
+                                                  delegate: SDKManager.sharedManager,
+                                                  sendCmcd: true)
                SDKManager.sharedManager.doverunnerSdk?.prepare(drm: config)
                
                // Load the new FpsContent to playback into FPSPlaybackManager.

@@ -1,4 +1,6 @@
-# FairPlayAdvanced : HLS Stream download and Playback
+# DoveRunner FairPlay Advanced Sample 
+
+### HLS Stream download and Playback
 
 This sample demonstrates how to use the `DoveRunnerFairPlay` framework to play HTTP Live Streams hosted on remote servers as well as how to persist the HLS streams on disk for offline playback.
 
@@ -103,7 +105,9 @@ DoveRunner Multi-DRM Service description and inquiries are available at the addr
 
 
 
-# FairPlayAdvanced : HLS 스트림 다운로드와 DoveRunnerFairPlay SDK 사용 설명
+# DoveRunner FairPlay Advanced Sample 
+
+###  HLS 스트림 다운로드와 DoveRunnerFairPlay SDK 사용 설명
 
 DoveRunner FairPlay Streaming(FPS) Advanced 는 `DoveRunnerFairPlay` 프레임워크를 어떻게 사용하는지 `Swift`로 구현된 프로젝트입니다.
 

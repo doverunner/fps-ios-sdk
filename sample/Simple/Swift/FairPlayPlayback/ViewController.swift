@@ -1,35 +1,35 @@
 //
 //  ViewController.swift
-//  PallyConFPSSimple
+//  DoveRunnerFairPlayPlayback Sample
 //
-//  Created by PallyCon on 2018. 4. 9..
-//  Copyright © 2018년 inka. All rights reserved.
+//  Created by DRM Team on 2018. 4. 9..
+//  Copyright © 2025 DoveRunner. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 import AVKit
 #if os(iOS)
-import PallyConFPSSDK
+import DoveRunnerFairPlay
 #else
-import PallyConFPSSDKTV
+import DoveRunnerFairPlayTV
 #endif
 
-let CERTIFICATE_URL = "https://license-global.pallycon.com/ri/fpsKeyManager.do?siteId=????"
-let CONTENT_ID      = ""
-let PALLYCON_TOKEN  = ""
-let CONTENT_URL     = ""
+let CERTIFICATE_URL  = "https://drm-license.doverunner.com/ri/fpsKeyManager.do?siteId=????"
+let CONTENT_ID       = ""
+let CONTENT_URL      = ""
+let CONTENT_AUTHDATA = ""
 
 class ViewController: UIViewController {
 
-    var fpsSDK: PallyConFPSSDK?
+    var doverunnerSdk: DoveRunnerFairPlay?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // 1. Create PallyConFPSSDK instance.
-        fpsSDK = PallyConFPSSDK()
+        // 1. Create DoveRunnerFairPlay instance.
+        doverunnerSdk = DoveRunnerFairPlay()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,12 +39,12 @@ class ViewController: UIViewController {
         
         let urlAsset = AVURLAsset(url: contentUrl)
         
-        let config = PallyConDrmConfiguration(avURLAsset: urlAsset,
+        let config = FairPlayConfiguration(avURLAsset: urlAsset,
                                               contentId: CONTENT_ID,
                                               certificateUrl: CERTIFICATE_URL,
-                                              authData: PALLYCON_TOKEN)
+                                              authData: CONTENT_AUTHDATA)
         // 2. Acquire a CustomData information
-        fpsSDK?.prepare(Content: config)
+        doverunnerSdk?.prepare(drm: config)
         let playerItem = AVPlayerItem(asset: urlAsset)
         let player = AVPlayer(playerItem: playerItem)
         let playerController = AVPlayerViewController()
@@ -58,9 +58,9 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: PallyConFPSLicenseDelegate
+extension ViewController: FairPlayLicenseDelegate
 {
-    func license(result: PallyConResult) {
+    func license(result: LicenseResult) {
         print("---------------------------- License Result ")
         print("Content ID : \(result.contentId)")
         print("Key ID     : \(String(describing: result.keyId))")
@@ -93,7 +93,7 @@ extension ViewController: PallyConFPSLicenseDelegate
 
     /*
     func licenseCallback(with spcData: Data, httpHeader header: [String : String]?) -> Data? {
-        guard let url = URL(string: "https://license.pallycon.com/ri/licenseManager.do") else {
+        guard let url = URL(string: "https://drm-license.doverunner.com/ri/licenseManager.do") else {
             return Data()
         }
         var request = URLRequest(url: url)

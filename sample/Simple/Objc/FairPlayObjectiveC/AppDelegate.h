@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  PallyConFPSSimple
+//  DoveRunnerFairPlayObjC
 //
-//  Created by PallyCon on 2018. 4. 5..
-//  Copyright © 2018년 inka. All rights reserved.
+//  Created by DRM Team on 2018. 4. 5..
+//  Copyright © 2018년 DoveRunner. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B4F8EA19207B04E9006FDB56"
-               BuildableName = "DoveRunnerFairPlayPlayback.app"
-               BlueprintName = "DoveRunnerFairPlayPlayback"
-               ReferencedContainer = "container:DoveRunnerFairPlayPlayback.xcodeproj">
+               BuildableName = "DoveRunnerFairPlaySwift.app"
+               BlueprintName = "DoveRunnerFairPlaySwift"
+               ReferencedContainer = "container:DoveRunnerFairPlaySwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B4F8EA19207B04E9006FDB56"
-            BuildableName = "DoveRunnerFairPlayPlayback.app"
-            BlueprintName = "DoveRunnerFairPlayPlayback"
-            ReferencedContainer = "container:DoveRunnerFairPlayPlayback.xcodeproj">
+            BuildableName = "DoveRunnerFairPlaySwift.app"
+            BlueprintName = "DoveRunnerFairPlaySwift"
+            ReferencedContainer = "container:DoveRunnerFairPlaySwift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B4F8EA19207B04E9006FDB56"
-            BuildableName = "DoveRunnerFairPlayPlayback.app"
-            BlueprintName = "DoveRunnerFairPlayPlayback"
-            ReferencedContainer = "container:DoveRunnerFairPlayPlayback.xcodeproj">
+            BuildableName = "DoveRunnerFairPlaySwift.app"
+            BlueprintName = "DoveRunnerFairPlaySwift"
+            ReferencedContainer = "container:DoveRunnerFairPlaySwift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

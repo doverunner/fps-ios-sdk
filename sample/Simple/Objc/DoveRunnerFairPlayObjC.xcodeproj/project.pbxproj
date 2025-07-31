@@ -20,10 +20,10 @@
 		B4AFA90B2075E329005AF13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4AFA90A2075E329005AF13A /* Assets.xcassets */; };
 		B4AFA90E2075E329005AF13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4AFA90C2075E329005AF13A /* LaunchScreen.storyboard */; };
 		B4AFA9112075E329005AF13A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AFA9102075E329005AF13A /* main.m */; };
-		C117297D2717338400F6FE10 /* PallyConFPSSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; };
-		C117297E2717338400F6FE10 /* PallyConFPSSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C17F9A812C50E1E700B3B57B /* PallyConFPSSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; };
-		C17F9A822C50E1E700B3B57B /* PallyConFPSSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18830562E3B0148009F25FB /* DoveRunnerFairPlay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18830552E3B0148009F25FB /* DoveRunnerFairPlay.xcframework */; };
+		C18830572E3B0148009F25FB /* DoveRunnerFairPlay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18830552E3B0148009F25FB /* DoveRunnerFairPlay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C18830582E3B0DCC009F25FB /* DoveRunnerFairPlay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18830552E3B0148009F25FB /* DoveRunnerFairPlay.xcframework */; };
+		C18830592E3B0DCC009F25FB /* DoveRunnerFairPlay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18830552E3B0148009F25FB /* DoveRunnerFairPlay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C117297E2717338400F6FE10 /* PallyConFPSSDK.xcframework in Embed Frameworks */,
+				C18830572E3B0148009F25FB /* DoveRunnerFairPlay.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C17F9A822C50E1E700B3B57B /* PallyConFPSSDK.xcframework in Embed Frameworks */,
+				C18830592E3B0DCC009F25FB /* DoveRunnerFairPlay.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,11 +53,11 @@
 
 /* Begin PBXFileReference section */
 		88A14E58220D653A00354DBE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B49AA6BF21352425000D95A6 /* DoveRunnerFairPlaySimpleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveRunnerFairPlaySimpleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B49AA6C22135244D000D95A6 /* DoveRunnerFairPlaySimpleTV-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DoveRunnerFairPlaySimpleTV-Info.plist"; sourceTree = "<group>"; };
+		B49AA6BF21352425000D95A6 /* DoveRunnerFairPlayObjCTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveRunnerFairPlayObjCTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49AA6C22135244D000D95A6 /* FairPlayObjectiveCTV-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FairPlayObjectiveCTV-Info.plist"; sourceTree = "<group>"; };
 		B49AA6C5213525A8000D95A6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B49AA6C72135261F000D95A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B4AFA8FE2075E329005AF13A /* DoveRunnerFairPlaySimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveRunnerFairPlaySimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4AFA8FE2075E329005AF13A /* DoveRunnerFairPlayObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveRunnerFairPlayObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4AFA9012075E329005AF13A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4AFA9022075E329005AF13A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B4AFA9042075E329005AF13A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		B4AFA90D2075E329005AF13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4AFA90F2075E329005AF13A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4AFA9102075E329005AF13A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PallyConFPSSDK.xcframework; path = ../../../lib/PallyConFPSSDK.xcframework; sourceTree = "<group>"; };
+		C18830552E3B0148009F25FB /* DoveRunnerFairPlay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DoveRunnerFairPlay.xcframework; path = ../../../lib/DoveRunnerFairPlay.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C117297D2717338400F6FE10 /* PallyConFPSSDK.xcframework in Frameworks */,
+				C18830562E3B0148009F25FB /* DoveRunnerFairPlay.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,29 +83,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C17F9A812C50E1E700B3B57B /* PallyConFPSSDK.xcframework in Frameworks */,
+				C18830582E3B0DCC009F25FB /* DoveRunnerFairPlay.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B49AA6C12135244D000D95A6 /* PallyConFPSSimpleTV */ = {
+		B49AA6C12135244D000D95A6 /* FairPlayObjectiveCTV */ = {
 			isa = PBXGroup;
 			children = (
-				B49AA6C22135244D000D95A6 /* DoveRunnerFairPlaySimpleTV-Info.plist */,
+				B49AA6C22135244D000D95A6 /* FairPlayObjectiveCTV-Info.plist */,
 				B49AA6C72135261F000D95A6 /* Assets.xcassets */,
 				B49AA6C5213525A8000D95A6 /* Main.storyboard */,
 			);
-			path = PallyConFPSSimpleTV;
+			path = FairPlayObjectiveCTV;
 			sourceTree = "<group>";
 		};
 		B4AFA8F52075E329005AF13A = {
 			isa = PBXGroup;
 			children = (
 				88A14E58220D653A00354DBE /* README.md */,
-				B49AA6C12135244D000D95A6 /* PallyConFPSSimpleTV */,
-				B4AFA9002075E329005AF13A /* PallyConFPSSimple */,
+				B49AA6C12135244D000D95A6 /* FairPlayObjectiveCTV */,
+				B4AFA9002075E329005AF13A /* FairPlayObjectiveC */,
 				B4AFA8FF2075E329005AF13A /* Products */,
 				B4F8EA58207B296F006FDB56 /* Frameworks */,
 			);
@@ -114,13 +114,13 @@
 		B4AFA8FF2075E329005AF13A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B4AFA8FE2075E329005AF13A /* DoveRunnerFairPlaySimple.app */,
-				B49AA6BF21352425000D95A6 /* DoveRunnerFairPlaySimpleTV.app */,
+				B4AFA8FE2075E329005AF13A /* DoveRunnerFairPlayObjC.app */,
+				B49AA6BF21352425000D95A6 /* DoveRunnerFairPlayObjCTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B4AFA9002075E329005AF13A /* PallyConFPSSimple */ = {
+		B4AFA9002075E329005AF13A /* FairPlayObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
 				B4AFA9012075E329005AF13A /* AppDelegate.h */,
@@ -133,13 +133,13 @@
 				B4AFA90F2075E329005AF13A /* Info.plist */,
 				B4AFA9102075E329005AF13A /* main.m */,
 			);
-			path = PallyConFPSSimple;
+			path = FairPlayObjectiveC;
 			sourceTree = "<group>";
 		};
 		B4F8EA58207B296F006FDB56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C18B6F7127171BC600FAC0BE /* PallyConFPSSDK.xcframework */,
+				C18830552E3B0148009F25FB /* DoveRunnerFairPlay.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,9 +147,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B49AA6AF21352425000D95A6 /* DoveRunnerFairPlaySimpleTV */ = {
+		B49AA6AF21352425000D95A6 /* DoveRunnerFairPlayObjCTV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B49AA6BC21352425000D95A6 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlaySimpleTV" */;
+			buildConfigurationList = B49AA6BC21352425000D95A6 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayObjCTV" */;
 			buildPhases = (
 				B49AA6B021352425000D95A6 /* Sources */,
 				B49AA6B421352425000D95A6 /* Frameworks */,
@@ -160,14 +160,14 @@
 			);
 			dependencies = (
 			);
-			name = DoveRunnerFairPlaySimpleTV;
+			name = DoveRunnerFairPlayObjCTV;
 			productName = PallyConFPSSimple;
-			productReference = B49AA6BF21352425000D95A6 /* DoveRunnerFairPlaySimpleTV.app */;
+			productReference = B49AA6BF21352425000D95A6 /* DoveRunnerFairPlayObjCTV.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B4AFA8FD2075E329005AF13A /* DoveRunnerFairPlaySimple */ = {
+		B4AFA8FD2075E329005AF13A /* DoveRunnerFairPlayObjC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4AFA9142075E329005AF13A /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlaySimple" */;
+			buildConfigurationList = B4AFA9142075E329005AF13A /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayObjC" */;
 			buildPhases = (
 				B4AFA8FA2075E329005AF13A /* Sources */,
 				B4AFA8FB2075E329005AF13A /* Frameworks */,
@@ -178,9 +178,9 @@
 			);
 			dependencies = (
 			);
-			name = DoveRunnerFairPlaySimple;
+			name = DoveRunnerFairPlayObjC;
 			productName = PallyConFPSSimple;
-			productReference = B4AFA8FE2075E329005AF13A /* DoveRunnerFairPlaySimple.app */;
+			productReference = B4AFA8FE2075E329005AF13A /* DoveRunnerFairPlayObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -201,7 +201,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B4AFA8F92075E329005AF13A /* Build configuration list for PBXProject "DoveRunnerFairPlaySimple" */;
+			buildConfigurationList = B4AFA8F92075E329005AF13A /* Build configuration list for PBXProject "DoveRunnerFairPlayObjC" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,8 +214,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4AFA8FD2075E329005AF13A /* DoveRunnerFairPlaySimple */,
-				B49AA6AF21352425000D95A6 /* DoveRunnerFairPlaySimpleTV */,
+				B4AFA8FD2075E329005AF13A /* DoveRunnerFairPlayObjC */,
+				B49AA6AF21352425000D95A6 /* DoveRunnerFairPlayObjCTV */,
 			);
 		};
 /* End PBXProject section */
@@ -298,13 +298,13 @@
 					"\"$(SRCROOT)/../../../lib\"",
 				);
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/PallyConFPSSimpleTV/PallyConFPSSimpleTV-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FairPlayObjectiveCTV/FairPlayObjectiveCTV-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSSimpleTVObjC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.sdk.fps.tvos.ojbc.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
@@ -325,13 +325,13 @@
 					"\"$(SRCROOT)/../../../lib\"",
 				);
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/PallyConFPSSimpleTV/PallyConFPSSimpleTV-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FairPlayObjectiveCTV/FairPlayObjectiveCTV-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSSimpleTVObjC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.sdk.fps.tvos.ojbc.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
@@ -461,16 +461,16 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					../../../lib,
+					"\"$(SRCROOT)/../../../lib\"",
 				);
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = PallyConFPSSimple/Info.plist;
+				INFOPLIST_FILE = FairPlayObjectiveC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSSimpleObjC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.sdk.fps.ios.ojbc.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -486,16 +486,16 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					../../../lib,
+					"\"$(SRCROOT)/../../../lib\"",
 				);
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = PallyConFPSSimple/Info.plist;
+				INFOPLIST_FILE = FairPlayObjectiveC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSSimpleObjC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.sdk.fps.ios.ojbc.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,7 +504,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B49AA6BC21352425000D95A6 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlaySimpleTV" */ = {
+		B49AA6BC21352425000D95A6 /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayObjCTV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B49AA6BD21352425000D95A6 /* Debug */,
@@ -513,7 +513,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4AFA8F92075E329005AF13A /* Build configuration list for PBXProject "DoveRunnerFairPlaySimple" */ = {
+		B4AFA8F92075E329005AF13A /* Build configuration list for PBXProject "DoveRunnerFairPlayObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4AFA9122075E329005AF13A /* Debug */,
@@ -522,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4AFA9142075E329005AF13A /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlaySimple" */ = {
+		B4AFA9142075E329005AF13A /* Build configuration list for PBXNativeTarget "DoveRunnerFairPlayObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4AFA9152075E329005AF13A /* Debug */,
