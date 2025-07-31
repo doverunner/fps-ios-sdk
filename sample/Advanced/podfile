@@ -1,4 +1,4 @@
-target 'PallyConFPSAdvanced' do
+target 'FairPlayAdvanced' do
   use_frameworks!
   pod 'google-cast-sdk', '4.6.1'
 end
