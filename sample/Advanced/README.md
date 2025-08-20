@@ -98,7 +98,7 @@ __FPSListManager.swift__:
 
 DoveRunner Multi-DRM Service description and inquiries are available at the address below.
 - [DoveRunner Homepage](https://www.doverunner.com)
-- [DoveRunner Multi-DRM Document](https://docs.doverunner.com)
+- [DoveRunner Multi-DRM Document](https://doverunner.com/docs/)
 
 
 ---
@@ -205,7 +205,7 @@ __FPSListManager.swift__:
 
 DoveRunner 멀티 DRM 서비스 설명과 문의 사항은 아래 주소로 제공됩니다.
 - [DoveRunner Homepage](https://www.doverunner.com)
-- [DoveRunner Multi-DRM Document](https://docs.doverunner.com)
+- [DoveRunner Multi-DRM Document](https://doverunner.com/docs/)
 
 
 

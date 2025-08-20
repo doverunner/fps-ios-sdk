@@ -67,8 +67,8 @@ __ViewController.m__:
 ## Multi-DRM Service
 
 Multi-DRM Service description and inquiries are available at the address below.
-- [Homepage](https://www.doverunner.com)
-- [Multi-DRM Document](https://doverunner.com/docs/content-security/multi-drm/)
+- [DoveRunner Homepage](https://www.doverunner.com)
+- [DoveRunner Multi-DRM Document](https://doverunner.com/docs/)
 
 
 ---
@@ -144,8 +144,8 @@ __ViewController.m__:
 ## 멀티 DRM 서비스
 
 멀티 DRM 서비스 설명과 문의 사항은 아래 주소로 제공됩니다.
-- [Homepage](https://www.doverunner.com)
-- [Multi-DRM Document](https://doverunner.com/docs/content-security/multi-drm/)
+- [DoveRunner Homepage](https://www.doverunner.com)
+- [DoveRunner Multi-DRM Document](https://doverunner.com/docs/)
 
 
 

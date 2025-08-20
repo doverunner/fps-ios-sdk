@@ -8213,119 +8213,119 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 237,
+      "offset": 241,
       "length": 10,
       "value": "\"Customer\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 267,
+      "offset": 271,
       "length": 9,
       "value": "\"License\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 299,
+      "offset": 303,
       "length": 12,
       "value": "\"ContentKey\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 353,
+      "offset": 357,
       "length": 5,
       "value": "\"cId\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 382,
+      "offset": 386,
       "length": 10,
       "value": "\"duration\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 415,
+      "offset": 419,
       "length": 15,
       "value": "\"persistentKey\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 446,
+      "offset": 450,
       "length": 8,
       "value": "\"userId\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 480,
+      "offset": 484,
       "length": 14,
       "value": "\"downloadDate\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 513,
+      "offset": 517,
       "length": 8,
       "value": "\"key_id\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 551,
+      "offset": 555,
       "length": 19,
       "value": "\"playback_duration\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 598,
+      "offset": 602,
       "length": 17,
       "value": "\"rental_duration\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 659,
+      "offset": 663,
       "length": 7,
       "value": "\"keyId\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 683,
+      "offset": 687,
       "length": 16,
       "value": "\"playbackExpiry\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 716,
+      "offset": 720,
       "length": 9,
       "value": "\"keyData\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 771,
+      "offset": 775,
       "length": 5,
       "value": "\"url\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 793,
+      "offset": 797,
       "length": 10,
       "value": "\"siteCert\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/DataBase\/FairPlayCoreDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 819,
+      "offset": 823,
       "length": 8,
       "value": "\"siteId\""
     },
@@ -8633,112 +8633,112 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/FairPlayLicenseManager.swift",
       "kind": "StringLiteral",
-      "offset": 1786,
+      "offset": 1790,
       "length": 5,
       "value": "\"skd\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/FairPlayLicenseManager.swift",
       "kind": "StringLiteral",
-      "offset": 1915,
+      "offset": 1919,
       "length": 45,
       "value": "\"com.doverunner.drm.sdk.license.requestQueue\""
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/Shared\/FairPlayLicenseManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2180,
+      "offset": 2184,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1182,
+      "offset": 1186,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1679,
+      "offset": 1683,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2923,
+      "offset": 2927,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 4626,
+      "offset": 4630,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 4703,
+      "offset": 4707,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 4782,
+      "offset": 4786,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 4863,
+      "offset": 4867,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 4949,
+      "offset": 4953,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5091,
+      "offset": 5095,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 8252,
+      "offset": 8256,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 8296,
+      "offset": 8300,
       "length": 3,
       "value": "600"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 8344,
+      "offset": 8348,
       "length": 3,
       "value": "900"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 8382,
+      "offset": 8386,
       "length": 1,
       "value": "0"
     },

@@ -7,7 +7,7 @@ Please refer to the links below for detailed information.
 
 ## Reference Links
 
-- [SDK Guide document](https://doverunner.com/docs/en/multidrm/clients/fairplay-ios/)
+- [SDK Guide document](https://doverunner.com/docs/content-security/multi-drm/)
 - [SDK API Reference](https://github.com/doverunner/doverunner-fps-ios-sdk/tree/main/doc)
-- [DoveRunner Multi-DRM License Token Guide](https://doverunner.com/docs/en/multidrm/license/license-token)
-- [Helpdesk for technical support](https://pallycon.zendesk.com)
+- [DoveRunner Multi-DRM License Token Guide](https://doverunner.com/docs/content-security/multi-drm/license/license-token/)
+- [Helpdesk for technical support](https://doverunner.zendesk.com)
