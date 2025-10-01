@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,8 +33,6 @@
 		C1BD570E1E65655700912599 /* FPSDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD570D1E65655700912599 /* FPSDownloaderDelegate.swift */; };
 		C1D5E6E820200EB5003F4302 /* FairPlayAdvancedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D5E6E720200EB5003F4302 /* FairPlayAdvancedUITests.swift */; };
 		C1DFA3E8202454AE00F570F6 /* TestCaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95FFB1F207F33002FB94C /* TestCaseUtils.swift */; };
-		C1ED2AED2E3ADCB700196CE2 /* DoveRunnerFairPlay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1ED2AEA2E3ACC9800196CE2 /* DoveRunnerFairPlay.xcframework */; };
-		C1ED2AEE2E3ADCB700196CE2 /* DoveRunnerFairPlay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1ED2AEA2E3ACC9800196CE2 /* DoveRunnerFairPlay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1F95FFA1F207E73002FB94C /* FairPlayAdvancedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95FF81F207E73002FB94C /* FairPlayAdvancedTests.swift */; };
 		C1F95FFC1F207F33002FB94C /* TestCaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95FFB1F207F33002FB94C /* TestCaseUtils.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +71,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C1ED2AEE2E3ADCB700196CE2 /* DoveRunnerFairPlay.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,7 +103,6 @@
 		C1D5E6E720200EB5003F4302 /* FairPlayAdvancedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairPlayAdvancedUITests.swift; sourceTree = "<group>"; };
 		C1ED2AE22E3A10F400196CE2 /* DoveRunnerFairPlayAdvancedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoveRunnerFairPlayAdvancedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1ED2AE32E3A118100196CE2 /* DoveRunnerAdvanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveRunnerAdvanced.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1ED2AEA2E3ACC9800196CE2 /* DoveRunnerFairPlay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DoveRunnerFairPlay.xcframework; path = ../../lib/DoveRunnerFairPlay.xcframework; sourceTree = "<group>"; };
 		C1F95FF61F207E73002FB94C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1F95FF71F207E73002FB94C /* FairPlayAdvancedTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FairPlayAdvancedTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C1F95FF81F207E73002FB94C /* FairPlayAdvancedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairPlayAdvancedTests.swift; sourceTree = "<group>"; };
@@ -125,7 +121,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1ED2AED2E3ADCB700196CE2 /* DoveRunnerFairPlay.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +144,6 @@
 		60C7D44DEF3EE7CCCB33E662 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1ED2AEA2E3ACC9800196CE2 /* DoveRunnerFairPlay.xcframework */,
 				C1305D16283CD162007D328B /* AVFoundation.framework */,
 			);
 			name = Frameworks;
@@ -545,10 +539,7 @@
 					"\"$(SRCROOT)/../../lib\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FairPlayAdvancedTV/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.fps.sdk.tvos.sample.advanced;
 				PRODUCT_NAME = DRFairPlayTV;
 				SDKROOT = appletvos;
@@ -570,10 +561,7 @@
 					"\"$(SRCROOT)/../../lib\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FairPlayAdvancedTV/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.fps.sdk.tvos.sample.advanced;
 				PRODUCT_NAME = DRFairPlayTV;
 				SDKROOT = appletvos;
@@ -690,8 +678,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -707,19 +694,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../lib\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/FairPlayAdvanced/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-					"$(inherited)",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks @loader_path/Frameworks $(inherited)";
 				PODS_PODFILE_DIR_PATH = "${SRCROOT}/.";
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doverunner.drm.fps.sdk.ios.sample.advanced;
@@ -742,19 +722,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../lib\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/FairPlayAdvanced/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-					"$(inherited)",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks @loader_path/Frameworks $(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				PODS_PODFILE_DIR_PATH = "${SRCROOT}/.";
 				PODS_ROOT = "${SRCROOT}/Pods";
@@ -775,11 +748,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PallyConFPSBasicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSBasicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
@@ -797,11 +766,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PallyConFPSBasicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSBasicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
@@ -817,11 +782,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PallyConFPSBasicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSBasicUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
@@ -837,11 +798,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PallyConFPSBasicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inka.PallyConFPSBasicUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PallyConFPSAdvancedTests/PallyConFPSAdvancedTests-Bridging-Header.h";
