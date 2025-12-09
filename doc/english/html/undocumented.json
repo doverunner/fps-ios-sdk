@@ -51,7 +51,7 @@
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/DoveRunnerFairPlay+Interface.swift",
-      "line": 116,
+      "line": 133,
       "symbol": "DoveRunnerFairPlay.getHLSTracks(Content:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -65,35 +65,35 @@
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
-      "line": 80,
+      "line": 94,
       "symbol": "LicenseResult.init(contentId:isSuccess:keyId:offlineExpiry:error:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
-      "line": 158,
+      "line": 172,
       "symbol": "OfflineExpiryDate.init(downloadDate:rentalDuration:playbackDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
-      "line": 186,
+      "line": 200,
       "symbol": "OfflineExpiryDate.update(downloadDate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
-      "line": 190,
+      "line": 204,
       "symbol": "OfflineExpiryDate.update(rentalDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
-      "line": 195,
+      "line": 209,
       "symbol": "OfflineExpiryDate.update(playbackDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -268,44 +268,100 @@
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/ContentKey+CoreDataClass.swift",
-      "line": 14,
+      "line": 13,
+      "symbol": "ContentKeyCoreDataClassSet",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/ContentKey+CoreDataClass.swift",
+      "line": 16,
       "symbol": "ContentKey",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/ContentKey+CoreDataClass.swift",
-      "line": 14,
+      "line": 16,
       "symbol": "ContentKey",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/Customer+CoreDataClass.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/ContentKey+CoreDataProperties.swift",
       "line": 14,
+      "symbol": "ContentKeyCoreDataPropertiesSet",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/Customer+CoreDataClass.swift",
+      "line": 13,
+      "symbol": "CustomerCoreDataClassSet",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/Customer+CoreDataClass.swift",
+      "line": 16,
       "symbol": "Customer",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/Customer+CoreDataClass.swift",
-      "line": 14,
+      "line": 16,
       "symbol": "Customer",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/License+CoreDataClass.swift",
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/Customer+CoreDataProperties.swift",
       "line": 14,
+      "symbol": "CustomerCoreDataPropertiesSet",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/License+CoreDataClass.swift",
+      "line": 13,
+      "symbol": "LicenseCoreDataClassSet",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/License+CoreDataClass.swift",
+      "line": 16,
       "symbol": "License",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/License+CoreDataClass.swift",
-      "line": 14,
+      "line": 16,
       "symbol": "License",
       "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/License+CoreDataProperties.swift",
+      "line": 14,
+      "symbol": "LicenseCoreDataPropertiesSet",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/PallyConFPSModel+CoreDataModel.swift",
+      "line": 13,
+      "symbol": "PallyConFPSModelFoundationFrameworkSet",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/build/DoveRunnerFairPlay.build/Release-iphoneos/DoveRunnerFairPlay.build/DerivedSources/CoreDataGenerated/PallyConFPSModel/PallyConFPSModel+CoreDataModel.swift",
+      "line": 14,
+      "symbol": "PallyConFPSModelCoreDataFrameworkManagedObject",
+      "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     }
   ],
