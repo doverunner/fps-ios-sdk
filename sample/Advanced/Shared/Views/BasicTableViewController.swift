@@ -297,8 +297,7 @@ class BasicTableViewController: UITableViewController {
                                                   contentId: fpsContent.contentId,
                                                   certificateUrl: CERTIFICATE_URL,
                                                   authData: fpsContent.token,
-                                                  delegate: SDKManager.sharedManager,
-                                                  sendCmcd: true)
+                                                  delegate: SDKManager.sharedManager)
                SDKManager.sharedManager.doverunnerSdk?.prepare(drm: config)
                
                // Load the new FpsContent to playback into FPSPlaybackManager.
