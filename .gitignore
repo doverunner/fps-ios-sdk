@@ -1,10 +1,16 @@
 .DS_Store
 
+# Xcode
+*.xcuserstate
+DerivedData/
+build/
+*.xccheckout
+
 # Advanced 샘플 프로젝트
 /sample/Advanced/DoveRunnerFairPlayAdvanced.xcworkspace/
 /sample/Advanced/DoveRunnerFairPlayAdvanced.xcodeproj/xcuserdata/
 /sample/Advanced/DoveRunnerFairPlayAdvanced.xcodeproj/xcshareddata/
-/sample/Advanced/DoveRunnerFairPlayAdvanced.xcodeproj/project.xcworkspace/xcuserdata
+/sample/Advanced/DoveRunnerFairPlayAdvanced.xcodeproj/project.xcworkspace/xcuserdata/
 /sample/Advanced/DoveRunnerFairPlayAdvanced.xcodeproj/project.xcworkspace/xcshareddata/
 
 # Simple 샘플 프로젝트
