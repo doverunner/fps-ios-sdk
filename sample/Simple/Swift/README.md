@@ -1,5 +1,5 @@
 
-# DoveRunnerFairPlay Playback Sample
+# DoveRunnerFairPlay Sample
 ### A simple DoveRunnerFairPlay SDK sample
 
 This sample demonstrates how to use the `DoveRunnerFairPlay` framework to play HTTP Live Streams hosted on remote servers as `Swift` language.
@@ -16,12 +16,16 @@ This sample demonstrates how to use the `DoveRunnerFairPlay` framework to play H
 
 ### Adding `DoveRunnerFairPlay.xcframework` to the Sample
 
-- Add `DoveRunnerFairPlay.xcframework` to Xcode project target in `General` -> `Embedded Binaries`.
+- Add `DoveRunnerFairPlay.xcframework` to Xcode project target in `General` -> `Frameworks, Libraries, and Embedded Content`.
 - Add `DoveRunnerFairPlay.xcframework` to the `Build Settings` -> `Search Paths` -> `Framework Search Paths` path.
 - Import the SDK header (`ViewController.swift`).
 
     ~~~swift
-    	import DoveRunnerFairPlay
+    #if os(iOS)
+    import DoveRunnerFairPlay
+    #else
+    import DoveRunnerFairPlayTV
+    #endif
     ~~~
 
 
@@ -31,11 +35,11 @@ This sample demonstrates how to use the `DoveRunnerFairPlay` framework to play H
 - If you wish to add your own HLS streams to test with using this sample, you can do this by adding an entry into the `ViewController.swift` that is part of the Xcode Project.
 
     ~~~swift
-    	// Service Integration Information
-      let CONTENT_URL      = ""
-      let CERTIFICATE_URL  = ""
-      let CONTENT_ID       = ""
-      let CONTENT_AUTHDATA = ""
+    // Service Integration Information
+    let CERTIFICATE_URL  = "https://drm-license.doverunner.com/ri/fpsKeyManager.do?siteId=????"
+    let CONTENT_ID       = ""
+    let CONTENT_URL      = ""
+    let CONTENT_AUTHDATA = ""
     ~~~
 
 - If you have registered an Apple certificate with DoveRunner Server, please refer to the [DoveRunner Guide](https://doverunner.com/docs/content-security/multi-drm/clients/fairplay-ios/) for the `CERTIFICATE_URL` value.
@@ -46,21 +50,13 @@ This sample demonstrates how to use the `DoveRunnerFairPlay` framework to play H
 
 - If any of the streams you add are not hosted securely, you will need to add an Application Transport Security(ATS) exception in the Info.plist.
 - More information on ATS and the relevant plist keys can be found in the following article:
-- Information Property List Key Reference - NSAppTransportSecurity: <https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33>
-
-
-
-### Bitcode
-
--  **`iOS`** library does **not support** `Bitcode`.
-   - In the Xcode project target `Build Settings` -> `Build Options` -> `Enable Bitcode` to `NO`.
--  **`tvOS`** library **supports** `Bitcode`.
+- NSAppTransportSecurity: <https://developer.apple.com/documentation/bundleresources/information_property_list/nsapptransportsecurity>
 
 
 
 ## Main Files
 
-__ViewController.swift__: 
+__ViewController.swift__:
 
 - It is the main file to play HLS stream using `DoveRunnerFairPlay` framework.
 - Playback is possible by inputting `Service Integration Information` and `Content Information`.
@@ -78,67 +74,66 @@ Multi-DRM Service description and inquiries are available at the address below.
 
 
 
-# DoveRunnerFairPlay Playback 샘플
+# DoveRunnerFairPlay Sample
 ### 심플한 DoveRunnerFairPlay SDK 사용 설명
 
 DoveRunner FairPlay Streaming(FPS) Simple 은 `DoveRunnerFairPlay` 프레임워크를 어떻게 사용하는지 `Swift`로 심플하게 구현된 프로젝트입니다.
 
 
 
-## Using the Sample
+## 샘플 사용 방법
 
 - `DoveRunnerFairPlay` SDK를 사용하는 샘플은 실제 디바이스에서 실행되며 시뮬레이터에서 작동하지 않습니다.
-- viewDidLoad() 에서 `DoveRunnerFairPlay` 를 초기화하고 viewDidAppear()에서 라이선스 정보를 설정하고 `AVFoundation`을 통해 재생합니다.
-- `DoveRunnerFairPlay`에 다양한 API 사용을 확인하려면 `Advanced Sample`를 확인하시기 바랍니다.  
+- `viewDidLoad()`에서 `DoveRunnerFairPlay`를 초기화하고, `viewDidAppear()`에서 라이선스 정보를 설정하고 `AVFoundation`을 통해 재생합니다.
+- `DoveRunnerFairPlay`의 다양한 API 사용을 확인하려면 `Advanced Sample`을 참고하시기 바랍니다.
 
 
 
-### Adding `DoveRunnerFairPlay.xcframework` to the Sample
+### 샘플에 `DoveRunnerFairPlay.xcframework` 추가
 
-- Xcode 프로젝트 타겟에 `General` -> `Embedded Binaries`에 `DoveRunnerFairPlay.xcframework`을 추가합니다.
+- Xcode 프로젝트 타겟의 `General` -> `Frameworks, Libraries, and Embedded Content`에 `DoveRunnerFairPlay.xcframework`를 추가합니다.
 - 추가한 `DoveRunnerFairPlay.xcframework` 경로를 `Build Settings` -> `Search Paths` -> `Framework Search Paths`에 입력합니다.
-- SDK 헤더를 `import` 합니다.
+- SDK 헤더를 `import` 합니다(`ViewController.swift`).
 
     ~~~swift
-    	import DoveRunnerFairPlay
+    #if os(iOS)
+    import DoveRunnerFairPlay
+    #else
+    import DoveRunnerFairPlayTV
+    #endif
     ~~~
 
 
 
-### Adding Streams to the Sample
+### 샘플에 스트림 추가
 
-- 만약 테스트 할 HLS 스트림이 있다면 Xcode 프로젝트에 `ViewController.swift` 파일에 콘텐츠 정보(HLS 스트림)와 서비스 연동 정보를 입력하면 됩니다.
+- 테스트할 HLS 스트림이 있다면 Xcode 프로젝트의 `ViewController.swift` 파일에 콘텐츠 정보(HLS 스트림)와 서비스 연동 정보를 입력합니다.
 
     ~~~swift
-      // 서비스 연동 정보
-      let CONTENT_URL      = ""
-      let CERTIFICATE_URL  = ""
-      let CONTENT_ID       = ""
-      let CONTENT_AUTHDATA = ""
+    // 서비스 연동 정보
+    let CERTIFICATE_URL  = "https://drm-license.doverunner.com/ri/fpsKeyManager.do?siteId=????"
+    let CONTENT_ID       = ""
+    let CONTENT_URL      = ""
+    let CONTENT_AUTHDATA = ""
     ~~~
 
-- DoveRunner Server 에 Apple 인증서를 등록한 경우, `CERTIFICATE_URL` 은 [DoveRunner Guide](https://doverunner.com/docs/content-security/multi-drm/clients/fairplay-ios/)를 참고하여 사용하시기 바랍니다.
+- DoveRunner Server에 Apple 인증서를 등록한 경우, `CERTIFICATE_URL` 값은 [DoveRunner Guide](https://doverunner.com/docs/content-security/multi-drm/clients/fairplay-ios/)를 참고하시기 바랍니다.
+
+
 
 ### Application Transport Security
 
-- HLS 스트리밍이 스트리밍되지 않는다면 Application Transport Security (ATS) 예외를 Info.plist에 추가해야 합니다. ATS 와 plist 키에 대한 설명은 다음 문서에서 확인 할 수 있습니다.  
-- Information Property List Key Reference - NSAppTransportSecurity: <https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33>
+- 보안(HTTPS)이 적용되지 않은 HTTP 스트림을 사용하는 경우, Info.plist에 Application Transport Security(ATS) 예외를 추가해야 합니다.
+- ATS 및 관련 plist 키에 대한 자세한 내용은 다음 문서를 참고하세요.
+- NSAppTransportSecurity: <https://developer.apple.com/documentation/bundleresources/information_property_list/nsapptransportsecurity>
 
 
 
-### Bitcode
+## 주요 파일
 
--  **`iOS`** 라이브러리는  `Bitcode` 를 지원하지 않습니다.
-   -	Xcode 프로젝트 타겟에서 `Build Settings` -> `Build Options` -> `Enable Bitcode`-> `NO`.
--  **`tvOS`** 라이브러리는  `Bitcode` 를 지원합니다.
+__ViewController.swift__:
 
-
-
-## Main Files
-
-__ViewController.swift__: 
-
-- `DoveRunnerFairPlay` 프레임워크를 활용하여 HLS 스트림을 어떻게 재생하는 메인 파일입니다. 
+- `DoveRunnerFairPlay` 프레임워크를 활용하여 HLS 스트림을 어떻게 재생하는지 보여주는 메인 파일입니다.
 - `서비스 연동 정보`와 `콘텐츠 정보(HLS)`를 입력하면 재생이 가능합니다.
 
 
