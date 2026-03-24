@@ -103,9 +103,9 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <h1 id='doverunnerfairplay-sdk-for-ios-document' class='heading'>DoveRunnerFairPlay SDK for iOS Document</h1>
+            <h1 id='doverunnerfairplay-sdk-for-ios-documentation' class='heading'>DoveRunnerFairPlay SDK for iOS Documentation</h1>
 
-<p>DoveRunnerFairPlsy SDK는 iOS용 미디어 서비스 앱을 개발할 때 Apple의 FairPlay Streaming(FPS) DRM을 쉽게 적용할 수 있게 해주는 제품입니다. 본 문서는 SDK에 포함된 라이브러리와 샘플 프로젝트의 사용법에 대해 설명합니다.</p>
+<p>DoveRunnerFairPlay SDK는 iOS용 미디어 서비스 앱을 개발할 때 Apple의 FairPlay Streaming(FPS) DRM을 쉽게 적용할 수 있게 해주는 제품입니다. 본 문서는 SDK에 포함된 라이브러리와 샘플 프로젝트의 사용법에 대해 설명합니다.</p>
 
 <p>FPS 클라이언트와 연동되는 DoveRunner 멀티 DRM 서비스에 대한 설명은 별도의 <a href="https://doverunner.com/docs/ko/">온라인 가이드</a>로 제공됩니다.
 SDK 사용과 관련한 기술 문의는 <a href="https://doverunner.zendesk.com/hc/ko">헬프데스크</a> 사이트를 이용해 주시기 바랍니다.</p>
@@ -120,10 +120,10 @@ SDK 사용과 관련한 기술 문의는 <a href="https://doverunner.zendesk.com
 
 <ul>
 <li>SDK는 시뮬레이터에서 동작하지 않습니다.</li>
-<li>FPS HLS콘텐츠를 테스트하려면, APPLE에서 받은 <code>App Certification</code>과 <code>RSA 개인키</code>를 보내주셔야 합니다.
+<li>FPS HLS 콘텐츠를 테스트하려면 다음 항목이 필요합니다.
 
 <ul>
-<li>Apple에서 <a href="https://developer.apple.com/streaming/fps/">FPS Deployment Package</a>를 발급 받아 <code>FPS Certification 파일</code>과 <code>RSA 개인키</code>, 그리고 <code>FPS App Secret 키</code>를 DoveRunner로 보내주셔야 합니다.</li>
+<li>Apple에서 <a href="https://developer.apple.com/streaming/fps/">FPS Deployment Package</a>를 발급 받아 <code>FPS Certificate 파일</code>, <code>RSA 개인키</code>, 그리고 <code>FPS App Secret 키(ASK)</code>를 DoveRunner로 보내주셔야 합니다.</li>
 </ul></li>
 <li><font color="red"><strong>위 조건이 갖춰지지 않으면 DoveRunnerFairPlay Sample로 FPS HLS 콘텐츠 재생이 불가합니다.</strong></font></li>
 </ul>
@@ -141,7 +141,7 @@ SDK 사용과 관련한 기술 문의는 <a href="https://doverunner.zendesk.com
 <p>다음과 같은 과정으로 DoveRunner FPS SDK를 개발 프로젝트에 추가할 수 있습니다.</p>
 
 <ol>
-<li><p><code>DoveRunnerFairPlay.zip</code> 파일을 받아 압축을 풉니다.</p></li>
+<li><p><a href="https://github.com/doverunner/fps-ios-sdk">github</a>에서 <code>DoveRunnerFairPlay.xcframework</code> 파일을 다운로드 받습니다.</p></li>
 <li><p><code>lib</code> 폴더에서 제공된 <code>DoveRunnerFairPlay.xcframework</code>  라이브러리를 프로젝트에 추가합니다.</p>
 
 <ul>
@@ -152,6 +152,11 @@ SDK 사용과 관련한 기술 문의는 <a href="https://doverunner.zendesk.com
 <li><p><code>Bitcode</code> 설정</p>
 
 <ul>
+<li><strong><code>iOS</code></strong> 라이브러리는 <strong><code>bitcode</code>를 지원하지 않습니다</strong>.
+
+<ul>
+<li>프로젝트 TARGETS의 <code>Build Settings</code> 탭에서 <code>Enable Bitcode</code>를 <code>NO</code>로 설정합니다.</li>
+</ul></li>
 <li><strong><code>tvOS</code></strong> 라이브러리는 <strong><code>bitcode</code>를 지원합니다</strong>.</li>
 </ul></li>
 </ol>
@@ -161,7 +166,7 @@ SDK 사용과 관련한 기술 문의는 <a href="https://doverunner.zendesk.com
 
 <ul>
 <li>Sample -&gt; Advanced 샘플은 <a href="https://developers.google.com/cast/docs/developers#ios"><code>GoogleCast.framework</code></a>가 필요합니다.</li>
-<li><a href="https://cocoapods.org/"><code>COCOAPODS</code></a>을 이용하여 <code>GoogleCast.framework</code>을 설치(<code>pod intstall</code>)하고 생성된 <code>FairPlaydvanced.xcworkspace</code> 를 실행합니다.</li>
+<li><a href="https://cocoapods.org/"><code>COCOAPODS</code></a>을 이용하여 <code>GoogleCast.framework</code>을 설치(<code>pod install</code>)하고 생성된 <code>FairPlayAdvanced.xcworkspace</code> 를 실행합니다.</li>
 </ul>
 </blockquote>
 <h2 id='퀵-스타트' class='heading'>퀵 스타트</h2>
@@ -170,12 +175,12 @@ SDK 사용과 관련한 기술 문의는 <a href="https://doverunner.zendesk.com
 <h3 id='콘텐츠-재생' class='heading'>콘텐츠 재생</h3>
 
 <hr>
-<pre class="highlight swift"><code><span class="c1">// 1. DoveRunnerFairPlay SDK 객체 생성합니다.</span>
+<pre class="highlight swift"><code><span class="c1">// 1. DoveRunnerFairPlay SDK 객체를 생성합니다.</span>
 <span class="k">let</span> <span class="nv">doverunnerSdk</span> <span class="o">=</span> <span class="kt">DoveRunnerFairPlay</span><span class="p">()</span>
 
 <span class="k">let</span> <span class="nv">urlAsset</span> <span class="o">=</span> <span class="kt">AVURLAsset</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"Content Url(m3u8)"</span><span class="p">)</span>
 
-<span class="c1">// 2. FPS 콘텐츠를 재생하기 전에 Token 정보를 설정하여 라이선스를 획득 준비를 합니다.</span>
+<span class="c1">// 2. FPS 콘텐츠를 재생하기 전에 Token 정보를 설정하여 라이선스 획득을 준비합니다.</span>
 <span class="k">let</span> <span class="nv">config</span> <span class="o">=</span> <span class="kt">FairPlayConfiguration</span><span class="p">(</span><span class="nv">avURLAsset</span><span class="p">:</span> <span class="n">urlAsset</span><span class="p">,</span> 
                                    <span class="nv">contentId</span><span class="p">:</span> <span class="s">"ContentID"</span><span class="p">,</span> 
                                    <span class="nv">certificateUrl</span><span class="p">:</span> <span class="s">"Certification URL"</span><span class="p">,</span>
@@ -186,7 +191,7 @@ SDK 사용과 관련한 기술 문의는 <a href="https://doverunner.zendesk.com
 <h3 id='콘텐츠-다운로드' class='heading'>콘텐츠 다운로드</h3>
 
 <hr>
-<pre class="highlight swift"><code><span class="c1">// 1. DoveRunnerFairPlay SDK 객체 생성합니다.</span>
+<pre class="highlight swift"><code><span class="c1">// 1. DoveRunnerFairPlay SDK 객체를 생성합니다.</span>
 <span class="k">let</span> <span class="nv">doverunnerSdk</span> <span class="o">=</span> <span class="kt">DoveRunnerFairPlay</span><span class="p">()</span>
 
 <span class="k">let</span> <span class="nv">urlAsset</span> <span class="o">=</span> <span class="kt">AVURLAsset</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"Content Url(m3u8)"</span><span class="p">)</span>
@@ -206,7 +211,7 @@ SDK 사용과 관련한 기술 문의는 <a href="https://doverunner.zendesk.com
 <span class="c1">// 4. 콘텐츠 다운로드 취소 (필요 시)</span>
 <span class="n">downloadTask</span><span class="o">.</span><span class="nf">cancel</span><span class="p">()</span>
 </code></pre>
-<h3 id='크롬캐스트-재생을-위한-json-data-만들기' class='heading'>크롬캐스트 재생을 위한 Json data 만들기</h3>
+<h3 id='크롬캐스트-재생을-위한-json-data-만들기' class='heading'>크롬캐스트 재생을 위한 JSON data 만들기</h3>
 
 <hr>
 <pre class="highlight swift"><code><span class="c1">// 저희 SDK 는 크롬캐스트 재생을 지원합니다.</span>

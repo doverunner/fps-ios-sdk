@@ -226,7 +226,7 @@
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/Shared/FPSLicenseDownloader.swift",
-      "line": 626,
+      "line": 631,
       "symbol": "FPSLicenseDownloader",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
