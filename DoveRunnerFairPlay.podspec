@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name  = 'DoveRunnerFairPlay'
-  s.version = '2.5.0'
+  s.version = 'v2.6.0'
   s.platform = :ios
   s.ios.deployment_target = '13.6'
   s.summary = 'DoveRunner FairPlay SDK for iOS'
