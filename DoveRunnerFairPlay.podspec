@@ -1,11 +1,12 @@
 Pod::Spec.new do |s|
   s.name  = 'DoveRunnerFairPlay'
-  s.version = 'v2.6.0'
+  s.version = '2.6.0'
   s.platform = :ios
   s.ios.deployment_target = '13.6'
   s.summary = 'DoveRunner FairPlay SDK for iOS'
   s.author = { 'DoveRunner Multi-DRM' => 'support@doverunner.com' }
   s.homepage = 'https://github.com/doverunner/fps-ios-sdk'
+  s.license = { :type => 'Commercial', :text => 'Copyright (c) DoveRunner. All rights reserved.' }
   s.source = {
     :git => 'https://github.com/doverunner/fps-ios-sdk.git',
     :tag => s.version.to_s
