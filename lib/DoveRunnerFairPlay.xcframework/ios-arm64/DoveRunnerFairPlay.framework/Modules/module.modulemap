@@ -7,5 +7,4 @@ framework module DoveRunnerFairPlay {
 
 module DoveRunnerFairPlay.Swift {
   header "DoveRunnerFairPlay-ObjC.h"
-  requires objc
 }
