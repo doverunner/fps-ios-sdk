@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-ios12.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name DoveRunnerFairPlay
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios12.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name DoveRunnerFairPlay
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
 import AVFoundation
 import CommonCrypto/*.CC_LONG*/
 import CommonCrypto/*.CC_MD5*/
@@ -88,7 +88,9 @@ extension DoveRunnerFairPlay {
   public var licenseCookies: Swift.String?
   public var renewalInterval: Swift.Int64
   public var sendCmcdAsHTTPHeaders: Swift.Bool
-  @objc public init(avURLAsset: AVFoundation.AVURLAsset, contentId id: Swift.String, certificateUrl url: Swift.String, authData: Swift.String? = nil, delegate: (any FairPlayLicenseDelegate)? = nil, licenseUrl: Swift.String? = nil, licenseHttpHeader: [Swift.String : Swift.String]? = nil, licenseCookies: Swift.String? = nil, renewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue, sendCmcd: Swift.Bool = false)
+  @objc public init(avURLAsset: AVFoundation.AVURLAsset, contentId id: Swift.String, certificateUrl url: Swift.String, authData: Swift.String? = nil, delegate: (any FairPlayLicenseDelegate)? = nil, licenseUrl: Swift.String? = nil, licenseHttpHeader: [Swift.String : Swift.String]? = nil, licenseCookies: Swift.String? = nil, renewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue)
+  @available(iOS 18.0, tvOS 18.0, *)
+  convenience public init(avURLAsset: AVFoundation.AVURLAsset, contentId id: Swift.String, certificateUrl url: Swift.String, authData: Swift.String? = nil, delegate: (any FairPlayLicenseDelegate)? = nil, licenseUrl: Swift.String? = nil, licenseHttpHeader: [Swift.String : Swift.String]? = nil, licenseCookies: Swift.String? = nil, renewalInterval: Swift.Int64 = RenewalInterval.Zero.rawValue, sendCmcd: Swift.Bool = false)
   @objc deinit
 }
 @objc public class LicenseResult : ObjectiveC.NSObject {
@@ -283,99 +285,107 @@ public enum PallyConSDKException : Swift.Error {
   @objc optional func licenseCallback(with spcData: Foundation.Data, httpHeader header: [Swift.String : Swift.String]?) -> Foundation.Data?
   @objc optional func resourceLoaderCallback(requestResource: AVFoundation.AVAssetResourceLoadingRequest) -> Swift.Bool
 }
-@_inheritsConvenienceInitializers @objc(ContentKey) public class ContentKey : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias ContentKeyCoreDataClassSet = Foundation.NSSet
+@_inheritsConvenienceInitializers @objc(ContentKey) nonisolated public class ContentKey : CoreData.NSManagedObject {
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit
 }
+public typealias ContentKeyCoreDataPropertiesSet = Foundation.NSSet
 extension ContentKey {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ContentKey>
-  @objc @NSManaged dynamic public var keyData: Foundation.Data? {
+  @objc @NSManaged nonisolated dynamic public var keyData: Foundation.Data? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var keyId: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var keyId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var playbackExpiry: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var playbackExpiry: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var license: License? {
+  @objc @NSManaged nonisolated dynamic public var license: License? {
     @objc get
     @objc set
   }
 }
-@objc @_inheritsConvenienceInitializers public class Customer : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias CustomerCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class Customer : CoreData.NSManagedObject {
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit
 }
+public typealias CustomerCoreDataPropertiesSet = Foundation.NSSet
 extension Customer {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Customer>
-  @objc @NSManaged dynamic public var siteCert: Foundation.Data? {
+  @objc @NSManaged nonisolated dynamic public var siteCert: Foundation.Data? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var siteId: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var siteId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var url: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var url: Swift.String? {
     @objc get
     @objc set
   }
 }
-@objc @_inheritsConvenienceInitializers public class License : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias LicenseCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class License : CoreData.NSManagedObject {
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit
 }
+public typealias LicenseCoreDataPropertiesSet = Foundation.NSSet
 extension License {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<License>
-  @objc @NSManaged dynamic public var cId: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var cId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var downloadDate: Foundation.Date? {
+  @objc @NSManaged nonisolated dynamic public var downloadDate: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var duration: Foundation.Date? {
+  @objc @NSManaged nonisolated dynamic public var duration: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var key_id: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var key_id: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var licenseType: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var licenseType: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var optionalId: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var optionalId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var persistentKey: Foundation.Data? {
+  @objc @NSManaged nonisolated dynamic public var persistentKey: Foundation.Data? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var playback_duration: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var playback_duration: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var rental_duration: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var rental_duration: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var userId: Swift.String? {
+  @objc @NSManaged nonisolated dynamic public var userId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var contentkey: ContentKey? {
+  @objc @NSManaged nonisolated dynamic public var contentkey: ContentKey? {
     @objc get
     @objc set
   }
 }
+public typealias PallyConFPSModelFoundationFrameworkSet = Foundation.NSSet
+public typealias PallyConFPSModelCoreDataFrameworkManagedObject = CoreData.NSManagedObject
 extension RenewalInterval : Swift.Equatable {}
 extension RenewalInterval : Swift.Hashable {}
 extension RenewalInterval : Swift.RawRepresentable {}

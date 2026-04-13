@@ -37,7 +37,7 @@
     AVURLAsset *urlAsset = [[AVURLAsset alloc] initWithURL:contentUrl options:nil];
 
     // 2. Set parameters required for FPS content playback.
-    FairPlayConfiguration* config = [[FairPlayConfiguration alloc] initWithAvURLAsset:urlAsset contentId:CONTENT_ID certificateUrl:CERTIFICATE_URL authData:CONTENT_AUTHDATA delegate:self licenseUrl:nil licenseHttpHeader:nil licenseCookies:nil renewalInterval:0 sendCmcd:false];
+    FairPlayConfiguration* config = [[FairPlayConfiguration alloc] initWithAvURLAsset:urlAsset contentId:CONTENT_ID certificateUrl:CERTIFICATE_URL authData:CONTENT_AUTHDATA delegate:self licenseUrl:nil licenseHttpHeader:nil licenseCookies:nil renewalInterval:0];
     [_doverunnerSdk prepareWithDrm:config];
     
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:urlAsset];
