@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          DoveRunnerFairPlay 2.6.1 Docs
+          DoveRunnerFairPlay 2.7.0 Docs
         </a>
         
       </p>
@@ -99,7 +99,48 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <h1 id='version-2-6-1' class='heading'>Version 2.6.1</h1>
+            <h1 id='version-2-7-0' class='heading'>Version 2.7.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 2.7.0</strong></p>
+</blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/FairPlayConfiguration.html#/s:18DoveRunnerFairPlay0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvp">FairPlayConfiguration.contentHttpHeader</a></code> has been added.</p>
+
+<ul>
+<li>You can set the HTTP headers that the SDK applies when requesting the HLS playlists(m3u8) to extract Key IDs during content download.</li>
+<li>This must be set if the content server requires header-based authentication (e.g. Authorization).</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="k">let</span> <span class="nv">config</span> <span class="o">=</span> <span class="kt">FairPlayConfiguration</span><span class="p">(</span><span class="nv">avURLAsset</span><span class="p">:</span> <span class="n">urlAsset</span><span class="p">,</span>
+                                     <span class="nv">contentId</span><span class="p">:</span> <span class="s">"ContentID"</span><span class="p">,</span>
+                                     <span class="nv">certificateUrl</span><span class="p">:</span> <span class="s">"Certification URL"</span><span class="p">,</span>
+                                     <span class="nv">authData</span><span class="p">:</span> <span class="s">"Token or CustomData"</span><span class="p">)</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">contentHttpHeader</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Authorization"</span><span class="p">:</span> <span class="s">"Bearer &lt;token&gt;"</span><span class="p">]</span>
+</code></pre>
+
+<blockquote>
+<p><strong>Note</strong></p>
+</blockquote>
+
+<ul>
+<li><code>contentHttpHeader</code> is applied only to the playlist(m3u8) requests made by the SDK.</li>
+<li>If the media segment download requests also require headers, set them in the <code>AVURLAsset</code> options when creating the asset.</li>
+</ul>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/FairPlayConfiguration.html#/s:18DoveRunnerFairPlay0cD13ConfigurationC13downloadTitleSSSgvp">FairPlayConfiguration.downloadTitle</a></code> has been added.</p>
+
+<ul>
+<li>You can specify the title shown in the system download UI (Live Activity on iPadOS 27+, Settings &gt; Storage).</li>
+<li>If not set, the <code>contentId</code> is displayed.</li>
+</ul>
+
+<p><font color="blue"><strong><code>Fixed</code></strong></font> Fixed offline license acquisition failure for header-authenticated content</p>
+
+<ul>
+<li>When the content server requires header authentication, the SDK could not access the playlists during download, causing Key ID extraction to fail and the offline license not to be saved. This has been fixed.</li>
+<li>The playlist request timeout has been improved.</li>
+</ul>
+<h1 id='version-2-6-1' class='heading'>Version 2.6.1</h1>
 
 <blockquote>
 <p><strong>What&rsquo;s New in Version 2.6.1</strong></p>

@@ -1956,6 +1956,159 @@
           },
           {
             "kind": "Var",
+            "name": "contentHttpHeader",
+            "printedName": "contentHttpHeader",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DoveRunnerFairPlayTV0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvp",
+            "mangledName": "$s20DoveRunnerFairPlayTV0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvp",
+            "moduleName": "DoveRunnerFairPlayTV",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DoveRunnerFairPlayTV0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvg",
+                "mangledName": "$s20DoveRunnerFairPlayTV0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvg",
+                "moduleName": "DoveRunnerFairPlayTV",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DoveRunnerFairPlayTV0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvs",
+                "mangledName": "$s20DoveRunnerFairPlayTV0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvs",
+                "moduleName": "DoveRunnerFairPlayTV",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DoveRunnerFairPlayTV0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvM",
+                "mangledName": "$s20DoveRunnerFairPlayTV0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvM",
+                "moduleName": "DoveRunnerFairPlayTV",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "renewalInterval",
             "printedName": "renewalInterval",
             "children": [
@@ -2122,6 +2275,117 @@
                 "declKind": "Accessor",
                 "usr": "s:20DoveRunnerFairPlayTV0cD13ConfigurationC21sendCmcdAsHTTPHeadersSbvM",
                 "mangledName": "$s20DoveRunnerFairPlayTV0cD13ConfigurationC21sendCmcdAsHTTPHeadersSbvM",
+                "moduleName": "DoveRunnerFairPlayTV",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "downloadTitle",
+            "printedName": "downloadTitle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DoveRunnerFairPlayTV0cD13ConfigurationC13downloadTitleSSSgvp",
+            "mangledName": "$s20DoveRunnerFairPlayTV0cD13ConfigurationC13downloadTitleSSSgvp",
+            "moduleName": "DoveRunnerFairPlayTV",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DoveRunnerFairPlayTV0cD13ConfigurationC13downloadTitleSSSgvg",
+                "mangledName": "$s20DoveRunnerFairPlayTV0cD13ConfigurationC13downloadTitleSSSgvg",
+                "moduleName": "DoveRunnerFairPlayTV",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DoveRunnerFairPlayTV0cD13ConfigurationC13downloadTitleSSSgvs",
+                "mangledName": "$s20DoveRunnerFairPlayTV0cD13ConfigurationC13downloadTitleSSSgvs",
+                "moduleName": "DoveRunnerFairPlayTV",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DoveRunnerFairPlayTV0cD13ConfigurationC13downloadTitleSSSgvM",
+                "mangledName": "$s20DoveRunnerFairPlayTV0cD13ConfigurationC13downloadTitleSSSgvM",
                 "moduleName": "DoveRunnerFairPlayTV",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -8903,91 +9167,91 @@
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1195,
+      "offset": 1571,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 2591,
+      "offset": 3152,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 3772,
+      "offset": 4333,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5475,
+      "offset": 6036,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5552,
+      "offset": 6113,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5631,
+      "offset": 6192,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5712,
+      "offset": 6273,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5798,
+      "offset": 6359,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 5940,
+      "offset": 6501,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 9101,
+      "offset": 9662,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 9145,
+      "offset": 9706,
       "length": 3,
       "value": "600"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 9193,
+      "offset": 9754,
       "length": 3,
       "value": "900"
     },
     {
       "filePath": "\/Users\/yhpark\/work\/pallycon\/fps\/PallyConFPSSDK\/DoveRunnerFairPlay\/FairPlayConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 9231,
+      "offset": 9792,
       "length": 1,
       "value": "0"
     },

@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          DoveRunnerFairPlay 2.6.1 Docs
+          DoveRunnerFairPlay 2.7.0 Docs
         </a>
         
       </p>
@@ -99,7 +99,48 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <h1 id='version-2-6-1' class='heading'>Version 2.6.1</h1>
+            <h1 id='version-2-7-0' class='heading'>Version 2.7.0</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 2.7.0</strong></p>
+</blockquote>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/FairPlayConfiguration.html#/s:18DoveRunnerFairPlay0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvp">FairPlayConfiguration.contentHttpHeader</a></code> 가 추가됩니다.</p>
+
+<ul>
+<li>콘텐츠 다운로드 시 SDK가 Key ID 추출을 위해 HLS 플레이리스트(m3u8)를 요청할 때 적용되는 HTTP 헤더를 설정할 수 있습니다.</li>
+<li>콘텐츠 서버가 헤더 인증(예: Authorization)을 요구하는 경우 반드시 설정해야 합니다.</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="k">let</span> <span class="nv">config</span> <span class="o">=</span> <span class="kt">FairPlayConfiguration</span><span class="p">(</span><span class="nv">avURLAsset</span><span class="p">:</span> <span class="n">urlAsset</span><span class="p">,</span>
+                                     <span class="nv">contentId</span><span class="p">:</span> <span class="s">"ContentID"</span><span class="p">,</span>
+                                     <span class="nv">certificateUrl</span><span class="p">:</span> <span class="s">"Certification URL"</span><span class="p">,</span>
+                                     <span class="nv">authData</span><span class="p">:</span> <span class="s">"Token or CustomData"</span><span class="p">)</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">contentHttpHeader</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Authorization"</span><span class="p">:</span> <span class="s">"Bearer &lt;token&gt;"</span><span class="p">]</span>
+</code></pre>
+
+<blockquote>
+<p><strong>Note</strong></p>
+</blockquote>
+
+<ul>
+<li><code>contentHttpHeader</code>는 SDK가 요청하는 플레이리스트(m3u8)에만 적용됩니다.</li>
+<li>미디어 세그먼트 다운로드 요청에도 헤더가 필요한 경우, <code>AVURLAsset</code> 생성 시 options에 헤더를 설정해야 합니다.</li>
+</ul>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/FairPlayConfiguration.html#/s:18DoveRunnerFairPlay0cD13ConfigurationC13downloadTitleSSSgvp">FairPlayConfiguration.downloadTitle</a></code> 이 추가됩니다.</p>
+
+<ul>
+<li>시스템 다운로드 UI(iPadOS 27+의 Live Activity, 설정 &gt; 저장 공간)에 표시되는 제목을 지정할 수 있습니다.</li>
+<li>설정하지 않으면 <code>contentId</code>가 표시됩니다.</li>
+</ul>
+
+<p><font color="blue"><strong><code>Fixed</code></strong></font> 헤더 인증 콘텐츠의 오프라인 라이선스 획득 오류 수정</p>
+
+<ul>
+<li>콘텐츠 서버가 헤더 인증을 요구하는 경우, 다운로드 시 플레이리스트에 접근하지 못해 Key ID 추출이 실패하고 오프라인 라이선스가 저장되지 않던 문제가 수정됩니다.</li>
+<li>플레이리스트 요청 타임아웃이 개선됩니다.</li>
+</ul>
+<h1 id='version-2-6-1' class='heading'>Version 2.6.1</h1>
 
 <blockquote>
 <p><strong>What&rsquo;s New in Version 2.6.1</strong></p>

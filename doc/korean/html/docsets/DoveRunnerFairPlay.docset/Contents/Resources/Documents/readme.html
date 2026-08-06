@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          DoveRunnerFairPlay 2.6.1 Docs
+          DoveRunnerFairPlay 2.7.0 Docs
         </a>
         
       </p>
@@ -199,6 +199,13 @@ SDK 사용과 관련한 기술 문의는 <a href="https://doverunner.zendesk.com
                                    <span class="nv">contentId</span><span class="p">:</span> <span class="s">"ContentID"</span><span class="p">,</span> 
                                    <span class="nv">certificateUrl</span><span class="p">:</span> <span class="s">"Certification URL"</span><span class="p">,</span> 
                                    <span class="nv">authData</span><span class="p">:</span> <span class="s">"Token or CustomData"</span><span class="p">)</span>
+
+<span class="c1">// (옵션) 콘텐츠 서버가 HTTP 헤더 인증을 요구하는 경우 설정합니다. (v2.7.0+)</span>
+<span class="c1">// 미디어 세그먼트 요청에도 헤더가 필요하면 AVURLAsset 생성 시 options에 설정해야 합니다.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">contentHttpHeader</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Authorization"</span><span class="p">:</span> <span class="s">"Bearer &lt;token&gt;"</span><span class="p">]</span>
+
+<span class="c1">// (옵션) 시스템 다운로드 UI에 표시할 제목을 설정합니다. 미설정 시 contentId가 표시됩니다. (v2.7.0+)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">downloadTitle</span> <span class="o">=</span> <span class="s">"콘텐츠 제목"</span>
 
 <span class="c1">// 2. FPS 콘텐츠 다운로드를 위해 DownloadTask 객체를 생성하고 라이선스 획득 준비를 합니다.</span>
 <span class="k">let</span> <span class="nv">downloadTask</span> <span class="o">=</span> <span class="n">doverunnerSdk</span><span class="o">.</span><span class="nf">createDownloadTask</span><span class="p">(</span><span class="nv">drm</span><span class="p">:</span> <span class="n">config</span><span class="p">,</span> 

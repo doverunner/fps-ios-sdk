@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          DoveRunnerFairPlay 2.6.1 Docs
+          DoveRunnerFairPlay 2.7.0 Docs
         </a>
         
       </p>
@@ -199,6 +199,13 @@ For technical questions about using the SDK, please visit the <a href="https://d
                                    <span class="nv">contentId</span><span class="p">:</span> <span class="s">"ContentID"</span><span class="p">,</span> 
                                    <span class="nv">certificateUrl</span><span class="p">:</span> <span class="s">"Certification URL"</span><span class="p">,</span> 
                                    <span class="nv">authData</span><span class="p">:</span> <span class="s">"Token or CustomData"</span><span class="p">)</span>
+
+<span class="c1">// (Optional) Set this if the content server requires HTTP header authentication. (v2.7.0+)</span>
+<span class="c1">// If the media segment requests also require headers, set them in the AVURLAsset options.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">contentHttpHeader</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Authorization"</span><span class="p">:</span> <span class="s">"Bearer &lt;token&gt;"</span><span class="p">]</span>
+
+<span class="c1">// (Optional) The title shown in the system download UI. If not set, contentId is displayed. (v2.7.0+)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">downloadTitle</span> <span class="o">=</span> <span class="s">"Content Title"</span>
 
 <span class="c1">// 2. To download FPS content, create a DownloadTask object and enter token information to prepare for license acquisition.</span>
 <span class="k">let</span> <span class="nv">downloadTask</span> <span class="o">=</span> <span class="n">doverunnerSdk</span><span class="o">.</span><span class="nf">createDownloadTask</span><span class="p">(</span><span class="nv">drm</span><span class="p">:</span> <span class="n">config</span><span class="p">,</span> 

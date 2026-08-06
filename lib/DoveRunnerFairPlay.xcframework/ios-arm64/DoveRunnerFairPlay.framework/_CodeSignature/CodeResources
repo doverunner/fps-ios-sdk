@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/DoveRunnerFairPlay-ObjC.h</key>
 		<data>
-		npg7xJbo3rwP3YRvhTbh0ylQNqM=
+		KT2MEbXy/xVrux1YOTkZDvbzB7o=
 		</data>
 		<key>Headers/DoveRunnerFairPlay.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HPbYW0Ff43gxArZgaL94NEubnLg=
+		ypK9QNVyNDvaMEjdzdLmYdpCXX8=
 		</data>
 		<key>Modules/DoveRunnerFairPlay.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		pHWsen2airqy5i/SQz8SmQa2TBE=
+		md6nrrXp+Ya+O3RN64hh2FsEo0A=
 		</data>
 		<key>Modules/DoveRunnerFairPlay.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		NZ87K1deHr3UDwvlG0hLVb2khCM=
+		ZOjxH9Q2aLCeoxv8wQtb5y4Ct4E=
 		</data>
 		<key>Modules/DoveRunnerFairPlay.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		ADVuFTiv2apWyX+g819bsPVjgIs=
+		D6emEH39FN2gvfRGiJKZwWBRCLQ=
 		</data>
 		<key>Modules/DoveRunnerFairPlay.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		NZ87K1deHr3UDwvlG0hLVb2khCM=
+		ZOjxH9Q2aLCeoxv8wQtb5y4Ct4E=
 		</data>
 		<key>Modules/DoveRunnerFairPlay.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		t40IqSg7CyvRjYYGSJyA0OFMrNk=
+		D9WOyWJogob3dfoqSci/xL75q3g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 2.mom</key>
 		<data>
-		QQamuKgz5cC5A68kPZofpe/V+zU=
+		jDsQbgrP2ljYBh9Brm6yXquu9SY=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.mom</key>
 		<data>
-		n0fb68weHW3SBu2f1L3bUMMvk+E=
+		T1gS8dz4WX6WYD4H9DYVJYsw05I=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.omo</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 4.mom</key>
 		<data>
-		0JUClrJhz/JZgW8IA4EzbArs/OU=
+		auLoon1WrT/VtZYZJGVzCBlCVcQ=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel.mom</key>
 		<data>
-		7j6h55Wjk/KJARuny23svJNXqv0=
+		5TdkrlgluBdYb90lX/YHglIFs/I=
 		</data>
 		<key>PallyConFPSModel.momd/VersionInfo.plist</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4xe7Im8tn4KSyVWasAxAQx3zv7tNLYYqOmP30x914J8=
+			tfv/XvMooysfJcPaT8Jg/3FRljc03tVP4CDSHEXY1OY=
 			</data>
 		</dict>
 		<key>Headers/DoveRunnerFairPlay.h</key>
@@ -89,35 +89,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aLCi49gITD5VY6EO9ommjw3lDIbfjX8dwwqMn5jHwC8=
+			Dma6BHYBNyF6xoRUIUPMegcbH6L89tnbuaTTSVxYKq0=
 			</data>
 		</dict>
 		<key>Modules/DoveRunnerFairPlay.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yJNtYl8OI8ns+fQZwa2p65IsKSrgEYeOYJX1DhS4Kds=
+			40Vauz2uP7hPz0GMoLe8WqT5lKkRmETWczG7LI+RqV0=
 			</data>
 		</dict>
 		<key>Modules/DoveRunnerFairPlay.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PBayNWIoHkTSeQrAyGVSVBkOv5gYGBJz6ePkjYzYvQ4=
+			qf2kZ3PwZAqv3YIYyF7VXY4aHVvAd1gThuu+MFvTAA4=
 			</data>
 		</dict>
 		<key>Modules/DoveRunnerFairPlay.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yJNtYl8OI8ns+fQZwa2p65IsKSrgEYeOYJX1DhS4Kds=
+			40Vauz2uP7hPz0GMoLe8WqT5lKkRmETWczG7LI+RqV0=
 			</data>
 		</dict>
 		<key>Modules/DoveRunnerFairPlay.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TQPXpsLpqXGpzjxzX4TRYPW7/13fFPzvxVgPWbUPF8c=
+			zdmX45cbHot80BahzKg9k/iTZIDVzAllMMJSxiNa4W0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -131,14 +131,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			srDsu9wWHKOxlXFjeoPC7UR8JVVYaQbiA2U3bqif3to=
+			9tX5s5YQ13BEowCA/M2Zj7uXPJof12xV5EOXvUMluVE=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JxHoREH9YJDl+8xOFF3LmYCAGHSXVrDmgd6lQ0fH8bY=
+			QHJjM3w15QwpG6iQL+CcDCbI7g/UP6nKyJX6T+4tr8g=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.omo</key>
@@ -152,14 +152,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			a28fw84j+dd3bPCvUR1F6BYouMWSLPkDTn9RKj6gOI4=
+			OJtianCvS2ukEpylxQh1kW30V93+vzFhpR4xjZeVKy8=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O9FqTG+7cJ+xyeRSEwpoeh+3P9u7KhDz5xTYD7UNSRo=
+			YLk2UKJWMlllJiJREzwoZf2FTvCeXbBzujJCvXG4Djg=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/VersionInfo.plist</key>

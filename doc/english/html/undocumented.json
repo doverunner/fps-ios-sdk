@@ -58,42 +58,42 @@
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FPSContentDownloader.swift",
-      "line": 200,
+      "line": 201,
       "symbol": "FPSContentDownloader",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
-      "line": 94,
+      "line": 101,
       "symbol": "LicenseResult.init(contentId:isSuccess:keyId:offlineExpiry:error:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
-      "line": 172,
+      "line": 179,
       "symbol": "OfflineExpiryDate.init(downloadDate:rentalDuration:playbackDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
-      "line": 200,
+      "line": 207,
       "symbol": "OfflineExpiryDate.update(downloadDate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
-      "line": 204,
+      "line": 211,
       "symbol": "OfflineExpiryDate.update(rentalDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yhpark/work/pallycon/fps/PallyConFPSSDK/DoveRunnerFairPlay/FairPlayConfiguration.swift",
-      "line": 209,
+      "line": 216,
       "symbol": "OfflineExpiryDate.update(playbackDuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

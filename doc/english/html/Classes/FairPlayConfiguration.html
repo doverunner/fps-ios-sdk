@@ -18,7 +18,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          DoveRunnerFairPlay 2.6.1 Docs
+          DoveRunnerFairPlay 2.7.0 Docs
         </a>
         
       </p>
@@ -340,6 +340,35 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:18DoveRunnerFairPlay0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/contentHttpHeader" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18DoveRunnerFairPlay0cD13ConfigurationC17contentHttpHeaderSDyS2SGSgvp">contentHttpHeader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>httpHeader used when the SDK requests the HLS playlists(m3u8) of the content.
+Set this if the content server requires HTTP headers(e.g. authorization) to access the playlists.
+Note: To apply headers to the media segment requests of <code><a href="../Classes/FairPlayConfiguration.html#/s:18DoveRunnerFairPlay0cD13ConfigurationC10avURLAssetSo10AVURLAssetCvp">avURLAsset</a></code>, set them in the <code>AVURLAsset</code> options when creating it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">contentHttpHeader</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:18DoveRunnerFairPlay0cD13ConfigurationC15renewalIntervals5Int64Vvp"></a>
                     <a name="//apple_ref/swift/Property/renewalInterval" class="dashAnchor"></a>
                     <a class="token" href="#/s:18DoveRunnerFairPlay0cD13ConfigurationC15renewalIntervals5Int64Vvp">renewalInterval</a>
@@ -385,6 +414,34 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sendCmcdAsHTTPHeaders</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18DoveRunnerFairPlay0cD13ConfigurationC13downloadTitleSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/downloadTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18DoveRunnerFairPlay0cD13ConfigurationC13downloadTitleSSSgvp">downloadTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The title shown in the system download UI (Live Activity on iPadOS 27+, Settings &gt; Storage).
+If not set, <code><a href="../Classes/FairPlayConfiguration.html#/s:18DoveRunnerFairPlay0cD13ConfigurationC9contentIdSSvp">contentId</a></code> is displayed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">downloadTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
