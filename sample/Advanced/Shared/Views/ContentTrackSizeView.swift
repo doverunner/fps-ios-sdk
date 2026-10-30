@@ -2,10 +2,13 @@
 //  ContentTrackSizeView.swift
 //  FairPlayAdvanced
 //
-//  Created by yhpark on 4/10/25.
+//  Created by DoveRunner on 4/10/25.
 //  Copyright © 2025 DoveRunner. All rights reserved.
 //
 
+// `HLSPlaylistParser` is provided by the iOS SDK only, so this view is iOS-only
+// even though it lives in the Shared folder.
+#if os(iOS)
 import SwiftUI
 import DoveRunnerFairPlay
 
@@ -137,3 +140,4 @@ struct ContentTrackSizePopupView: View {
         }
     }
 }
+#endif

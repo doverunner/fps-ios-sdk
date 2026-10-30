@@ -36,24 +36,25 @@ class BasicTableViewController: UITableViewController {
           
           // Set BasicListTableViewController as the delegate for FPSPlaybackManager to recieve playback information
           FPSPlaybackManager.sharedManager.delegate = self
-          #if os(iOS)
-               // Set ChromeCast Button
-               let castButton: GCKUICastButton = GCKUICastButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
-               castButton.tintColor = UIColor.black
-               self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: castButton)
-          #endif
      }
      
      override func viewWillAppear(_ animated: Bool) {
           super.viewWillAppear(animated)
           
           if playerViewController != nil {
-               // The view reappeared as a results of dismissing an AVPlayerViewController.
-               // Perform cleanup.
                FPSPlaybackManager.sharedManager.setFpsContentForPlayback(nil)
                playerViewController?.player = nil
                playerViewController = nil
           }
+          
+          #if os(iOS)
+          // Set ChromeCast Button
+          if self.navigationItem.rightBarButtonItem == nil {
+               let castButton: GCKUICastButton = GCKUICastButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+               castButton.tintColor = UIColor.black
+               self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: castButton)
+          }
+          #endif
      }
      
      override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -102,11 +103,13 @@ class BasicTableViewController: UITableViewController {
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
           let cell = tableView.dequeueReusableCell(withIdentifier: BasicTableViewCell.reuseIdentifier, for: indexPath) as! BasicTableViewCell
 
-          if indexPath.section == 0 {
+          #if os(iOS)
+               // Download section rows expose a detail button (content info / track selection).
+               // tvOS has only the streaming section and does not support `.detailButton`.
+               cell.accessoryType = (indexPath.section == 0) ? .none : .detailButton
+          #else
                cell.accessoryType = .none
-          } else {
-               cell.accessoryType = .detailButton
-          }
+          #endif
           
           let fpsContent = FPSListManager.sharedManager.fpsContent(section: indexPath.section, index: indexPath.row)
           
@@ -215,10 +218,33 @@ class BasicTableViewController: UITableViewController {
                          alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                          self.present(alert, animated: true)
                     }
-              
+                    
+                    // 다운로드 시 컨텐츠 정보가 나오므로 굳이 표시
+                    let alertContentSizeAction = UIAlertAction(title: "Content Size", style: .default) { _ in
+                         // you have to connect on the online for the content download.
+                         if Recharbility.isConnectedToNetwork() {
+                              let parser = HLSPlaylistParser()
+                              do {
+                                   let manifest = try parser.downloadAndParseManifest(from: fpsContent.contentUrl)
+                                   let popupView = ContentTrackSizePopupView(isPresented: .constant(true), manifest: manifest)
+                                   let hostingController = UIHostingController(rootView: popupView)
+                                   hostingController.view.backgroundColor = .clear
+                                   hostingController.modalPresentationStyle = .overFullScreen
+                                   self.present(hostingController, animated: true)
+                              } catch {
+                                   print("Error parsing playlist: \(error)")
+                              }
+                         } else {
+                              let alert = UIAlertController(title: "Download Failed", message: "network connect failed", preferredStyle: .alert)
+                              alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                              self.present(alert, animated: true)
+                         }
+                    }
+                    
                     let alertController = UIAlertController(title: fpsContent.contentName, message: "Select from the following options:", preferredStyle: .actionSheet)
                     alertController.addAction(alertAction)
                     alertController.addAction(alertExistLicenseAction)
+                    alertController.addAction(alertContentSizeAction)
                     if let action = alertAction2 {
                          alertController.addAction(action)
                     }
@@ -247,11 +273,14 @@ class BasicTableViewController: UITableViewController {
                     let fpsContent = cell.fpsContent,
                     !fpsContent.chromcastPlayUrlPath.isEmpty {
                     
+                    // Google Cast step 3: send the media (with the DRM token in customData) to the receiver.
                     let mediaInfo = self.buildMediaInformation(fpsContent: fpsContent)
                     castSession.remoteMediaClient?.loadMedia(mediaInfo)
                     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-                    if let isEnabled = appDelegate?.castControlBarsEnabled(), isEnabled {
-                         appDelegate?.setCastControlBarsEnabled(notificationsEnabled: false)
+                    // Hide the mini controller (owned by the SceneDelegate's Cast container)
+                    // before presenting the expanded controls so they do not overlap.
+                    if let sceneDelegate = self.sceneDelegate, sceneDelegate.castControlBarsEnabled {
+                         sceneDelegate.setCastControlBarsEnabled(false)
                     }
                     GCKCastContext.sharedInstance().presentDefaultExpandedMediaControls()
                } else {
@@ -277,10 +306,11 @@ class BasicTableViewController: UITableViewController {
                     // you have to connect on the online for the streaming content play.
                     if (Recharbility.isConnectedToNetwork() == false) {
                          let alert = UIAlertController(title: "Play Failed", message: "network connect failed", preferredStyle: .alert)
-                         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { Void in
+                         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak self] Void in
+                              guard let self = self, self.view.window != nil else { return }
                               self.tableView.reloadData()
                          }))
-                         self.present(alert, animated: true)
+                         UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
                          return
                     }
                } else {
@@ -298,6 +328,7 @@ class BasicTableViewController: UITableViewController {
                                                   certificateUrl: CERTIFICATE_URL,
                                                   authData: fpsContent.token,
                                                   delegate: SDKManager.sharedManager)
+               
                SDKManager.sharedManager.doverunnerSdk?.prepare(drm: config)
                
                // Load the new FpsContent to playback into FPSPlaybackManager.
@@ -311,7 +342,7 @@ class BasicTableViewController: UITableViewController {
  */
 extension BasicTableViewController: BasicTableViewCellDelegate {
      func basicListTableViewCell(_ cell: BasicTableViewCell, downloadStateDidChange newState: FPSContent.DownloadState) {
-          guard let indexPath = tableView.indexPath(for: cell) else {
+          guard self.view.window != nil, let indexPath = tableView.indexPath(for: cell) else {
                return
           }
           
@@ -319,7 +350,7 @@ extension BasicTableViewController: BasicTableViewCellDelegate {
      }
      
      func basicListTableViewCell(_ cell: BasicTableViewCell, avPlayerAssetDidChange asset: AVURLAsset) {
-          guard let indexPath = tableView.indexPath(for: cell) else {
+          guard self.view.window != nil, let indexPath = tableView.indexPath(for: cell) else {
                return
           }
           

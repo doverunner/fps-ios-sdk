@@ -21,6 +21,10 @@
 		B4F8EA28207B04E9006FDB56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F8EA26207B04E9006FDB56 /* LaunchScreen.storyboard */; };
 		C18830532E3B00BC009F25FB /* DoveRunnerFairPlay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18830522E3B00BC009F25FB /* DoveRunnerFairPlay.xcframework */; };
 		C18830542E3B00BC009F25FB /* DoveRunnerFairPlay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18830522E3B00BC009F25FB /* DoveRunnerFairPlay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1A5CE022EB0A00000D0A001 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A5CE012EB0A00000D0A001 /* SceneDelegate.swift */; };
+		C1A5CE032EB0A00000D0A001 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A5CE012EB0A00000D0A001 /* SceneDelegate.swift */; };
+		C1A5CE042EB0A00000D0A001 /* DoveRunnerFairPlay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18830522E3B00BC009F25FB /* DoveRunnerFairPlay.xcframework */; };
+		C1A5CE052EB0A00000D0A001 /* DoveRunnerFairPlay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C18830522E3B00BC009F25FB /* DoveRunnerFairPlay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C1A5CE052EB0A00000D0A001 /* DoveRunnerFairPlay.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +66,7 @@
 		B4F8EA27207B04E9006FDB56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4F8EA29207B04E9006FDB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C18830522E3B00BC009F25FB /* DoveRunnerFairPlay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DoveRunnerFairPlay.xcframework; path = ../../../lib/DoveRunnerFairPlay.xcframework; sourceTree = "<group>"; };
+		C1A5CE012EB0A00000D0A001 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A5CE042EB0A00000D0A001 /* DoveRunnerFairPlay.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				B4F8EA1D207B04E9006FDB56 /* AppDelegate.swift */,
+				C1A5CE012EB0A00000D0A001 /* SceneDelegate.swift */,
 				B4F8EA1F207B04E9006FDB56 /* ViewController.swift */,
 				B4F8EA21207B04E9006FDB56 /* Main.storyboard */,
 				B4F8EA24207B04E9006FDB56 /* Assets.xcassets */,
@@ -243,6 +251,7 @@
 			files = (
 				B4E249A12134D6E200E65D76 /* ViewController.swift in Sources */,
 				B4E249A22134D6E200E65D76 /* AppDelegate.swift in Sources */,
+				C1A5CE032EB0A00000D0A001 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +261,7 @@
 			files = (
 				B4F8EA20207B04E9006FDB56 /* ViewController.swift in Sources */,
 				B4F8EA1E207B04E9006FDB56 /* AppDelegate.swift in Sources */,
+				C1A5CE022EB0A00000D0A001 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,10 +293,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "FairPlayPlaybackTV/FairPlayPlaybackTV-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +305,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.2;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Debug;
 		};
@@ -306,10 +315,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "FairPlayPlaybackTV/FairPlayPlaybackTV-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,7 +327,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.2;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Release;
 		};
@@ -373,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -426,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -446,7 +454,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = ../../../lib;
 				INFOPLIST_FILE = FairPlayPlayback/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,7 +480,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = ../../../lib;
 				INFOPLIST_FILE = FairPlayPlayback/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

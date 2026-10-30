@@ -7,6 +7,7 @@
 //  A SDKManager class decribes the overall usage of DoveRunnerFairPlay.
 //
 
+
 import Foundation
 import AVFoundation
 import UIKit
@@ -64,9 +65,9 @@ class SDKManager: NSObject {
           if content == nil {
                content = fpsContent
                if minimumBitrate != String() {
-                    content!.downloadDelegate = FPSDownloaderDelegate(url: fpsContent.urlAsset.url, contentId: fpsContent.contentId, token: fpsContent.token, minimumBitrate: minimumBitrate)
+                    content!.downloadDelegate = FPSDownloaderDelegate(url: fpsContent.urlAsset.url, contentId: fpsContent.contentId, token: fpsContent.token, licenseUrl: fpsContent.licenseUrl, minimumBitrate: minimumBitrate)
                } else {
-                    content!.downloadDelegate = FPSDownloaderDelegate(url: fpsContent.urlAsset.url, contentId: fpsContent.contentId, token: fpsContent.token)
+                    content!.downloadDelegate = FPSDownloaderDelegate(url: fpsContent.urlAsset.url, contentId: fpsContent.contentId, token: fpsContent.token, licenseUrl: fpsContent.licenseUrl)
                }
                 activeDownloadsMap[content!.contentId] = content
           }
@@ -247,6 +248,82 @@ extension SDKManager: FairPlayLicenseDelegate {
           }
      }
      
+     
+     func addCMCDDataToRequest(url: URL) -> URLRequest {
+         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
+         var request = URLRequest(url: url)
+          //request.addValue("AuthData-token=Send-HeaderField-Send-HeaderField-Send-HeaderField", forHTTPHeaderField: "CMCD-Object")
+          request.addValue("cid=072298a7-ce89-4f44-9ce5-22fde6271fc2", forHTTPHeaderField: "CMCD-Session")
+          return request
+         
+         // CMCD 데이터를 딕셔너리로 준비
+         var cmcdData: [String: String] = [:]
+          
+          let token = "AuthData-Token-AuthData-Token-AuthData-Token-AuthData-Token-AuthData-Token"
+          cmcdData["AuthData-token"] = token
+     
+         // 세션 ID
+         let sessionId = UUID().uuidString
+         cmcdData["sid"] = "\"\(sessionId)\""
+         
+         // 비트레이트
+         let bitrate = 3200
+         cmcdData["br"] = "\(bitrate)"
+         
+         // 버퍼 고갈 상태
+         cmcdData["bs"] = "" // 값이 없는 경우 빈 문자열
+         
+         // 객체 지속 시간
+         let duration = 4004
+         cmcdData["d"] = "\(duration)"
+         
+         // 측정된 처리량
+         let measuredThroughput = 25400
+         cmcdData["mtp"] = "\(measuredThroughput)"
+         
+         // 객체 유형
+         cmcdData["ot"] = "v"
+         
+         // 요청된 최대 처리량
+         let requestedThroughput = 15000
+         cmcdData["rtp"] = "\(requestedThroughput)"
+         
+         // 최대 비트레이트
+         let topBitrate = 6000
+         cmcdData["tb"] = "\(topBitrate)"
+         
+         // CMCD 데이터를 쿼리 문자열로 변환
+         let cmcdString = cmcdData.map { key, value in
+             if value.isEmpty {
+                 return key
+             } else {
+                 return "\(key)=\(value)"
+             }
+         }.joined(separator: ",")
+         
+         // URL 인코딩
+         let encodedCMCD = cmcdString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? cmcdString
+         
+         // 기존 쿼리 항목이 있으면 유지하고 CMCD 추가
+         var queryItems = components.queryItems ?? []
+         queryItems.append(URLQueryItem(name: "CMCD", value: encodedCMCD))
+         components.queryItems = queryItems
+         
+         // 수정된 URL을 request에 설정
+         request.url = components.url
+         
+         // HTTP 헤더에 CMCD 데이터 추가
+         request.addValue("sid=\"\(sessionId)\"", forHTTPHeaderField: "CMCD-Session")
+         request.addValue("mtp=\(measuredThroughput)", forHTTPHeaderField: "CMCD-Request")
+         request.addValue("br=\(bitrate),d=\(duration),ot=v,tb=\(topBitrate),token=\(token)", forHTTPHeaderField: "CMCD-Object")
+         
+         var statusValues = ["bs"]
+         statusValues.append("rtp=\(requestedThroughput)")
+         request.addValue(statusValues.joined(separator: ","), forHTTPHeaderField: "CMCD-Status")
+         
+         return request
+     }
+     
      func replaceURLWithScheme(_ scheme: String, _ url: URL) -> URL? {
          let urlString = url.absoluteString
          guard let index = urlString.firstIndex(of: ":") else { return nil }
@@ -264,10 +341,45 @@ extension SDKManager: FairPlayLicenseDelegate {
                requestResource.finishLoading(with: error)
                return false
           }
-          
+
           print("---------> originalUrl : \(originalUrl)")
           print("---------> changeUrl   : \(changeUrl)")
+          var playback_session_id : String?
+          if let headers = requestResource.request.allHTTPHeaderFields {
+              print("HTTP Headers: ------------------------- ")
+              for (key, value) in headers {
+                  print("\(key): \(value)")
+                   
+                   if "X-Playback-Session-Id" == key as String {
+                        playback_session_id = value
+                   }
+              }
+          }
+          print("HTTP Headers: ------------------------- ")
+          
           if originalUrl.hasSuffix("m3u8") == false {
+               
+//               var requestWithCMCD = addCMCDDataToRequest(url: changeUrl)
+//               requestWithCMCD.addValue(playback_session_id!, forHTTPHeaderField: "x-playback-session-id")
+//               print(requestWithCMCD.url?.absoluteString ?? "URL is nil")
+//               
+//               if let redirectURL = requestWithCMCD.url {
+//                   print("---------> requestResource.request.url : \(requestResource.request.url?.absoluteString ?? "nil")")
+//                   print("---------> redirectURL                 : \(redirectURL)")
+//                    
+//                    print("---------> requestWithCMCD   : \(requestWithCMCD.url?.absoluteString)")
+//                    if let headers = requestWithCMCD.allHTTPHeaderFields {
+//                        print("requestWithCMCD Headers: ------------------------- ")
+//                        for (key, value) in headers {
+//                            print("\(key): \(value)")
+//                        }
+//                    }
+//                    print("requestWithCMCD Headers: ------------------------- ")
+//                    
+//                   requestResource.redirect = requestWithCMCD
+//                   requestResource.response = HTTPURLResponse(url: redirectURL, statusCode: 302, httpVersion: nil, headerFields: nil)
+//                   requestResource.finishLoading()
+//               }
                if let redirectURL = URL(string: changeUrl.absoluteString, relativeTo: requestResource.request.url) {
                     print("---------> requestResource.request.url : \(requestResource.request.url?.absoluteString)")
                     print("---------> redirectURL                 : \(redirectURL)")
@@ -278,13 +390,12 @@ extension SDKManager: FairPlayLicenseDelegate {
                return true
           }
 
-          
           guard let dataRequest = requestResource.dataRequest else {
                let error = SDKError.invalid(comment: "loadingRequest.dataRequest error")
                requestResource.finishLoading(with: error)
                return false
           }
-
+          
           let task = URLSession.shared.dataTask(with: changeUrl) { (data, response, error) in
                guard error == nil, let data = data else {
                     requestResource.finishLoading(with: error)
@@ -309,14 +420,21 @@ extension SDKManager: FairPlayLicenseDelegate {
           return true
      }
      
-/*
+     /*
      func licenseCallback(with spcData: Data, httpHeader header: [String : String]?) -> Data? {
           guard let url = URL(string: "  ") else {
               return Data()
           }
           var request = URLRequest(url: url)
           request.httpMethod = "POST"
-          request.allHTTPHeaderFields = header
+          if var unwrappedHeader = header {
+               if unwrappedHeader.keys.contains("pallycon-customdata-v2") {
+                    //unwrappedHeader.removeValue(forKey: "pallycon-customdata-v2")
+                    //unwrappedHeader["pallycon-customdata-v2"] = "new auth data"
+                    print("Token : \(String(describing: unwrappedHeader["pallycon-customdata-v2"]))")
+               }
+               request.allHTTPHeaderFields = unwrappedHeader
+          }
           request.httpBody = spcData
                     
           var task: URLSessionDataTask?
@@ -348,7 +466,7 @@ extension SDKManager: FairPlayLicenseDelegate {
           
           return returnData.data
      }
-*/
+      */
 }
 
 extension UIApplication {

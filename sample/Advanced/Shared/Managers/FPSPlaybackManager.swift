@@ -1,7 +1,7 @@
 //
 //  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //
-//  DoveRunner Team (http://www.doverunner.com)
+//  DRM Team
 //
 //  A FPSPlaybackManager class handles playback in the AVPlayerViewController.
 //
@@ -18,7 +18,7 @@ class FPSPlaybackManager: NSObject {
     weak var delegate: FPSPlaybackDelegate?
     
     /// The instance of AVPlayer that will be used for playback of FPSPlaybackManager.playerItem.
-    private let player = AVPlayer()
+    public let player = AVPlayer()
     
     /// A Bool tracking if the AVPlayerItem.status has changed to .readyToPlay for the current FPSPlaybackManager.playerItem.
     private var readyForPlayback = false
@@ -102,6 +102,12 @@ class FPSPlaybackManager: NSObject {
             strongSelf.delegate?.playbackManager(strongSelf, playerCurrentItemDidChange: player)
         }
         
+        configureAudioSession()
+        
+        // Allow AirPlay Video (external playback). The default is already `true`,
+        // but it is set explicitly because `usesExternalPlaybackWhileExternalScreenIsActive`
+        // has no effect when `allowsExternalPlayback` is `false`.
+        player.allowsExternalPlayback = true
         player.usesExternalPlaybackWhileExternalScreenIsActive = true
     }
     
@@ -109,6 +115,25 @@ class FPSPlaybackManager: NSObject {
         player.removeObserver(self, forKeyPath: #keyPath(AVPlayer.currentItem))
         /// Remove any KVO observer.
         playerObserver?.invalidate()
+    }
+    
+    // MARK: Audio Session
+    
+    /// Configures the shared audio session for media playback.
+    ///
+    /// The `.playback` category is required for AirPlay Video routing. Without it the
+    /// session falls back to the default `.soloAmbient` category, in which case the system
+    /// may route only audio to the AirPlay receiver while video keeps rendering locally.
+    /// Together with the `audio` background mode in Info.plist, it also keeps playback
+    /// alive when the app is backgrounded or the device is locked.
+    private func configureAudioSession() {
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.playback, mode: .moviePlayback)
+            try audioSession.setActive(true)
+        } catch {
+            print("Failed to configure audio session for playback: \(error.localizedDescription)")
+        }
     }
     
     /**
@@ -124,6 +149,7 @@ class FPSPlaybackManager: NSObject {
          Apple TV unless AirPlay playback is set to mirroring. The FPS-aware app must set the
          usesExternalPlaybackWhileExternalScreenIsActive property of the AVPlayer object to TRUE.
         **/
+        player.allowsExternalPlayback = true
         player.usesExternalPlaybackWhileExternalScreenIsActive = true
     }
     

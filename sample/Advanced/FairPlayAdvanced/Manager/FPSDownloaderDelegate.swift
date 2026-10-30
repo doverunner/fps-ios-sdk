@@ -16,26 +16,26 @@ public class FPSDownloaderDelegate: NSObject {
     
     fileprivate var downloadTask: DownloadTask?
     
-    init(url: URL, contentId: String, token: String) {
+    init(url: URL, contentId: String, token: String, licenseUrl: String) {
         super.init()
 
         let videoAsset = AVURLAsset(url: url)
         let config = FairPlayConfiguration(avURLAsset: videoAsset,
-                                              contentId: contentId,
-                                              certificateUrl: CERTIFICATE_URL,
-                                              authData: token,
-                                              delegate: SDKManager.sharedManager)
+                                           contentId: contentId,
+                                           certificateUrl: CERTIFICATE_URL,
+                                           authData: token,
+                                           delegate: SDKManager.sharedManager)
         downloadTask = SDKManager.sharedManager.doverunnerSdk?.createDownloadTask(drm: config, delegate: self)
     }
     
-    init(url: URL, contentId: String, token: String, minimumBitrate: String ) {
+    init(url: URL, contentId: String, token: String, licenseUrl: String, minimumBitrate: String ) {
         super.init()
         let videoAsset = AVURLAsset(url: url)
         let config = FairPlayConfiguration(avURLAsset: videoAsset,
-                                              contentId: contentId,
-                                              certificateUrl: CERTIFICATE_URL,
-                                              authData: token,
-                                              delegate: SDKManager.sharedManager)
+                                           contentId: contentId,
+                                           certificateUrl: CERTIFICATE_URL,
+                                           authData: token,
+                                           delegate: SDKManager.sharedManager)
         downloadTask = SDKManager.sharedManager.doverunnerSdk?.createDownloadTask(drm: config, delegate: self, downloadMinimumBitrate: minimumBitrate)
     }
     
@@ -138,4 +138,3 @@ extension Date {
         return tomorrow.month != month
     }
 }
-
