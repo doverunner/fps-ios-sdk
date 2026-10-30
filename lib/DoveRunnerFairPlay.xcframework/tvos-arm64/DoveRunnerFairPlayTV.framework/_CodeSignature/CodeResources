@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/DoveRunnerFairPlayTV-ObjC.h</key>
 		<data>
-		p3qscK4sl4cal5dfILCMAD5uNoA=
+		LXi9WRNgnyhajfQKfo/bAH4ZrUc=
 		</data>
 		<key>Headers/DoveRunnerFairPlayTV.h</key>
 		<data>
@@ -14,55 +14,51 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		X9W5irpSA7b57LQDyG60R2XEb5E=
+		cnxrF7eqe7BIS/XqawY/G3BlDDQ=
 		</data>
 		<key>Modules/DoveRunnerFairPlayTV.swiftmodule/arm64-apple-tvos.abi.json</key>
 		<data>
-		L3efMnz97hqja3BHrVDdzhrOtAE=
+		af/1YtieBRny3L96D5UYvDAb4gg=
 		</data>
 		<key>Modules/DoveRunnerFairPlayTV.swiftmodule/arm64-apple-tvos.private.swiftinterface</key>
 		<data>
-		yZQsbryXjtacD7LTXgBZ/PTwCg0=
+		HFbTMNkMygSkx5sEzM26oQDzXPA=
 		</data>
 		<key>Modules/DoveRunnerFairPlayTV.swiftmodule/arm64-apple-tvos.swiftdoc</key>
 		<data>
-		VxX3QzoZoOyC1baIdl/YFFsHPIQ=
+		WvYGzc9aTxNzjh0ZUdkNhFz7G80=
 		</data>
 		<key>Modules/DoveRunnerFairPlayTV.swiftmodule/arm64-apple-tvos.swiftinterface</key>
 		<data>
-		yZQsbryXjtacD7LTXgBZ/PTwCg0=
+		HFbTMNkMygSkx5sEzM26oQDzXPA=
 		</data>
 		<key>Modules/DoveRunnerFairPlayTV.swiftmodule/arm64-apple-tvos.swiftmodule</key>
 		<data>
-		exQXeyKSX0dMuedeNfTuJx9UW0I=
+		zYlnBbZJQYixoPbhP/6CDCpmfqY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		3TqR0RCJKuhPyXUX2GC1Xz90iCM=
+		IFCQA2wZFkatz9yuCS/4JDpAh74=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 2.mom</key>
 		<data>
-		u0jvjhQk+RHxVUWH0CudcSILFOw=
+		C/w7qVCZOLXFvqvOxO6waAS6Rwg=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.mom</key>
 		<data>
-		9gl1ri4QwGG4T49ktcZmIOF749g=
+		ULGlXojnVFC4iTTTXWMBVCXA0Y4=
 		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.omo</key>
 		<data>
 		QxL+zEdZ4YYoeARN0Gr3jpmEIXg=
 		</data>
-		<key>PallyConFPSModel.momd/PallyConFPSModel 4.mom</key>
-		<data>
-		QiEx3SDvItwO22/SqJWIXp8Mqyw=
-		</data>
 		<key>PallyConFPSModel.momd/PallyConFPSModel.mom</key>
 		<data>
-		qnV2E8CdT33pSFmt6sbMs7dwZq4=
+		cgEiZ/IqEopKSiMUqLwUuY7bDtw=
 		</data>
 		<key>PallyConFPSModel.momd/VersionInfo.plist</key>
 		<data>
-		XYXb3njGOPevCFfVcK1bDhzj9Oc=
+		3eDYAEKK8KHSYO47VYaTEEiCJLQ=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -75,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j1wsqFRU2ipMUsXwwjx6EDq76oRkzSVhQRvzWYZ8UXg=
+			h0+f0q63MLG/Mp2vD5RcOEikR2SFD9eljSSEiwZSM2w=
 			</data>
 		</dict>
 		<key>Headers/DoveRunnerFairPlayTV.h</key>
@@ -89,56 +85,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xyhccw47Z59ZAoXIwyVXJzTtPF1O5Hc5fgWAD96Q5D8=
+			0DsNaKd0NfHZtxVJpM9vGkvYcVoLv1cZRmFhRAGtAVU=
 			</data>
 		</dict>
 		<key>Modules/DoveRunnerFairPlayTV.swiftmodule/arm64-apple-tvos.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FTBlXRW8eNlmVjIGuWZrMzKTXdfxYjg65GewHU8Nvjc=
+			fGMduHBtZ3exJelafKnxSHyWwhmO354HY86CZNHOLXM=
 			</data>
 		</dict>
 		<key>Modules/DoveRunnerFairPlayTV.swiftmodule/arm64-apple-tvos.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dj29VjhfRaHh2+1b2Pyec+EuDby9GzNPG/pS8PekJ20=
+			HO9BapI4s9cfomIwW4cE6aMNawe16iPBes5Sv1+rpKU=
 			</data>
 		</dict>
 		<key>Modules/DoveRunnerFairPlayTV.swiftmodule/arm64-apple-tvos.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FTBlXRW8eNlmVjIGuWZrMzKTXdfxYjg65GewHU8Nvjc=
+			fGMduHBtZ3exJelafKnxSHyWwhmO354HY86CZNHOLXM=
 			</data>
 		</dict>
 		<key>Modules/DoveRunnerFairPlayTV.swiftmodule/arm64-apple-tvos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BAOBPvIM/1GeeUsd76b9Hx5PGMBREoptXe6dTQ3+Ga4=
+			RV8LNxLeuWzkq1XuYvPwimHipJIKI3oQWrs46egPkwY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MwzkRpQAQZ02pQi6FfrIVMUwU/ulCRDbPcKstCSzhyw=
+			/mONX8l4lm3htMzQBN4I/STT/qEL4gjEOU/6W8WldAE=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 2.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AiHW1ExLPg3sNdWJFuBgjwRG8gO4PF43PCP1N0nPGuc=
+			2p8rU+RhYe9IGrljwAJmKfL6jnJ3qmAsP+AW0AMHVV0=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			es8q3B2mraXzTBh+qleFOAEEdqNPcZuw+sdp6C4ZTd4=
+			36wWuQ6djU/hpLMNdpimMWbeazvdyQzVB100SyWsKJk=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel 3.omo</key>
@@ -148,25 +144,18 @@
 			SjsF+v0iTUW/zqUXTTGQGfg14cMAsixhLpakKRV1iDw=
 			</data>
 		</dict>
-		<key>PallyConFPSModel.momd/PallyConFPSModel 4.mom</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			h2UZDL8zZezCW/tOitb8RHK63Dze9lF0ruKADdsms+8=
-			</data>
-		</dict>
 		<key>PallyConFPSModel.momd/PallyConFPSModel.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KvmBzz+vPWUMuo1IW6JlWNrmPKHmPC1EX6aSBDt77/k=
+			xwTqWyE076wXOWQwmIQxAy69eNILmqldWErRUTdGJGY=
 			</data>
 		</dict>
 		<key>PallyConFPSModel.momd/VersionInfo.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			28uBhCHtEklKRd212OZcu+NKD7E8PPhxJwvYDilUMBs=
+			IDRoH5jz+VhNQqiX1SwLP/MYiqyNpD4fjYKpwuinKnU=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
