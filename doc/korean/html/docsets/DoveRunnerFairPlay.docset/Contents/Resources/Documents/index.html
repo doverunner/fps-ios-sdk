@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          DoveRunnerFairPlay 2.7.1 Docs
+          DoveRunnerFairPlay 2.7.2 Docs
         </a>
         
       </p>
@@ -99,7 +99,46 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <h1 id='version-2-7-1' class='heading'>Version 2.7.1</h1>
+            <h1 id='version-2-7-2' class='heading'>Version 2.7.2</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 2.7.2</strong></p>
+</blockquote>
+
+<p><font color="red"><strong><code>Changed</code></strong></font> SDK 최소 지원 버전이 <code>iOS 15.0</code>으로 변경됩니다.</p>
+
+<ul>
+<li>빌드 환경(Xcode) 업데이트에 따라 최소 지원 버전이 <code>iOS 13.0</code>에서 <code>iOS 15.0</code>으로 변경됩니다.</li>
+</ul>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/DownloadTask.html#/c:@M@DoveRunnerFairPlay@objc(cs)DownloadTask(im)resumeWithNewCookies:">DownloadTask.resume(newCookies:)</a></code> 가 추가됩니다.</p>
+
+<ul>
+<li>중단된 다운로드를 갱신된 HTTP 쿠키로 재개합니다. 다운로드가 중단된 사이(장시간 일시정지, 앱 재실행 등) 콘텐츠 서버 쿠키가 만료된 경우, 새 쿠키를 전달하면 남은 세그먼트만 이어서 다운로드합니다.</li>
+<li>기기에 부분 다운로드 패키지가 없으면 원본 URL로 처음부터 다운로드합니다.</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="c1">// 중단된 다운로드를 서버에서 갱신한 쿠키로 재개</span>
+  <span class="c1">// (다운로드 중단은 기존 cancel() 사용)</span>
+  <span class="n">downloadTask</span><span class="o">.</span><span class="nf">resume</span><span class="p">(</span><span class="nv">newCookies</span><span class="p">:</span> <span class="n">renewedCookies</span><span class="p">)</span>
+</code></pre>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/DownloadTask.html#/c:@M@DoveRunnerFairPlay@objc(cs)DownloadTask(py)downloadedLocation">DownloadTask.downloadedLocation</a></code> 가 추가됩니다.</p>
+
+<ul>
+<li>콘텐츠의 다운로드 패키지 위치를 반환합니다(부분 다운로드 포함). 다운로드된 것이 없거나 기기에서 삭제된 경우 <code>nil</code>을 반환합니다.</li>
+</ul>
+
+<blockquote>
+<p><strong>Note</strong></p>
+</blockquote>
+
+<ul>
+<li><code>resume(newCookies:)</code>는 콘텐츠 서버가 유효기간이 짧은 쿠키로 미디어 세그먼트를 보호하는 특수한 상황을 위한 API입니다. 대부분의 경우 SDK의 다운로드 세션이 다운로드를 자체적으로 유지하므로 이 API를 호출할 필요가 없습니다.</li>
+<li>쿠키를 통한 콘텐츠 보호는 정말 필요한 경우에만 적용하는 것을 권장합니다. 콘텐츠 서버 쿠키는 다운로드 중 갱신이 필요 없도록 충분한 유효기간으로 발급하고, 쿠키 만료가 불가피한 경우에만 이 API를 사용하세요.</li>
+<li>쿠키의 domain은 콘텐츠 서버의 호스트와 일치해야 합니다.</li>
+<li>앱 재실행이나 앱 업데이트 후에도 다운로드를 이어받을 수 있습니다.</li>
+</ul>
+<h1 id='version-2-7-1' class='heading'>Version 2.7.1</h1>
 
 <blockquote>
 <p><strong>What&rsquo;s New in Version 2.7.1</strong></p>
