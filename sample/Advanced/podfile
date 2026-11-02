@@ -1,5 +1,6 @@
-target 'DoveRunnerFairPlayAdvanced' do
+platform :ios, '15.0'
+
+target 'FairPlayAdvanced' do
   use_frameworks!
-  pod 'google-cast-sdk', '4.6.1'
-  pod 'DoveRunnerFairPlay', '2.6.1'
+  pod 'google-cast-sdk', '4.8.4'
 end

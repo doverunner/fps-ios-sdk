@@ -17,7 +17,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          DoveRunnerFairPlay 2.7.1 Docs
+          DoveRunnerFairPlay 2.7.2 Docs
         </a>
         
       </p>
@@ -99,7 +99,42 @@
         <section class="section">
           <div class="section-content top-matter">
             
-            <h1 id='version-2-7-1' class='heading'>Version 2.7.1</h1>
+            <h1 id='version-2-7-2' class='heading'>Version 2.7.2</h1>
+
+<blockquote>
+<p><strong>What&rsquo;s New in Version 2.7.2</strong></p>
+</blockquote>
+
+<p><font color="red"><strong><code>Changed</code></strong></font> The minimum supported SDK version changes to <code>iOS 15.0</code>.</p>
+
+<ul>
+<li>Following the build environment(Xcode) update, the minimum supported version changes from <code>iOS 13.0</code> to <code>iOS 15.0</code>.</li>
+</ul>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/DownloadTask.html#/c:@M@DoveRunnerFairPlay@objc(cs)DownloadTask(im)resumeWithNewCookies:">DownloadTask.resume(newCookies:)</a></code> has been added.</p>
+
+<ul>
+<li>Resumes a stopped download with renewed HTTP cookies. If the content server cookies expired while the download was stopped (e.g. after a long pause or an app relaunch), call this method with the renewed cookies and only the remaining segments are downloaded.</li>
+<li>If no partially downloaded package exists on the device, the download starts over from the original URL.</li>
+</ul>
+<pre class="highlight swift"><code>  <span class="c1">// Resume the stopped download with renewed cookies issued by your server</span>
+  <span class="c1">// (use the existing cancel() to stop the download)</span>
+  <span class="n">downloadTask</span><span class="o">.</span><span class="nf">resume</span><span class="p">(</span><span class="nv">newCookies</span><span class="p">:</span> <span class="n">renewedCookies</span><span class="p">)</span>
+</code></pre>
+
+<p><font color="darkviolet"><strong><code>Added</code></strong></font> <code><a href="Classes/DownloadTask.html#/c:@M@DoveRunnerFairPlay@objc(cs)DownloadTask(py)downloadedLocation">DownloadTask.downloadedLocation</a></code> has been added.</p>
+
+<blockquote>
+<p><strong>Note</strong></p>
+</blockquote>
+
+<ul>
+<li><code>resume(newCookies:)</code> is intended for a specific case: the content server protects media segments with short-lived cookies. In most cases you do not need to call it, because the SDK&rsquo;s download session keeps the download going on its own.</li>
+<li>Cookie-based content protection is recommended only when it is really required. We recommend issuing content server cookies with a sufficient lifetime so that renewal during a download is not needed, and using this API only when cookie expiration is unavoidable.</li>
+<li>The cookies&rsquo; domain must match the content server&rsquo;s host.</li>
+<li>The download can be resumed after an app relaunch or an app update.</li>
+</ul>
+<h1 id='version-2-7-1' class='heading'>Version 2.7.1</h1>
 
 <blockquote>
 <p><strong>What&rsquo;s New in Version 2.7.1</strong></p>

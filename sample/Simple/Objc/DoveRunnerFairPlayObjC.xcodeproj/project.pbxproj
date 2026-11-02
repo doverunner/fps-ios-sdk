@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1A5CE132EB0A00000D0A001 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A5CE122EB0A00000D0A001 /* SceneDelegate.m */; };
+		C1A5CE142EB0A00000D0A001 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A5CE122EB0A00000D0A001 /* SceneDelegate.m */; };
 		88A14E59220D653A00354DBE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 88A14E58220D653A00354DBE /* README.md */; };
 		88A14E5A220D653A00354DBE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 88A14E58220D653A00354DBE /* README.md */; };
 		B49AA6B121352425000D95A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AFA9052075E329005AF13A /* ViewController.m */; };
@@ -52,6 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C1A5CE112EB0A00000D0A001 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		C1A5CE122EB0A00000D0A001 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		88A14E58220D653A00354DBE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B49AA6BF21352425000D95A6 /* DoveRunnerFairPlayObjCTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveRunnerFairPlayObjCTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49AA6C22135244D000D95A6 /* FairPlayObjectiveCTV-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FairPlayObjectiveCTV-Info.plist"; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			children = (
 				B4AFA9012075E329005AF13A /* AppDelegate.h */,
 				B4AFA9022075E329005AF13A /* AppDelegate.m */,
+				C1A5CE112EB0A00000D0A001 /* SceneDelegate.h */,
+				C1A5CE122EB0A00000D0A001 /* SceneDelegate.m */,
 				B4AFA9042075E329005AF13A /* ViewController.h */,
 				B4AFA9052075E329005AF13A /* ViewController.m */,
 				B4AFA9072075E329005AF13A /* Main.storyboard */,
@@ -252,6 +258,7 @@
 				B49AA6B121352425000D95A6 /* ViewController.m in Sources */,
 				B49AA6B221352425000D95A6 /* main.m in Sources */,
 				B49AA6B321352425000D95A6 /* AppDelegate.m in Sources */,
+				C1A5CE142EB0A00000D0A001 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +269,7 @@
 				B4AFA9062075E329005AF13A /* ViewController.m in Sources */,
 				B4AFA9112075E329005AF13A /* main.m in Sources */,
 				B4AFA9032075E329005AF13A /* AppDelegate.m in Sources */,
+				C1A5CE132EB0A00000D0A001 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,14 +300,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../lib\"",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/FairPlayObjectiveCTV/FairPlayObjectiveCTV-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,7 +316,7 @@
 				SDKROOT = appletvos;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 				VALID_ARCHS = arm64;
 			};
 			name = Debug;
@@ -319,14 +326,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../lib\"",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/FairPlayObjectiveCTV/FairPlayObjectiveCTV-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,7 +342,7 @@
 				SDKROOT = appletvos;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 				VALID_ARCHS = arm64;
 			};
 			name = Release;
@@ -392,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -444,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -457,7 +463,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BITCODE_GENERATION_MODE = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -465,7 +470,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = FairPlayObjectiveC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +487,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BITCODE_GENERATION_MODE = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 22X77ENQ2H;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,7 +494,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = FairPlayObjectiveC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

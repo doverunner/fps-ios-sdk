@@ -1,34 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<!--
+  Replace the placeholder values below with your own content information.
+    ContentNameKey      : Name shown in the list.
+    ContentURL          : HLS playlist(m3u8) URL of the content.
+    FPSCidKey           : Content ID. Required when no token is used.
+    FPSToken            : Token or custom data used to acquire the FairPlay license.
+    FPSLicenseUrl       : License server URL. Leave empty to use the default DoveRunner license server.
+    OnlyStreaming       : true = streaming only (no download menu), false = download allowed.
+    Mainm3u8Scheme      : true = load the playlist through the SDK's mainm3u8 custom scheme.
+    ChromcastPlayUrlPath: Content URL for Google Cast playback. Leave empty if not used.
+-->
 <array>
 	<dict>
-		<key>FPSCidKey</key>
-		<string>content id</string>
-		<key>Mainm3u8Scheme</key>
-		<false/>
+		<key>ContentNameKey</key>
+		<string>Streaming Content</string>
 		<key>ContentURL</key>
 		<string>content url</string>
-		<key>ContentNameKey</key>
-		<string>streaming content </string>
+		<key>FPSCidKey</key>
+		<string>content id</string>
+		<key>FPSToken</key>
+		<string>token or custom data</string>
+		<key>FPSLicenseUrl</key>
+		<string></string>
 		<key>OnlyStreaming</key>
 		<true/>
-		<key>FPSToken</key>
-		<string>AuthData</string>
-	</dict>
-	<dict>
-		<key>FPSCidKey</key>
-		<string>content id</string>
 		<key>Mainm3u8Scheme</key>
 		<false/>
+		<key>ChromcastPlayUrlPath</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>ContentNameKey</key>
+		<string>Download Content</string>
 		<key>ContentURL</key>
 		<string>content url</string>
-		<key>ContentNameKey</key>
-		<string>downloadecontent</string>
+		<key>FPSCidKey</key>
+		<string>content id</string>
+		<key>FPSToken</key>
+		<string>token or custom data</string>
+		<key>FPSLicenseUrl</key>
+		<string></string>
 		<key>OnlyStreaming</key>
 		<false/>
-		<key>FPSToken</key>
-		<string>AuthData</string>
+		<key>Mainm3u8Scheme</key>
+		<false/>
+		<key>ChromcastPlayUrlPath</key>
+		<string></string>
 	</dict>
 </array>
 </plist>

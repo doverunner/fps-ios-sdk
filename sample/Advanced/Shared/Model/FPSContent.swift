@@ -18,22 +18,25 @@ struct FPSContent {
     
     var contentId: String
     var token: String
+    var licenseUrl: String
     var liveKeyRotation: Bool
     var contentName: String
     var urlAsset: AVURLAsset
     var chromcastPlayUrlPath: String
     var downloadDelegate: Any?
+    var contentUrl: String = String()
     
     init(_ contentId: String,
          _ token: String,
          _ contentName: String,
          _ urlAsset: AVURLAsset
          ) {
-        self.init(contentId, token, false, contentName, urlAsset, "", nil)
+        self.init(contentId, token, "", false, contentName, urlAsset, "", nil)
     }
     
     init(_ contentId: String,
          _ token: String,
+         _ licenseUrl: String,
          _ liveKeyRotation: Bool,
          _ contentName: String,
          _ urlAsset: AVURLAsset,
@@ -41,6 +44,7 @@ struct FPSContent {
          _ downloadDelegate: Any?) {
         self.contentId = contentId
         self.token = token
+        self.licenseUrl = licenseUrl
         self.liveKeyRotation = liveKeyRotation
         self.contentName = contentName
         self.urlAsset = urlAsset
@@ -75,6 +79,8 @@ extension FPSContent {
        
         static let token = "FPSToken"
         
+        static let licenseUrl = "FPSLicenseUrl"
+        
         static let liveKeyRotation = "FPSLiveKeyRotation"
         
         static let avUrlAsset = "FPSAVURLAsset"
@@ -90,4 +96,3 @@ extension FPSContent {
         static let mainm3u8Scheme = "Mainm3u8Scheme"
     }
 }
-

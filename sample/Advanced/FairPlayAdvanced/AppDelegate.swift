@@ -1,117 +1,86 @@
 //
 //  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //
-//  DoveRunner Team (http://www.doverunner.com)
+//  DRM Team
 //
 //  AppDelegate
 //
+//  Handles process-level events only. Window / view hierarchy setup lives in
+//  `SceneDelegate` because apps built with the iOS 27 SDK must adopt the
+//  UIScene life cycle.
+//
+//  Google Cast integration (overview)
+//  ┌────────────────────────────┬────────────────────────────────────────────────────┐
+//  │ Where                      │ What                                               │
+//  ├────────────────────────────┼────────────────────────────────────────────────────┤
+//  │ AppDelegate (this file)    │ 1. Initialize GCKCastContext once per process       │
+//  │ SceneDelegate              │ 2. Wrap the root VC in GCKUICastContainerViewController │
+//  │ BasicTableViewController   │ 3. Show GCKUICastButton, load media to the receiver │
+//  │ Info.plist                 │ NSBonjourServices / NSLocalNetworkUsageDescription   │
+//  └────────────────────────────┴────────────────────────────────────────────────────┘
+//
 
 import UIKit
-#if os(iOS)
-    import GoogleCast
-#endif
+import GoogleCast
 
-let kPrefReceiverAppID: String = "receiver_app_id"
-let kPrefCustomReceiverSelectedValue: String = "use_custom_receiver_app_id"
-let kPrefCustomReceiverAppID: String = "custom_receiver_app_id"
+// MARK: - Google Cast configuration
 
-// receive app ID by chromcast
+/// Receiver application ID registered on the Google Cast SDK Developer Console.
+/// A custom receiver is required to play DRM-protected content with the token
+/// passed through `customData`. Replace this value with your own receiver ID.
 let applicationID: String = ""
 
-let appDelegate = UIApplication.shared.delegate as? AppDelegate
-
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    /// Stored by `application(_:handleEventsForBackgroundURLSession:completionHandler:)`
+    /// and invoked by `FPSPlaybackManager` when the background URL session finishes.
     var backgroundSessionCompletionHandler: (() -> Void)?
     
+    // MARK: UIApplicationDelegate
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let navigationController = storyboard.instantiateViewController(withIdentifier: "MainNavigation")
-        
-        let options = GCKCastOptions(discoveryCriteria: GCKDiscoveryCriteria(applicationID: applicationID))
-        GCKCastContext.setSharedInstanceWith(options)
-        GCKLogger.sharedInstance().delegate = self
-        
-        let shared = GCKCastContext.sharedInstance()
-        let castContainerVC = shared.createCastContainerController(for: navigationController)
-        castContainerVC.miniMediaControlsItemEnabled = true
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = castContainerVC
-        self.window?.makeKeyAndVisible()
+        // Google Cast step 1.
+        // The Cast context must exist before any Cast UI (GCKUICastButton,
+        // GCKUICastContainerViewController) is created. `didFinishLaunching`
+        // runs before the first scene connects, so this is the right place.
+        setupGoogleCast()
         return true
+    }
+    
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        // "Default Configuration" is declared in Info.plist (UIApplicationSceneManifest)
+        // and points to `SceneDelegate`.
+        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
     
     func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
         backgroundSessionCompletionHandler = completionHandler
-        
-    }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 }
+
+// MARK: - Google Cast setup
 
 extension AppDelegate {
-    func applicationIDFromUserDefaults() -> String {
-        let userDefaults = UserDefaults.standard
-        var prefApplicationID = userDefaults.string(forKey: kPrefReceiverAppID)
-        if prefApplicationID == kPrefCustomReceiverSelectedValue {
-            prefApplicationID = userDefaults.string(forKey: kPrefCustomReceiverAppID)
-        }
+    /// Google Cast step 1: create the shared `GCKCastContext`.
+    ///
+    /// Call this exactly once per process. `GCKDiscoveryCriteria` tells the SDK
+    /// which receiver application to look for on the local network.
+    private func setupGoogleCast() {
+        let criteria = GCKDiscoveryCriteria(applicationID: applicationID)
+        let options = GCKCastOptions(discoveryCriteria: criteria)
+        GCKCastContext.setSharedInstanceWith(options)
         
-        guard let appIdRegex = try? NSRegularExpression(pattern: "\\b[0-9A-F]{8}\\b", options: []),
-            let prefAppID = prefApplicationID else {
-                return ""
-        }
-        
-        let numberOfMatches = appIdRegex.numberOfMatches(in: prefAppID, options: [], range: NSMakeRange(0, prefAppID.count))
-        if numberOfMatches == 0 {
-            return ""
-        }
-        
-        return prefAppID
-    }
-    
-    func setCastControlBarsEnabled(notificationsEnabled: Bool) {
-        guard let castContainerVC = self.window?.rootViewController as? GCKUICastContainerViewController else {
-            return
-        }
-        castContainerVC.miniMediaControlsItemEnabled = notificationsEnabled
-    }
-    
-    func castControlBarsEnabled() -> Bool {
-        guard let castContainerVC = self.window?.rootViewController as? GCKUICastContainerViewController else {
-            return false
-        }
-        return castContainerVC.miniMediaControlsItemEnabled
+        // Route Cast SDK logs to the console. Useful while integrating; remove
+        // or filter by level for production builds.
+        GCKLogger.sharedInstance().delegate = self
     }
 }
+
+// MARK: - GCKLoggerDelegate
 
 extension AppDelegate: GCKLoggerDelegate {
     func logMessage(_ message: String, at level: GCKLoggerLevel, fromFunction function: String, location: String) {
         print("\(function) \(message)")
     }
 }
-

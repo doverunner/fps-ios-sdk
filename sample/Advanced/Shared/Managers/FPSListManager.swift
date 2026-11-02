@@ -42,6 +42,7 @@ class FPSListManager: NSObject {
             
             let contentId = (entry[FPSContent.Keys.cId] as? String) ?? ""
             let token = (entry[FPSContent.Keys.token] as? String) ?? ""
+            let licenseUrl = (entry[FPSContent.Keys.licenseUrl] as? String) ?? ""
             let liveKeyRotation = (entry[FPSContent.Keys.liveKeyRotation] as? Bool) ?? false
             let chromcastUrlPath = (entry[FPSContent.Keys.chromcastPlayUrlPath] as? String) ?? ""
             let mainm3u8Scheme = (entry[FPSContent.Keys.mainm3u8Scheme] as? Bool) ?? false
@@ -49,6 +50,7 @@ class FPSListManager: NSObject {
             var fpsContent: FPSContent!
             // Get the FPSContent from
             if #available(iOS 10.0, *), var fpsContent = SDKManager.sharedManager.localFpsContentForStream(with: contentId, token: token, contentName: contentName) {
+                fpsContent.contentUrl = contentPlaylistURLString
                 self.contents.append(fpsContent)
                 continue
             } else {
@@ -66,7 +68,8 @@ class FPSListManager: NSObject {
                     urlAsset = AVURLAsset(url: contentPlaylistURL)
                 }
 
-                fpsContent = FPSContent(contentId, token, liveKeyRotation, contentName, urlAsset, chromcastUrlPath, nil)
+                fpsContent = FPSContent(contentId, token, licenseUrl, liveKeyRotation, contentName, urlAsset, chromcastUrlPath, nil)
+                fpsContent.contentUrl = contentPlaylistURLString
             }
             
             if let isOnlyStreaming = entry["OnlyStreaming"] as? Bool, isOnlyStreaming {
@@ -87,7 +90,7 @@ class FPSListManager: NSObject {
         return URL(string: newUrlString)
     }
     
-    // MARK: FPSContent access
+    // MARK: FPSContent access    
     /// Returns the number of FPSContent.
     func numberOfContent(section: Int) -> Int {
         if section == 0 {
@@ -149,4 +152,3 @@ class FPSListManager: NSObject {
         return urlAsset
     }
 }
-

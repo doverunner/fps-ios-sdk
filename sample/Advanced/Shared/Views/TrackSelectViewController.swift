@@ -1,3 +1,6 @@
+// `HLSPlaylistParser` is provided by the iOS SDK only, so this view is iOS-only
+// even though it lives in the Shared folder.
+#if os(iOS)
 import SwiftUI
 import DoveRunnerFairPlay
 
@@ -402,3 +405,4 @@ struct HLSTrackSelectView: View {
         }
     }
 }
+#endif

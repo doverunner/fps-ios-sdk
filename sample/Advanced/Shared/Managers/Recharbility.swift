@@ -1,7 +1,7 @@
 //
 //  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //  
-//  DoveRunner Team (http://www.doverunner.com)
+//  DRM Team
 //
 //  A class Recharbility is created to verify that the current terminal is connected to the network.
 //

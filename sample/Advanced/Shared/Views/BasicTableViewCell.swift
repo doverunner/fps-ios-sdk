@@ -1,7 +1,7 @@
 //
 //  Copyright © 2017년 DoveRunner INC. All rights reserved.
 //
-//  DoveRunner Team (http://www.doverunner.com)
+//  DRM Team
 //
 //  BasicTableViewCell class is tableViewCell for the FPS Contents
 //
@@ -114,7 +114,7 @@ class BasicTableViewCell: UITableViewCell {
             switch downloadState {
             case .pause:
                 if #available(iOS 11.0, *) {
-                    SDKManager.sharedManager.pauseDownloadStatus(for: contentId)
+                        SDKManager.sharedManager.pauseDownloadStatus(for: contentId)
                 }
             case .downloading:
                 self.downloadProgressView.isHidden = false
